@@ -2649,87 +2649,87 @@
  2099              		.file 58 "/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Re
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 QRCodeReader.cpp
-     /tmp/ccoB86LE.s:17     .text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED2Ev:0000000000000000 $a
-     /tmp/ccoB86LE.s:23     .text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED2Ev:0000000000000000 _ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED2Ev
-     /tmp/ccoB86LE.s:83     .text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED2Ev:0000000000000054 $d
-     /tmp/ccoB86LE.s:2007   .rodata._ZTVN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE:0000000000000000 _ZTVN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE
+     /tmp/ccFPOSYl.s:17     .text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED2Ev:0000000000000000 $a
+     /tmp/ccFPOSYl.s:23     .text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED2Ev:0000000000000000 _ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED2Ev
+     /tmp/ccFPOSYl.s:83     .text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED2Ev:0000000000000054 $d
+     /tmp/ccFPOSYl.s:2007   .rodata._ZTVN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE:0000000000000000 _ZTVN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE
 .ARM.exidx.text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED2Ev:0000000000000000 $d
-     /tmp/ccoB86LE.s:23     .text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED2Ev:0000000000000000 _ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED1Ev
-     /tmp/ccoB86LE.s:95     .text._ZN5zxing8ArrayRefIcED2Ev:0000000000000000 $a
-     /tmp/ccoB86LE.s:101    .text._ZN5zxing8ArrayRefIcED2Ev:0000000000000000 _ZN5zxing8ArrayRefIcED2Ev
-     /tmp/ccoB86LE.s:159    .text._ZN5zxing8ArrayRefIcED2Ev:0000000000000054 $d
-     /tmp/ccoB86LE.s:1997   .rodata._ZTVN5zxing8ArrayRefIcEE:0000000000000000 _ZTVN5zxing8ArrayRefIcEE
+     /tmp/ccFPOSYl.s:23     .text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED2Ev:0000000000000000 _ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED1Ev
+     /tmp/ccFPOSYl.s:95     .text._ZN5zxing8ArrayRefIcED2Ev:0000000000000000 $a
+     /tmp/ccFPOSYl.s:101    .text._ZN5zxing8ArrayRefIcED2Ev:0000000000000000 _ZN5zxing8ArrayRefIcED2Ev
+     /tmp/ccFPOSYl.s:159    .text._ZN5zxing8ArrayRefIcED2Ev:0000000000000054 $d
+     /tmp/ccFPOSYl.s:1997   .rodata._ZTVN5zxing8ArrayRefIcEE:0000000000000000 _ZTVN5zxing8ArrayRefIcEE
 .ARM.exidx.text._ZN5zxing8ArrayRefIcED2Ev:0000000000000000 $d
-     /tmp/ccoB86LE.s:101    .text._ZN5zxing8ArrayRefIcED2Ev:0000000000000000 _ZN5zxing8ArrayRefIcED1Ev
-     /tmp/ccoB86LE.s:171    .text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED0Ev:0000000000000000 $a
-     /tmp/ccoB86LE.s:177    .text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED0Ev:0000000000000000 _ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED0Ev
-     /tmp/ccoB86LE.s:243    .text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED0Ev:0000000000000060 $d
+     /tmp/ccFPOSYl.s:101    .text._ZN5zxing8ArrayRefIcED2Ev:0000000000000000 _ZN5zxing8ArrayRefIcED1Ev
+     /tmp/ccFPOSYl.s:171    .text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED0Ev:0000000000000000 $a
+     /tmp/ccFPOSYl.s:177    .text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED0Ev:0000000000000000 _ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED0Ev
+     /tmp/ccFPOSYl.s:243    .text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED0Ev:0000000000000060 $d
 .ARM.exidx.text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED0Ev:0000000000000000 $d
-     /tmp/ccoB86LE.s:254    .text._ZN5zxing8ArrayRefIcED0Ev:0000000000000000 $a
-     /tmp/ccoB86LE.s:260    .text._ZN5zxing8ArrayRefIcED0Ev:0000000000000000 _ZN5zxing8ArrayRefIcED0Ev
-     /tmp/ccoB86LE.s:326    .text._ZN5zxing8ArrayRefIcED0Ev:0000000000000060 $d
+     /tmp/ccFPOSYl.s:254    .text._ZN5zxing8ArrayRefIcED0Ev:0000000000000000 $a
+     /tmp/ccFPOSYl.s:260    .text._ZN5zxing8ArrayRefIcED0Ev:0000000000000000 _ZN5zxing8ArrayRefIcED0Ev
+     /tmp/ccFPOSYl.s:326    .text._ZN5zxing8ArrayRefIcED0Ev:0000000000000060 $d
 .ARM.exidx.text._ZN5zxing8ArrayRefIcED0Ev:0000000000000000 $d
-     /tmp/ccoB86LE.s:337    .text._ZN5zxing6qrcode12QRCodeReaderD2Ev:0000000000000000 $a
-     /tmp/ccoB86LE.s:343    .text._ZN5zxing6qrcode12QRCodeReaderD2Ev:0000000000000000 _ZN5zxing6qrcode12QRCodeReaderD2Ev
-     /tmp/ccoB86LE.s:381    .text._ZN5zxing6qrcode12QRCodeReaderD2Ev:0000000000000024 $d
+     /tmp/ccFPOSYl.s:337    .text._ZN5zxing6qrcode12QRCodeReaderD2Ev:0000000000000000 $a
+     /tmp/ccFPOSYl.s:343    .text._ZN5zxing6qrcode12QRCodeReaderD2Ev:0000000000000000 _ZN5zxing6qrcode12QRCodeReaderD2Ev
+     /tmp/ccFPOSYl.s:381    .text._ZN5zxing6qrcode12QRCodeReaderD2Ev:0000000000000024 $d
 .ARM.exidx.text._ZN5zxing6qrcode12QRCodeReaderD2Ev:0000000000000000 $d
-     /tmp/ccoB86LE.s:343    .text._ZN5zxing6qrcode12QRCodeReaderD2Ev:0000000000000000 _ZN5zxing6qrcode12QRCodeReaderD1Ev
-     /tmp/ccoB86LE.s:390    .text._ZN5zxing6qrcode12QRCodeReaderD0Ev:0000000000000000 $a
-     /tmp/ccoB86LE.s:396    .text._ZN5zxing6qrcode12QRCodeReaderD0Ev:0000000000000000 _ZN5zxing6qrcode12QRCodeReaderD0Ev
+     /tmp/ccFPOSYl.s:343    .text._ZN5zxing6qrcode12QRCodeReaderD2Ev:0000000000000000 _ZN5zxing6qrcode12QRCodeReaderD1Ev
+     /tmp/ccFPOSYl.s:390    .text._ZN5zxing6qrcode12QRCodeReaderD0Ev:0000000000000000 $a
+     /tmp/ccFPOSYl.s:396    .text._ZN5zxing6qrcode12QRCodeReaderD0Ev:0000000000000000 _ZN5zxing6qrcode12QRCodeReaderD0Ev
 .ARM.exidx.text._ZN5zxing6qrcode12QRCodeReaderD0Ev:0000000000000000 $d
-     /tmp/ccoB86LE.s:424    .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $a
-     /tmp/ccoB86LE.s:429    .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 _Z41__static_initialization_and_destruction_0ii
-     /tmp/ccoB86LE.s:2015   .bss._ZStL8__ioinit:0000000000000000 .LANCHOR1
+     /tmp/ccFPOSYl.s:424    .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $a
+     /tmp/ccFPOSYl.s:429    .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 _Z41__static_initialization_and_destruction_0ii
+     /tmp/ccFPOSYl.s:2015   .bss._ZStL8__ioinit:0000000000000000 .LANCHOR1
 .ARM.exidx.text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $d
-     /tmp/ccoB86LE.s:470    .text._ZN5zxing6qrcode12QRCodeReaderC2Ev:0000000000000000 $a
-     /tmp/ccoB86LE.s:476    .text._ZN5zxing6qrcode12QRCodeReaderC2Ev:0000000000000000 _ZN5zxing6qrcode12QRCodeReaderC2Ev
-     /tmp/ccoB86LE.s:529    .text._ZN5zxing6qrcode12QRCodeReaderC2Ev:0000000000000034 $d
+     /tmp/ccFPOSYl.s:470    .text._ZN5zxing6qrcode12QRCodeReaderC2Ev:0000000000000000 $a
+     /tmp/ccFPOSYl.s:476    .text._ZN5zxing6qrcode12QRCodeReaderC2Ev:0000000000000000 _ZN5zxing6qrcode12QRCodeReaderC2Ev
+     /tmp/ccFPOSYl.s:529    .text._ZN5zxing6qrcode12QRCodeReaderC2Ev:0000000000000034 $d
 .ARM.extab.text._ZN5zxing6qrcode12QRCodeReaderC2Ev:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing6qrcode12QRCodeReaderC2Ev:0000000000000000 $d
-     /tmp/ccoB86LE.s:476    .text._ZN5zxing6qrcode12QRCodeReaderC2Ev:0000000000000000 _ZN5zxing6qrcode12QRCodeReaderC1Ev
-     /tmp/ccoB86LE.s:556    .text._ZN5zxing6qrcode12QRCodeReader10getDecoderEv:0000000000000000 $a
-     /tmp/ccoB86LE.s:562    .text._ZN5zxing6qrcode12QRCodeReader10getDecoderEv:0000000000000000 _ZN5zxing6qrcode12QRCodeReader10getDecoderEv
+     /tmp/ccFPOSYl.s:476    .text._ZN5zxing6qrcode12QRCodeReaderC2Ev:0000000000000000 _ZN5zxing6qrcode12QRCodeReaderC1Ev
+     /tmp/ccFPOSYl.s:556    .text._ZN5zxing6qrcode12QRCodeReader10getDecoderEv:0000000000000000 $a
+     /tmp/ccFPOSYl.s:562    .text._ZN5zxing6qrcode12QRCodeReader10getDecoderEv:0000000000000000 _ZN5zxing6qrcode12QRCodeReader10getDecoderEv
 .ARM.exidx.text._ZN5zxing6qrcode12QRCodeReader10getDecoderEv:0000000000000000 $d
-     /tmp/ccoB86LE.s:581    .text._ZN5zxing6qrcode8DetectorD2Ev:0000000000000000 $a
-     /tmp/ccoB86LE.s:587    .text._ZN5zxing6qrcode8DetectorD2Ev:0000000000000000 _ZN5zxing6qrcode8DetectorD2Ev
-     /tmp/ccoB86LE.s:695    .text._ZN5zxing6qrcode8DetectorD2Ev:0000000000000090 $d
+     /tmp/ccFPOSYl.s:581    .text._ZN5zxing6qrcode8DetectorD2Ev:0000000000000000 $a
+     /tmp/ccFPOSYl.s:587    .text._ZN5zxing6qrcode8DetectorD2Ev:0000000000000000 _ZN5zxing6qrcode8DetectorD2Ev
+     /tmp/ccFPOSYl.s:695    .text._ZN5zxing6qrcode8DetectorD2Ev:0000000000000090 $d
 .ARM.exidx.text._ZN5zxing6qrcode8DetectorD2Ev:0000000000000000 $d
-     /tmp/ccoB86LE.s:587    .text._ZN5zxing6qrcode8DetectorD2Ev:0000000000000000 _ZN5zxing6qrcode8DetectorD1Ev
-     /tmp/ccoB86LE.s:709    .text._ZN5zxing6qrcode12QRCodeReader6decodeENS_3RefINS_12BinaryBitmapEEENS_11DecodeHintsE:0000000000000000 $a
-     /tmp/ccoB86LE.s:715    .text._ZN5zxing6qrcode12QRCodeReader6decodeENS_3RefINS_12BinaryBitmapEEENS_11DecodeHintsE:0000000000000000 _ZN5zxing6qrcode12QRCodeReader6decodeENS_3RefINS_12BinaryBitmapEEENS_11DecodeHintsE
-     /tmp/ccoB86LE.s:1713   .text._ZN5zxing6qrcode12QRCodeReader6decodeENS_3RefINS_12BinaryBitmapEEENS_11DecodeHintsE:0000000000000604 $d
+     /tmp/ccFPOSYl.s:587    .text._ZN5zxing6qrcode8DetectorD2Ev:0000000000000000 _ZN5zxing6qrcode8DetectorD1Ev
+     /tmp/ccFPOSYl.s:709    .text._ZN5zxing6qrcode12QRCodeReader6decodeENS_3RefINS_12BinaryBitmapEEENS_11DecodeHintsE:0000000000000000 $a
+     /tmp/ccFPOSYl.s:715    .text._ZN5zxing6qrcode12QRCodeReader6decodeENS_3RefINS_12BinaryBitmapEEENS_11DecodeHintsE:0000000000000000 _ZN5zxing6qrcode12QRCodeReader6decodeENS_3RefINS_12BinaryBitmapEEENS_11DecodeHintsE
+     /tmp/ccFPOSYl.s:1713   .text._ZN5zxing6qrcode12QRCodeReader6decodeENS_3RefINS_12BinaryBitmapEEENS_11DecodeHintsE:0000000000000604 $d
 .ARM.extab.text._ZN5zxing6qrcode12QRCodeReader6decodeENS_3RefINS_12BinaryBitmapEEENS_11DecodeHintsE:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing6qrcode12QRCodeReader6decodeENS_3RefINS_12BinaryBitmapEEENS_11DecodeHintsE:0000000000000000 $d
-     /tmp/ccoB86LE.s:1779   .text._ZN5zxing6qrcode8DetectorD0Ev:0000000000000000 $a
-     /tmp/ccoB86LE.s:1785   .text._ZN5zxing6qrcode8DetectorD0Ev:0000000000000000 _ZN5zxing6qrcode8DetectorD0Ev
-     /tmp/ccoB86LE.s:1900   .text._ZN5zxing6qrcode8DetectorD0Ev:000000000000009c $d
+     /tmp/ccFPOSYl.s:1779   .text._ZN5zxing6qrcode8DetectorD0Ev:0000000000000000 $a
+     /tmp/ccFPOSYl.s:1785   .text._ZN5zxing6qrcode8DetectorD0Ev:0000000000000000 _ZN5zxing6qrcode8DetectorD0Ev
+     /tmp/ccFPOSYl.s:1900   .text._ZN5zxing6qrcode8DetectorD0Ev:000000000000009c $d
 .ARM.exidx.text._ZN5zxing6qrcode8DetectorD0Ev:0000000000000000 $d
-     /tmp/ccoB86LE.s:1913   .text._GLOBAL__sub_I__ZN5zxing6qrcode12QRCodeReaderC2Ev:0000000000000000 $a
-     /tmp/ccoB86LE.s:1918   .text._GLOBAL__sub_I__ZN5zxing6qrcode12QRCodeReaderC2Ev:0000000000000000 _GLOBAL__sub_I__ZN5zxing6qrcode12QRCodeReaderC2Ev
+     /tmp/ccFPOSYl.s:1913   .text._GLOBAL__sub_I__ZN5zxing6qrcode12QRCodeReaderC2Ev:0000000000000000 $a
+     /tmp/ccFPOSYl.s:1918   .text._GLOBAL__sub_I__ZN5zxing6qrcode12QRCodeReaderC2Ev:0000000000000000 _GLOBAL__sub_I__ZN5zxing6qrcode12QRCodeReaderC2Ev
 .ARM.exidx.text._GLOBAL__sub_I__ZN5zxing6qrcode12QRCodeReaderC2Ev:0000000000000000 $d
-     /tmp/ccoB86LE.s:1941   .init_array:0000000000000000 $d
-     /tmp/ccoB86LE.s:1948   .rodata._ZTSN5zxing7CountedE:0000000000000000 _ZTSN5zxing7CountedE
-     /tmp/ccoB86LE.s:1945   .rodata._ZTSN5zxing7CountedE:0000000000000000 $d
-     /tmp/ccoB86LE.s:1955   .rodata._ZTIN5zxing7CountedE:0000000000000000 _ZTIN5zxing7CountedE
-     /tmp/ccoB86LE.s:1952   .rodata._ZTIN5zxing7CountedE:0000000000000000 $d
-     /tmp/ccoB86LE.s:1963   .rodata._ZTSN5zxing8ArrayRefIcEE:0000000000000000 _ZTSN5zxing8ArrayRefIcEE
-     /tmp/ccoB86LE.s:1960   .rodata._ZTSN5zxing8ArrayRefIcEE:0000000000000000 $d
-     /tmp/ccoB86LE.s:1970   .rodata._ZTIN5zxing8ArrayRefIcEE:0000000000000000 _ZTIN5zxing8ArrayRefIcEE
-     /tmp/ccoB86LE.s:1967   .rodata._ZTIN5zxing8ArrayRefIcEE:0000000000000000 $d
-     /tmp/ccoB86LE.s:1979   .rodata._ZTSN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE:0000000000000000 _ZTSN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE
-     /tmp/ccoB86LE.s:1976   .rodata._ZTSN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE:0000000000000000 $d
-     /tmp/ccoB86LE.s:1986   .rodata._ZTIN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE:0000000000000000 _ZTIN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE
-     /tmp/ccoB86LE.s:1983   .rodata._ZTIN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE:0000000000000000 $d
-     /tmp/ccoB86LE.s:2032   .rodata._ZTSN5zxing6qrcode12QRCodeReaderE:0000000000000000 _ZTSN5zxing6qrcode12QRCodeReaderE
-     /tmp/ccoB86LE.s:2024   .rodata._ZTIN5zxing6qrcode12QRCodeReaderE:0000000000000000 _ZTIN5zxing6qrcode12QRCodeReaderE
-     /tmp/ccoB86LE.s:1994   .rodata._ZTVN5zxing8ArrayRefIcEE:0000000000000000 $d
-     /tmp/ccoB86LE.s:2004   .rodata._ZTVN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE:0000000000000000 $d
-     /tmp/ccoB86LE.s:2039   .rodata._ZTVN5zxing6qrcode12QRCodeReaderE:0000000000000000 _ZTVN5zxing6qrcode12QRCodeReaderE
-     /tmp/ccoB86LE.s:2014   .bss._ZStL8__ioinit:0000000000000000 $d
-     /tmp/ccoB86LE.s:2018   .bss._ZStL8__ioinit:0000000000000000 _ZStL8__ioinit
-     /tmp/ccoB86LE.s:2021   .rodata._ZTIN5zxing6qrcode12QRCodeReaderE:0000000000000000 $d
-     /tmp/ccoB86LE.s:2029   .rodata._ZTSN5zxing6qrcode12QRCodeReaderE:0000000000000000 $d
-     /tmp/ccoB86LE.s:2035   .rodata._ZTVN5zxing6qrcode12QRCodeReaderE:0000000000000000 $d
+     /tmp/ccFPOSYl.s:1941   .init_array:0000000000000000 $d
+     /tmp/ccFPOSYl.s:1948   .rodata._ZTSN5zxing7CountedE:0000000000000000 _ZTSN5zxing7CountedE
+     /tmp/ccFPOSYl.s:1945   .rodata._ZTSN5zxing7CountedE:0000000000000000 $d
+     /tmp/ccFPOSYl.s:1955   .rodata._ZTIN5zxing7CountedE:0000000000000000 _ZTIN5zxing7CountedE
+     /tmp/ccFPOSYl.s:1952   .rodata._ZTIN5zxing7CountedE:0000000000000000 $d
+     /tmp/ccFPOSYl.s:1963   .rodata._ZTSN5zxing8ArrayRefIcEE:0000000000000000 _ZTSN5zxing8ArrayRefIcEE
+     /tmp/ccFPOSYl.s:1960   .rodata._ZTSN5zxing8ArrayRefIcEE:0000000000000000 $d
+     /tmp/ccFPOSYl.s:1970   .rodata._ZTIN5zxing8ArrayRefIcEE:0000000000000000 _ZTIN5zxing8ArrayRefIcEE
+     /tmp/ccFPOSYl.s:1967   .rodata._ZTIN5zxing8ArrayRefIcEE:0000000000000000 $d
+     /tmp/ccFPOSYl.s:1979   .rodata._ZTSN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE:0000000000000000 _ZTSN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE
+     /tmp/ccFPOSYl.s:1976   .rodata._ZTSN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE:0000000000000000 $d
+     /tmp/ccFPOSYl.s:1986   .rodata._ZTIN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE:0000000000000000 _ZTIN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE
+     /tmp/ccFPOSYl.s:1983   .rodata._ZTIN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE:0000000000000000 $d
+     /tmp/ccFPOSYl.s:2032   .rodata._ZTSN5zxing6qrcode12QRCodeReaderE:0000000000000000 _ZTSN5zxing6qrcode12QRCodeReaderE
+     /tmp/ccFPOSYl.s:2024   .rodata._ZTIN5zxing6qrcode12QRCodeReaderE:0000000000000000 _ZTIN5zxing6qrcode12QRCodeReaderE
+     /tmp/ccFPOSYl.s:1994   .rodata._ZTVN5zxing8ArrayRefIcEE:0000000000000000 $d
+     /tmp/ccFPOSYl.s:2004   .rodata._ZTVN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE:0000000000000000 $d
+     /tmp/ccFPOSYl.s:2039   .rodata._ZTVN5zxing6qrcode12QRCodeReaderE:0000000000000000 _ZTVN5zxing6qrcode12QRCodeReaderE
+     /tmp/ccFPOSYl.s:2014   .bss._ZStL8__ioinit:0000000000000000 $d
+     /tmp/ccFPOSYl.s:2018   .bss._ZStL8__ioinit:0000000000000000 _ZStL8__ioinit
+     /tmp/ccFPOSYl.s:2021   .rodata._ZTIN5zxing6qrcode12QRCodeReaderE:0000000000000000 $d
+     /tmp/ccFPOSYl.s:2029   .rodata._ZTSN5zxing6qrcode12QRCodeReaderE:0000000000000000 $d
+     /tmp/ccFPOSYl.s:2035   .rodata._ZTVN5zxing6qrcode12QRCodeReaderE:0000000000000000 $d
                      .debug_frame:0000000000000010 $d
                            .group:0000000000000000 _ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED5Ev
                            .group:0000000000000000 _ZN5zxing8ArrayRefIcED5Ev

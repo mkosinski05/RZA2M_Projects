@@ -4957,44 +4957,44 @@
  1318              		.file 60 "/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/on
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 EAN8Reader.cpp
-     /tmp/cczPk2Sb.s:17     .text._ZN5zxing4oned10EAN8Reader16getBarcodeFormatEv:0000000000000000 $a
-     /tmp/cczPk2Sb.s:23     .text._ZN5zxing4oned10EAN8Reader16getBarcodeFormatEv:0000000000000000 _ZN5zxing4oned10EAN8Reader16getBarcodeFormatEv
+     /tmp/cc4V8oA9.s:17     .text._ZN5zxing4oned10EAN8Reader16getBarcodeFormatEv:0000000000000000 $a
+     /tmp/cc4V8oA9.s:23     .text._ZN5zxing4oned10EAN8Reader16getBarcodeFormatEv:0000000000000000 _ZN5zxing4oned10EAN8Reader16getBarcodeFormatEv
 .ARM.exidx.text._ZN5zxing4oned10EAN8Reader16getBarcodeFormatEv:0000000000000000 $d
-     /tmp/cczPk2Sb.s:43     .text._ZN5zxing4oned10EAN8ReaderD2Ev:0000000000000000 $a
-     /tmp/cczPk2Sb.s:49     .text._ZN5zxing4oned10EAN8ReaderD2Ev:0000000000000000 _ZN5zxing4oned10EAN8ReaderD2Ev
-     /tmp/cczPk2Sb.s:107    .text._ZN5zxing4oned10EAN8ReaderD2Ev:0000000000000030 $d
+     /tmp/cc4V8oA9.s:43     .text._ZN5zxing4oned10EAN8ReaderD2Ev:0000000000000000 $a
+     /tmp/cc4V8oA9.s:49     .text._ZN5zxing4oned10EAN8ReaderD2Ev:0000000000000000 _ZN5zxing4oned10EAN8ReaderD2Ev
+     /tmp/cc4V8oA9.s:107    .text._ZN5zxing4oned10EAN8ReaderD2Ev:0000000000000030 $d
 .ARM.exidx.text._ZN5zxing4oned10EAN8ReaderD2Ev:0000000000000000 $d
-     /tmp/cczPk2Sb.s:49     .text._ZN5zxing4oned10EAN8ReaderD2Ev:0000000000000000 _ZN5zxing4oned10EAN8ReaderD1Ev
-     /tmp/cczPk2Sb.s:116    .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $a
-     /tmp/cczPk2Sb.s:121    .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 _Z41__static_initialization_and_destruction_0ii
-     /tmp/cczPk2Sb.s:1228   .bss._ZStL8__ioinit:0000000000000000 .LANCHOR1
+     /tmp/cc4V8oA9.s:49     .text._ZN5zxing4oned10EAN8ReaderD2Ev:0000000000000000 _ZN5zxing4oned10EAN8ReaderD1Ev
+     /tmp/cc4V8oA9.s:116    .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $a
+     /tmp/cc4V8oA9.s:121    .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 _Z41__static_initialization_and_destruction_0ii
+     /tmp/cc4V8oA9.s:1228   .bss._ZStL8__ioinit:0000000000000000 .LANCHOR1
 .ARM.exidx.text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $d
-     /tmp/cczPk2Sb.s:162    .text._ZN5zxing4oned10EAN8ReaderD0Ev:0000000000000000 $a
-     /tmp/cczPk2Sb.s:168    .text._ZN5zxing4oned10EAN8ReaderD0Ev:0000000000000000 _ZN5zxing4oned10EAN8ReaderD0Ev
-     /tmp/cczPk2Sb.s:230    .text._ZN5zxing4oned10EAN8ReaderD0Ev:000000000000003c $d
+     /tmp/cc4V8oA9.s:162    .text._ZN5zxing4oned10EAN8ReaderD0Ev:0000000000000000 $a
+     /tmp/cc4V8oA9.s:168    .text._ZN5zxing4oned10EAN8ReaderD0Ev:0000000000000000 _ZN5zxing4oned10EAN8ReaderD0Ev
+     /tmp/cc4V8oA9.s:230    .text._ZN5zxing4oned10EAN8ReaderD0Ev:000000000000003c $d
 .ARM.exidx.text._ZN5zxing4oned10EAN8ReaderD0Ev:0000000000000000 $d
-     /tmp/cczPk2Sb.s:237    .text._ZN5zxing4oned10EAN8Reader12decodeMiddleENS_3RefINS_8BitArrayEEERKNS0_10OneDReader5RangeERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE:0000000000000000 $a
-     /tmp/cczPk2Sb.s:243    .text._ZN5zxing4oned10EAN8Reader12decodeMiddleENS_3RefINS_8BitArrayEEERKNS0_10OneDReader5RangeERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE:0000000000000000 _ZN5zxing4oned10EAN8Reader12decodeMiddleENS_3RefINS_8BitArrayEEERKNS0_10OneDReader5RangeERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+     /tmp/cc4V8oA9.s:237    .text._ZN5zxing4oned10EAN8Reader12decodeMiddleENS_3RefINS_8BitArrayEEERKNS0_10OneDReader5RangeERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE:0000000000000000 $a
+     /tmp/cc4V8oA9.s:243    .text._ZN5zxing4oned10EAN8Reader12decodeMiddleENS_3RefINS_8BitArrayEEERKNS0_10OneDReader5RangeERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE:0000000000000000 _ZN5zxing4oned10EAN8Reader12decodeMiddleENS_3RefINS_8BitArrayEEERKNS0_10OneDReader5RangeERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
 .ARM.extab.text._ZN5zxing4oned10EAN8Reader12decodeMiddleENS_3RefINS_8BitArrayEEERKNS0_10OneDReader5RangeERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing4oned10EAN8Reader12decodeMiddleENS_3RefINS_8BitArrayEEERKNS0_10OneDReader5RangeERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE:0000000000000000 $d
-     /tmp/cczPk2Sb.s:1024   .text._ZN5zxing4oned10EAN8ReaderC2Ev:0000000000000000 $a
-     /tmp/cczPk2Sb.s:1030   .text._ZN5zxing4oned10EAN8ReaderC2Ev:0000000000000000 _ZN5zxing4oned10EAN8ReaderC2Ev
-     /tmp/cczPk2Sb.s:1163   .text._ZN5zxing4oned10EAN8ReaderC2Ev:0000000000000074 $d
+     /tmp/cc4V8oA9.s:1024   .text._ZN5zxing4oned10EAN8ReaderC2Ev:0000000000000000 $a
+     /tmp/cc4V8oA9.s:1030   .text._ZN5zxing4oned10EAN8ReaderC2Ev:0000000000000000 _ZN5zxing4oned10EAN8ReaderC2Ev
+     /tmp/cc4V8oA9.s:1163   .text._ZN5zxing4oned10EAN8ReaderC2Ev:0000000000000074 $d
 .ARM.extab.text._ZN5zxing4oned10EAN8ReaderC2Ev:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing4oned10EAN8ReaderC2Ev:0000000000000000 $d
-     /tmp/cczPk2Sb.s:1030   .text._ZN5zxing4oned10EAN8ReaderC2Ev:0000000000000000 _ZN5zxing4oned10EAN8ReaderC1Ev
-     /tmp/cczPk2Sb.s:1193   .text._GLOBAL__sub_I__ZN5zxing4oned10EAN8ReaderC2Ev:0000000000000000 $a
-     /tmp/cczPk2Sb.s:1198   .text._GLOBAL__sub_I__ZN5zxing4oned10EAN8ReaderC2Ev:0000000000000000 _GLOBAL__sub_I__ZN5zxing4oned10EAN8ReaderC2Ev
+     /tmp/cc4V8oA9.s:1030   .text._ZN5zxing4oned10EAN8ReaderC2Ev:0000000000000000 _ZN5zxing4oned10EAN8ReaderC1Ev
+     /tmp/cc4V8oA9.s:1193   .text._GLOBAL__sub_I__ZN5zxing4oned10EAN8ReaderC2Ev:0000000000000000 $a
+     /tmp/cc4V8oA9.s:1198   .text._GLOBAL__sub_I__ZN5zxing4oned10EAN8ReaderC2Ev:0000000000000000 _GLOBAL__sub_I__ZN5zxing4oned10EAN8ReaderC2Ev
 .ARM.exidx.text._GLOBAL__sub_I__ZN5zxing4oned10EAN8ReaderC2Ev:0000000000000000 $d
-     /tmp/cczPk2Sb.s:1221   .init_array:0000000000000000 $d
-     /tmp/cczPk2Sb.s:1245   .rodata._ZTSN5zxing4oned10EAN8ReaderE:0000000000000000 _ZTSN5zxing4oned10EAN8ReaderE
-     /tmp/cczPk2Sb.s:1237   .rodata._ZTIN5zxing4oned10EAN8ReaderE:0000000000000000 _ZTIN5zxing4oned10EAN8ReaderE
-     /tmp/cczPk2Sb.s:1252   .rodata._ZTVN5zxing4oned10EAN8ReaderE:0000000000000000 _ZTVN5zxing4oned10EAN8ReaderE
-     /tmp/cczPk2Sb.s:1227   .bss._ZStL8__ioinit:0000000000000000 $d
-     /tmp/cczPk2Sb.s:1231   .bss._ZStL8__ioinit:0000000000000000 _ZStL8__ioinit
-     /tmp/cczPk2Sb.s:1234   .rodata._ZTIN5zxing4oned10EAN8ReaderE:0000000000000000 $d
-     /tmp/cczPk2Sb.s:1242   .rodata._ZTSN5zxing4oned10EAN8ReaderE:0000000000000000 $d
-     /tmp/cczPk2Sb.s:1248   .rodata._ZTVN5zxing4oned10EAN8ReaderE:0000000000000000 $d
+     /tmp/cc4V8oA9.s:1221   .init_array:0000000000000000 $d
+     /tmp/cc4V8oA9.s:1245   .rodata._ZTSN5zxing4oned10EAN8ReaderE:0000000000000000 _ZTSN5zxing4oned10EAN8ReaderE
+     /tmp/cc4V8oA9.s:1237   .rodata._ZTIN5zxing4oned10EAN8ReaderE:0000000000000000 _ZTIN5zxing4oned10EAN8ReaderE
+     /tmp/cc4V8oA9.s:1252   .rodata._ZTVN5zxing4oned10EAN8ReaderE:0000000000000000 _ZTVN5zxing4oned10EAN8ReaderE
+     /tmp/cc4V8oA9.s:1227   .bss._ZStL8__ioinit:0000000000000000 $d
+     /tmp/cc4V8oA9.s:1231   .bss._ZStL8__ioinit:0000000000000000 _ZStL8__ioinit
+     /tmp/cc4V8oA9.s:1234   .rodata._ZTIN5zxing4oned10EAN8ReaderE:0000000000000000 $d
+     /tmp/cc4V8oA9.s:1242   .rodata._ZTSN5zxing4oned10EAN8ReaderE:0000000000000000 $d
+     /tmp/cc4V8oA9.s:1248   .rodata._ZTVN5zxing4oned10EAN8ReaderE:0000000000000000 $d
                      .debug_frame:0000000000000010 $d
                            .group:0000000000000000 _ZN5zxing4oned10EAN8ReaderD5Ev
                            .group:0000000000000000 wm4.0.cd1e96de8a8c4f34e746a820772853ad

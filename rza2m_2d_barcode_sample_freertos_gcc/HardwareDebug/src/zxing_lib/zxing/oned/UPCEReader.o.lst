@@ -11141,94 +11141,94 @@
  4223              		.file 68 "/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/on
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 UPCEReader.cpp
-     /tmp/ccsvecqt.s:17     .text._ZN5zxing4oned10UPCEReader16getBarcodeFormatEv:0000000000000000 $a
-     /tmp/ccsvecqt.s:23     .text._ZN5zxing4oned10UPCEReader16getBarcodeFormatEv:0000000000000000 _ZN5zxing4oned10UPCEReader16getBarcodeFormatEv
+     /tmp/ccuI4w8D.s:17     .text._ZN5zxing4oned10UPCEReader16getBarcodeFormatEv:0000000000000000 $a
+     /tmp/ccuI4w8D.s:23     .text._ZN5zxing4oned10UPCEReader16getBarcodeFormatEv:0000000000000000 _ZN5zxing4oned10UPCEReader16getBarcodeFormatEv
 .ARM.exidx.text._ZN5zxing4oned10UPCEReader16getBarcodeFormatEv:0000000000000000 $d
-     /tmp/ccsvecqt.s:43     .text._ZNSt6vectorIiSaIiEED2Ev:0000000000000000 $a
-     /tmp/ccsvecqt.s:49     .text._ZNSt6vectorIiSaIiEED2Ev:0000000000000000 _ZNSt6vectorIiSaIiEED2Ev
+     /tmp/ccuI4w8D.s:43     .text._ZNSt6vectorIiSaIiEED2Ev:0000000000000000 $a
+     /tmp/ccuI4w8D.s:49     .text._ZNSt6vectorIiSaIiEED2Ev:0000000000000000 _ZNSt6vectorIiSaIiEED2Ev
 .ARM.exidx.text._ZNSt6vectorIiSaIiEED2Ev:0000000000000000 $d
-     /tmp/ccsvecqt.s:49     .text._ZNSt6vectorIiSaIiEED2Ev:0000000000000000 _ZNSt6vectorIiSaIiEED1Ev
-     /tmp/ccsvecqt.s:100    .text._ZN5zxing4oned10UPCEReader9decodeEndENS_3RefINS_8BitArrayEEEi:0000000000000000 $a
-     /tmp/ccsvecqt.s:106    .text._ZN5zxing4oned10UPCEReader9decodeEndENS_3RefINS_8BitArrayEEEi:0000000000000000 _ZN5zxing4oned10UPCEReader9decodeEndENS_3RefINS_8BitArrayEEEi
-     /tmp/ccsvecqt.s:4057   .bss._ZN12_GLOBAL__N_1L18MIDDLE_END_PATTERNE:0000000000000000 .LANCHOR0
+     /tmp/ccuI4w8D.s:49     .text._ZNSt6vectorIiSaIiEED2Ev:0000000000000000 _ZNSt6vectorIiSaIiEED1Ev
+     /tmp/ccuI4w8D.s:100    .text._ZN5zxing4oned10UPCEReader9decodeEndENS_3RefINS_8BitArrayEEEi:0000000000000000 $a
+     /tmp/ccuI4w8D.s:106    .text._ZN5zxing4oned10UPCEReader9decodeEndENS_3RefINS_8BitArrayEEEi:0000000000000000 _ZN5zxing4oned10UPCEReader9decodeEndENS_3RefINS_8BitArrayEEEi
+     /tmp/ccuI4w8D.s:4057   .bss._ZN12_GLOBAL__N_1L18MIDDLE_END_PATTERNE:0000000000000000 .LANCHOR0
 .ARM.extab.text._ZN5zxing4oned10UPCEReader9decodeEndENS_3RefINS_8BitArrayEEEi:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing4oned10UPCEReader9decodeEndENS_3RefINS_8BitArrayEEEi:0000000000000000 $d
-     /tmp/ccsvecqt.s:334    .text._ZN5zxing4oned10UPCEReaderD2Ev:0000000000000000 $a
-     /tmp/ccsvecqt.s:340    .text._ZN5zxing4oned10UPCEReaderD2Ev:0000000000000000 _ZN5zxing4oned10UPCEReaderD2Ev
-     /tmp/ccsvecqt.s:396    .text._ZN5zxing4oned10UPCEReaderD2Ev:0000000000000030 $d
+     /tmp/ccuI4w8D.s:334    .text._ZN5zxing4oned10UPCEReaderD2Ev:0000000000000000 $a
+     /tmp/ccuI4w8D.s:340    .text._ZN5zxing4oned10UPCEReaderD2Ev:0000000000000000 _ZN5zxing4oned10UPCEReaderD2Ev
+     /tmp/ccuI4w8D.s:396    .text._ZN5zxing4oned10UPCEReaderD2Ev:0000000000000030 $d
 .ARM.exidx.text._ZN5zxing4oned10UPCEReaderD2Ev:0000000000000000 $d
-     /tmp/ccsvecqt.s:340    .text._ZN5zxing4oned10UPCEReaderD2Ev:0000000000000000 _ZN5zxing4oned10UPCEReaderD1Ev
-     /tmp/ccsvecqt.s:405    .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $a
-     /tmp/ccsvecqt.s:410    .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 _Z41__static_initialization_and_destruction_0ii
-     /tmp/ccsvecqt.s:4064   .bss._ZStL8__ioinit:0000000000000000 .LANCHOR2
-     /tmp/ccsvecqt.s:4071   .rodata._ZN12_GLOBAL__N_1L19MIDDLE_END_PATTERN_E:0000000000000000 .LANCHOR3
+     /tmp/ccuI4w8D.s:340    .text._ZN5zxing4oned10UPCEReaderD2Ev:0000000000000000 _ZN5zxing4oned10UPCEReaderD1Ev
+     /tmp/ccuI4w8D.s:405    .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $a
+     /tmp/ccuI4w8D.s:410    .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 _Z41__static_initialization_and_destruction_0ii
+     /tmp/ccuI4w8D.s:4064   .bss._ZStL8__ioinit:0000000000000000 .LANCHOR2
+     /tmp/ccuI4w8D.s:4071   .rodata._ZN12_GLOBAL__N_1L19MIDDLE_END_PATTERN_E:0000000000000000 .LANCHOR3
 .ARM.extab.text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $d
 .ARM.exidx.text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $d
-     /tmp/ccsvecqt.s:602    .text._ZN5zxing4oned10UPCEReaderD0Ev:0000000000000000 $a
-     /tmp/ccsvecqt.s:608    .text._ZN5zxing4oned10UPCEReaderD0Ev:0000000000000000 _ZN5zxing4oned10UPCEReaderD0Ev
-     /tmp/ccsvecqt.s:670    .text._ZN5zxing4oned10UPCEReaderD0Ev:000000000000003c $d
+     /tmp/ccuI4w8D.s:602    .text._ZN5zxing4oned10UPCEReaderD0Ev:0000000000000000 $a
+     /tmp/ccuI4w8D.s:608    .text._ZN5zxing4oned10UPCEReaderD0Ev:0000000000000000 _ZN5zxing4oned10UPCEReaderD0Ev
+     /tmp/ccuI4w8D.s:670    .text._ZN5zxing4oned10UPCEReaderD0Ev:000000000000003c $d
 .ARM.exidx.text._ZN5zxing4oned10UPCEReaderD0Ev:0000000000000000 $d
-     /tmp/ccsvecqt.s:677    .text._ZN5zxing4oned10UPCEReaderC2Ev:0000000000000000 $a
-     /tmp/ccsvecqt.s:683    .text._ZN5zxing4oned10UPCEReaderC2Ev:0000000000000000 _ZN5zxing4oned10UPCEReaderC2Ev
-     /tmp/ccsvecqt.s:725    .text._ZN5zxing4oned10UPCEReaderC2Ev:000000000000002c $d
+     /tmp/ccuI4w8D.s:677    .text._ZN5zxing4oned10UPCEReaderC2Ev:0000000000000000 $a
+     /tmp/ccuI4w8D.s:683    .text._ZN5zxing4oned10UPCEReaderC2Ev:0000000000000000 _ZN5zxing4oned10UPCEReaderC2Ev
+     /tmp/ccuI4w8D.s:725    .text._ZN5zxing4oned10UPCEReaderC2Ev:000000000000002c $d
 .ARM.exidx.text._ZN5zxing4oned10UPCEReaderC2Ev:0000000000000000 $d
-     /tmp/ccsvecqt.s:683    .text._ZN5zxing4oned10UPCEReaderC2Ev:0000000000000000 _ZN5zxing4oned10UPCEReaderC1Ev
-     /tmp/ccsvecqt.s:733    .text._ZN5zxing4oned10UPCEReader28determineNumSysAndCheckDigitERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi:0000000000000000 $a
-     /tmp/ccsvecqt.s:739    .text._ZN5zxing4oned10UPCEReader28determineNumSysAndCheckDigitERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi:0000000000000000 _ZN5zxing4oned10UPCEReader28determineNumSysAndCheckDigitERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi
-     /tmp/ccsvecqt.s:4083   .rodata._ZN12_GLOBAL__N_1L31NUMSYS_AND_CHECK_DIGIT_PATTERNSE:0000000000000000 .LANCHOR4
+     /tmp/ccuI4w8D.s:683    .text._ZN5zxing4oned10UPCEReaderC2Ev:0000000000000000 _ZN5zxing4oned10UPCEReaderC1Ev
+     /tmp/ccuI4w8D.s:733    .text._ZN5zxing4oned10UPCEReader28determineNumSysAndCheckDigitERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi:0000000000000000 $a
+     /tmp/ccuI4w8D.s:739    .text._ZN5zxing4oned10UPCEReader28determineNumSysAndCheckDigitERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi:0000000000000000 _ZN5zxing4oned10UPCEReader28determineNumSysAndCheckDigitERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi
+     /tmp/ccuI4w8D.s:4083   .rodata._ZN12_GLOBAL__N_1L31NUMSYS_AND_CHECK_DIGIT_PATTERNSE:0000000000000000 .LANCHOR4
 .ARM.exidx.text._ZN5zxing4oned10UPCEReader28determineNumSysAndCheckDigitERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi:0000000000000000 $d
-     /tmp/ccsvecqt.s:848    .text._ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag:0000000000000000 $a
-     /tmp/ccsvecqt.s:854    .text._ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag:0000000000000000 _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag
-     /tmp/ccsvecqt.s:4133   .rodata._ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag.str1.4:0000000000000000 .LC0
+     /tmp/ccuI4w8D.s:848    .text._ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag:0000000000000000 $a
+     /tmp/ccuI4w8D.s:854    .text._ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag:0000000000000000 _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag
+     /tmp/ccuI4w8D.s:4133   .rodata._ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag.str1.4:0000000000000000 .LC0
 .ARM.exidx.text._ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag:0000000000000000 $d
-     /tmp/ccsvecqt.s:1040   .text._ZN5zxing4oned10UPCEReader17convertUPCEtoUPCAERKNS_3RefINS_6StringEEE:0000000000000000 $a
-     /tmp/ccsvecqt.s:1046   .text._ZN5zxing4oned10UPCEReader17convertUPCEtoUPCAERKNS_3RefINS_6StringEEE:0000000000000000 _ZN5zxing4oned10UPCEReader17convertUPCEtoUPCAERKNS_3RefINS_6StringEEE
-     /tmp/ccsvecqt.s:1165   .text._ZN5zxing4oned10UPCEReader17convertUPCEtoUPCAERKNS_3RefINS_6StringEEE:0000000000000070 $d
-     /tmp/ccsvecqt.s:1179   .text._ZN5zxing4oned10UPCEReader17convertUPCEtoUPCAERKNS_3RefINS_6StringEEE:0000000000000084 $a
-     /tmp/ccsvecqt.s:4109   .rodata._ZN5zxing4oned10UPCEReader17convertUPCEtoUPCAERKNS_3RefINS_6StringEEE.str1.4:0000000000000000 .LC1
-     /tmp/ccsvecqt.s:4112   .rodata._ZN5zxing4oned10UPCEReader17convertUPCEtoUPCAERKNS_3RefINS_6StringEEE.str1.4:0000000000000018 .LC2
-     /tmp/ccsvecqt.s:4116   .rodata._ZN5zxing4oned10UPCEReader17convertUPCEtoUPCAERKNS_3RefINS_6StringEEE.str1.4:0000000000000050 .LC3
-     /tmp/ccsvecqt.s:4122   .rodata._ZN5zxing4oned10UPCEReader17convertUPCEtoUPCAERKNS_3RefINS_6StringEEE.str1.4:0000000000000084 .LC5
-     /tmp/ccsvecqt.s:4119   .rodata._ZN5zxing4oned10UPCEReader17convertUPCEtoUPCAERKNS_3RefINS_6StringEEE.str1.4:000000000000006c .LC4
-     /tmp/ccsvecqt.s:4125   .rodata._ZN5zxing4oned10UPCEReader17convertUPCEtoUPCAERKNS_3RefINS_6StringEEE.str1.4:000000000000008c .LC6
+     /tmp/ccuI4w8D.s:1040   .text._ZN5zxing4oned10UPCEReader17convertUPCEtoUPCAERKNS_3RefINS_6StringEEE:0000000000000000 $a
+     /tmp/ccuI4w8D.s:1046   .text._ZN5zxing4oned10UPCEReader17convertUPCEtoUPCAERKNS_3RefINS_6StringEEE:0000000000000000 _ZN5zxing4oned10UPCEReader17convertUPCEtoUPCAERKNS_3RefINS_6StringEEE
+     /tmp/ccuI4w8D.s:1165   .text._ZN5zxing4oned10UPCEReader17convertUPCEtoUPCAERKNS_3RefINS_6StringEEE:0000000000000070 $d
+     /tmp/ccuI4w8D.s:1179   .text._ZN5zxing4oned10UPCEReader17convertUPCEtoUPCAERKNS_3RefINS_6StringEEE:0000000000000084 $a
+     /tmp/ccuI4w8D.s:4109   .rodata._ZN5zxing4oned10UPCEReader17convertUPCEtoUPCAERKNS_3RefINS_6StringEEE.str1.4:0000000000000000 .LC1
+     /tmp/ccuI4w8D.s:4112   .rodata._ZN5zxing4oned10UPCEReader17convertUPCEtoUPCAERKNS_3RefINS_6StringEEE.str1.4:0000000000000018 .LC2
+     /tmp/ccuI4w8D.s:4116   .rodata._ZN5zxing4oned10UPCEReader17convertUPCEtoUPCAERKNS_3RefINS_6StringEEE.str1.4:0000000000000050 .LC3
+     /tmp/ccuI4w8D.s:4122   .rodata._ZN5zxing4oned10UPCEReader17convertUPCEtoUPCAERKNS_3RefINS_6StringEEE.str1.4:0000000000000084 .LC5
+     /tmp/ccuI4w8D.s:4119   .rodata._ZN5zxing4oned10UPCEReader17convertUPCEtoUPCAERKNS_3RefINS_6StringEEE.str1.4:000000000000006c .LC4
+     /tmp/ccuI4w8D.s:4125   .rodata._ZN5zxing4oned10UPCEReader17convertUPCEtoUPCAERKNS_3RefINS_6StringEEE.str1.4:000000000000008c .LC6
 .ARM.extab.text._ZN5zxing4oned10UPCEReader17convertUPCEtoUPCAERKNS_3RefINS_6StringEEE:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing4oned10UPCEReader17convertUPCEtoUPCAERKNS_3RefINS_6StringEEE:0000000000000000 $d
-     /tmp/ccsvecqt.s:3068   .text._ZSt12__miter_baseIPiEDTcl12__miter_basecldtfp_4baseEEESt13move_iteratorIT_E:0000000000000000 $a
-     /tmp/ccsvecqt.s:3074   .text._ZSt12__miter_baseIPiEDTcl12__miter_basecldtfp_4baseEEESt13move_iteratorIT_E:0000000000000000 _ZSt12__miter_baseIPiEDTcl12__miter_basecldtfp_4baseEEESt13move_iteratorIT_E
+     /tmp/ccuI4w8D.s:3068   .text._ZSt12__miter_baseIPiEDTcl12__miter_basecldtfp_4baseEEESt13move_iteratorIT_E:0000000000000000 $a
+     /tmp/ccuI4w8D.s:3074   .text._ZSt12__miter_baseIPiEDTcl12__miter_basecldtfp_4baseEEESt13move_iteratorIT_E:0000000000000000 _ZSt12__miter_baseIPiEDTcl12__miter_basecldtfp_4baseEEESt13move_iteratorIT_E
 .ARM.exidx.text._ZSt12__miter_baseIPiEDTcl12__miter_basecldtfp_4baseEEESt13move_iteratorIT_E:0000000000000000 $d
-     /tmp/ccsvecqt.s:3093   .text._ZNSt6vectorIiSaIiEE17_M_default_appendEj:0000000000000000 $a
-     /tmp/ccsvecqt.s:3099   .text._ZNSt6vectorIiSaIiEE17_M_default_appendEj:0000000000000000 _ZNSt6vectorIiSaIiEE17_M_default_appendEj
-     /tmp/ccsvecqt.s:4129   .rodata._ZNSt6vectorIiSaIiEE17_M_default_appendEj.str1.4:0000000000000000 .LC7
+     /tmp/ccuI4w8D.s:3093   .text._ZNSt6vectorIiSaIiEE17_M_default_appendEj:0000000000000000 $a
+     /tmp/ccuI4w8D.s:3099   .text._ZNSt6vectorIiSaIiEE17_M_default_appendEj:0000000000000000 _ZNSt6vectorIiSaIiEE17_M_default_appendEj
+     /tmp/ccuI4w8D.s:4129   .rodata._ZNSt6vectorIiSaIiEE17_M_default_appendEj.str1.4:0000000000000000 .LC7
 .ARM.exidx.text._ZNSt6vectorIiSaIiEE17_M_default_appendEj:0000000000000000 $d
-     /tmp/ccsvecqt.s:3465   .text._ZN5zxing4oned10UPCEReader12decodeMiddleENS_3RefINS_8BitArrayEEERKNS0_10OneDReader5RangeERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE:0000000000000000 $a
-     /tmp/ccsvecqt.s:3471   .text._ZN5zxing4oned10UPCEReader12decodeMiddleENS_3RefINS_8BitArrayEEERKNS0_10OneDReader5RangeERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE:0000000000000000 _ZN5zxing4oned10UPCEReader12decodeMiddleENS_3RefINS_8BitArrayEEERKNS0_10OneDReader5RangeERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+     /tmp/ccuI4w8D.s:3465   .text._ZN5zxing4oned10UPCEReader12decodeMiddleENS_3RefINS_8BitArrayEEERKNS0_10OneDReader5RangeERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE:0000000000000000 $a
+     /tmp/ccuI4w8D.s:3471   .text._ZN5zxing4oned10UPCEReader12decodeMiddleENS_3RefINS_8BitArrayEEERKNS0_10OneDReader5RangeERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE:0000000000000000 _ZN5zxing4oned10UPCEReader12decodeMiddleENS_3RefINS_8BitArrayEEERKNS0_10OneDReader5RangeERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
 .ARM.extab.text._ZN5zxing4oned10UPCEReader12decodeMiddleENS_3RefINS_8BitArrayEEERKNS0_10OneDReader5RangeERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing4oned10UPCEReader12decodeMiddleENS_3RefINS_8BitArrayEEERKNS0_10OneDReader5RangeERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE:0000000000000000 $d
-     /tmp/ccsvecqt.s:3868   .text._GLOBAL__sub_I__ZN5zxing4oned10UPCEReaderC2Ev:0000000000000000 $a
-     /tmp/ccsvecqt.s:3873   .text._GLOBAL__sub_I__ZN5zxing4oned10UPCEReaderC2Ev:0000000000000000 _GLOBAL__sub_I__ZN5zxing4oned10UPCEReaderC2Ev
+     /tmp/ccuI4w8D.s:3868   .text._GLOBAL__sub_I__ZN5zxing4oned10UPCEReaderC2Ev:0000000000000000 $a
+     /tmp/ccuI4w8D.s:3873   .text._GLOBAL__sub_I__ZN5zxing4oned10UPCEReaderC2Ev:0000000000000000 _GLOBAL__sub_I__ZN5zxing4oned10UPCEReaderC2Ev
 .ARM.exidx.text._GLOBAL__sub_I__ZN5zxing4oned10UPCEReaderC2Ev:0000000000000000 $d
-     /tmp/ccsvecqt.s:3896   .init_array:0000000000000000 $d
-     /tmp/ccsvecqt.s:3899   .text._ZN5zxing4oned10UPCEReader13checkChecksumERKNS_3RefINS_6StringEEE:0000000000000000 $a
-     /tmp/ccsvecqt.s:3905   .text._ZN5zxing4oned10UPCEReader13checkChecksumERKNS_3RefINS_6StringEEE:0000000000000000 _ZN5zxing4oned10UPCEReader13checkChecksumERKNS_3RefINS_6StringEEE
+     /tmp/ccuI4w8D.s:3896   .init_array:0000000000000000 $d
+     /tmp/ccuI4w8D.s:3899   .text._ZN5zxing4oned10UPCEReader13checkChecksumERKNS_3RefINS_6StringEEE:0000000000000000 $a
+     /tmp/ccuI4w8D.s:3905   .text._ZN5zxing4oned10UPCEReader13checkChecksumERKNS_3RefINS_6StringEEE:0000000000000000 _ZN5zxing4oned10UPCEReader13checkChecksumERKNS_3RefINS_6StringEEE
 .ARM.extab.text._ZN5zxing4oned10UPCEReader13checkChecksumERKNS_3RefINS_6StringEEE:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing4oned10UPCEReader13checkChecksumERKNS_3RefINS_6StringEEE:0000000000000000 $d
-     /tmp/ccsvecqt.s:4147   .rodata._ZTSN5zxing4oned10UPCEReaderE:0000000000000000 _ZTSN5zxing4oned10UPCEReaderE
-     /tmp/ccsvecqt.s:4139   .rodata._ZTIN5zxing4oned10UPCEReaderE:0000000000000000 _ZTIN5zxing4oned10UPCEReaderE
-     /tmp/ccsvecqt.s:4154   .rodata._ZTVN5zxing4oned10UPCEReaderE:0000000000000000 _ZTVN5zxing4oned10UPCEReaderE
-     /tmp/ccsvecqt.s:4056   .bss._ZN12_GLOBAL__N_1L18MIDDLE_END_PATTERNE:0000000000000000 $d
-     /tmp/ccsvecqt.s:4060   .bss._ZN12_GLOBAL__N_1L18MIDDLE_END_PATTERNE:0000000000000000 _ZN12_GLOBAL__N_1L18MIDDLE_END_PATTERNE
-     /tmp/ccsvecqt.s:4063   .bss._ZStL8__ioinit:0000000000000000 $d
-     /tmp/ccsvecqt.s:4067   .bss._ZStL8__ioinit:0000000000000000 _ZStL8__ioinit
-     /tmp/ccsvecqt.s:4070   .rodata._ZN12_GLOBAL__N_1L19MIDDLE_END_PATTERN_E:0000000000000000 $d
-     /tmp/ccsvecqt.s:4074   .rodata._ZN12_GLOBAL__N_1L19MIDDLE_END_PATTERN_E:0000000000000000 _ZN12_GLOBAL__N_1L19MIDDLE_END_PATTERN_E
-     /tmp/ccsvecqt.s:4082   .rodata._ZN12_GLOBAL__N_1L31NUMSYS_AND_CHECK_DIGIT_PATTERNSE:0000000000000000 $d
-     /tmp/ccsvecqt.s:4086   .rodata._ZN12_GLOBAL__N_1L31NUMSYS_AND_CHECK_DIGIT_PATTERNSE:0000000000000000 _ZN12_GLOBAL__N_1L31NUMSYS_AND_CHECK_DIGIT_PATTERNSE
-     /tmp/ccsvecqt.s:4108   .rodata._ZN5zxing4oned10UPCEReader17convertUPCEtoUPCAERKNS_3RefINS_6StringEEE.str1.4:0000000000000000 $d
-     /tmp/ccsvecqt.s:4128   .rodata._ZNSt6vectorIiSaIiEE17_M_default_appendEj.str1.4:0000000000000000 $d
-     /tmp/ccsvecqt.s:4132   .rodata._ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag.str1.4:0000000000000000 $d
-     /tmp/ccsvecqt.s:4136   .rodata._ZTIN5zxing4oned10UPCEReaderE:0000000000000000 $d
-     /tmp/ccsvecqt.s:4144   .rodata._ZTSN5zxing4oned10UPCEReaderE:0000000000000000 $d
-     /tmp/ccsvecqt.s:4150   .rodata._ZTVN5zxing4oned10UPCEReaderE:0000000000000000 $d
+     /tmp/ccuI4w8D.s:4147   .rodata._ZTSN5zxing4oned10UPCEReaderE:0000000000000000 _ZTSN5zxing4oned10UPCEReaderE
+     /tmp/ccuI4w8D.s:4139   .rodata._ZTIN5zxing4oned10UPCEReaderE:0000000000000000 _ZTIN5zxing4oned10UPCEReaderE
+     /tmp/ccuI4w8D.s:4154   .rodata._ZTVN5zxing4oned10UPCEReaderE:0000000000000000 _ZTVN5zxing4oned10UPCEReaderE
+     /tmp/ccuI4w8D.s:4056   .bss._ZN12_GLOBAL__N_1L18MIDDLE_END_PATTERNE:0000000000000000 $d
+     /tmp/ccuI4w8D.s:4060   .bss._ZN12_GLOBAL__N_1L18MIDDLE_END_PATTERNE:0000000000000000 _ZN12_GLOBAL__N_1L18MIDDLE_END_PATTERNE
+     /tmp/ccuI4w8D.s:4063   .bss._ZStL8__ioinit:0000000000000000 $d
+     /tmp/ccuI4w8D.s:4067   .bss._ZStL8__ioinit:0000000000000000 _ZStL8__ioinit
+     /tmp/ccuI4w8D.s:4070   .rodata._ZN12_GLOBAL__N_1L19MIDDLE_END_PATTERN_E:0000000000000000 $d
+     /tmp/ccuI4w8D.s:4074   .rodata._ZN12_GLOBAL__N_1L19MIDDLE_END_PATTERN_E:0000000000000000 _ZN12_GLOBAL__N_1L19MIDDLE_END_PATTERN_E
+     /tmp/ccuI4w8D.s:4082   .rodata._ZN12_GLOBAL__N_1L31NUMSYS_AND_CHECK_DIGIT_PATTERNSE:0000000000000000 $d
+     /tmp/ccuI4w8D.s:4086   .rodata._ZN12_GLOBAL__N_1L31NUMSYS_AND_CHECK_DIGIT_PATTERNSE:0000000000000000 _ZN12_GLOBAL__N_1L31NUMSYS_AND_CHECK_DIGIT_PATTERNSE
+     /tmp/ccuI4w8D.s:4108   .rodata._ZN5zxing4oned10UPCEReader17convertUPCEtoUPCAERKNS_3RefINS_6StringEEE.str1.4:0000000000000000 $d
+     /tmp/ccuI4w8D.s:4128   .rodata._ZNSt6vectorIiSaIiEE17_M_default_appendEj.str1.4:0000000000000000 $d
+     /tmp/ccuI4w8D.s:4132   .rodata._ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPKcEEvT_S8_St20forward_iterator_tag.str1.4:0000000000000000 $d
+     /tmp/ccuI4w8D.s:4136   .rodata._ZTIN5zxing4oned10UPCEReaderE:0000000000000000 $d
+     /tmp/ccuI4w8D.s:4144   .rodata._ZTSN5zxing4oned10UPCEReaderE:0000000000000000 $d
+     /tmp/ccuI4w8D.s:4150   .rodata._ZTVN5zxing4oned10UPCEReaderE:0000000000000000 $d
                      .debug_frame:0000000000000010 $d
                            .group:0000000000000000 _ZNSt6vectorIiSaIiEED5Ev
                            .group:0000000000000000 _ZN5zxing4oned10UPCEReaderD5Ev

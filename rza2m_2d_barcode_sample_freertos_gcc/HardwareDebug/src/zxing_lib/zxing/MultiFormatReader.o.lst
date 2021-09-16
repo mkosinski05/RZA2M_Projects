@@ -10635,106 +10635,106 @@
  7133              		.file 72 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 MultiFormatReader.cpp
-     /tmp/cc4hjW4T.s:17     .text._ZNK5zxing9Exception4whatEv:0000000000000000 $a
-     /tmp/cc4hjW4T.s:23     .text._ZNK5zxing9Exception4whatEv:0000000000000000 _ZNK5zxing9Exception4whatEv
-     /tmp/cc4hjW4T.s:7041   .rodata._ZNK5zxing9Exception4whatEv.str1.4:0000000000000000 .LC0
+     /tmp/ccDsxb5q.s:17     .text._ZNK5zxing9Exception4whatEv:0000000000000000 $a
+     /tmp/ccDsxb5q.s:23     .text._ZNK5zxing9Exception4whatEv:0000000000000000 _ZNK5zxing9Exception4whatEv
+     /tmp/ccDsxb5q.s:7041   .rodata._ZNK5zxing9Exception4whatEv.str1.4:0000000000000000 .LC0
 .ARM.exidx.text._ZNK5zxing9Exception4whatEv:0000000000000000 $d
-     /tmp/cc4hjW4T.s:47     .text._ZN5zxing9ExceptionD2Ev:0000000000000000 $a
-     /tmp/cc4hjW4T.s:53     .text._ZN5zxing9ExceptionD2Ev:0000000000000000 _ZN5zxing9ExceptionD2Ev
-     /tmp/cc4hjW4T.s:115    .text._ZN5zxing9ExceptionD2Ev:0000000000000058 $d
-     /tmp/cc4hjW4T.s:7010   .rodata._ZTVN5zxing9ExceptionE:0000000000000000 _ZTVN5zxing9ExceptionE
+     /tmp/ccDsxb5q.s:47     .text._ZN5zxing9ExceptionD2Ev:0000000000000000 $a
+     /tmp/ccDsxb5q.s:53     .text._ZN5zxing9ExceptionD2Ev:0000000000000000 _ZN5zxing9ExceptionD2Ev
+     /tmp/ccDsxb5q.s:115    .text._ZN5zxing9ExceptionD2Ev:0000000000000058 $d
+     /tmp/ccDsxb5q.s:7010   .rodata._ZTVN5zxing9ExceptionE:0000000000000000 _ZTVN5zxing9ExceptionE
 .ARM.extab.text._ZN5zxing9ExceptionD2Ev:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing9ExceptionD2Ev:0000000000000000 $d
-     /tmp/cc4hjW4T.s:53     .text._ZN5zxing9ExceptionD2Ev:0000000000000000 _ZN5zxing9ExceptionD1Ev
-     /tmp/cc4hjW4T.s:152    .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $a
-     /tmp/cc4hjW4T.s:157    .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 _Z41__static_initialization_and_destruction_0ii
-     /tmp/cc4hjW4T.s:7030   .bss._ZStL8__ioinit:0000000000000000 .LANCHOR0
+     /tmp/ccDsxb5q.s:53     .text._ZN5zxing9ExceptionD2Ev:0000000000000000 _ZN5zxing9ExceptionD1Ev
+     /tmp/ccDsxb5q.s:152    .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $a
+     /tmp/ccDsxb5q.s:157    .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 _Z41__static_initialization_and_destruction_0ii
+     /tmp/ccDsxb5q.s:7030   .bss._ZStL8__ioinit:0000000000000000 .LANCHOR0
 .ARM.exidx.text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $d
-     /tmp/cc4hjW4T.s:199    .text._ZN5zxing17MultiFormatReaderD2Ev:0000000000000000 $a
-     /tmp/cc4hjW4T.s:205    .text._ZN5zxing17MultiFormatReaderD2Ev:0000000000000000 _ZN5zxing17MultiFormatReaderD2Ev
-     /tmp/cc4hjW4T.s:376    .text._ZN5zxing17MultiFormatReaderD2Ev:00000000000000c0 $d
+     /tmp/ccDsxb5q.s:199    .text._ZN5zxing17MultiFormatReaderD2Ev:0000000000000000 $a
+     /tmp/ccDsxb5q.s:205    .text._ZN5zxing17MultiFormatReaderD2Ev:0000000000000000 _ZN5zxing17MultiFormatReaderD2Ev
+     /tmp/ccDsxb5q.s:376    .text._ZN5zxing17MultiFormatReaderD2Ev:00000000000000c0 $d
 .ARM.exidx.text._ZN5zxing17MultiFormatReaderD2Ev:0000000000000000 $d
-     /tmp/cc4hjW4T.s:205    .text._ZN5zxing17MultiFormatReaderD2Ev:0000000000000000 _ZN5zxing17MultiFormatReaderD1Ev
-     /tmp/cc4hjW4T.s:385    .text._ZN5zxing17MultiFormatReaderD0Ev:0000000000000000 $a
-     /tmp/cc4hjW4T.s:391    .text._ZN5zxing17MultiFormatReaderD0Ev:0000000000000000 _ZN5zxing17MultiFormatReaderD0Ev
+     /tmp/ccDsxb5q.s:205    .text._ZN5zxing17MultiFormatReaderD2Ev:0000000000000000 _ZN5zxing17MultiFormatReaderD1Ev
+     /tmp/ccDsxb5q.s:385    .text._ZN5zxing17MultiFormatReaderD0Ev:0000000000000000 $a
+     /tmp/ccDsxb5q.s:391    .text._ZN5zxing17MultiFormatReaderD0Ev:0000000000000000 _ZN5zxing17MultiFormatReaderD0Ev
 .ARM.exidx.text._ZN5zxing17MultiFormatReaderD0Ev:0000000000000000 $d
-     /tmp/cc4hjW4T.s:419    .text._ZN5zxing15ReaderExceptionD2Ev:0000000000000000 $a
-     /tmp/cc4hjW4T.s:425    .text._ZN5zxing15ReaderExceptionD2Ev:0000000000000000 _ZN5zxing15ReaderExceptionD2Ev
-     /tmp/cc4hjW4T.s:495    .text._ZN5zxing15ReaderExceptionD2Ev:0000000000000058 $d
+     /tmp/ccDsxb5q.s:419    .text._ZN5zxing15ReaderExceptionD2Ev:0000000000000000 $a
+     /tmp/ccDsxb5q.s:425    .text._ZN5zxing15ReaderExceptionD2Ev:0000000000000000 _ZN5zxing15ReaderExceptionD2Ev
+     /tmp/ccDsxb5q.s:495    .text._ZN5zxing15ReaderExceptionD2Ev:0000000000000058 $d
 .ARM.extab.text._ZN5zxing15ReaderExceptionD2Ev:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing15ReaderExceptionD2Ev:0000000000000000 $d
-     /tmp/cc4hjW4T.s:425    .text._ZN5zxing15ReaderExceptionD2Ev:0000000000000000 _ZN5zxing15ReaderExceptionD1Ev
-     /tmp/cc4hjW4T.s:531    .text._ZN5zxing9ExceptionD0Ev:0000000000000000 $a
-     /tmp/cc4hjW4T.s:537    .text._ZN5zxing9ExceptionD0Ev:0000000000000000 _ZN5zxing9ExceptionD0Ev
-     /tmp/cc4hjW4T.s:608    .text._ZN5zxing9ExceptionD0Ev:0000000000000064 $d
+     /tmp/ccDsxb5q.s:425    .text._ZN5zxing15ReaderExceptionD2Ev:0000000000000000 _ZN5zxing15ReaderExceptionD1Ev
+     /tmp/ccDsxb5q.s:531    .text._ZN5zxing9ExceptionD0Ev:0000000000000000 $a
+     /tmp/ccDsxb5q.s:537    .text._ZN5zxing9ExceptionD0Ev:0000000000000000 _ZN5zxing9ExceptionD0Ev
+     /tmp/ccDsxb5q.s:608    .text._ZN5zxing9ExceptionD0Ev:0000000000000064 $d
 .ARM.extab.text._ZN5zxing9ExceptionD0Ev:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing9ExceptionD0Ev:0000000000000000 $d
-     /tmp/cc4hjW4T.s:642    .text._ZN5zxing15ReaderExceptionD0Ev:0000000000000000 $a
-     /tmp/cc4hjW4T.s:648    .text._ZN5zxing15ReaderExceptionD0Ev:0000000000000000 _ZN5zxing15ReaderExceptionD0Ev
-     /tmp/cc4hjW4T.s:723    .text._ZN5zxing15ReaderExceptionD0Ev:0000000000000064 $d
+     /tmp/ccDsxb5q.s:642    .text._ZN5zxing15ReaderExceptionD0Ev:0000000000000000 $a
+     /tmp/ccDsxb5q.s:648    .text._ZN5zxing15ReaderExceptionD0Ev:0000000000000000 _ZN5zxing15ReaderExceptionD0Ev
+     /tmp/ccDsxb5q.s:723    .text._ZN5zxing15ReaderExceptionD0Ev:0000000000000064 $d
 .ARM.extab.text._ZN5zxing15ReaderExceptionD0Ev:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing15ReaderExceptionD0Ev:0000000000000000 $d
-     /tmp/cc4hjW4T.s:757    .text._ZN5zxing17MultiFormatReaderC2Ev:0000000000000000 $a
-     /tmp/cc4hjW4T.s:763    .text._ZN5zxing17MultiFormatReaderC2Ev:0000000000000000 _ZN5zxing17MultiFormatReaderC2Ev
-     /tmp/cc4hjW4T.s:921    .text._ZN5zxing17MultiFormatReaderC2Ev:00000000000000a8 $d
+     /tmp/ccDsxb5q.s:757    .text._ZN5zxing17MultiFormatReaderC2Ev:0000000000000000 $a
+     /tmp/ccDsxb5q.s:763    .text._ZN5zxing17MultiFormatReaderC2Ev:0000000000000000 _ZN5zxing17MultiFormatReaderC2Ev
+     /tmp/ccDsxb5q.s:921    .text._ZN5zxing17MultiFormatReaderC2Ev:00000000000000a8 $d
 .ARM.extab.text._ZN5zxing17MultiFormatReaderC2Ev:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing17MultiFormatReaderC2Ev:0000000000000000 $d
-     /tmp/cc4hjW4T.s:763    .text._ZN5zxing17MultiFormatReaderC2Ev:0000000000000000 _ZN5zxing17MultiFormatReaderC1Ev
-     /tmp/cc4hjW4T.s:947    .text._ZN5zxing17MultiFormatReader14decodeInternalENS_3RefINS_12BinaryBitmapEEE:0000000000000000 $a
-     /tmp/cc4hjW4T.s:953    .text._ZN5zxing17MultiFormatReader14decodeInternalENS_3RefINS_12BinaryBitmapEEE:0000000000000000 _ZN5zxing17MultiFormatReader14decodeInternalENS_3RefINS_12BinaryBitmapEEE
-     /tmp/cc4hjW4T.s:7037   .rodata._ZN5zxing17MultiFormatReader14decodeInternalENS_3RefINS_12BinaryBitmapEEE.str1.4:0000000000000000 .LC1
-     /tmp/cc4hjW4T.s:7001   .rodata._ZTIN5zxing15ReaderExceptionE:0000000000000000 _ZTIN5zxing15ReaderExceptionE
-     /tmp/cc4hjW4T.s:1452   .text._ZN5zxing17MultiFormatReader14decodeInternalENS_3RefINS_12BinaryBitmapEEE:0000000000000294 $d
-     /tmp/cc4hjW4T.s:7022   .rodata._ZTVN5zxing15ReaderExceptionE:0000000000000000 _ZTVN5zxing15ReaderExceptionE
+     /tmp/ccDsxb5q.s:763    .text._ZN5zxing17MultiFormatReaderC2Ev:0000000000000000 _ZN5zxing17MultiFormatReaderC1Ev
+     /tmp/ccDsxb5q.s:947    .text._ZN5zxing17MultiFormatReader14decodeInternalENS_3RefINS_12BinaryBitmapEEE:0000000000000000 $a
+     /tmp/ccDsxb5q.s:953    .text._ZN5zxing17MultiFormatReader14decodeInternalENS_3RefINS_12BinaryBitmapEEE:0000000000000000 _ZN5zxing17MultiFormatReader14decodeInternalENS_3RefINS_12BinaryBitmapEEE
+     /tmp/ccDsxb5q.s:7037   .rodata._ZN5zxing17MultiFormatReader14decodeInternalENS_3RefINS_12BinaryBitmapEEE.str1.4:0000000000000000 .LC1
+     /tmp/ccDsxb5q.s:7001   .rodata._ZTIN5zxing15ReaderExceptionE:0000000000000000 _ZTIN5zxing15ReaderExceptionE
+     /tmp/ccDsxb5q.s:1452   .text._ZN5zxing17MultiFormatReader14decodeInternalENS_3RefINS_12BinaryBitmapEEE:0000000000000294 $d
+     /tmp/ccDsxb5q.s:7022   .rodata._ZTVN5zxing15ReaderExceptionE:0000000000000000 _ZTVN5zxing15ReaderExceptionE
 .ARM.extab.text._ZN5zxing17MultiFormatReader14decodeInternalENS_3RefINS_12BinaryBitmapEEE:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing17MultiFormatReader14decodeInternalENS_3RefINS_12BinaryBitmapEEE:0000000000000000 $d
-     /tmp/cc4hjW4T.s:1497   .text._ZNSt6vectorIN5zxing3RefINS0_6ReaderEEESaIS3_EE19_M_emplace_back_auxIJS3_EEEvDpOT_:0000000000000000 $a
-     /tmp/cc4hjW4T.s:1503   .text._ZNSt6vectorIN5zxing3RefINS0_6ReaderEEESaIS3_EE19_M_emplace_back_auxIJS3_EEEvDpOT_:0000000000000000 _ZNSt6vectorIN5zxing3RefINS0_6ReaderEEESaIS3_EE19_M_emplace_back_auxIJS3_EEEvDpOT_
+     /tmp/ccDsxb5q.s:1497   .text._ZNSt6vectorIN5zxing3RefINS0_6ReaderEEESaIS3_EE19_M_emplace_back_auxIJS3_EEEvDpOT_:0000000000000000 $a
+     /tmp/ccDsxb5q.s:1503   .text._ZNSt6vectorIN5zxing3RefINS0_6ReaderEEESaIS3_EE19_M_emplace_back_auxIJS3_EEEvDpOT_:0000000000000000 _ZNSt6vectorIN5zxing3RefINS0_6ReaderEEESaIS3_EE19_M_emplace_back_auxIJS3_EEEvDpOT_
 .ARM.exidx.text._ZNSt6vectorIN5zxing3RefINS0_6ReaderEEESaIS3_EE19_M_emplace_back_auxIJS3_EEEvDpOT_:0000000000000000 $d
-     /tmp/cc4hjW4T.s:1965   .text._ZNSt6vectorIN5zxing3RefINS0_6ReaderEEESaIS3_EE12emplace_backIJS3_EEEvDpOT_:0000000000000000 $a
-     /tmp/cc4hjW4T.s:1971   .text._ZNSt6vectorIN5zxing3RefINS0_6ReaderEEESaIS3_EE12emplace_backIJS3_EEEvDpOT_:0000000000000000 _ZNSt6vectorIN5zxing3RefINS0_6ReaderEEESaIS3_EE12emplace_backIJS3_EEEvDpOT_
+     /tmp/ccDsxb5q.s:1965   .text._ZNSt6vectorIN5zxing3RefINS0_6ReaderEEESaIS3_EE12emplace_backIJS3_EEEvDpOT_:0000000000000000 $a
+     /tmp/ccDsxb5q.s:1971   .text._ZNSt6vectorIN5zxing3RefINS0_6ReaderEEESaIS3_EE12emplace_backIJS3_EEEvDpOT_:0000000000000000 _ZNSt6vectorIN5zxing3RefINS0_6ReaderEEESaIS3_EE12emplace_backIJS3_EEEvDpOT_
 .ARM.exidx.text._ZNSt6vectorIN5zxing3RefINS0_6ReaderEEESaIS3_EE12emplace_backIJS3_EEEvDpOT_:0000000000000000 $d
-     /tmp/cc4hjW4T.s:2099   .text._ZN5zxing17MultiFormatReader8setHintsENS_11DecodeHintsE:0000000000000000 $a
-     /tmp/cc4hjW4T.s:2105   .text._ZN5zxing17MultiFormatReader8setHintsENS_11DecodeHintsE:0000000000000000 _ZN5zxing17MultiFormatReader8setHintsENS_11DecodeHintsE
-     /tmp/cc4hjW4T.s:5452   .text._ZN5zxing17MultiFormatReader8setHintsENS_11DecodeHintsE:000000000000126c $d
+     /tmp/ccDsxb5q.s:2099   .text._ZN5zxing17MultiFormatReader8setHintsENS_11DecodeHintsE:0000000000000000 $a
+     /tmp/ccDsxb5q.s:2105   .text._ZN5zxing17MultiFormatReader8setHintsENS_11DecodeHintsE:0000000000000000 _ZN5zxing17MultiFormatReader8setHintsENS_11DecodeHintsE
+     /tmp/ccDsxb5q.s:5452   .text._ZN5zxing17MultiFormatReader8setHintsENS_11DecodeHintsE:000000000000126c $d
 .ARM.extab.text._ZN5zxing17MultiFormatReader8setHintsENS_11DecodeHintsE:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing17MultiFormatReader8setHintsENS_11DecodeHintsE:0000000000000000 $d
-     /tmp/cc4hjW4T.s:5672   .text._ZN5zxing17MultiFormatReader6decodeENS_3RefINS_12BinaryBitmapEEE:0000000000000000 $a
-     /tmp/cc4hjW4T.s:5678   .text._ZN5zxing17MultiFormatReader6decodeENS_3RefINS_12BinaryBitmapEEE:0000000000000000 _ZN5zxing17MultiFormatReader6decodeENS_3RefINS_12BinaryBitmapEEE
+     /tmp/ccDsxb5q.s:5672   .text._ZN5zxing17MultiFormatReader6decodeENS_3RefINS_12BinaryBitmapEEE:0000000000000000 $a
+     /tmp/ccDsxb5q.s:5678   .text._ZN5zxing17MultiFormatReader6decodeENS_3RefINS_12BinaryBitmapEEE:0000000000000000 _ZN5zxing17MultiFormatReader6decodeENS_3RefINS_12BinaryBitmapEEE
 .ARM.extab.text._ZN5zxing17MultiFormatReader6decodeENS_3RefINS_12BinaryBitmapEEE:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing17MultiFormatReader6decodeENS_3RefINS_12BinaryBitmapEEE:0000000000000000 $d
-     /tmp/cc4hjW4T.s:6091   .text._ZN5zxing17MultiFormatReader6decodeENS_3RefINS_12BinaryBitmapEEENS_11DecodeHintsE:0000000000000000 $a
-     /tmp/cc4hjW4T.s:6097   .text._ZN5zxing17MultiFormatReader6decodeENS_3RefINS_12BinaryBitmapEEENS_11DecodeHintsE:0000000000000000 _ZN5zxing17MultiFormatReader6decodeENS_3RefINS_12BinaryBitmapEEENS_11DecodeHintsE
+     /tmp/ccDsxb5q.s:6091   .text._ZN5zxing17MultiFormatReader6decodeENS_3RefINS_12BinaryBitmapEEENS_11DecodeHintsE:0000000000000000 $a
+     /tmp/ccDsxb5q.s:6097   .text._ZN5zxing17MultiFormatReader6decodeENS_3RefINS_12BinaryBitmapEEENS_11DecodeHintsE:0000000000000000 _ZN5zxing17MultiFormatReader6decodeENS_3RefINS_12BinaryBitmapEEENS_11DecodeHintsE
 .ARM.extab.text._ZN5zxing17MultiFormatReader6decodeENS_3RefINS_12BinaryBitmapEEENS_11DecodeHintsE:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing17MultiFormatReader6decodeENS_3RefINS_12BinaryBitmapEEENS_11DecodeHintsE:0000000000000000 $d
-     /tmp/cc4hjW4T.s:6509   .text._ZN5zxing17MultiFormatReader15decodeWithStateENS_3RefINS_12BinaryBitmapEEE:0000000000000000 $a
-     /tmp/cc4hjW4T.s:6515   .text._ZN5zxing17MultiFormatReader15decodeWithStateENS_3RefINS_12BinaryBitmapEEE:0000000000000000 _ZN5zxing17MultiFormatReader15decodeWithStateENS_3RefINS_12BinaryBitmapEEE
+     /tmp/ccDsxb5q.s:6509   .text._ZN5zxing17MultiFormatReader15decodeWithStateENS_3RefINS_12BinaryBitmapEEE:0000000000000000 $a
+     /tmp/ccDsxb5q.s:6515   .text._ZN5zxing17MultiFormatReader15decodeWithStateENS_3RefINS_12BinaryBitmapEEE:0000000000000000 _ZN5zxing17MultiFormatReader15decodeWithStateENS_3RefINS_12BinaryBitmapEEE
 .ARM.extab.text._ZN5zxing17MultiFormatReader15decodeWithStateENS_3RefINS_12BinaryBitmapEEE:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing17MultiFormatReader15decodeWithStateENS_3RefINS_12BinaryBitmapEEE:0000000000000000 $d
-     /tmp/cc4hjW4T.s:6941   .text._GLOBAL__sub_I__ZN5zxing17MultiFormatReaderC2Ev:0000000000000000 $a
-     /tmp/cc4hjW4T.s:6946   .text._GLOBAL__sub_I__ZN5zxing17MultiFormatReaderC2Ev:0000000000000000 _GLOBAL__sub_I__ZN5zxing17MultiFormatReaderC2Ev
+     /tmp/ccDsxb5q.s:6941   .text._GLOBAL__sub_I__ZN5zxing17MultiFormatReaderC2Ev:0000000000000000 $a
+     /tmp/ccDsxb5q.s:6946   .text._GLOBAL__sub_I__ZN5zxing17MultiFormatReaderC2Ev:0000000000000000 _GLOBAL__sub_I__ZN5zxing17MultiFormatReaderC2Ev
 .ARM.exidx.text._GLOBAL__sub_I__ZN5zxing17MultiFormatReaderC2Ev:0000000000000000 $d
-     /tmp/cc4hjW4T.s:6969   .init_array:0000000000000000 $d
-     /tmp/cc4hjW4T.s:6976   .rodata._ZTSN5zxing9ExceptionE:0000000000000000 _ZTSN5zxing9ExceptionE
-     /tmp/cc4hjW4T.s:6973   .rodata._ZTSN5zxing9ExceptionE:0000000000000000 $d
-     /tmp/cc4hjW4T.s:6983   .rodata._ZTIN5zxing9ExceptionE:0000000000000000 _ZTIN5zxing9ExceptionE
-     /tmp/cc4hjW4T.s:6980   .rodata._ZTIN5zxing9ExceptionE:0000000000000000 $d
-     /tmp/cc4hjW4T.s:7059   .rodata._ZTSN5zxing17MultiFormatReaderE:0000000000000000 _ZTSN5zxing17MultiFormatReaderE
-     /tmp/cc4hjW4T.s:7051   .rodata._ZTIN5zxing17MultiFormatReaderE:0000000000000000 _ZTIN5zxing17MultiFormatReaderE
-     /tmp/cc4hjW4T.s:6994   .rodata._ZTSN5zxing15ReaderExceptionE:0000000000000000 _ZTSN5zxing15ReaderExceptionE
-     /tmp/cc4hjW4T.s:6991   .rodata._ZTSN5zxing15ReaderExceptionE:0000000000000000 $d
-     /tmp/cc4hjW4T.s:6998   .rodata._ZTIN5zxing15ReaderExceptionE:0000000000000000 $d
-     /tmp/cc4hjW4T.s:7007   .rodata._ZTVN5zxing9ExceptionE:0000000000000000 $d
-     /tmp/cc4hjW4T.s:7066   .rodata._ZTVN5zxing17MultiFormatReaderE:0000000000000000 _ZTVN5zxing17MultiFormatReaderE
-     /tmp/cc4hjW4T.s:7019   .rodata._ZTVN5zxing15ReaderExceptionE:0000000000000000 $d
-     /tmp/cc4hjW4T.s:7029   .bss._ZStL8__ioinit:0000000000000000 $d
-     /tmp/cc4hjW4T.s:7033   .bss._ZStL8__ioinit:0000000000000000 _ZStL8__ioinit
-     /tmp/cc4hjW4T.s:7036   .rodata._ZN5zxing17MultiFormatReader14decodeInternalENS_3RefINS_12BinaryBitmapEEE.str1.4:0000000000000000 $d
-     /tmp/cc4hjW4T.s:7040   .rodata._ZNK5zxing9Exception4whatEv.str1.4:0000000000000000 $d
-     /tmp/cc4hjW4T.s:7044   .rodata._ZNSt6vectorIN5zxing3RefINS0_6ReaderEEESaIS3_EE19_M_emplace_back_auxIJS3_EEEvDpOT_.str1.4:0000000000000000 $d
-     /tmp/cc4hjW4T.s:7048   .rodata._ZTIN5zxing17MultiFormatReaderE:0000000000000000 $d
-     /tmp/cc4hjW4T.s:7056   .rodata._ZTSN5zxing17MultiFormatReaderE:0000000000000000 $d
-     /tmp/cc4hjW4T.s:7062   .rodata._ZTVN5zxing17MultiFormatReaderE:0000000000000000 $d
+     /tmp/ccDsxb5q.s:6969   .init_array:0000000000000000 $d
+     /tmp/ccDsxb5q.s:6976   .rodata._ZTSN5zxing9ExceptionE:0000000000000000 _ZTSN5zxing9ExceptionE
+     /tmp/ccDsxb5q.s:6973   .rodata._ZTSN5zxing9ExceptionE:0000000000000000 $d
+     /tmp/ccDsxb5q.s:6983   .rodata._ZTIN5zxing9ExceptionE:0000000000000000 _ZTIN5zxing9ExceptionE
+     /tmp/ccDsxb5q.s:6980   .rodata._ZTIN5zxing9ExceptionE:0000000000000000 $d
+     /tmp/ccDsxb5q.s:7059   .rodata._ZTSN5zxing17MultiFormatReaderE:0000000000000000 _ZTSN5zxing17MultiFormatReaderE
+     /tmp/ccDsxb5q.s:7051   .rodata._ZTIN5zxing17MultiFormatReaderE:0000000000000000 _ZTIN5zxing17MultiFormatReaderE
+     /tmp/ccDsxb5q.s:6994   .rodata._ZTSN5zxing15ReaderExceptionE:0000000000000000 _ZTSN5zxing15ReaderExceptionE
+     /tmp/ccDsxb5q.s:6991   .rodata._ZTSN5zxing15ReaderExceptionE:0000000000000000 $d
+     /tmp/ccDsxb5q.s:6998   .rodata._ZTIN5zxing15ReaderExceptionE:0000000000000000 $d
+     /tmp/ccDsxb5q.s:7007   .rodata._ZTVN5zxing9ExceptionE:0000000000000000 $d
+     /tmp/ccDsxb5q.s:7066   .rodata._ZTVN5zxing17MultiFormatReaderE:0000000000000000 _ZTVN5zxing17MultiFormatReaderE
+     /tmp/ccDsxb5q.s:7019   .rodata._ZTVN5zxing15ReaderExceptionE:0000000000000000 $d
+     /tmp/ccDsxb5q.s:7029   .bss._ZStL8__ioinit:0000000000000000 $d
+     /tmp/ccDsxb5q.s:7033   .bss._ZStL8__ioinit:0000000000000000 _ZStL8__ioinit
+     /tmp/ccDsxb5q.s:7036   .rodata._ZN5zxing17MultiFormatReader14decodeInternalENS_3RefINS_12BinaryBitmapEEE.str1.4:0000000000000000 $d
+     /tmp/ccDsxb5q.s:7040   .rodata._ZNK5zxing9Exception4whatEv.str1.4:0000000000000000 $d
+     /tmp/ccDsxb5q.s:7044   .rodata._ZNSt6vectorIN5zxing3RefINS0_6ReaderEEESaIS3_EE19_M_emplace_back_auxIJS3_EEEvDpOT_.str1.4:0000000000000000 $d
+     /tmp/ccDsxb5q.s:7048   .rodata._ZTIN5zxing17MultiFormatReaderE:0000000000000000 $d
+     /tmp/ccDsxb5q.s:7056   .rodata._ZTSN5zxing17MultiFormatReaderE:0000000000000000 $d
+     /tmp/ccDsxb5q.s:7062   .rodata._ZTVN5zxing17MultiFormatReaderE:0000000000000000 $d
                      .debug_frame:0000000000000010 $d
                            .group:0000000000000000 _ZN5zxing9ExceptionD5Ev
                            .group:0000000000000000 _ZN5zxing15ReaderExceptionD5Ev

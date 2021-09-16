@@ -33413,275 +33413,275 @@
  25633              		.file 76 "/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/No
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 Detector.cpp
-     /tmp/ccv9NJwC.s:17     .text._ZNK5zxing9Exception4whatEv:0000000000000000 $a
-     /tmp/ccv9NJwC.s:23     .text._ZNK5zxing9Exception4whatEv:0000000000000000 _ZNK5zxing9Exception4whatEv
-     /tmp/ccv9NJwC.s:25568  .rodata._ZNK5zxing9Exception4whatEv.str1.4:0000000000000000 .LC0
+     /tmp/ccjz1RIq.s:17     .text._ZNK5zxing9Exception4whatEv:0000000000000000 $a
+     /tmp/ccjz1RIq.s:23     .text._ZNK5zxing9Exception4whatEv:0000000000000000 _ZNK5zxing9Exception4whatEv
+     /tmp/ccjz1RIq.s:25568  .rodata._ZNK5zxing9Exception4whatEv.str1.4:0000000000000000 .LC0
 .ARM.exidx.text._ZNK5zxing9Exception4whatEv:0000000000000000 $d
-     /tmp/ccv9NJwC.s:47     .text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED2Ev:0000000000000000 $a
-     /tmp/ccv9NJwC.s:53     .text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED2Ev:0000000000000000 _ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED2Ev
-     /tmp/ccv9NJwC.s:113    .text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED2Ev:0000000000000054 $d
-     /tmp/ccv9NJwC.s:25474  .rodata._ZTVN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE:0000000000000000 _ZTVN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE
+     /tmp/ccjz1RIq.s:47     .text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED2Ev:0000000000000000 $a
+     /tmp/ccjz1RIq.s:53     .text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED2Ev:0000000000000000 _ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED2Ev
+     /tmp/ccjz1RIq.s:113    .text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED2Ev:0000000000000054 $d
+     /tmp/ccjz1RIq.s:25474  .rodata._ZTVN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE:0000000000000000 _ZTVN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE
 .ARM.exidx.text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED2Ev:0000000000000000 $d
-     /tmp/ccv9NJwC.s:53     .text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED2Ev:0000000000000000 _ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED1Ev
-     /tmp/ccv9NJwC.s:125    .text._ZN5zxing8ArrayRefIiED2Ev:0000000000000000 $a
-     /tmp/ccv9NJwC.s:131    .text._ZN5zxing8ArrayRefIiED2Ev:0000000000000000 _ZN5zxing8ArrayRefIiED2Ev
-     /tmp/ccv9NJwC.s:189    .text._ZN5zxing8ArrayRefIiED2Ev:0000000000000054 $d
-     /tmp/ccv9NJwC.s:25464  .rodata._ZTVN5zxing8ArrayRefIiEE:0000000000000000 _ZTVN5zxing8ArrayRefIiEE
+     /tmp/ccjz1RIq.s:53     .text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED2Ev:0000000000000000 _ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED1Ev
+     /tmp/ccjz1RIq.s:125    .text._ZN5zxing8ArrayRefIiED2Ev:0000000000000000 $a
+     /tmp/ccjz1RIq.s:131    .text._ZN5zxing8ArrayRefIiED2Ev:0000000000000000 _ZN5zxing8ArrayRefIiED2Ev
+     /tmp/ccjz1RIq.s:189    .text._ZN5zxing8ArrayRefIiED2Ev:0000000000000054 $d
+     /tmp/ccjz1RIq.s:25464  .rodata._ZTVN5zxing8ArrayRefIiEE:0000000000000000 _ZTVN5zxing8ArrayRefIiEE
 .ARM.exidx.text._ZN5zxing8ArrayRefIiED2Ev:0000000000000000 $d
-     /tmp/ccv9NJwC.s:131    .text._ZN5zxing8ArrayRefIiED2Ev:0000000000000000 _ZN5zxing8ArrayRefIiED1Ev
-     /tmp/ccv9NJwC.s:201    .text._ZN5zxing5aztec8DetectorD2Ev:0000000000000000 $a
-     /tmp/ccv9NJwC.s:207    .text._ZN5zxing5aztec8DetectorD2Ev:0000000000000000 _ZN5zxing5aztec8DetectorD2Ev
-     /tmp/ccv9NJwC.s:273    .text._ZN5zxing5aztec8DetectorD2Ev:0000000000000054 $d
-     /tmp/ccv9NJwC.s:25494  .rodata._ZTVN5zxing5aztec8DetectorE:0000000000000000 _ZTVN5zxing5aztec8DetectorE
+     /tmp/ccjz1RIq.s:131    .text._ZN5zxing8ArrayRefIiED2Ev:0000000000000000 _ZN5zxing8ArrayRefIiED1Ev
+     /tmp/ccjz1RIq.s:201    .text._ZN5zxing5aztec8DetectorD2Ev:0000000000000000 $a
+     /tmp/ccjz1RIq.s:207    .text._ZN5zxing5aztec8DetectorD2Ev:0000000000000000 _ZN5zxing5aztec8DetectorD2Ev
+     /tmp/ccjz1RIq.s:273    .text._ZN5zxing5aztec8DetectorD2Ev:0000000000000054 $d
+     /tmp/ccjz1RIq.s:25494  .rodata._ZTVN5zxing5aztec8DetectorE:0000000000000000 _ZTVN5zxing5aztec8DetectorE
 .ARM.exidx.text._ZN5zxing5aztec8DetectorD2Ev:0000000000000000 $d
-     /tmp/ccv9NJwC.s:207    .text._ZN5zxing5aztec8DetectorD2Ev:0000000000000000 _ZN5zxing5aztec8DetectorD1Ev
-     /tmp/ccv9NJwC.s:287    .text._ZN5zxing5aztec5PointD2Ev:0000000000000000 $a
-     /tmp/ccv9NJwC.s:293    .text._ZN5zxing5aztec5PointD2Ev:0000000000000000 _ZN5zxing5aztec5PointD2Ev
+     /tmp/ccjz1RIq.s:207    .text._ZN5zxing5aztec8DetectorD2Ev:0000000000000000 _ZN5zxing5aztec8DetectorD1Ev
+     /tmp/ccjz1RIq.s:287    .text._ZN5zxing5aztec5PointD2Ev:0000000000000000 $a
+     /tmp/ccjz1RIq.s:293    .text._ZN5zxing5aztec5PointD2Ev:0000000000000000 _ZN5zxing5aztec5PointD2Ev
 .ARM.exidx.text._ZN5zxing5aztec5PointD2Ev:0000000000000000 $d
-     /tmp/ccv9NJwC.s:293    .text._ZN5zxing5aztec5PointD2Ev:0000000000000000 _ZN5zxing5aztec5PointD1Ev
-     /tmp/ccv9NJwC.s:312    .text._ZN5zxing22WhiteRectangleDetectorD2Ev:0000000000000000 $a
-     /tmp/ccv9NJwC.s:318    .text._ZN5zxing22WhiteRectangleDetectorD2Ev:0000000000000000 _ZN5zxing22WhiteRectangleDetectorD2Ev
-     /tmp/ccv9NJwC.s:384    .text._ZN5zxing22WhiteRectangleDetectorD2Ev:0000000000000054 $d
-     /tmp/ccv9NJwC.s:25515  .rodata._ZTVN5zxing22WhiteRectangleDetectorE:0000000000000000 _ZTVN5zxing22WhiteRectangleDetectorE
+     /tmp/ccjz1RIq.s:293    .text._ZN5zxing5aztec5PointD2Ev:0000000000000000 _ZN5zxing5aztec5PointD1Ev
+     /tmp/ccjz1RIq.s:312    .text._ZN5zxing22WhiteRectangleDetectorD2Ev:0000000000000000 $a
+     /tmp/ccjz1RIq.s:318    .text._ZN5zxing22WhiteRectangleDetectorD2Ev:0000000000000000 _ZN5zxing22WhiteRectangleDetectorD2Ev
+     /tmp/ccjz1RIq.s:384    .text._ZN5zxing22WhiteRectangleDetectorD2Ev:0000000000000054 $d
+     /tmp/ccjz1RIq.s:25515  .rodata._ZTVN5zxing22WhiteRectangleDetectorE:0000000000000000 _ZTVN5zxing22WhiteRectangleDetectorE
 .ARM.exidx.text._ZN5zxing22WhiteRectangleDetectorD2Ev:0000000000000000 $d
-     /tmp/ccv9NJwC.s:318    .text._ZN5zxing22WhiteRectangleDetectorD2Ev:0000000000000000 _ZN5zxing22WhiteRectangleDetectorD1Ev
-     /tmp/ccv9NJwC.s:398    .text._ZN5zxing5aztec5PointD0Ev:0000000000000000 $a
-     /tmp/ccv9NJwC.s:404    .text._ZN5zxing5aztec5PointD0Ev:0000000000000000 _ZN5zxing5aztec5PointD0Ev
+     /tmp/ccjz1RIq.s:318    .text._ZN5zxing22WhiteRectangleDetectorD2Ev:0000000000000000 _ZN5zxing22WhiteRectangleDetectorD1Ev
+     /tmp/ccjz1RIq.s:398    .text._ZN5zxing5aztec5PointD0Ev:0000000000000000 $a
+     /tmp/ccjz1RIq.s:404    .text._ZN5zxing5aztec5PointD0Ev:0000000000000000 _ZN5zxing5aztec5PointD0Ev
 .ARM.exidx.text._ZN5zxing5aztec5PointD0Ev:0000000000000000 $d
-     /tmp/ccv9NJwC.s:429    .text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED0Ev:0000000000000000 $a
-     /tmp/ccv9NJwC.s:435    .text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED0Ev:0000000000000000 _ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED0Ev
-     /tmp/ccv9NJwC.s:501    .text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED0Ev:0000000000000060 $d
+     /tmp/ccjz1RIq.s:429    .text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED0Ev:0000000000000000 $a
+     /tmp/ccjz1RIq.s:435    .text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED0Ev:0000000000000000 _ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED0Ev
+     /tmp/ccjz1RIq.s:501    .text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED0Ev:0000000000000060 $d
 .ARM.exidx.text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED0Ev:0000000000000000 $d
-     /tmp/ccv9NJwC.s:512    .text._ZN5zxing8ArrayRefIiED0Ev:0000000000000000 $a
-     /tmp/ccv9NJwC.s:518    .text._ZN5zxing8ArrayRefIiED0Ev:0000000000000000 _ZN5zxing8ArrayRefIiED0Ev
-     /tmp/ccv9NJwC.s:584    .text._ZN5zxing8ArrayRefIiED0Ev:0000000000000060 $d
+     /tmp/ccjz1RIq.s:512    .text._ZN5zxing8ArrayRefIiED0Ev:0000000000000000 $a
+     /tmp/ccjz1RIq.s:518    .text._ZN5zxing8ArrayRefIiED0Ev:0000000000000000 _ZN5zxing8ArrayRefIiED0Ev
+     /tmp/ccjz1RIq.s:584    .text._ZN5zxing8ArrayRefIiED0Ev:0000000000000060 $d
 .ARM.exidx.text._ZN5zxing8ArrayRefIiED0Ev:0000000000000000 $d
-     /tmp/ccv9NJwC.s:595    .text._ZN5zxing5aztec8DetectorD0Ev:0000000000000000 $a
-     /tmp/ccv9NJwC.s:601    .text._ZN5zxing5aztec8DetectorD0Ev:0000000000000000 _ZN5zxing5aztec8DetectorD0Ev
-     /tmp/ccv9NJwC.s:674    .text._ZN5zxing5aztec8DetectorD0Ev:0000000000000060 $d
+     /tmp/ccjz1RIq.s:595    .text._ZN5zxing5aztec8DetectorD0Ev:0000000000000000 $a
+     /tmp/ccjz1RIq.s:601    .text._ZN5zxing5aztec8DetectorD0Ev:0000000000000000 _ZN5zxing5aztec8DetectorD0Ev
+     /tmp/ccjz1RIq.s:674    .text._ZN5zxing5aztec8DetectorD0Ev:0000000000000060 $d
 .ARM.exidx.text._ZN5zxing5aztec8DetectorD0Ev:0000000000000000 $d
-     /tmp/ccv9NJwC.s:687    .text._ZN5zxing22WhiteRectangleDetectorD0Ev:0000000000000000 $a
-     /tmp/ccv9NJwC.s:693    .text._ZN5zxing22WhiteRectangleDetectorD0Ev:0000000000000000 _ZN5zxing22WhiteRectangleDetectorD0Ev
-     /tmp/ccv9NJwC.s:766    .text._ZN5zxing22WhiteRectangleDetectorD0Ev:0000000000000060 $d
+     /tmp/ccjz1RIq.s:687    .text._ZN5zxing22WhiteRectangleDetectorD0Ev:0000000000000000 $a
+     /tmp/ccjz1RIq.s:693    .text._ZN5zxing22WhiteRectangleDetectorD0Ev:0000000000000000 _ZN5zxing22WhiteRectangleDetectorD0Ev
+     /tmp/ccjz1RIq.s:766    .text._ZN5zxing22WhiteRectangleDetectorD0Ev:0000000000000060 $d
 .ARM.exidx.text._ZN5zxing22WhiteRectangleDetectorD0Ev:0000000000000000 $d
-     /tmp/ccv9NJwC.s:779    .text._ZN5zxing5ArrayIiED2Ev:0000000000000000 $a
-     /tmp/ccv9NJwC.s:785    .text._ZN5zxing5ArrayIiED2Ev:0000000000000000 _ZN5zxing5ArrayIiED2Ev
-     /tmp/ccv9NJwC.s:839    .text._ZN5zxing5ArrayIiED2Ev:0000000000000028 $d
-     /tmp/ccv9NJwC.s:25535  .rodata._ZTVN5zxing5ArrayIiEE:0000000000000000 _ZTVN5zxing5ArrayIiEE
+     /tmp/ccjz1RIq.s:779    .text._ZN5zxing5ArrayIiED2Ev:0000000000000000 $a
+     /tmp/ccjz1RIq.s:785    .text._ZN5zxing5ArrayIiED2Ev:0000000000000000 _ZN5zxing5ArrayIiED2Ev
+     /tmp/ccjz1RIq.s:839    .text._ZN5zxing5ArrayIiED2Ev:0000000000000028 $d
+     /tmp/ccjz1RIq.s:25535  .rodata._ZTVN5zxing5ArrayIiEE:0000000000000000 _ZTVN5zxing5ArrayIiEE
 .ARM.exidx.text._ZN5zxing5ArrayIiED2Ev:0000000000000000 $d
-     /tmp/ccv9NJwC.s:785    .text._ZN5zxing5ArrayIiED2Ev:0000000000000000 _ZN5zxing5ArrayIiED1Ev
-     /tmp/ccv9NJwC.s:848    .text._ZN5zxing5ArrayIiED0Ev:0000000000000000 $a
-     /tmp/ccv9NJwC.s:854    .text._ZN5zxing5ArrayIiED0Ev:0000000000000000 _ZN5zxing5ArrayIiED0Ev
-     /tmp/ccv9NJwC.s:913    .text._ZN5zxing5ArrayIiED0Ev:0000000000000034 $d
+     /tmp/ccjz1RIq.s:785    .text._ZN5zxing5ArrayIiED2Ev:0000000000000000 _ZN5zxing5ArrayIiED1Ev
+     /tmp/ccjz1RIq.s:848    .text._ZN5zxing5ArrayIiED0Ev:0000000000000000 $a
+     /tmp/ccjz1RIq.s:854    .text._ZN5zxing5ArrayIiED0Ev:0000000000000000 _ZN5zxing5ArrayIiED0Ev
+     /tmp/ccjz1RIq.s:913    .text._ZN5zxing5ArrayIiED0Ev:0000000000000034 $d
 .ARM.exidx.text._ZN5zxing5ArrayIiED0Ev:0000000000000000 $d
-     /tmp/ccv9NJwC.s:920    .text._ZN5zxing9ExceptionD2Ev:0000000000000000 $a
-     /tmp/ccv9NJwC.s:926    .text._ZN5zxing9ExceptionD2Ev:0000000000000000 _ZN5zxing9ExceptionD2Ev
-     /tmp/ccv9NJwC.s:988    .text._ZN5zxing9ExceptionD2Ev:0000000000000058 $d
-     /tmp/ccv9NJwC.s:25453  .rodata._ZTVN5zxing9ExceptionE:0000000000000000 _ZTVN5zxing9ExceptionE
+     /tmp/ccjz1RIq.s:920    .text._ZN5zxing9ExceptionD2Ev:0000000000000000 $a
+     /tmp/ccjz1RIq.s:926    .text._ZN5zxing9ExceptionD2Ev:0000000000000000 _ZN5zxing9ExceptionD2Ev
+     /tmp/ccjz1RIq.s:988    .text._ZN5zxing9ExceptionD2Ev:0000000000000058 $d
+     /tmp/ccjz1RIq.s:25453  .rodata._ZTVN5zxing9ExceptionE:0000000000000000 _ZTVN5zxing9ExceptionE
 .ARM.extab.text._ZN5zxing9ExceptionD2Ev:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing9ExceptionD2Ev:0000000000000000 $d
-     /tmp/ccv9NJwC.s:926    .text._ZN5zxing9ExceptionD2Ev:0000000000000000 _ZN5zxing9ExceptionD1Ev
-     /tmp/ccv9NJwC.s:1025   .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $a
-     /tmp/ccv9NJwC.s:1030   .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 _Z41__static_initialization_and_destruction_0ii
-     /tmp/ccv9NJwC.s:25542  .bss._ZStL8__ioinit:0000000000000000 .LANCHOR0
+     /tmp/ccjz1RIq.s:926    .text._ZN5zxing9ExceptionD2Ev:0000000000000000 _ZN5zxing9ExceptionD1Ev
+     /tmp/ccjz1RIq.s:1025   .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $a
+     /tmp/ccjz1RIq.s:1030   .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 _Z41__static_initialization_and_destruction_0ii
+     /tmp/ccjz1RIq.s:25542  .bss._ZStL8__ioinit:0000000000000000 .LANCHOR0
 .ARM.exidx.text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $d
-     /tmp/ccv9NJwC.s:1072   .text._ZN5zxing5ArrayINS_3RefINS_11ResultPointEEEED2Ev:0000000000000000 $a
-     /tmp/ccv9NJwC.s:1078   .text._ZN5zxing5ArrayINS_3RefINS_11ResultPointEEEED2Ev:0000000000000000 _ZN5zxing5ArrayINS_3RefINS_11ResultPointEEEED2Ev
-     /tmp/ccv9NJwC.s:1193   .text._ZN5zxing5ArrayINS_3RefINS_11ResultPointEEEED2Ev:0000000000000080 $d
-     /tmp/ccv9NJwC.s:25525  .rodata._ZTVN5zxing5ArrayINS_3RefINS_11ResultPointEEEEE:0000000000000000 _ZTVN5zxing5ArrayINS_3RefINS_11ResultPointEEEEE
+     /tmp/ccjz1RIq.s:1072   .text._ZN5zxing5ArrayINS_3RefINS_11ResultPointEEEED2Ev:0000000000000000 $a
+     /tmp/ccjz1RIq.s:1078   .text._ZN5zxing5ArrayINS_3RefINS_11ResultPointEEEED2Ev:0000000000000000 _ZN5zxing5ArrayINS_3RefINS_11ResultPointEEEED2Ev
+     /tmp/ccjz1RIq.s:1193   .text._ZN5zxing5ArrayINS_3RefINS_11ResultPointEEEED2Ev:0000000000000080 $d
+     /tmp/ccjz1RIq.s:25525  .rodata._ZTVN5zxing5ArrayINS_3RefINS_11ResultPointEEEEE:0000000000000000 _ZTVN5zxing5ArrayINS_3RefINS_11ResultPointEEEEE
 .ARM.exidx.text._ZN5zxing5ArrayINS_3RefINS_11ResultPointEEEED2Ev:0000000000000000 $d
-     /tmp/ccv9NJwC.s:1078   .text._ZN5zxing5ArrayINS_3RefINS_11ResultPointEEEED2Ev:0000000000000000 _ZN5zxing5ArrayINS_3RefINS_11ResultPointEEEED1Ev
-     /tmp/ccv9NJwC.s:1202   .text._ZN5zxing5ArrayINS_3RefINS_11ResultPointEEEED0Ev:0000000000000000 $a
-     /tmp/ccv9NJwC.s:1208   .text._ZN5zxing5ArrayINS_3RefINS_11ResultPointEEEED0Ev:0000000000000000 _ZN5zxing5ArrayINS_3RefINS_11ResultPointEEEED0Ev
-     /tmp/ccv9NJwC.s:1329   .text._ZN5zxing5ArrayINS_3RefINS_11ResultPointEEEED0Ev:000000000000008c $d
+     /tmp/ccjz1RIq.s:1078   .text._ZN5zxing5ArrayINS_3RefINS_11ResultPointEEEED2Ev:0000000000000000 _ZN5zxing5ArrayINS_3RefINS_11ResultPointEEEED1Ev
+     /tmp/ccjz1RIq.s:1202   .text._ZN5zxing5ArrayINS_3RefINS_11ResultPointEEEED0Ev:0000000000000000 $a
+     /tmp/ccjz1RIq.s:1208   .text._ZN5zxing5ArrayINS_3RefINS_11ResultPointEEEED0Ev:0000000000000000 _ZN5zxing5ArrayINS_3RefINS_11ResultPointEEEED0Ev
+     /tmp/ccjz1RIq.s:1329   .text._ZN5zxing5ArrayINS_3RefINS_11ResultPointEEEED0Ev:000000000000008c $d
 .ARM.exidx.text._ZN5zxing5ArrayINS_3RefINS_11ResultPointEEEED0Ev:0000000000000000 $d
-     /tmp/ccv9NJwC.s:1336   .text._ZN5zxing15ReaderExceptionD2Ev:0000000000000000 $a
-     /tmp/ccv9NJwC.s:1342   .text._ZN5zxing15ReaderExceptionD2Ev:0000000000000000 _ZN5zxing15ReaderExceptionD2Ev
-     /tmp/ccv9NJwC.s:1412   .text._ZN5zxing15ReaderExceptionD2Ev:0000000000000058 $d
+     /tmp/ccjz1RIq.s:1336   .text._ZN5zxing15ReaderExceptionD2Ev:0000000000000000 $a
+     /tmp/ccjz1RIq.s:1342   .text._ZN5zxing15ReaderExceptionD2Ev:0000000000000000 _ZN5zxing15ReaderExceptionD2Ev
+     /tmp/ccjz1RIq.s:1412   .text._ZN5zxing15ReaderExceptionD2Ev:0000000000000058 $d
 .ARM.extab.text._ZN5zxing15ReaderExceptionD2Ev:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing15ReaderExceptionD2Ev:0000000000000000 $d
-     /tmp/ccv9NJwC.s:1342   .text._ZN5zxing15ReaderExceptionD2Ev:0000000000000000 _ZN5zxing15ReaderExceptionD1Ev
-     /tmp/ccv9NJwC.s:1448   .text._ZN5zxing9ExceptionD0Ev:0000000000000000 $a
-     /tmp/ccv9NJwC.s:1454   .text._ZN5zxing9ExceptionD0Ev:0000000000000000 _ZN5zxing9ExceptionD0Ev
-     /tmp/ccv9NJwC.s:1525   .text._ZN5zxing9ExceptionD0Ev:0000000000000064 $d
+     /tmp/ccjz1RIq.s:1342   .text._ZN5zxing15ReaderExceptionD2Ev:0000000000000000 _ZN5zxing15ReaderExceptionD1Ev
+     /tmp/ccjz1RIq.s:1448   .text._ZN5zxing9ExceptionD0Ev:0000000000000000 $a
+     /tmp/ccjz1RIq.s:1454   .text._ZN5zxing9ExceptionD0Ev:0000000000000000 _ZN5zxing9ExceptionD0Ev
+     /tmp/ccjz1RIq.s:1525   .text._ZN5zxing9ExceptionD0Ev:0000000000000064 $d
 .ARM.extab.text._ZN5zxing9ExceptionD0Ev:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing9ExceptionD0Ev:0000000000000000 $d
-     /tmp/ccv9NJwC.s:1559   .text._ZN5zxing15ReaderExceptionD0Ev:0000000000000000 $a
-     /tmp/ccv9NJwC.s:1565   .text._ZN5zxing15ReaderExceptionD0Ev:0000000000000000 _ZN5zxing15ReaderExceptionD0Ev
-     /tmp/ccv9NJwC.s:1640   .text._ZN5zxing15ReaderExceptionD0Ev:0000000000000064 $d
+     /tmp/ccjz1RIq.s:1559   .text._ZN5zxing15ReaderExceptionD0Ev:0000000000000000 $a
+     /tmp/ccjz1RIq.s:1565   .text._ZN5zxing15ReaderExceptionD0Ev:0000000000000000 _ZN5zxing15ReaderExceptionD0Ev
+     /tmp/ccjz1RIq.s:1640   .text._ZN5zxing15ReaderExceptionD0Ev:0000000000000064 $d
 .ARM.extab.text._ZN5zxing15ReaderExceptionD0Ev:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing15ReaderExceptionD0Ev:0000000000000000 $d
-     /tmp/ccv9NJwC.s:1674   .text._ZN5zxing9ExceptionC2EPKc:0000000000000000 $a
-     /tmp/ccv9NJwC.s:1680   .text._ZN5zxing9ExceptionC2EPKc:0000000000000000 _ZN5zxing9ExceptionC2EPKc
-     /tmp/ccv9NJwC.s:1735   .text._ZN5zxing9ExceptionC2EPKc:000000000000004c $d
+     /tmp/ccjz1RIq.s:1674   .text._ZN5zxing9ExceptionC2EPKc:0000000000000000 $a
+     /tmp/ccjz1RIq.s:1680   .text._ZN5zxing9ExceptionC2EPKc:0000000000000000 _ZN5zxing9ExceptionC2EPKc
+     /tmp/ccjz1RIq.s:1735   .text._ZN5zxing9ExceptionC2EPKc:000000000000004c $d
 .ARM.extab.text._ZN5zxing9ExceptionC2EPKc:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing9ExceptionC2EPKc:0000000000000000 $d
-     /tmp/ccv9NJwC.s:1680   .text._ZN5zxing9ExceptionC2EPKc:0000000000000000 _ZN5zxing9ExceptionC1EPKc
-     /tmp/ccv9NJwC.s:1771   .text._ZN5zxing5aztec5Point13toResultPointEv:0000000000000000 $a
-     /tmp/ccv9NJwC.s:1777   .text._ZN5zxing5aztec5Point13toResultPointEv:0000000000000000 _ZN5zxing5aztec5Point13toResultPointEv
+     /tmp/ccjz1RIq.s:1680   .text._ZN5zxing9ExceptionC2EPKc:0000000000000000 _ZN5zxing9ExceptionC1EPKc
+     /tmp/ccjz1RIq.s:1771   .text._ZN5zxing5aztec5Point13toResultPointEv:0000000000000000 $a
+     /tmp/ccjz1RIq.s:1777   .text._ZN5zxing5aztec5Point13toResultPointEv:0000000000000000 _ZN5zxing5aztec5Point13toResultPointEv
 .ARM.extab.text._ZN5zxing5aztec5Point13toResultPointEv:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing5aztec5Point13toResultPointEv:0000000000000000 $d
-     /tmp/ccv9NJwC.s:1923   .text._ZN5zxing5aztec8DetectorC2ENS_3RefINS_9BitMatrixEEE:0000000000000000 $a
-     /tmp/ccv9NJwC.s:1929   .text._ZN5zxing5aztec8DetectorC2ENS_3RefINS_9BitMatrixEEE:0000000000000000 _ZN5zxing5aztec8DetectorC2ENS_3RefINS_9BitMatrixEEE
-     /tmp/ccv9NJwC.s:2037   .text._ZN5zxing5aztec8DetectorC2ENS_3RefINS_9BitMatrixEEE:0000000000000088 $d
+     /tmp/ccjz1RIq.s:1923   .text._ZN5zxing5aztec8DetectorC2ENS_3RefINS_9BitMatrixEEE:0000000000000000 $a
+     /tmp/ccjz1RIq.s:1929   .text._ZN5zxing5aztec8DetectorC2ENS_3RefINS_9BitMatrixEEE:0000000000000000 _ZN5zxing5aztec8DetectorC2ENS_3RefINS_9BitMatrixEEE
+     /tmp/ccjz1RIq.s:2037   .text._ZN5zxing5aztec8DetectorC2ENS_3RefINS_9BitMatrixEEE:0000000000000088 $d
 .ARM.exidx.text._ZN5zxing5aztec8DetectorC2ENS_3RefINS_9BitMatrixEEE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:1929   .text._ZN5zxing5aztec8DetectorC2ENS_3RefINS_9BitMatrixEEE:0000000000000000 _ZN5zxing5aztec8DetectorC1ENS_3RefINS_9BitMatrixEEE
-     /tmp/ccv9NJwC.s:2053   .text._ZN5zxing5aztec8Detector20correctParameterDataENS_3RefINS_8BitArrayEEEb:0000000000000000 $a
-     /tmp/ccv9NJwC.s:2059   .text._ZN5zxing5aztec8Detector20correctParameterDataENS_3RefINS_8BitArrayEEEb:0000000000000000 _ZN5zxing5aztec8Detector20correctParameterDataENS_3RefINS_8BitArrayEEEb
-     /tmp/ccv9NJwC.s:25553  .rodata._ZN5zxing5aztec8Detector20correctParameterDataENS_3RefINS_8BitArrayEEEb.str1.4:0000000000000000 .LC1
-     /tmp/ccv9NJwC.s:25387  .rodata._ZTIN5zxing15ReaderExceptionE:0000000000000000 _ZTIN5zxing15ReaderExceptionE
-     /tmp/ccv9NJwC.s:3034   .text._ZN5zxing5aztec8Detector20correctParameterDataENS_3RefINS_8BitArrayEEEb:00000000000004d8 $d
-     /tmp/ccv9NJwC.s:25504  .rodata._ZTVN5zxing15ReaderExceptionE:0000000000000000 _ZTVN5zxing15ReaderExceptionE
+     /tmp/ccjz1RIq.s:1929   .text._ZN5zxing5aztec8DetectorC2ENS_3RefINS_9BitMatrixEEE:0000000000000000 _ZN5zxing5aztec8DetectorC1ENS_3RefINS_9BitMatrixEEE
+     /tmp/ccjz1RIq.s:2053   .text._ZN5zxing5aztec8Detector20correctParameterDataENS_3RefINS_8BitArrayEEEb:0000000000000000 $a
+     /tmp/ccjz1RIq.s:2059   .text._ZN5zxing5aztec8Detector20correctParameterDataENS_3RefINS_8BitArrayEEEb:0000000000000000 _ZN5zxing5aztec8Detector20correctParameterDataENS_3RefINS_8BitArrayEEEb
+     /tmp/ccjz1RIq.s:25553  .rodata._ZN5zxing5aztec8Detector20correctParameterDataENS_3RefINS_8BitArrayEEEb.str1.4:0000000000000000 .LC1
+     /tmp/ccjz1RIq.s:25387  .rodata._ZTIN5zxing15ReaderExceptionE:0000000000000000 _ZTIN5zxing15ReaderExceptionE
+     /tmp/ccjz1RIq.s:3034   .text._ZN5zxing5aztec8Detector20correctParameterDataENS_3RefINS_8BitArrayEEEb:00000000000004d8 $d
+     /tmp/ccjz1RIq.s:25504  .rodata._ZTVN5zxing15ReaderExceptionE:0000000000000000 _ZTVN5zxing15ReaderExceptionE
 .ARM.extab.text._ZN5zxing5aztec8Detector20correctParameterDataENS_3RefINS_8BitArrayEEEb:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing5aztec8Detector20correctParameterDataENS_3RefINS_8BitArrayEEEb:0000000000000000 $d
-     /tmp/ccv9NJwC.s:3095   .text._ZN5zxing5aztec8Detector10sampleGridENS_3RefINS_9BitMatrixEEENS2_INS_11ResultPointEEES6_S6_S6_:0000000000000000 $a
-     /tmp/ccv9NJwC.s:3101   .text._ZN5zxing5aztec8Detector10sampleGridENS_3RefINS_9BitMatrixEEENS2_INS_11ResultPointEEES6_S6_S6_:0000000000000000 _ZN5zxing5aztec8Detector10sampleGridENS_3RefINS_9BitMatrixEEENS2_INS_11ResultPointEEES6_S6_S6_
+     /tmp/ccjz1RIq.s:3095   .text._ZN5zxing5aztec8Detector10sampleGridENS_3RefINS_9BitMatrixEEENS2_INS_11ResultPointEEES6_S6_S6_:0000000000000000 $a
+     /tmp/ccjz1RIq.s:3101   .text._ZN5zxing5aztec8Detector10sampleGridENS_3RefINS_9BitMatrixEEENS2_INS_11ResultPointEEES6_S6_S6_:0000000000000000 _ZN5zxing5aztec8Detector10sampleGridENS_3RefINS_9BitMatrixEEENS2_INS_11ResultPointEEES6_S6_S6_
 .ARM.extab.text._ZN5zxing5aztec8Detector10sampleGridENS_3RefINS_9BitMatrixEEENS2_INS_11ResultPointEEES6_S6_S6_:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing5aztec8Detector10sampleGridENS_3RefINS_9BitMatrixEEENS2_INS_11ResultPointEEES6_S6_S6_:0000000000000000 $d
-     /tmp/ccv9NJwC.s:3547   .text._ZN5zxing5aztec8Detector13getParametersENS_3RefINS_8BitArrayEEE:0000000000000000 $a
-     /tmp/ccv9NJwC.s:3553   .text._ZN5zxing5aztec8Detector13getParametersENS_3RefINS_8BitArrayEEE:0000000000000000 _ZN5zxing5aztec8Detector13getParametersENS_3RefINS_8BitArrayEEE
+     /tmp/ccjz1RIq.s:3547   .text._ZN5zxing5aztec8Detector13getParametersENS_3RefINS_8BitArrayEEE:0000000000000000 $a
+     /tmp/ccjz1RIq.s:3553   .text._ZN5zxing5aztec8Detector13getParametersENS_3RefINS_8BitArrayEEE:0000000000000000 _ZN5zxing5aztec8Detector13getParametersENS_3RefINS_8BitArrayEEE
 .ARM.exidx.text._ZN5zxing5aztec8Detector13getParametersENS_3RefINS_8BitArrayEEE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:3733   .text._ZN5zxing5aztec8Detector7isValidEii:0000000000000000 $a
-     /tmp/ccv9NJwC.s:3739   .text._ZN5zxing5aztec8Detector7isValidEii:0000000000000000 _ZN5zxing5aztec8Detector7isValidEii
+     /tmp/ccjz1RIq.s:3733   .text._ZN5zxing5aztec8Detector7isValidEii:0000000000000000 $a
+     /tmp/ccjz1RIq.s:3739   .text._ZN5zxing5aztec8Detector7isValidEii:0000000000000000 _ZN5zxing5aztec8Detector7isValidEii
 .ARM.exidx.text._ZN5zxing5aztec8Detector7isValidEii:0000000000000000 $d
-     /tmp/ccv9NJwC.s:3800   .text._ZN5zxing5aztec8Detector17getFirstDifferentENS_3RefINS0_5PointEEEbii:0000000000000000 $a
-     /tmp/ccv9NJwC.s:3806   .text._ZN5zxing5aztec8Detector17getFirstDifferentENS_3RefINS0_5PointEEEbii:0000000000000000 _ZN5zxing5aztec8Detector17getFirstDifferentENS_3RefINS0_5PointEEEbii
-     /tmp/ccv9NJwC.s:4177   .text._ZN5zxing5aztec8Detector17getFirstDifferentENS_3RefINS0_5PointEEEbii:00000000000001f4 $d
-     /tmp/ccv9NJwC.s:25484  .rodata._ZTVN5zxing5aztec5PointE:0000000000000000 _ZTVN5zxing5aztec5PointE
+     /tmp/ccjz1RIq.s:3800   .text._ZN5zxing5aztec8Detector17getFirstDifferentENS_3RefINS0_5PointEEEbii:0000000000000000 $a
+     /tmp/ccjz1RIq.s:3806   .text._ZN5zxing5aztec8Detector17getFirstDifferentENS_3RefINS0_5PointEEEbii:0000000000000000 _ZN5zxing5aztec8Detector17getFirstDifferentENS_3RefINS0_5PointEEEbii
+     /tmp/ccjz1RIq.s:4177   .text._ZN5zxing5aztec8Detector17getFirstDifferentENS_3RefINS0_5PointEEEbii:00000000000001f4 $d
+     /tmp/ccjz1RIq.s:25484  .rodata._ZTVN5zxing5aztec5PointE:0000000000000000 _ZTVN5zxing5aztec5PointE
 .ARM.exidx.text._ZN5zxing5aztec8Detector17getFirstDifferentENS_3RefINS0_5PointEEEbii:0000000000000000 $d
-     /tmp/ccv9NJwC.s:4189   .text._ZN5zxing5aztec8Detector8distanceENS_3RefINS0_5PointEEES4_:0000000000000000 $a
-     /tmp/ccv9NJwC.s:4195   .text._ZN5zxing5aztec8Detector8distanceENS_3RefINS0_5PointEEES4_:0000000000000000 _ZN5zxing5aztec8Detector8distanceENS_3RefINS0_5PointEEES4_
+     /tmp/ccjz1RIq.s:4189   .text._ZN5zxing5aztec8Detector8distanceENS_3RefINS0_5PointEEES4_:0000000000000000 $a
+     /tmp/ccjz1RIq.s:4195   .text._ZN5zxing5aztec8Detector8distanceENS_3RefINS0_5PointEEES4_:0000000000000000 _ZN5zxing5aztec8Detector8distanceENS_3RefINS0_5PointEEES4_
 .ARM.exidx.text._ZN5zxing5aztec8Detector8distanceENS_3RefINS0_5PointEEES4_:0000000000000000 $d
-     /tmp/ccv9NJwC.s:4265   .text._ZN5zxing5aztec8Detector8getColorENS_3RefINS0_5PointEEES4_:0000000000000000 $a
-     /tmp/ccv9NJwC.s:4271   .text._ZN5zxing5aztec8Detector8getColorENS_3RefINS0_5PointEEES4_:0000000000000000 _ZN5zxing5aztec8Detector8getColorENS_3RefINS0_5PointEEES4_
-     /tmp/ccv9NJwC.s:4839   .text._ZN5zxing5aztec8Detector8getColorENS_3RefINS0_5PointEEES4_:0000000000000320 $d
+     /tmp/ccjz1RIq.s:4265   .text._ZN5zxing5aztec8Detector8getColorENS_3RefINS0_5PointEEES4_:0000000000000000 $a
+     /tmp/ccjz1RIq.s:4271   .text._ZN5zxing5aztec8Detector8getColorENS_3RefINS0_5PointEEES4_:0000000000000000 _ZN5zxing5aztec8Detector8getColorENS_3RefINS0_5PointEEES4_
+     /tmp/ccjz1RIq.s:4839   .text._ZN5zxing5aztec8Detector8getColorENS_3RefINS0_5PointEEES4_:0000000000000320 $d
 .ARM.extab.text._ZN5zxing5aztec8Detector8getColorENS_3RefINS0_5PointEEES4_:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing5aztec8Detector8getColorENS_3RefINS0_5PointEEES4_:0000000000000000 $d
-     /tmp/ccv9NJwC.s:4870   .text._ZN5zxing5aztec8Detector23isWhiteOrBlackRectangleENS_3RefINS0_5PointEEES4_S4_S4_:0000000000000000 $a
-     /tmp/ccv9NJwC.s:4876   .text._ZN5zxing5aztec8Detector23isWhiteOrBlackRectangleENS_3RefINS0_5PointEEES4_S4_S4_:0000000000000000 _ZN5zxing5aztec8Detector23isWhiteOrBlackRectangleENS_3RefINS0_5PointEEES4_S4_S4_
-     /tmp/ccv9NJwC.s:6645   .text._ZN5zxing5aztec8Detector23isWhiteOrBlackRectangleENS_3RefINS0_5PointEEES4_S4_S4_:0000000000000974 $d
+     /tmp/ccjz1RIq.s:4870   .text._ZN5zxing5aztec8Detector23isWhiteOrBlackRectangleENS_3RefINS0_5PointEEES4_S4_S4_:0000000000000000 $a
+     /tmp/ccjz1RIq.s:4876   .text._ZN5zxing5aztec8Detector23isWhiteOrBlackRectangleENS_3RefINS0_5PointEEES4_S4_S4_:0000000000000000 _ZN5zxing5aztec8Detector23isWhiteOrBlackRectangleENS_3RefINS0_5PointEEES4_S4_S4_
+     /tmp/ccjz1RIq.s:6645   .text._ZN5zxing5aztec8Detector23isWhiteOrBlackRectangleENS_3RefINS0_5PointEEES4_S4_S4_:0000000000000974 $d
 .ARM.extab.text._ZN5zxing5aztec8Detector23isWhiteOrBlackRectangleENS_3RefINS0_5PointEEES4_S4_S4_:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing5aztec8Detector23isWhiteOrBlackRectangleENS_3RefINS0_5PointEEES4_S4_S4_:0000000000000000 $d
-     /tmp/ccv9NJwC.s:6689   .text._ZN5zxing5aztec8Detector10sampleLineENS_3RefINS0_5PointEEES4_i:0000000000000000 $a
-     /tmp/ccv9NJwC.s:6695   .text._ZN5zxing5aztec8Detector10sampleLineENS_3RefINS0_5PointEEES4_i:0000000000000000 _ZN5zxing5aztec8Detector10sampleLineENS_3RefINS0_5PointEEES4_i
+     /tmp/ccjz1RIq.s:6689   .text._ZN5zxing5aztec8Detector10sampleLineENS_3RefINS0_5PointEEES4_i:0000000000000000 $a
+     /tmp/ccjz1RIq.s:6695   .text._ZN5zxing5aztec8Detector10sampleLineENS_3RefINS0_5PointEEES4_i:0000000000000000 _ZN5zxing5aztec8Detector10sampleLineENS_3RefINS0_5PointEEES4_i
 .ARM.extab.text._ZN5zxing5aztec8Detector10sampleLineENS_3RefINS0_5PointEEES4_i:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing5aztec8Detector10sampleLineENS_3RefINS0_5PointEEES4_i:0000000000000000 $d
-     /tmp/ccv9NJwC.s:7397   .text._ZN5zxing5aztec8Detector17extractParametersESt6vectorINS_3RefINS0_5PointEEESaIS5_EE:0000000000000000 $a
-     /tmp/ccv9NJwC.s:7403   .text._ZN5zxing5aztec8Detector17extractParametersESt6vectorINS_3RefINS0_5PointEEESaIS5_EE:0000000000000000 _ZN5zxing5aztec8Detector17extractParametersESt6vectorINS_3RefINS0_5PointEEESaIS5_EE
-     /tmp/ccv9NJwC.s:25549  .rodata._ZN5zxing5aztec8Detector17extractParametersESt6vectorINS_3RefINS0_5PointEEESaIS5_EE.str1.4:0000000000000000 .LC2
-     /tmp/ccv9NJwC.s:11060  .text._ZN5zxing5aztec8Detector17extractParametersESt6vectorINS_3RefINS0_5PointEEESaIS5_EE:00000000000012c8 $d
+     /tmp/ccjz1RIq.s:7397   .text._ZN5zxing5aztec8Detector17extractParametersESt6vectorINS_3RefINS0_5PointEEESaIS5_EE:0000000000000000 $a
+     /tmp/ccjz1RIq.s:7403   .text._ZN5zxing5aztec8Detector17extractParametersESt6vectorINS_3RefINS0_5PointEEESaIS5_EE:0000000000000000 _ZN5zxing5aztec8Detector17extractParametersESt6vectorINS_3RefINS0_5PointEEESaIS5_EE
+     /tmp/ccjz1RIq.s:25549  .rodata._ZN5zxing5aztec8Detector17extractParametersESt6vectorINS_3RefINS0_5PointEEESaIS5_EE.str1.4:0000000000000000 .LC2
+     /tmp/ccjz1RIq.s:11060  .text._ZN5zxing5aztec8Detector17extractParametersESt6vectorINS_3RefINS0_5PointEEESaIS5_EE:00000000000012c8 $d
 .ARM.extab.text._ZN5zxing5aztec8Detector17extractParametersESt6vectorINS_3RefINS0_5PointEEESaIS5_EE:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing5aztec8Detector17extractParametersESt6vectorINS_3RefINS0_5PointEEESaIS5_EE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:11120  .text._ZNSt6vectorIN5zxing3RefINS0_5aztec5PointEEESaIS4_EED2Ev:0000000000000000 $a
-     /tmp/ccv9NJwC.s:11126  .text._ZNSt6vectorIN5zxing3RefINS0_5aztec5PointEEESaIS4_EED2Ev:0000000000000000 _ZNSt6vectorIN5zxing3RefINS0_5aztec5PointEEESaIS4_EED2Ev
+     /tmp/ccjz1RIq.s:11120  .text._ZNSt6vectorIN5zxing3RefINS0_5aztec5PointEEESaIS4_EED2Ev:0000000000000000 $a
+     /tmp/ccjz1RIq.s:11126  .text._ZNSt6vectorIN5zxing3RefINS0_5aztec5PointEEESaIS4_EED2Ev:0000000000000000 _ZNSt6vectorIN5zxing3RefINS0_5aztec5PointEEESaIS4_EED2Ev
 .ARM.exidx.text._ZNSt6vectorIN5zxing3RefINS0_5aztec5PointEEESaIS4_EED2Ev:0000000000000000 $d
-     /tmp/ccv9NJwC.s:11126  .text._ZNSt6vectorIN5zxing3RefINS0_5aztec5PointEEESaIS4_EED2Ev:0000000000000000 _ZNSt6vectorIN5zxing3RefINS0_5aztec5PointEEESaIS4_EED1Ev
-     /tmp/ccv9NJwC.s:11236  .text._ZN5zxing3RefINS_11ResultPointEE5resetEPS1_:0000000000000000 $a
-     /tmp/ccv9NJwC.s:11242  .text._ZN5zxing3RefINS_11ResultPointEE5resetEPS1_:0000000000000000 _ZN5zxing3RefINS_11ResultPointEE5resetEPS1_
+     /tmp/ccjz1RIq.s:11126  .text._ZNSt6vectorIN5zxing3RefINS0_5aztec5PointEEESaIS4_EED2Ev:0000000000000000 _ZNSt6vectorIN5zxing3RefINS0_5aztec5PointEEESaIS4_EED1Ev
+     /tmp/ccjz1RIq.s:11236  .text._ZN5zxing3RefINS_11ResultPointEE5resetEPS1_:0000000000000000 $a
+     /tmp/ccjz1RIq.s:11242  .text._ZN5zxing3RefINS_11ResultPointEE5resetEPS1_:0000000000000000 _ZN5zxing3RefINS_11ResultPointEE5resetEPS1_
 .ARM.exidx.text._ZN5zxing3RefINS_11ResultPointEE5resetEPS1_:0000000000000000 $d
-     /tmp/ccv9NJwC.s:11314  .text._ZN5zxing3RefINS_5aztec5PointEE5resetEPS2_:0000000000000000 $a
-     /tmp/ccv9NJwC.s:11320  .text._ZN5zxing3RefINS_5aztec5PointEE5resetEPS2_:0000000000000000 _ZN5zxing3RefINS_5aztec5PointEE5resetEPS2_
+     /tmp/ccjz1RIq.s:11314  .text._ZN5zxing3RefINS_5aztec5PointEE5resetEPS2_:0000000000000000 $a
+     /tmp/ccjz1RIq.s:11320  .text._ZN5zxing3RefINS_5aztec5PointEE5resetEPS2_:0000000000000000 _ZN5zxing3RefINS_5aztec5PointEE5resetEPS2_
 .ARM.exidx.text._ZN5zxing3RefINS_5aztec5PointEE5resetEPS2_:0000000000000000 $d
-     /tmp/ccv9NJwC.s:11392  .text._ZN5zxing5aztec8Detector15getMatrixCenterEv:0000000000000000 $a
-     /tmp/ccv9NJwC.s:11398  .text._ZN5zxing5aztec8Detector15getMatrixCenterEv:0000000000000000 _ZN5zxing5aztec8Detector15getMatrixCenterEv
-     /tmp/ccv9NJwC.s:14288  .text._ZN5zxing5aztec8Detector15getMatrixCenterEv:0000000000001024 $d
-     /tmp/ccv9NJwC.s:14299  .text._ZN5zxing5aztec8Detector15getMatrixCenterEv:000000000000102c $a
+     /tmp/ccjz1RIq.s:11392  .text._ZN5zxing5aztec8Detector15getMatrixCenterEv:0000000000000000 $a
+     /tmp/ccjz1RIq.s:11398  .text._ZN5zxing5aztec8Detector15getMatrixCenterEv:0000000000000000 _ZN5zxing5aztec8Detector15getMatrixCenterEv
+     /tmp/ccjz1RIq.s:14288  .text._ZN5zxing5aztec8Detector15getMatrixCenterEv:0000000000001024 $d
+     /tmp/ccjz1RIq.s:14299  .text._ZN5zxing5aztec8Detector15getMatrixCenterEv:000000000000102c $a
 .ARM.extab.text._ZN5zxing5aztec8Detector15getMatrixCenterEv:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25412  .rodata._ZTIN5zxing17NotFoundExceptionE:0000000000000000 _ZTIN5zxing17NotFoundExceptionE
+     /tmp/ccjz1RIq.s:25412  .rodata._ZTIN5zxing17NotFoundExceptionE:0000000000000000 _ZTIN5zxing17NotFoundExceptionE
 .ARM.exidx.text._ZN5zxing5aztec8Detector15getMatrixCenterEv:0000000000000000 $d
-     /tmp/ccv9NJwC.s:15509  .text._ZNSt6vectorIN5zxing3RefINS0_11ResultPointEEESaIS3_EE19_M_emplace_back_auxIJS3_EEEvDpOT_:0000000000000000 $a
-     /tmp/ccv9NJwC.s:15515  .text._ZNSt6vectorIN5zxing3RefINS0_11ResultPointEEESaIS3_EE19_M_emplace_back_auxIJS3_EEEvDpOT_:0000000000000000 _ZNSt6vectorIN5zxing3RefINS0_11ResultPointEEESaIS3_EE19_M_emplace_back_auxIJS3_EEEvDpOT_
+     /tmp/ccjz1RIq.s:15509  .text._ZNSt6vectorIN5zxing3RefINS0_11ResultPointEEESaIS3_EE19_M_emplace_back_auxIJS3_EEEvDpOT_:0000000000000000 $a
+     /tmp/ccjz1RIq.s:15515  .text._ZNSt6vectorIN5zxing3RefINS0_11ResultPointEEESaIS3_EE19_M_emplace_back_auxIJS3_EEEvDpOT_:0000000000000000 _ZNSt6vectorIN5zxing3RefINS0_11ResultPointEEESaIS3_EE19_M_emplace_back_auxIJS3_EEEvDpOT_
 .ARM.exidx.text._ZNSt6vectorIN5zxing3RefINS0_11ResultPointEEESaIS3_EE19_M_emplace_back_auxIJS3_EEEvDpOT_:0000000000000000 $d
-     /tmp/ccv9NJwC.s:15976  .text._ZNSt6vectorIN5zxing3RefINS0_11ResultPointEEESaIS3_EE12emplace_backIJS3_EEEvDpOT_:0000000000000000 $a
-     /tmp/ccv9NJwC.s:15982  .text._ZNSt6vectorIN5zxing3RefINS0_11ResultPointEEESaIS3_EE12emplace_backIJS3_EEEvDpOT_:0000000000000000 _ZNSt6vectorIN5zxing3RefINS0_11ResultPointEEESaIS3_EE12emplace_backIJS3_EEEvDpOT_
+     /tmp/ccjz1RIq.s:15976  .text._ZNSt6vectorIN5zxing3RefINS0_11ResultPointEEESaIS3_EE12emplace_backIJS3_EEEvDpOT_:0000000000000000 $a
+     /tmp/ccjz1RIq.s:15982  .text._ZNSt6vectorIN5zxing3RefINS0_11ResultPointEEESaIS3_EE12emplace_backIJS3_EEEvDpOT_:0000000000000000 _ZNSt6vectorIN5zxing3RefINS0_11ResultPointEEESaIS3_EE12emplace_backIJS3_EEEvDpOT_
 .ARM.exidx.text._ZNSt6vectorIN5zxing3RefINS0_11ResultPointEEESaIS3_EE12emplace_backIJS3_EEEvDpOT_:0000000000000000 $d
-     /tmp/ccv9NJwC.s:16110  .text._ZN5zxing5aztec8Detector21getMatrixCornerPointsESt6vectorINS_3RefINS0_5PointEEESaIS5_EE:0000000000000000 $a
-     /tmp/ccv9NJwC.s:16116  .text._ZN5zxing5aztec8Detector21getMatrixCornerPointsESt6vectorINS_3RefINS0_5PointEEESaIS5_EE:0000000000000000 _ZN5zxing5aztec8Detector21getMatrixCornerPointsESt6vectorINS_3RefINS0_5PointEEESaIS5_EE
-     /tmp/ccv9NJwC.s:25557  .rodata._ZN5zxing5aztec8Detector21getMatrixCornerPointsESt6vectorINS_3RefINS0_5PointEEESaIS5_EE.str1.4:0000000000000000 .LC4
-     /tmp/ccv9NJwC.s:17425  .text._ZN5zxing5aztec8Detector21getMatrixCornerPointsESt6vectorINS_3RefINS0_5PointEEESaIS5_EE:0000000000000758 $d
+     /tmp/ccjz1RIq.s:16110  .text._ZN5zxing5aztec8Detector21getMatrixCornerPointsESt6vectorINS_3RefINS0_5PointEEESaIS5_EE:0000000000000000 $a
+     /tmp/ccjz1RIq.s:16116  .text._ZN5zxing5aztec8Detector21getMatrixCornerPointsESt6vectorINS_3RefINS0_5PointEEESaIS5_EE:0000000000000000 _ZN5zxing5aztec8Detector21getMatrixCornerPointsESt6vectorINS_3RefINS0_5PointEEESaIS5_EE
+     /tmp/ccjz1RIq.s:25557  .rodata._ZN5zxing5aztec8Detector21getMatrixCornerPointsESt6vectorINS_3RefINS0_5PointEEESaIS5_EE.str1.4:0000000000000000 .LC4
+     /tmp/ccjz1RIq.s:17425  .text._ZN5zxing5aztec8Detector21getMatrixCornerPointsESt6vectorINS_3RefINS0_5PointEEESaIS5_EE:0000000000000758 $d
 .ARM.extab.text._ZN5zxing5aztec8Detector21getMatrixCornerPointsESt6vectorINS_3RefINS0_5PointEEESaIS5_EE:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing5aztec8Detector21getMatrixCornerPointsESt6vectorINS_3RefINS0_5PointEEESaIS5_EE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:17503  .text._ZNSt6vectorIN5zxing3RefINS0_5aztec5PointEEESaIS4_EE19_M_emplace_back_auxIJS4_EEEvDpOT_:0000000000000000 $a
-     /tmp/ccv9NJwC.s:17509  .text._ZNSt6vectorIN5zxing3RefINS0_5aztec5PointEEESaIS4_EE19_M_emplace_back_auxIJS4_EEEvDpOT_:0000000000000000 _ZNSt6vectorIN5zxing3RefINS0_5aztec5PointEEESaIS4_EE19_M_emplace_back_auxIJS4_EEEvDpOT_
+     /tmp/ccjz1RIq.s:17503  .text._ZNSt6vectorIN5zxing3RefINS0_5aztec5PointEEESaIS4_EE19_M_emplace_back_auxIJS4_EEEvDpOT_:0000000000000000 $a
+     /tmp/ccjz1RIq.s:17509  .text._ZNSt6vectorIN5zxing3RefINS0_5aztec5PointEEESaIS4_EE19_M_emplace_back_auxIJS4_EEEvDpOT_:0000000000000000 _ZNSt6vectorIN5zxing3RefINS0_5aztec5PointEEESaIS4_EE19_M_emplace_back_auxIJS4_EEEvDpOT_
 .ARM.exidx.text._ZNSt6vectorIN5zxing3RefINS0_5aztec5PointEEESaIS4_EE19_M_emplace_back_auxIJS4_EEEvDpOT_:0000000000000000 $d
-     /tmp/ccv9NJwC.s:17968  .text._ZNSt6vectorIN5zxing3RefINS0_5aztec5PointEEESaIS4_EE12emplace_backIJS4_EEEvDpOT_:0000000000000000 $a
-     /tmp/ccv9NJwC.s:17974  .text._ZNSt6vectorIN5zxing3RefINS0_5aztec5PointEEESaIS4_EE12emplace_backIJS4_EEEvDpOT_:0000000000000000 _ZNSt6vectorIN5zxing3RefINS0_5aztec5PointEEESaIS4_EE12emplace_backIJS4_EEEvDpOT_
+     /tmp/ccjz1RIq.s:17968  .text._ZNSt6vectorIN5zxing3RefINS0_5aztec5PointEEESaIS4_EE12emplace_backIJS4_EEEvDpOT_:0000000000000000 $a
+     /tmp/ccjz1RIq.s:17974  .text._ZNSt6vectorIN5zxing3RefINS0_5aztec5PointEEESaIS4_EE12emplace_backIJS4_EEEvDpOT_:0000000000000000 _ZNSt6vectorIN5zxing3RefINS0_5aztec5PointEEESaIS4_EE12emplace_backIJS4_EEEvDpOT_
 .ARM.exidx.text._ZNSt6vectorIN5zxing3RefINS0_5aztec5PointEEESaIS4_EE12emplace_backIJS4_EEEvDpOT_:0000000000000000 $d
-     /tmp/ccv9NJwC.s:18102  .text._ZN5zxing5aztec8Detector22getBullEyeCornerPointsENS_3RefINS0_5PointEEE:0000000000000000 $a
-     /tmp/ccv9NJwC.s:18108  .text._ZN5zxing5aztec8Detector22getBullEyeCornerPointsENS_3RefINS0_5PointEEE:0000000000000000 _ZN5zxing5aztec8Detector22getBullEyeCornerPointsENS_3RefINS0_5PointEEE
-     /tmp/ccv9NJwC.s:25561  .rodata._ZN5zxing5aztec8Detector22getBullEyeCornerPointsENS_3RefINS0_5PointEEE.str1.4:0000000000000000 .LC5
-     /tmp/ccv9NJwC.s:25564  .rodata._ZN5zxing5aztec8Detector22getBullEyeCornerPointsENS_3RefINS0_5PointEEE.str1.4:0000000000000028 .LC6
-     /tmp/ccv9NJwC.s:22644  .text._ZN5zxing5aztec8Detector22getBullEyeCornerPointsENS_3RefINS0_5PointEEE:0000000000001960 $d
+     /tmp/ccjz1RIq.s:18102  .text._ZN5zxing5aztec8Detector22getBullEyeCornerPointsENS_3RefINS0_5PointEEE:0000000000000000 $a
+     /tmp/ccjz1RIq.s:18108  .text._ZN5zxing5aztec8Detector22getBullEyeCornerPointsENS_3RefINS0_5PointEEE:0000000000000000 _ZN5zxing5aztec8Detector22getBullEyeCornerPointsENS_3RefINS0_5PointEEE
+     /tmp/ccjz1RIq.s:25561  .rodata._ZN5zxing5aztec8Detector22getBullEyeCornerPointsENS_3RefINS0_5PointEEE.str1.4:0000000000000000 .LC5
+     /tmp/ccjz1RIq.s:25564  .rodata._ZN5zxing5aztec8Detector22getBullEyeCornerPointsENS_3RefINS0_5PointEEE.str1.4:0000000000000028 .LC6
+     /tmp/ccjz1RIq.s:22644  .text._ZN5zxing5aztec8Detector22getBullEyeCornerPointsENS_3RefINS0_5PointEEE:0000000000001960 $d
 .ARM.extab.text._ZN5zxing5aztec8Detector22getBullEyeCornerPointsENS_3RefINS0_5PointEEE:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing5aztec8Detector22getBullEyeCornerPointsENS_3RefINS0_5PointEEE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:22737  .text._ZN5zxing5aztec8Detector6detectEv:0000000000000000 $a
-     /tmp/ccv9NJwC.s:22743  .text._ZN5zxing5aztec8Detector6detectEv:0000000000000000 _ZN5zxing5aztec8Detector6detectEv
-     /tmp/ccv9NJwC.s:25183  .text._ZN5zxing5aztec8Detector6detectEv:0000000000000cbc $d
+     /tmp/ccjz1RIq.s:22737  .text._ZN5zxing5aztec8Detector6detectEv:0000000000000000 $a
+     /tmp/ccjz1RIq.s:22743  .text._ZN5zxing5aztec8Detector6detectEv:0000000000000000 _ZN5zxing5aztec8Detector6detectEv
+     /tmp/ccjz1RIq.s:25183  .text._ZN5zxing5aztec8Detector6detectEv:0000000000000cbc $d
 .ARM.extab.text._ZN5zxing5aztec8Detector6detectEv:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing5aztec8Detector6detectEv:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25243  .text._GLOBAL__sub_I__ZN5zxing5aztec8DetectorC2ENS_3RefINS_9BitMatrixEEE:0000000000000000 $a
-     /tmp/ccv9NJwC.s:25248  .text._GLOBAL__sub_I__ZN5zxing5aztec8DetectorC2ENS_3RefINS_9BitMatrixEEE:0000000000000000 _GLOBAL__sub_I__ZN5zxing5aztec8DetectorC2ENS_3RefINS_9BitMatrixEEE
+     /tmp/ccjz1RIq.s:25243  .text._GLOBAL__sub_I__ZN5zxing5aztec8DetectorC2ENS_3RefINS_9BitMatrixEEE:0000000000000000 $a
+     /tmp/ccjz1RIq.s:25248  .text._GLOBAL__sub_I__ZN5zxing5aztec8DetectorC2ENS_3RefINS_9BitMatrixEEE:0000000000000000 _GLOBAL__sub_I__ZN5zxing5aztec8DetectorC2ENS_3RefINS_9BitMatrixEEE
 .ARM.exidx.text._GLOBAL__sub_I__ZN5zxing5aztec8DetectorC2ENS_3RefINS_9BitMatrixEEE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25271  .init_array:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25278  .rodata._ZTSN5zxing22WhiteRectangleDetectorE:0000000000000000 _ZTSN5zxing22WhiteRectangleDetectorE
-     /tmp/ccv9NJwC.s:25275  .rodata._ZTSN5zxing22WhiteRectangleDetectorE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25285  .rodata._ZTSN5zxing7CountedE:0000000000000000 _ZTSN5zxing7CountedE
-     /tmp/ccv9NJwC.s:25282  .rodata._ZTSN5zxing7CountedE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25292  .rodata._ZTIN5zxing7CountedE:0000000000000000 _ZTIN5zxing7CountedE
-     /tmp/ccv9NJwC.s:25289  .rodata._ZTIN5zxing7CountedE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25300  .rodata._ZTSN5zxing9ExceptionE:0000000000000000 _ZTSN5zxing9ExceptionE
-     /tmp/ccv9NJwC.s:25297  .rodata._ZTSN5zxing9ExceptionE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25307  .rodata._ZTIN5zxing9ExceptionE:0000000000000000 _ZTIN5zxing9ExceptionE
-     /tmp/ccv9NJwC.s:25304  .rodata._ZTIN5zxing9ExceptionE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25316  .rodata._ZTSN5zxing8ArrayRefIiEE:0000000000000000 _ZTSN5zxing8ArrayRefIiEE
-     /tmp/ccv9NJwC.s:25313  .rodata._ZTSN5zxing8ArrayRefIiEE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25323  .rodata._ZTIN5zxing8ArrayRefIiEE:0000000000000000 _ZTIN5zxing8ArrayRefIiEE
-     /tmp/ccv9NJwC.s:25320  .rodata._ZTIN5zxing8ArrayRefIiEE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25332  .rodata._ZTSN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE:0000000000000000 _ZTSN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE
-     /tmp/ccv9NJwC.s:25329  .rodata._ZTSN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25339  .rodata._ZTIN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE:0000000000000000 _ZTIN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE
-     /tmp/ccv9NJwC.s:25336  .rodata._ZTIN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25348  .rodata._ZTSN5zxing5aztec5PointE:0000000000000000 _ZTSN5zxing5aztec5PointE
-     /tmp/ccv9NJwC.s:25345  .rodata._ZTSN5zxing5aztec5PointE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25355  .rodata._ZTIN5zxing5aztec5PointE:0000000000000000 _ZTIN5zxing5aztec5PointE
-     /tmp/ccv9NJwC.s:25352  .rodata._ZTIN5zxing5aztec5PointE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25364  .rodata._ZTSN5zxing5aztec8DetectorE:0000000000000000 _ZTSN5zxing5aztec8DetectorE
-     /tmp/ccv9NJwC.s:25361  .rodata._ZTSN5zxing5aztec8DetectorE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25371  .rodata._ZTIN5zxing5aztec8DetectorE:0000000000000000 _ZTIN5zxing5aztec8DetectorE
-     /tmp/ccv9NJwC.s:25368  .rodata._ZTIN5zxing5aztec8DetectorE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25380  .rodata._ZTSN5zxing15ReaderExceptionE:0000000000000000 _ZTSN5zxing15ReaderExceptionE
-     /tmp/ccv9NJwC.s:25377  .rodata._ZTSN5zxing15ReaderExceptionE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25384  .rodata._ZTIN5zxing15ReaderExceptionE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25396  .rodata._ZTIN5zxing22WhiteRectangleDetectorE:0000000000000000 _ZTIN5zxing22WhiteRectangleDetectorE
-     /tmp/ccv9NJwC.s:25393  .rodata._ZTIN5zxing22WhiteRectangleDetectorE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25405  .rodata._ZTSN5zxing17NotFoundExceptionE:0000000000000000 _ZTSN5zxing17NotFoundExceptionE
-     /tmp/ccv9NJwC.s:25402  .rodata._ZTSN5zxing17NotFoundExceptionE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25409  .rodata._ZTIN5zxing17NotFoundExceptionE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25421  .rodata._ZTSN5zxing5ArrayINS_3RefINS_11ResultPointEEEEE:0000000000000000 _ZTSN5zxing5ArrayINS_3RefINS_11ResultPointEEEEE
-     /tmp/ccv9NJwC.s:25418  .rodata._ZTSN5zxing5ArrayINS_3RefINS_11ResultPointEEEEE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25428  .rodata._ZTIN5zxing5ArrayINS_3RefINS_11ResultPointEEEEE:0000000000000000 _ZTIN5zxing5ArrayINS_3RefINS_11ResultPointEEEEE
-     /tmp/ccv9NJwC.s:25425  .rodata._ZTIN5zxing5ArrayINS_3RefINS_11ResultPointEEEEE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25437  .rodata._ZTSN5zxing5ArrayIiEE:0000000000000000 _ZTSN5zxing5ArrayIiEE
-     /tmp/ccv9NJwC.s:25434  .rodata._ZTSN5zxing5ArrayIiEE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25444  .rodata._ZTIN5zxing5ArrayIiEE:0000000000000000 _ZTIN5zxing5ArrayIiEE
-     /tmp/ccv9NJwC.s:25441  .rodata._ZTIN5zxing5ArrayIiEE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25450  .rodata._ZTVN5zxing9ExceptionE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25461  .rodata._ZTVN5zxing8ArrayRefIiEE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25471  .rodata._ZTVN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25481  .rodata._ZTVN5zxing5aztec5PointE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25491  .rodata._ZTVN5zxing5aztec8DetectorE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25501  .rodata._ZTVN5zxing15ReaderExceptionE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25512  .rodata._ZTVN5zxing22WhiteRectangleDetectorE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25522  .rodata._ZTVN5zxing5ArrayINS_3RefINS_11ResultPointEEEEE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25532  .rodata._ZTVN5zxing5ArrayIiEE:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25541  .bss._ZStL8__ioinit:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25545  .bss._ZStL8__ioinit:0000000000000000 _ZStL8__ioinit
-     /tmp/ccv9NJwC.s:25548  .rodata._ZN5zxing5aztec8Detector17extractParametersESt6vectorINS_3RefINS0_5PointEEESaIS5_EE.str1.4:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25552  .rodata._ZN5zxing5aztec8Detector20correctParameterDataENS_3RefINS_8BitArrayEEEb.str1.4:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25556  .rodata._ZN5zxing5aztec8Detector21getMatrixCornerPointsESt6vectorINS_3RefINS0_5PointEEESaIS5_EE.str1.4:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25560  .rodata._ZN5zxing5aztec8Detector22getBullEyeCornerPointsENS_3RefINS0_5PointEEE.str1.4:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25567  .rodata._ZNK5zxing9Exception4whatEv.str1.4:0000000000000000 $d
-     /tmp/ccv9NJwC.s:25571  .rodata._ZNSt6vectorIN5zxing3RefINS0_11ResultPointEEESaIS3_EE19_M_emplace_back_auxIJS3_EEEvDpOT_.str1.4:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25271  .init_array:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25278  .rodata._ZTSN5zxing22WhiteRectangleDetectorE:0000000000000000 _ZTSN5zxing22WhiteRectangleDetectorE
+     /tmp/ccjz1RIq.s:25275  .rodata._ZTSN5zxing22WhiteRectangleDetectorE:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25285  .rodata._ZTSN5zxing7CountedE:0000000000000000 _ZTSN5zxing7CountedE
+     /tmp/ccjz1RIq.s:25282  .rodata._ZTSN5zxing7CountedE:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25292  .rodata._ZTIN5zxing7CountedE:0000000000000000 _ZTIN5zxing7CountedE
+     /tmp/ccjz1RIq.s:25289  .rodata._ZTIN5zxing7CountedE:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25300  .rodata._ZTSN5zxing9ExceptionE:0000000000000000 _ZTSN5zxing9ExceptionE
+     /tmp/ccjz1RIq.s:25297  .rodata._ZTSN5zxing9ExceptionE:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25307  .rodata._ZTIN5zxing9ExceptionE:0000000000000000 _ZTIN5zxing9ExceptionE
+     /tmp/ccjz1RIq.s:25304  .rodata._ZTIN5zxing9ExceptionE:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25316  .rodata._ZTSN5zxing8ArrayRefIiEE:0000000000000000 _ZTSN5zxing8ArrayRefIiEE
+     /tmp/ccjz1RIq.s:25313  .rodata._ZTSN5zxing8ArrayRefIiEE:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25323  .rodata._ZTIN5zxing8ArrayRefIiEE:0000000000000000 _ZTIN5zxing8ArrayRefIiEE
+     /tmp/ccjz1RIq.s:25320  .rodata._ZTIN5zxing8ArrayRefIiEE:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25332  .rodata._ZTSN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE:0000000000000000 _ZTSN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE
+     /tmp/ccjz1RIq.s:25329  .rodata._ZTSN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25339  .rodata._ZTIN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE:0000000000000000 _ZTIN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE
+     /tmp/ccjz1RIq.s:25336  .rodata._ZTIN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25348  .rodata._ZTSN5zxing5aztec5PointE:0000000000000000 _ZTSN5zxing5aztec5PointE
+     /tmp/ccjz1RIq.s:25345  .rodata._ZTSN5zxing5aztec5PointE:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25355  .rodata._ZTIN5zxing5aztec5PointE:0000000000000000 _ZTIN5zxing5aztec5PointE
+     /tmp/ccjz1RIq.s:25352  .rodata._ZTIN5zxing5aztec5PointE:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25364  .rodata._ZTSN5zxing5aztec8DetectorE:0000000000000000 _ZTSN5zxing5aztec8DetectorE
+     /tmp/ccjz1RIq.s:25361  .rodata._ZTSN5zxing5aztec8DetectorE:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25371  .rodata._ZTIN5zxing5aztec8DetectorE:0000000000000000 _ZTIN5zxing5aztec8DetectorE
+     /tmp/ccjz1RIq.s:25368  .rodata._ZTIN5zxing5aztec8DetectorE:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25380  .rodata._ZTSN5zxing15ReaderExceptionE:0000000000000000 _ZTSN5zxing15ReaderExceptionE
+     /tmp/ccjz1RIq.s:25377  .rodata._ZTSN5zxing15ReaderExceptionE:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25384  .rodata._ZTIN5zxing15ReaderExceptionE:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25396  .rodata._ZTIN5zxing22WhiteRectangleDetectorE:0000000000000000 _ZTIN5zxing22WhiteRectangleDetectorE
+     /tmp/ccjz1RIq.s:25393  .rodata._ZTIN5zxing22WhiteRectangleDetectorE:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25405  .rodata._ZTSN5zxing17NotFoundExceptionE:0000000000000000 _ZTSN5zxing17NotFoundExceptionE
+     /tmp/ccjz1RIq.s:25402  .rodata._ZTSN5zxing17NotFoundExceptionE:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25409  .rodata._ZTIN5zxing17NotFoundExceptionE:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25421  .rodata._ZTSN5zxing5ArrayINS_3RefINS_11ResultPointEEEEE:0000000000000000 _ZTSN5zxing5ArrayINS_3RefINS_11ResultPointEEEEE
+     /tmp/ccjz1RIq.s:25418  .rodata._ZTSN5zxing5ArrayINS_3RefINS_11ResultPointEEEEE:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25428  .rodata._ZTIN5zxing5ArrayINS_3RefINS_11ResultPointEEEEE:0000000000000000 _ZTIN5zxing5ArrayINS_3RefINS_11ResultPointEEEEE
+     /tmp/ccjz1RIq.s:25425  .rodata._ZTIN5zxing5ArrayINS_3RefINS_11ResultPointEEEEE:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25437  .rodata._ZTSN5zxing5ArrayIiEE:0000000000000000 _ZTSN5zxing5ArrayIiEE
+     /tmp/ccjz1RIq.s:25434  .rodata._ZTSN5zxing5ArrayIiEE:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25444  .rodata._ZTIN5zxing5ArrayIiEE:0000000000000000 _ZTIN5zxing5ArrayIiEE
+     /tmp/ccjz1RIq.s:25441  .rodata._ZTIN5zxing5ArrayIiEE:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25450  .rodata._ZTVN5zxing9ExceptionE:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25461  .rodata._ZTVN5zxing8ArrayRefIiEE:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25471  .rodata._ZTVN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25481  .rodata._ZTVN5zxing5aztec5PointE:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25491  .rodata._ZTVN5zxing5aztec8DetectorE:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25501  .rodata._ZTVN5zxing15ReaderExceptionE:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25512  .rodata._ZTVN5zxing22WhiteRectangleDetectorE:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25522  .rodata._ZTVN5zxing5ArrayINS_3RefINS_11ResultPointEEEEE:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25532  .rodata._ZTVN5zxing5ArrayIiEE:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25541  .bss._ZStL8__ioinit:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25545  .bss._ZStL8__ioinit:0000000000000000 _ZStL8__ioinit
+     /tmp/ccjz1RIq.s:25548  .rodata._ZN5zxing5aztec8Detector17extractParametersESt6vectorINS_3RefINS0_5PointEEESaIS5_EE.str1.4:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25552  .rodata._ZN5zxing5aztec8Detector20correctParameterDataENS_3RefINS_8BitArrayEEEb.str1.4:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25556  .rodata._ZN5zxing5aztec8Detector21getMatrixCornerPointsESt6vectorINS_3RefINS0_5PointEEESaIS5_EE.str1.4:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25560  .rodata._ZN5zxing5aztec8Detector22getBullEyeCornerPointsENS_3RefINS0_5PointEEE.str1.4:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25567  .rodata._ZNK5zxing9Exception4whatEv.str1.4:0000000000000000 $d
+     /tmp/ccjz1RIq.s:25571  .rodata._ZNSt6vectorIN5zxing3RefINS0_11ResultPointEEESaIS3_EE19_M_emplace_back_auxIJS3_EEEvDpOT_.str1.4:0000000000000000 $d
                      .debug_frame:0000000000000010 $d
                            .group:0000000000000000 _ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED5Ev
                            .group:0000000000000000 _ZN5zxing8ArrayRefIiED5Ev

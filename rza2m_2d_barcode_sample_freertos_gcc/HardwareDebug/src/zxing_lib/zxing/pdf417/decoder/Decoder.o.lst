@@ -4448,77 +4448,77 @@
  2995              		.file 56 "/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/pd
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 Decoder.cpp
-     /tmp/ccNCUTbu.s:17     .text._ZN5zxing8ArrayRefIiED2Ev:0000000000000000 $a
-     /tmp/ccNCUTbu.s:23     .text._ZN5zxing8ArrayRefIiED2Ev:0000000000000000 _ZN5zxing8ArrayRefIiED2Ev
-     /tmp/ccNCUTbu.s:83     .text._ZN5zxing8ArrayRefIiED2Ev:0000000000000054 $d
-     /tmp/ccNCUTbu.s:2882   .rodata._ZTVN5zxing8ArrayRefIiEE:0000000000000000 _ZTVN5zxing8ArrayRefIiEE
+     /tmp/ccJpgwTQ.s:17     .text._ZN5zxing8ArrayRefIiED2Ev:0000000000000000 $a
+     /tmp/ccJpgwTQ.s:23     .text._ZN5zxing8ArrayRefIiED2Ev:0000000000000000 _ZN5zxing8ArrayRefIiED2Ev
+     /tmp/ccJpgwTQ.s:83     .text._ZN5zxing8ArrayRefIiED2Ev:0000000000000054 $d
+     /tmp/ccJpgwTQ.s:2882   .rodata._ZTVN5zxing8ArrayRefIiEE:0000000000000000 _ZTVN5zxing8ArrayRefIiEE
 .ARM.exidx.text._ZN5zxing8ArrayRefIiED2Ev:0000000000000000 $d
-     /tmp/ccNCUTbu.s:23     .text._ZN5zxing8ArrayRefIiED2Ev:0000000000000000 _ZN5zxing8ArrayRefIiED1Ev
-     /tmp/ccNCUTbu.s:95     .text._ZN5zxing6pdf4177decoder15BitMatrixParserD2Ev:0000000000000000 $a
-     /tmp/ccNCUTbu.s:101    .text._ZN5zxing6pdf4177decoder15BitMatrixParserD2Ev:0000000000000000 _ZN5zxing6pdf4177decoder15BitMatrixParserD2Ev
-     /tmp/ccNCUTbu.s:212    .text._ZN5zxing6pdf4177decoder15BitMatrixParserD2Ev:0000000000000098 $d
-     /tmp/ccNCUTbu.s:2892   .rodata._ZTVN5zxing6pdf4177decoder15BitMatrixParserE:0000000000000000 _ZTVN5zxing6pdf4177decoder15BitMatrixParserE
+     /tmp/ccJpgwTQ.s:23     .text._ZN5zxing8ArrayRefIiED2Ev:0000000000000000 _ZN5zxing8ArrayRefIiED1Ev
+     /tmp/ccJpgwTQ.s:95     .text._ZN5zxing6pdf4177decoder15BitMatrixParserD2Ev:0000000000000000 $a
+     /tmp/ccJpgwTQ.s:101    .text._ZN5zxing6pdf4177decoder15BitMatrixParserD2Ev:0000000000000000 _ZN5zxing6pdf4177decoder15BitMatrixParserD2Ev
+     /tmp/ccJpgwTQ.s:212    .text._ZN5zxing6pdf4177decoder15BitMatrixParserD2Ev:0000000000000098 $d
+     /tmp/ccJpgwTQ.s:2892   .rodata._ZTVN5zxing6pdf4177decoder15BitMatrixParserE:0000000000000000 _ZTVN5zxing6pdf4177decoder15BitMatrixParserE
 .ARM.exidx.text._ZN5zxing6pdf4177decoder15BitMatrixParserD2Ev:0000000000000000 $d
-     /tmp/ccNCUTbu.s:101    .text._ZN5zxing6pdf4177decoder15BitMatrixParserD2Ev:0000000000000000 _ZN5zxing6pdf4177decoder15BitMatrixParserD1Ev
-     /tmp/ccNCUTbu.s:227    .text._ZN5zxing8ArrayRefIiED0Ev:0000000000000000 $a
-     /tmp/ccNCUTbu.s:233    .text._ZN5zxing8ArrayRefIiED0Ev:0000000000000000 _ZN5zxing8ArrayRefIiED0Ev
-     /tmp/ccNCUTbu.s:299    .text._ZN5zxing8ArrayRefIiED0Ev:0000000000000060 $d
+     /tmp/ccJpgwTQ.s:101    .text._ZN5zxing6pdf4177decoder15BitMatrixParserD2Ev:0000000000000000 _ZN5zxing6pdf4177decoder15BitMatrixParserD1Ev
+     /tmp/ccJpgwTQ.s:227    .text._ZN5zxing8ArrayRefIiED0Ev:0000000000000000 $a
+     /tmp/ccJpgwTQ.s:233    .text._ZN5zxing8ArrayRefIiED0Ev:0000000000000000 _ZN5zxing8ArrayRefIiED0Ev
+     /tmp/ccJpgwTQ.s:299    .text._ZN5zxing8ArrayRefIiED0Ev:0000000000000060 $d
 .ARM.exidx.text._ZN5zxing8ArrayRefIiED0Ev:0000000000000000 $d
-     /tmp/ccNCUTbu.s:310    .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $a
-     /tmp/ccNCUTbu.s:315    .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 _Z41__static_initialization_and_destruction_0ii
-     /tmp/ccNCUTbu.s:2901   .bss._ZStL8__ioinit:0000000000000000 .LANCHOR0
+     /tmp/ccJpgwTQ.s:310    .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $a
+     /tmp/ccJpgwTQ.s:315    .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 _Z41__static_initialization_and_destruction_0ii
+     /tmp/ccJpgwTQ.s:2901   .bss._ZStL8__ioinit:0000000000000000 .LANCHOR0
 .ARM.exidx.text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $d
-     /tmp/ccNCUTbu.s:357    .text._ZN5zxing6pdf4177decoder15BitMatrixParserD0Ev:0000000000000000 $a
-     /tmp/ccNCUTbu.s:363    .text._ZN5zxing6pdf4177decoder15BitMatrixParserD0Ev:0000000000000000 _ZN5zxing6pdf4177decoder15BitMatrixParserD0Ev
-     /tmp/ccNCUTbu.s:481    .text._ZN5zxing6pdf4177decoder15BitMatrixParserD0Ev:00000000000000a4 $d
+     /tmp/ccJpgwTQ.s:357    .text._ZN5zxing6pdf4177decoder15BitMatrixParserD0Ev:0000000000000000 $a
+     /tmp/ccJpgwTQ.s:363    .text._ZN5zxing6pdf4177decoder15BitMatrixParserD0Ev:0000000000000000 _ZN5zxing6pdf4177decoder15BitMatrixParserD0Ev
+     /tmp/ccJpgwTQ.s:481    .text._ZN5zxing6pdf4177decoder15BitMatrixParserD0Ev:00000000000000a4 $d
 .ARM.exidx.text._ZN5zxing6pdf4177decoder15BitMatrixParserD0Ev:0000000000000000 $d
-     /tmp/ccNCUTbu.s:495    .text._ZN5zxing6pdf4177decoder7Decoder19verifyCodewordCountENS_8ArrayRefIiEEi:0000000000000000 $a
-     /tmp/ccNCUTbu.s:501    .text._ZN5zxing6pdf4177decoder7Decoder19verifyCodewordCountENS_8ArrayRefIiEEi:0000000000000000 _ZN5zxing6pdf4177decoder7Decoder19verifyCodewordCountENS_8ArrayRefIiEEi
-     /tmp/ccNCUTbu.s:2929   .rodata._ZN5zxing6pdf4177decoder7Decoder19verifyCodewordCountENS_8ArrayRefIiEEi.str1.4:0000000000000000 .LC0
-     /tmp/ccNCUTbu.s:2933   .rodata._ZN5zxing6pdf4177decoder7Decoder19verifyCodewordCountENS_8ArrayRefIiEEi.str1.4:000000000000003c .LC1
-     /tmp/ccNCUTbu.s:2937   .rodata._ZN5zxing6pdf4177decoder7Decoder19verifyCodewordCountENS_8ArrayRefIiEEi.str1.4:0000000000000080 .LC2
+     /tmp/ccJpgwTQ.s:495    .text._ZN5zxing6pdf4177decoder7Decoder19verifyCodewordCountENS_8ArrayRefIiEEi:0000000000000000 $a
+     /tmp/ccJpgwTQ.s:501    .text._ZN5zxing6pdf4177decoder7Decoder19verifyCodewordCountENS_8ArrayRefIiEEi:0000000000000000 _ZN5zxing6pdf4177decoder7Decoder19verifyCodewordCountENS_8ArrayRefIiEEi
+     /tmp/ccJpgwTQ.s:2929   .rodata._ZN5zxing6pdf4177decoder7Decoder19verifyCodewordCountENS_8ArrayRefIiEEi.str1.4:0000000000000000 .LC0
+     /tmp/ccJpgwTQ.s:2933   .rodata._ZN5zxing6pdf4177decoder7Decoder19verifyCodewordCountENS_8ArrayRefIiEEi.str1.4:000000000000003c .LC1
+     /tmp/ccJpgwTQ.s:2937   .rodata._ZN5zxing6pdf4177decoder7Decoder19verifyCodewordCountENS_8ArrayRefIiEEi.str1.4:0000000000000080 .LC2
 .ARM.extab.text._ZN5zxing6pdf4177decoder7Decoder19verifyCodewordCountENS_8ArrayRefIiEEi:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing6pdf4177decoder7Decoder19verifyCodewordCountENS_8ArrayRefIiEEi:0000000000000000 $d
-     /tmp/ccNCUTbu.s:686    .text._ZN5zxing6pdf4177decoder7Decoder13correctErrorsENS_8ArrayRefIiEES4_i:0000000000000000 $a
-     /tmp/ccNCUTbu.s:692    .text._ZN5zxing6pdf4177decoder7Decoder13correctErrorsENS_8ArrayRefIiEES4_i:0000000000000000 _ZN5zxing6pdf4177decoder7Decoder13correctErrorsENS_8ArrayRefIiEES4_i
-     /tmp/ccNCUTbu.s:2914   .rodata._ZN5zxing6pdf4177decoder7Decoder13correctErrorsENS_8ArrayRefIiEES4_i.str1.4:0000000000000000 .LC3
-     /tmp/ccNCUTbu.s:2918   .rodata._ZN5zxing6pdf4177decoder7Decoder13correctErrorsENS_8ArrayRefIiEES4_i.str1.4:0000000000000048 .LC4
-     /tmp/ccNCUTbu.s:1389   .text._ZN5zxing6pdf4177decoder7Decoder13correctErrorsENS_8ArrayRefIiEES4_i:00000000000003f4 $d
+     /tmp/ccJpgwTQ.s:686    .text._ZN5zxing6pdf4177decoder7Decoder13correctErrorsENS_8ArrayRefIiEES4_i:0000000000000000 $a
+     /tmp/ccJpgwTQ.s:692    .text._ZN5zxing6pdf4177decoder7Decoder13correctErrorsENS_8ArrayRefIiEES4_i:0000000000000000 _ZN5zxing6pdf4177decoder7Decoder13correctErrorsENS_8ArrayRefIiEES4_i
+     /tmp/ccJpgwTQ.s:2914   .rodata._ZN5zxing6pdf4177decoder7Decoder13correctErrorsENS_8ArrayRefIiEES4_i.str1.4:0000000000000000 .LC3
+     /tmp/ccJpgwTQ.s:2918   .rodata._ZN5zxing6pdf4177decoder7Decoder13correctErrorsENS_8ArrayRefIiEES4_i.str1.4:0000000000000048 .LC4
+     /tmp/ccJpgwTQ.s:1389   .text._ZN5zxing6pdf4177decoder7Decoder13correctErrorsENS_8ArrayRefIiEES4_i:00000000000003f4 $d
 .ARM.extab.text._ZN5zxing6pdf4177decoder7Decoder13correctErrorsENS_8ArrayRefIiEES4_i:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing6pdf4177decoder7Decoder13correctErrorsENS_8ArrayRefIiEES4_i:0000000000000000 $d
-     /tmp/ccNCUTbu.s:1438   .text._ZN5zxing6pdf4177decoder7Decoder6decodeENS_3RefINS_9BitMatrixEEERKNS_11DecodeHintsE:0000000000000000 $a
-     /tmp/ccNCUTbu.s:1444   .text._ZN5zxing6pdf4177decoder7Decoder6decodeENS_3RefINS_9BitMatrixEEERKNS_11DecodeHintsE:0000000000000000 _ZN5zxing6pdf4177decoder7Decoder6decodeENS_3RefINS_9BitMatrixEEERKNS_11DecodeHintsE
-     /tmp/ccNCUTbu.s:2942   .rodata._ZN5zxing6pdf4177decoder7Decoder6decodeENS_3RefINS_9BitMatrixEEERKNS_11DecodeHintsE.str1.4:0000000000000000 .LC5
-     /tmp/ccNCUTbu.s:2747   .text._ZN5zxing6pdf4177decoder7Decoder6decodeENS_3RefINS_9BitMatrixEEERKNS_11DecodeHintsE:0000000000000754 $d
+     /tmp/ccJpgwTQ.s:1438   .text._ZN5zxing6pdf4177decoder7Decoder6decodeENS_3RefINS_9BitMatrixEEERKNS_11DecodeHintsE:0000000000000000 $a
+     /tmp/ccJpgwTQ.s:1444   .text._ZN5zxing6pdf4177decoder7Decoder6decodeENS_3RefINS_9BitMatrixEEERKNS_11DecodeHintsE:0000000000000000 _ZN5zxing6pdf4177decoder7Decoder6decodeENS_3RefINS_9BitMatrixEEERKNS_11DecodeHintsE
+     /tmp/ccJpgwTQ.s:2942   .rodata._ZN5zxing6pdf4177decoder7Decoder6decodeENS_3RefINS_9BitMatrixEEERKNS_11DecodeHintsE.str1.4:0000000000000000 .LC5
+     /tmp/ccJpgwTQ.s:2747   .text._ZN5zxing6pdf4177decoder7Decoder6decodeENS_3RefINS_9BitMatrixEEERKNS_11DecodeHintsE:0000000000000754 $d
 .ARM.extab.text._ZN5zxing6pdf4177decoder7Decoder6decodeENS_3RefINS_9BitMatrixEEERKNS_11DecodeHintsE:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing6pdf4177decoder7Decoder6decodeENS_3RefINS_9BitMatrixEEERKNS_11DecodeHintsE:0000000000000000 $d
-     /tmp/ccNCUTbu.s:2800   .text._GLOBAL__sub_I__ZN5zxing6pdf4177decoder7Decoder10MAX_ERRORSE:0000000000000000 $a
-     /tmp/ccNCUTbu.s:2805   .text._GLOBAL__sub_I__ZN5zxing6pdf4177decoder7Decoder10MAX_ERRORSE:0000000000000000 _GLOBAL__sub_I__ZN5zxing6pdf4177decoder7Decoder10MAX_ERRORSE
+     /tmp/ccJpgwTQ.s:2800   .text._GLOBAL__sub_I__ZN5zxing6pdf4177decoder7Decoder10MAX_ERRORSE:0000000000000000 $a
+     /tmp/ccJpgwTQ.s:2805   .text._GLOBAL__sub_I__ZN5zxing6pdf4177decoder7Decoder10MAX_ERRORSE:0000000000000000 _GLOBAL__sub_I__ZN5zxing6pdf4177decoder7Decoder10MAX_ERRORSE
 .ARM.exidx.text._GLOBAL__sub_I__ZN5zxing6pdf4177decoder7Decoder10MAX_ERRORSE:0000000000000000 $d
-     /tmp/ccNCUTbu.s:2828   .init_array:0000000000000000 $d
-     /tmp/ccNCUTbu.s:2835   .rodata._ZTSN5zxing6pdf4177decoder15BitMatrixParserE:0000000000000000 _ZTSN5zxing6pdf4177decoder15BitMatrixParserE
-     /tmp/ccNCUTbu.s:2832   .rodata._ZTSN5zxing6pdf4177decoder15BitMatrixParserE:0000000000000000 $d
-     /tmp/ccNCUTbu.s:2842   .rodata._ZTSN5zxing7CountedE:0000000000000000 _ZTSN5zxing7CountedE
-     /tmp/ccNCUTbu.s:2839   .rodata._ZTSN5zxing7CountedE:0000000000000000 $d
-     /tmp/ccNCUTbu.s:2849   .rodata._ZTIN5zxing7CountedE:0000000000000000 _ZTIN5zxing7CountedE
-     /tmp/ccNCUTbu.s:2846   .rodata._ZTIN5zxing7CountedE:0000000000000000 $d
-     /tmp/ccNCUTbu.s:2857   .rodata._ZTSN5zxing8ArrayRefIiEE:0000000000000000 _ZTSN5zxing8ArrayRefIiEE
-     /tmp/ccNCUTbu.s:2854   .rodata._ZTSN5zxing8ArrayRefIiEE:0000000000000000 $d
-     /tmp/ccNCUTbu.s:2864   .rodata._ZTIN5zxing8ArrayRefIiEE:0000000000000000 _ZTIN5zxing8ArrayRefIiEE
-     /tmp/ccNCUTbu.s:2861   .rodata._ZTIN5zxing8ArrayRefIiEE:0000000000000000 $d
-     /tmp/ccNCUTbu.s:2873   .rodata._ZTIN5zxing6pdf4177decoder15BitMatrixParserE:0000000000000000 _ZTIN5zxing6pdf4177decoder15BitMatrixParserE
-     /tmp/ccNCUTbu.s:2870   .rodata._ZTIN5zxing6pdf4177decoder15BitMatrixParserE:0000000000000000 $d
-     /tmp/ccNCUTbu.s:2879   .rodata._ZTVN5zxing8ArrayRefIiEE:0000000000000000 $d
-     /tmp/ccNCUTbu.s:2889   .rodata._ZTVN5zxing6pdf4177decoder15BitMatrixParserE:0000000000000000 $d
-     /tmp/ccNCUTbu.s:2925   .rodata._ZN5zxing6pdf4177decoder7Decoder16MAX_EC_CODEWORDSE:0000000000000000 _ZN5zxing6pdf4177decoder7Decoder16MAX_EC_CODEWORDSE
-     /tmp/ccNCUTbu.s:2910   .rodata._ZN5zxing6pdf4177decoder7Decoder10MAX_ERRORSE:0000000000000000 _ZN5zxing6pdf4177decoder7Decoder10MAX_ERRORSE
-     /tmp/ccNCUTbu.s:2900   .bss._ZStL8__ioinit:0000000000000000 $d
-     /tmp/ccNCUTbu.s:2904   .bss._ZStL8__ioinit:0000000000000000 _ZStL8__ioinit
-     /tmp/ccNCUTbu.s:2907   .rodata._ZN5zxing6pdf4177decoder7Decoder10MAX_ERRORSE:0000000000000000 $d
-     /tmp/ccNCUTbu.s:2913   .rodata._ZN5zxing6pdf4177decoder7Decoder13correctErrorsENS_8ArrayRefIiEES4_i.str1.4:0000000000000000 $d
-     /tmp/ccNCUTbu.s:2922   .rodata._ZN5zxing6pdf4177decoder7Decoder16MAX_EC_CODEWORDSE:0000000000000000 $d
-     /tmp/ccNCUTbu.s:2928   .rodata._ZN5zxing6pdf4177decoder7Decoder19verifyCodewordCountENS_8ArrayRefIiEEi.str1.4:0000000000000000 $d
-     /tmp/ccNCUTbu.s:2941   .rodata._ZN5zxing6pdf4177decoder7Decoder6decodeENS_3RefINS_9BitMatrixEEERKNS_11DecodeHintsE.str1.4:0000000000000000 $d
+     /tmp/ccJpgwTQ.s:2828   .init_array:0000000000000000 $d
+     /tmp/ccJpgwTQ.s:2835   .rodata._ZTSN5zxing6pdf4177decoder15BitMatrixParserE:0000000000000000 _ZTSN5zxing6pdf4177decoder15BitMatrixParserE
+     /tmp/ccJpgwTQ.s:2832   .rodata._ZTSN5zxing6pdf4177decoder15BitMatrixParserE:0000000000000000 $d
+     /tmp/ccJpgwTQ.s:2842   .rodata._ZTSN5zxing7CountedE:0000000000000000 _ZTSN5zxing7CountedE
+     /tmp/ccJpgwTQ.s:2839   .rodata._ZTSN5zxing7CountedE:0000000000000000 $d
+     /tmp/ccJpgwTQ.s:2849   .rodata._ZTIN5zxing7CountedE:0000000000000000 _ZTIN5zxing7CountedE
+     /tmp/ccJpgwTQ.s:2846   .rodata._ZTIN5zxing7CountedE:0000000000000000 $d
+     /tmp/ccJpgwTQ.s:2857   .rodata._ZTSN5zxing8ArrayRefIiEE:0000000000000000 _ZTSN5zxing8ArrayRefIiEE
+     /tmp/ccJpgwTQ.s:2854   .rodata._ZTSN5zxing8ArrayRefIiEE:0000000000000000 $d
+     /tmp/ccJpgwTQ.s:2864   .rodata._ZTIN5zxing8ArrayRefIiEE:0000000000000000 _ZTIN5zxing8ArrayRefIiEE
+     /tmp/ccJpgwTQ.s:2861   .rodata._ZTIN5zxing8ArrayRefIiEE:0000000000000000 $d
+     /tmp/ccJpgwTQ.s:2873   .rodata._ZTIN5zxing6pdf4177decoder15BitMatrixParserE:0000000000000000 _ZTIN5zxing6pdf4177decoder15BitMatrixParserE
+     /tmp/ccJpgwTQ.s:2870   .rodata._ZTIN5zxing6pdf4177decoder15BitMatrixParserE:0000000000000000 $d
+     /tmp/ccJpgwTQ.s:2879   .rodata._ZTVN5zxing8ArrayRefIiEE:0000000000000000 $d
+     /tmp/ccJpgwTQ.s:2889   .rodata._ZTVN5zxing6pdf4177decoder15BitMatrixParserE:0000000000000000 $d
+     /tmp/ccJpgwTQ.s:2925   .rodata._ZN5zxing6pdf4177decoder7Decoder16MAX_EC_CODEWORDSE:0000000000000000 _ZN5zxing6pdf4177decoder7Decoder16MAX_EC_CODEWORDSE
+     /tmp/ccJpgwTQ.s:2910   .rodata._ZN5zxing6pdf4177decoder7Decoder10MAX_ERRORSE:0000000000000000 _ZN5zxing6pdf4177decoder7Decoder10MAX_ERRORSE
+     /tmp/ccJpgwTQ.s:2900   .bss._ZStL8__ioinit:0000000000000000 $d
+     /tmp/ccJpgwTQ.s:2904   .bss._ZStL8__ioinit:0000000000000000 _ZStL8__ioinit
+     /tmp/ccJpgwTQ.s:2907   .rodata._ZN5zxing6pdf4177decoder7Decoder10MAX_ERRORSE:0000000000000000 $d
+     /tmp/ccJpgwTQ.s:2913   .rodata._ZN5zxing6pdf4177decoder7Decoder13correctErrorsENS_8ArrayRefIiEES4_i.str1.4:0000000000000000 $d
+     /tmp/ccJpgwTQ.s:2922   .rodata._ZN5zxing6pdf4177decoder7Decoder16MAX_EC_CODEWORDSE:0000000000000000 $d
+     /tmp/ccJpgwTQ.s:2928   .rodata._ZN5zxing6pdf4177decoder7Decoder19verifyCodewordCountENS_8ArrayRefIiEEi.str1.4:0000000000000000 $d
+     /tmp/ccJpgwTQ.s:2941   .rodata._ZN5zxing6pdf4177decoder7Decoder6decodeENS_3RefINS_9BitMatrixEEERKNS_11DecodeHintsE.str1.4:0000000000000000 $d
                      .debug_frame:0000000000000010 $d
                            .group:0000000000000000 _ZN5zxing8ArrayRefIiED5Ev
                            .group:0000000000000000 _ZN5zxing6pdf4177decoder15BitMatrixParserD5Ev

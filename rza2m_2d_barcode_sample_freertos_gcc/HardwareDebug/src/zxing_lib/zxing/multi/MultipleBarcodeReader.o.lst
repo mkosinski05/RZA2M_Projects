@@ -902,37 +902,37 @@
  655              		.file 51 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 MultipleBarcodeReader.cpp
-     /tmp/ccYagDmx.s:17     .text._ZN5zxing5multi21MultipleBarcodeReader14decodeMultipleENS_3RefINS_12BinaryBitmapEEE:0000000000000000 $a
-     /tmp/ccYagDmx.s:23     .text._ZN5zxing5multi21MultipleBarcodeReader14decodeMultipleENS_3RefINS_12BinaryBitmapEEE:0000000000000000 _ZN5zxing5multi21MultipleBarcodeReader14decodeMultipleENS_3RefINS_12BinaryBitmapEEE
+     /tmp/ccEr5cQt.s:17     .text._ZN5zxing5multi21MultipleBarcodeReader14decodeMultipleENS_3RefINS_12BinaryBitmapEEE:0000000000000000 $a
+     /tmp/ccEr5cQt.s:23     .text._ZN5zxing5multi21MultipleBarcodeReader14decodeMultipleENS_3RefINS_12BinaryBitmapEEE:0000000000000000 _ZN5zxing5multi21MultipleBarcodeReader14decodeMultipleENS_3RefINS_12BinaryBitmapEEE
 .ARM.extab.text._ZN5zxing5multi21MultipleBarcodeReader14decodeMultipleENS_3RefINS_12BinaryBitmapEEE:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing5multi21MultipleBarcodeReader14decodeMultipleENS_3RefINS_12BinaryBitmapEEE:0000000000000000 $d
-     /tmp/ccYagDmx.s:425    .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $a
-     /tmp/ccYagDmx.s:430    .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 _Z41__static_initialization_and_destruction_0ii
-     /tmp/ccYagDmx.s:577    .bss._ZStL8__ioinit:0000000000000000 .LANCHOR0
+     /tmp/ccEr5cQt.s:425    .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $a
+     /tmp/ccEr5cQt.s:430    .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 _Z41__static_initialization_and_destruction_0ii
+     /tmp/ccEr5cQt.s:577    .bss._ZStL8__ioinit:0000000000000000 .LANCHOR0
 .ARM.exidx.text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $d
-     /tmp/ccYagDmx.s:471    .text._ZN5zxing5multi21MultipleBarcodeReaderD2Ev:0000000000000000 $a
-     /tmp/ccYagDmx.s:477    .text._ZN5zxing5multi21MultipleBarcodeReaderD2Ev:0000000000000000 _ZN5zxing5multi21MultipleBarcodeReaderD2Ev
+     /tmp/ccEr5cQt.s:471    .text._ZN5zxing5multi21MultipleBarcodeReaderD2Ev:0000000000000000 $a
+     /tmp/ccEr5cQt.s:477    .text._ZN5zxing5multi21MultipleBarcodeReaderD2Ev:0000000000000000 _ZN5zxing5multi21MultipleBarcodeReaderD2Ev
 .ARM.exidx.text._ZN5zxing5multi21MultipleBarcodeReaderD2Ev:0000000000000000 $d
-     /tmp/ccYagDmx.s:477    .text._ZN5zxing5multi21MultipleBarcodeReaderD2Ev:0000000000000000 _ZN5zxing5multi21MultipleBarcodeReaderD1Ev
-     /tmp/ccYagDmx.s:496    .text._ZN5zxing5multi21MultipleBarcodeReaderD0Ev:0000000000000000 $a
-     /tmp/ccYagDmx.s:502    .text._ZN5zxing5multi21MultipleBarcodeReaderD0Ev:0000000000000000 _ZN5zxing5multi21MultipleBarcodeReaderD0Ev
+     /tmp/ccEr5cQt.s:477    .text._ZN5zxing5multi21MultipleBarcodeReaderD2Ev:0000000000000000 _ZN5zxing5multi21MultipleBarcodeReaderD1Ev
+     /tmp/ccEr5cQt.s:496    .text._ZN5zxing5multi21MultipleBarcodeReaderD0Ev:0000000000000000 $a
+     /tmp/ccEr5cQt.s:502    .text._ZN5zxing5multi21MultipleBarcodeReaderD0Ev:0000000000000000 _ZN5zxing5multi21MultipleBarcodeReaderD0Ev
 .ARM.exidx.text._ZN5zxing5multi21MultipleBarcodeReaderD0Ev:0000000000000000 $d
-     /tmp/ccYagDmx.s:527    .text._GLOBAL__sub_I__ZN5zxing5multi21MultipleBarcodeReaderD2Ev:0000000000000000 $a
-     /tmp/ccYagDmx.s:532    .text._GLOBAL__sub_I__ZN5zxing5multi21MultipleBarcodeReaderD2Ev:0000000000000000 _GLOBAL__sub_I__ZN5zxing5multi21MultipleBarcodeReaderD2Ev
+     /tmp/ccEr5cQt.s:527    .text._GLOBAL__sub_I__ZN5zxing5multi21MultipleBarcodeReaderD2Ev:0000000000000000 $a
+     /tmp/ccEr5cQt.s:532    .text._GLOBAL__sub_I__ZN5zxing5multi21MultipleBarcodeReaderD2Ev:0000000000000000 _GLOBAL__sub_I__ZN5zxing5multi21MultipleBarcodeReaderD2Ev
 .ARM.exidx.text._GLOBAL__sub_I__ZN5zxing5multi21MultipleBarcodeReaderD2Ev:0000000000000000 $d
-     /tmp/ccYagDmx.s:555    .init_array:0000000000000000 $d
-     /tmp/ccYagDmx.s:562    .rodata._ZTSN5zxing7CountedE:0000000000000000 _ZTSN5zxing7CountedE
-     /tmp/ccYagDmx.s:559    .rodata._ZTSN5zxing7CountedE:0000000000000000 $d
-     /tmp/ccYagDmx.s:569    .rodata._ZTIN5zxing7CountedE:0000000000000000 _ZTIN5zxing7CountedE
-     /tmp/ccYagDmx.s:566    .rodata._ZTIN5zxing7CountedE:0000000000000000 $d
-     /tmp/ccYagDmx.s:594    .rodata._ZTSN5zxing5multi21MultipleBarcodeReaderE:0000000000000000 _ZTSN5zxing5multi21MultipleBarcodeReaderE
-     /tmp/ccYagDmx.s:586    .rodata._ZTIN5zxing5multi21MultipleBarcodeReaderE:0000000000000000 _ZTIN5zxing5multi21MultipleBarcodeReaderE
-     /tmp/ccYagDmx.s:600    .rodata._ZTVN5zxing5multi21MultipleBarcodeReaderE:0000000000000000 _ZTVN5zxing5multi21MultipleBarcodeReaderE
-     /tmp/ccYagDmx.s:576    .bss._ZStL8__ioinit:0000000000000000 $d
-     /tmp/ccYagDmx.s:580    .bss._ZStL8__ioinit:0000000000000000 _ZStL8__ioinit
-     /tmp/ccYagDmx.s:583    .rodata._ZTIN5zxing5multi21MultipleBarcodeReaderE:0000000000000000 $d
-     /tmp/ccYagDmx.s:591    .rodata._ZTSN5zxing5multi21MultipleBarcodeReaderE:0000000000000000 $d
-     /tmp/ccYagDmx.s:597    .rodata._ZTVN5zxing5multi21MultipleBarcodeReaderE:0000000000000000 $d
+     /tmp/ccEr5cQt.s:555    .init_array:0000000000000000 $d
+     /tmp/ccEr5cQt.s:562    .rodata._ZTSN5zxing7CountedE:0000000000000000 _ZTSN5zxing7CountedE
+     /tmp/ccEr5cQt.s:559    .rodata._ZTSN5zxing7CountedE:0000000000000000 $d
+     /tmp/ccEr5cQt.s:569    .rodata._ZTIN5zxing7CountedE:0000000000000000 _ZTIN5zxing7CountedE
+     /tmp/ccEr5cQt.s:566    .rodata._ZTIN5zxing7CountedE:0000000000000000 $d
+     /tmp/ccEr5cQt.s:594    .rodata._ZTSN5zxing5multi21MultipleBarcodeReaderE:0000000000000000 _ZTSN5zxing5multi21MultipleBarcodeReaderE
+     /tmp/ccEr5cQt.s:586    .rodata._ZTIN5zxing5multi21MultipleBarcodeReaderE:0000000000000000 _ZTIN5zxing5multi21MultipleBarcodeReaderE
+     /tmp/ccEr5cQt.s:600    .rodata._ZTVN5zxing5multi21MultipleBarcodeReaderE:0000000000000000 _ZTVN5zxing5multi21MultipleBarcodeReaderE
+     /tmp/ccEr5cQt.s:576    .bss._ZStL8__ioinit:0000000000000000 $d
+     /tmp/ccEr5cQt.s:580    .bss._ZStL8__ioinit:0000000000000000 _ZStL8__ioinit
+     /tmp/ccEr5cQt.s:583    .rodata._ZTIN5zxing5multi21MultipleBarcodeReaderE:0000000000000000 $d
+     /tmp/ccEr5cQt.s:591    .rodata._ZTSN5zxing5multi21MultipleBarcodeReaderE:0000000000000000 $d
+     /tmp/ccEr5cQt.s:597    .rodata._ZTVN5zxing5multi21MultipleBarcodeReaderE:0000000000000000 $d
                      .debug_frame:0000000000000010 $d
                            .group:0000000000000000 wm4.0.cd1e96de8a8c4f34e746a820772853ad
                            .group:0000000000000000 wm4.cconfig.h.31.21483d26c3710eb58c7a44c20d82c775

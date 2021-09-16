@@ -63,7 +63,7 @@
   39:../src/zxing_lib/r_zxing.cpp **** Macro definitions
   40:../src/zxing_lib/r_zxing.cpp **** ******************************************************************************/
   41:../src/zxing_lib/r_zxing.cpp **** //#define DECODE_HINTS  (DecodeHints::ONED_HINT | DecodeHints::QR_CODE_HINT | DecodeHints::DATA_MAT
-  42:../src/zxing_lib/r_zxing.cpp **** #define DECODE_HINTS  (DecodeHints::QR_CODE_HINT)
+  42:../src/zxing_lib/r_zxing.cpp **** #define DECODE_HINTS  (DecodeHints::QR_CODE_HINT | DecodeHints::UPC_A_HINT | DecodeHints::UPC_E_HIN
   43:../src/zxing_lib/r_zxing.cpp **** 
   44:../src/zxing_lib/r_zxing.cpp **** /******************************************************************************
   45:../src/zxing_lib/r_zxing.cpp **** Typedef definitions
@@ -773,7 +773,7 @@
  151              	.LBE536:
   68:../src/zxing_lib/r_zxing.cpp ****     hints.setTryHarder(false);
  152              		.loc 1 68 0
- 153 0040 011AA0E3 		mov	r1, #4096
+ 153 0040 391AA0E3 		mov	r1, #233472
  154              	.LVL12:
  155 0044 10008DE2 		add	r0, sp, #16
  156              	.LVL13:
@@ -3149,20 +3149,20 @@
  798              		.file 66 "../src/zxing_lib/ImageReaderSource.h"
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 r_zxing.cpp
-     /tmp/ccgwZ0hz.s:17     .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $a
-     /tmp/ccgwZ0hz.s:22     .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 _Z41__static_initialization_and_destruction_0ii
-     /tmp/ccgwZ0hz.s:734    .bss._ZStL8__ioinit:0000000000000000 .LANCHOR0
+     /tmp/ccRLwo2D.s:17     .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $a
+     /tmp/ccRLwo2D.s:22     .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 _Z41__static_initialization_and_destruction_0ii
+     /tmp/ccRLwo2D.s:734    .bss._ZStL8__ioinit:0000000000000000 .LANCHOR0
 .ARM.exidx.text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $d
-     /tmp/ccgwZ0hz.s:64     .text.zxing_decode_image:0000000000000000 $a
-     /tmp/ccgwZ0hz.s:70     .text.zxing_decode_image:0000000000000000 zxing_decode_image
+     /tmp/ccRLwo2D.s:64     .text.zxing_decode_image:0000000000000000 $a
+     /tmp/ccRLwo2D.s:70     .text.zxing_decode_image:0000000000000000 zxing_decode_image
 .ARM.extab.text.zxing_decode_image:0000000000000000 $d
 .ARM.exidx.text.zxing_decode_image:0000000000000000 $d
-     /tmp/ccgwZ0hz.s:702    .text._GLOBAL__sub_I_zxing_decode_image:0000000000000000 $a
-     /tmp/ccgwZ0hz.s:707    .text._GLOBAL__sub_I_zxing_decode_image:0000000000000000 _GLOBAL__sub_I_zxing_decode_image
+     /tmp/ccRLwo2D.s:702    .text._GLOBAL__sub_I_zxing_decode_image:0000000000000000 $a
+     /tmp/ccRLwo2D.s:707    .text._GLOBAL__sub_I_zxing_decode_image:0000000000000000 _GLOBAL__sub_I_zxing_decode_image
 .ARM.exidx.text._GLOBAL__sub_I_zxing_decode_image:0000000000000000 $d
-     /tmp/ccgwZ0hz.s:730    .init_array:0000000000000000 $d
-     /tmp/ccgwZ0hz.s:733    .bss._ZStL8__ioinit:0000000000000000 $d
-     /tmp/ccgwZ0hz.s:737    .bss._ZStL8__ioinit:0000000000000000 _ZStL8__ioinit
+     /tmp/ccRLwo2D.s:730    .init_array:0000000000000000 $d
+     /tmp/ccRLwo2D.s:733    .bss._ZStL8__ioinit:0000000000000000 $d
+     /tmp/ccRLwo2D.s:737    .bss._ZStL8__ioinit:0000000000000000 _ZStL8__ioinit
                      .debug_frame:0000000000000010 $d
                            .group:0000000000000000 wm4.0.cd1e96de8a8c4f34e746a820772853ad
                            .group:0000000000000000 wm4._newlib_version.h.4.3572908597b70d672d181fc7fc501c19

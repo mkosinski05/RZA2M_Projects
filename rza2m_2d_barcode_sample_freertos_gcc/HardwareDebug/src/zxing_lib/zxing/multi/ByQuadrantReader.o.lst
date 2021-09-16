@@ -3086,57 +3086,57 @@
  2546              		.file 50 "/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Re
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 ByQuadrantReader.cpp
-     /tmp/cc8PakzH.s:17     .text._ZN5zxing5multi16ByQuadrantReaderD2Ev:0000000000000000 $a
-     /tmp/cc8PakzH.s:23     .text._ZN5zxing5multi16ByQuadrantReaderD2Ev:0000000000000000 _ZN5zxing5multi16ByQuadrantReaderD2Ev
-     /tmp/cc8PakzH.s:49     .text._ZN5zxing5multi16ByQuadrantReaderD2Ev:000000000000001c $d
+     /tmp/ccS4IBU9.s:17     .text._ZN5zxing5multi16ByQuadrantReaderD2Ev:0000000000000000 $a
+     /tmp/ccS4IBU9.s:23     .text._ZN5zxing5multi16ByQuadrantReaderD2Ev:0000000000000000 _ZN5zxing5multi16ByQuadrantReaderD2Ev
+     /tmp/ccS4IBU9.s:49     .text._ZN5zxing5multi16ByQuadrantReaderD2Ev:000000000000001c $d
 .ARM.exidx.text._ZN5zxing5multi16ByQuadrantReaderD2Ev:0000000000000000 $d
-     /tmp/cc8PakzH.s:23     .text._ZN5zxing5multi16ByQuadrantReaderD2Ev:0000000000000000 _ZN5zxing5multi16ByQuadrantReaderD1Ev
-     /tmp/cc8PakzH.s:58     .text._ZN5zxing5multi16ByQuadrantReaderD0Ev:0000000000000000 $a
-     /tmp/cc8PakzH.s:64     .text._ZN5zxing5multi16ByQuadrantReaderD0Ev:0000000000000000 _ZN5zxing5multi16ByQuadrantReaderD0Ev
+     /tmp/ccS4IBU9.s:23     .text._ZN5zxing5multi16ByQuadrantReaderD2Ev:0000000000000000 _ZN5zxing5multi16ByQuadrantReaderD1Ev
+     /tmp/ccS4IBU9.s:58     .text._ZN5zxing5multi16ByQuadrantReaderD0Ev:0000000000000000 $a
+     /tmp/ccS4IBU9.s:64     .text._ZN5zxing5multi16ByQuadrantReaderD0Ev:0000000000000000 _ZN5zxing5multi16ByQuadrantReaderD0Ev
 .ARM.exidx.text._ZN5zxing5multi16ByQuadrantReaderD0Ev:0000000000000000 $d
-     /tmp/cc8PakzH.s:92     .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $a
-     /tmp/cc8PakzH.s:97     .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 _Z41__static_initialization_and_destruction_0ii
-     /tmp/cc8PakzH.s:2468   .bss._ZStL8__ioinit:0000000000000000 .LANCHOR1
+     /tmp/ccS4IBU9.s:92     .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $a
+     /tmp/ccS4IBU9.s:97     .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 _Z41__static_initialization_and_destruction_0ii
+     /tmp/ccS4IBU9.s:2468   .bss._ZStL8__ioinit:0000000000000000 .LANCHOR1
 .ARM.exidx.text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $d
-     /tmp/cc8PakzH.s:138    .text._ZN5zxing5multi16ByQuadrantReader6decodeENS_3RefINS_12BinaryBitmapEEE:0000000000000000 $a
-     /tmp/cc8PakzH.s:144    .text._ZN5zxing5multi16ByQuadrantReader6decodeENS_3RefINS_12BinaryBitmapEEE:0000000000000000 _ZN5zxing5multi16ByQuadrantReader6decodeENS_3RefINS_12BinaryBitmapEEE
+     /tmp/ccS4IBU9.s:138    .text._ZN5zxing5multi16ByQuadrantReader6decodeENS_3RefINS_12BinaryBitmapEEE:0000000000000000 $a
+     /tmp/ccS4IBU9.s:144    .text._ZN5zxing5multi16ByQuadrantReader6decodeENS_3RefINS_12BinaryBitmapEEE:0000000000000000 _ZN5zxing5multi16ByQuadrantReader6decodeENS_3RefINS_12BinaryBitmapEEE
 .ARM.extab.text._ZN5zxing5multi16ByQuadrantReader6decodeENS_3RefINS_12BinaryBitmapEEE:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing5multi16ByQuadrantReader6decodeENS_3RefINS_12BinaryBitmapEEE:0000000000000000 $d
-     /tmp/cc8PakzH.s:545    .text._ZN5zxing5multi16ByQuadrantReaderC2ERNS_6ReaderE:0000000000000000 $a
-     /tmp/cc8PakzH.s:551    .text._ZN5zxing5multi16ByQuadrantReaderC2ERNS_6ReaderE:0000000000000000 _ZN5zxing5multi16ByQuadrantReaderC2ERNS_6ReaderE
-     /tmp/cc8PakzH.s:580    .text._ZN5zxing5multi16ByQuadrantReaderC2ERNS_6ReaderE:0000000000000018 $d
+     /tmp/ccS4IBU9.s:545    .text._ZN5zxing5multi16ByQuadrantReaderC2ERNS_6ReaderE:0000000000000000 $a
+     /tmp/ccS4IBU9.s:551    .text._ZN5zxing5multi16ByQuadrantReaderC2ERNS_6ReaderE:0000000000000000 _ZN5zxing5multi16ByQuadrantReaderC2ERNS_6ReaderE
+     /tmp/ccS4IBU9.s:580    .text._ZN5zxing5multi16ByQuadrantReaderC2ERNS_6ReaderE:0000000000000018 $d
 .ARM.exidx.text._ZN5zxing5multi16ByQuadrantReaderC2ERNS_6ReaderE:0000000000000000 $d
-     /tmp/cc8PakzH.s:551    .text._ZN5zxing5multi16ByQuadrantReaderC2ERNS_6ReaderE:0000000000000000 _ZN5zxing5multi16ByQuadrantReaderC1ERNS_6ReaderE
-     /tmp/cc8PakzH.s:589    .text._ZN5zxing3RefINS_12BinaryBitmapEE5resetEPS1_:0000000000000000 $a
-     /tmp/cc8PakzH.s:595    .text._ZN5zxing3RefINS_12BinaryBitmapEE5resetEPS1_:0000000000000000 _ZN5zxing3RefINS_12BinaryBitmapEE5resetEPS1_
+     /tmp/ccS4IBU9.s:551    .text._ZN5zxing5multi16ByQuadrantReaderC2ERNS_6ReaderE:0000000000000000 _ZN5zxing5multi16ByQuadrantReaderC1ERNS_6ReaderE
+     /tmp/ccS4IBU9.s:589    .text._ZN5zxing3RefINS_12BinaryBitmapEE5resetEPS1_:0000000000000000 $a
+     /tmp/ccS4IBU9.s:595    .text._ZN5zxing3RefINS_12BinaryBitmapEE5resetEPS1_:0000000000000000 _ZN5zxing3RefINS_12BinaryBitmapEE5resetEPS1_
 .ARM.exidx.text._ZN5zxing3RefINS_12BinaryBitmapEE5resetEPS1_:0000000000000000 $d
-     /tmp/cc8PakzH.s:667    .text._ZN5zxing3RefINS_19ResultPointCallbackEE5resetEPS1_:0000000000000000 $a
-     /tmp/cc8PakzH.s:673    .text._ZN5zxing3RefINS_19ResultPointCallbackEE5resetEPS1_:0000000000000000 _ZN5zxing3RefINS_19ResultPointCallbackEE5resetEPS1_
+     /tmp/ccS4IBU9.s:667    .text._ZN5zxing3RefINS_19ResultPointCallbackEE5resetEPS1_:0000000000000000 $a
+     /tmp/ccS4IBU9.s:673    .text._ZN5zxing3RefINS_19ResultPointCallbackEE5resetEPS1_:0000000000000000 _ZN5zxing3RefINS_19ResultPointCallbackEE5resetEPS1_
 .ARM.exidx.text._ZN5zxing3RefINS_19ResultPointCallbackEE5resetEPS1_:0000000000000000 $d
-     /tmp/cc8PakzH.s:745    .text._ZN5zxing5multi16ByQuadrantReader6decodeENS_3RefINS_12BinaryBitmapEEENS_11DecodeHintsE:0000000000000000 $a
-     /tmp/cc8PakzH.s:751    .text._ZN5zxing5multi16ByQuadrantReader6decodeENS_3RefINS_12BinaryBitmapEEENS_11DecodeHintsE:0000000000000000 _ZN5zxing5multi16ByQuadrantReader6decodeENS_3RefINS_12BinaryBitmapEEENS_11DecodeHintsE
+     /tmp/ccS4IBU9.s:745    .text._ZN5zxing5multi16ByQuadrantReader6decodeENS_3RefINS_12BinaryBitmapEEENS_11DecodeHintsE:0000000000000000 $a
+     /tmp/ccS4IBU9.s:751    .text._ZN5zxing5multi16ByQuadrantReader6decodeENS_3RefINS_12BinaryBitmapEEENS_11DecodeHintsE:0000000000000000 _ZN5zxing5multi16ByQuadrantReader6decodeENS_3RefINS_12BinaryBitmapEEENS_11DecodeHintsE
 .ARM.extab.text._ZN5zxing5multi16ByQuadrantReader6decodeENS_3RefINS_12BinaryBitmapEEENS_11DecodeHintsE:0000000000000000 $d
-     /tmp/cc8PakzH.s:2461   .rodata._ZTIN5zxing15ReaderExceptionE:0000000000000000 _ZTIN5zxing15ReaderExceptionE
+     /tmp/ccS4IBU9.s:2461   .rodata._ZTIN5zxing15ReaderExceptionE:0000000000000000 _ZTIN5zxing15ReaderExceptionE
 .ARM.exidx.text._ZN5zxing5multi16ByQuadrantReader6decodeENS_3RefINS_12BinaryBitmapEEENS_11DecodeHintsE:0000000000000000 $d
-     /tmp/cc8PakzH.s:2401   .text._GLOBAL__sub_I__ZN5zxing5multi16ByQuadrantReaderC2ERNS_6ReaderE:0000000000000000 $a
-     /tmp/cc8PakzH.s:2406   .text._GLOBAL__sub_I__ZN5zxing5multi16ByQuadrantReaderC2ERNS_6ReaderE:0000000000000000 _GLOBAL__sub_I__ZN5zxing5multi16ByQuadrantReaderC2ERNS_6ReaderE
+     /tmp/ccS4IBU9.s:2401   .text._GLOBAL__sub_I__ZN5zxing5multi16ByQuadrantReaderC2ERNS_6ReaderE:0000000000000000 $a
+     /tmp/ccS4IBU9.s:2406   .text._GLOBAL__sub_I__ZN5zxing5multi16ByQuadrantReaderC2ERNS_6ReaderE:0000000000000000 _GLOBAL__sub_I__ZN5zxing5multi16ByQuadrantReaderC2ERNS_6ReaderE
 .ARM.exidx.text._GLOBAL__sub_I__ZN5zxing5multi16ByQuadrantReaderC2ERNS_6ReaderE:0000000000000000 $d
-     /tmp/cc8PakzH.s:2429   .init_array:0000000000000000 $d
-     /tmp/cc8PakzH.s:2436   .rodata._ZTSN5zxing9ExceptionE:0000000000000000 _ZTSN5zxing9ExceptionE
-     /tmp/cc8PakzH.s:2433   .rodata._ZTSN5zxing9ExceptionE:0000000000000000 $d
-     /tmp/cc8PakzH.s:2443   .rodata._ZTIN5zxing9ExceptionE:0000000000000000 _ZTIN5zxing9ExceptionE
-     /tmp/cc8PakzH.s:2440   .rodata._ZTIN5zxing9ExceptionE:0000000000000000 $d
-     /tmp/cc8PakzH.s:2485   .rodata._ZTSN5zxing5multi16ByQuadrantReaderE:0000000000000000 _ZTSN5zxing5multi16ByQuadrantReaderE
-     /tmp/cc8PakzH.s:2477   .rodata._ZTIN5zxing5multi16ByQuadrantReaderE:0000000000000000 _ZTIN5zxing5multi16ByQuadrantReaderE
-     /tmp/cc8PakzH.s:2454   .rodata._ZTSN5zxing15ReaderExceptionE:0000000000000000 _ZTSN5zxing15ReaderExceptionE
-     /tmp/cc8PakzH.s:2451   .rodata._ZTSN5zxing15ReaderExceptionE:0000000000000000 $d
-     /tmp/cc8PakzH.s:2458   .rodata._ZTIN5zxing15ReaderExceptionE:0000000000000000 $d
-     /tmp/cc8PakzH.s:2492   .rodata._ZTVN5zxing5multi16ByQuadrantReaderE:0000000000000000 _ZTVN5zxing5multi16ByQuadrantReaderE
-     /tmp/cc8PakzH.s:2467   .bss._ZStL8__ioinit:0000000000000000 $d
-     /tmp/cc8PakzH.s:2471   .bss._ZStL8__ioinit:0000000000000000 _ZStL8__ioinit
-     /tmp/cc8PakzH.s:2474   .rodata._ZTIN5zxing5multi16ByQuadrantReaderE:0000000000000000 $d
-     /tmp/cc8PakzH.s:2482   .rodata._ZTSN5zxing5multi16ByQuadrantReaderE:0000000000000000 $d
-     /tmp/cc8PakzH.s:2488   .rodata._ZTVN5zxing5multi16ByQuadrantReaderE:0000000000000000 $d
+     /tmp/ccS4IBU9.s:2429   .init_array:0000000000000000 $d
+     /tmp/ccS4IBU9.s:2436   .rodata._ZTSN5zxing9ExceptionE:0000000000000000 _ZTSN5zxing9ExceptionE
+     /tmp/ccS4IBU9.s:2433   .rodata._ZTSN5zxing9ExceptionE:0000000000000000 $d
+     /tmp/ccS4IBU9.s:2443   .rodata._ZTIN5zxing9ExceptionE:0000000000000000 _ZTIN5zxing9ExceptionE
+     /tmp/ccS4IBU9.s:2440   .rodata._ZTIN5zxing9ExceptionE:0000000000000000 $d
+     /tmp/ccS4IBU9.s:2485   .rodata._ZTSN5zxing5multi16ByQuadrantReaderE:0000000000000000 _ZTSN5zxing5multi16ByQuadrantReaderE
+     /tmp/ccS4IBU9.s:2477   .rodata._ZTIN5zxing5multi16ByQuadrantReaderE:0000000000000000 _ZTIN5zxing5multi16ByQuadrantReaderE
+     /tmp/ccS4IBU9.s:2454   .rodata._ZTSN5zxing15ReaderExceptionE:0000000000000000 _ZTSN5zxing15ReaderExceptionE
+     /tmp/ccS4IBU9.s:2451   .rodata._ZTSN5zxing15ReaderExceptionE:0000000000000000 $d
+     /tmp/ccS4IBU9.s:2458   .rodata._ZTIN5zxing15ReaderExceptionE:0000000000000000 $d
+     /tmp/ccS4IBU9.s:2492   .rodata._ZTVN5zxing5multi16ByQuadrantReaderE:0000000000000000 _ZTVN5zxing5multi16ByQuadrantReaderE
+     /tmp/ccS4IBU9.s:2467   .bss._ZStL8__ioinit:0000000000000000 $d
+     /tmp/ccS4IBU9.s:2471   .bss._ZStL8__ioinit:0000000000000000 _ZStL8__ioinit
+     /tmp/ccS4IBU9.s:2474   .rodata._ZTIN5zxing5multi16ByQuadrantReaderE:0000000000000000 $d
+     /tmp/ccS4IBU9.s:2482   .rodata._ZTSN5zxing5multi16ByQuadrantReaderE:0000000000000000 $d
+     /tmp/ccS4IBU9.s:2488   .rodata._ZTVN5zxing5multi16ByQuadrantReaderE:0000000000000000 $d
                      .debug_frame:0000000000000010 $d
                            .group:0000000000000000 wm4.0.cd1e96de8a8c4f34e746a820772853ad
                            .group:0000000000000000 wm4.cconfig.h.31.21483d26c3710eb58c7a44c20d82c775

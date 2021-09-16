@@ -5068,55 +5068,55 @@
  2260              		.file 63 "/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Ex
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 MultiDetector.cpp
-     /tmp/ccHKCOQY.s:17     .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $a
-     /tmp/ccHKCOQY.s:22     .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 _Z41__static_initialization_and_destruction_0ii
-     /tmp/ccHKCOQY.s:2171   .bss._ZStL8__ioinit:0000000000000000 .LANCHOR0
+     /tmp/cckc0Tb5.s:17     .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $a
+     /tmp/cckc0Tb5.s:22     .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 _Z41__static_initialization_and_destruction_0ii
+     /tmp/cckc0Tb5.s:2171   .bss._ZStL8__ioinit:0000000000000000 .LANCHOR0
 .ARM.exidx.text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $d
-     /tmp/ccHKCOQY.s:64     .text._ZN5zxing5multi13MultiDetectorD2Ev:0000000000000000 $a
-     /tmp/ccHKCOQY.s:70     .text._ZN5zxing5multi13MultiDetectorD2Ev:0000000000000000 _ZN5zxing5multi13MultiDetectorD2Ev
-     /tmp/ccHKCOQY.s:186    .text._ZN5zxing5multi13MultiDetectorD2Ev:0000000000000090 $d
+     /tmp/cckc0Tb5.s:64     .text._ZN5zxing5multi13MultiDetectorD2Ev:0000000000000000 $a
+     /tmp/cckc0Tb5.s:70     .text._ZN5zxing5multi13MultiDetectorD2Ev:0000000000000000 _ZN5zxing5multi13MultiDetectorD2Ev
+     /tmp/cckc0Tb5.s:186    .text._ZN5zxing5multi13MultiDetectorD2Ev:0000000000000090 $d
 .ARM.exidx.text._ZN5zxing5multi13MultiDetectorD2Ev:0000000000000000 $d
-     /tmp/ccHKCOQY.s:70     .text._ZN5zxing5multi13MultiDetectorD2Ev:0000000000000000 _ZN5zxing5multi13MultiDetectorD1Ev
-     /tmp/ccHKCOQY.s:202    .text._ZN5zxing5multi13MultiDetectorD0Ev:0000000000000000 $a
-     /tmp/ccHKCOQY.s:208    .text._ZN5zxing5multi13MultiDetectorD0Ev:0000000000000000 _ZN5zxing5multi13MultiDetectorD0Ev
+     /tmp/cckc0Tb5.s:70     .text._ZN5zxing5multi13MultiDetectorD2Ev:0000000000000000 _ZN5zxing5multi13MultiDetectorD1Ev
+     /tmp/cckc0Tb5.s:202    .text._ZN5zxing5multi13MultiDetectorD0Ev:0000000000000000 $a
+     /tmp/cckc0Tb5.s:208    .text._ZN5zxing5multi13MultiDetectorD0Ev:0000000000000000 _ZN5zxing5multi13MultiDetectorD0Ev
 .ARM.exidx.text._ZN5zxing5multi13MultiDetectorD0Ev:0000000000000000 $d
-     /tmp/ccHKCOQY.s:236    .text._ZN5zxing5multi13MultiDetectorC2ENS_3RefINS_9BitMatrixEEE:0000000000000000 $a
-     /tmp/ccHKCOQY.s:242    .text._ZN5zxing5multi13MultiDetectorC2ENS_3RefINS_9BitMatrixEEE:0000000000000000 _ZN5zxing5multi13MultiDetectorC2ENS_3RefINS_9BitMatrixEEE
-     /tmp/ccHKCOQY.s:440    .text._ZN5zxing5multi13MultiDetectorC2ENS_3RefINS_9BitMatrixEEE:0000000000000104 $d
+     /tmp/cckc0Tb5.s:236    .text._ZN5zxing5multi13MultiDetectorC2ENS_3RefINS_9BitMatrixEEE:0000000000000000 $a
+     /tmp/cckc0Tb5.s:242    .text._ZN5zxing5multi13MultiDetectorC2ENS_3RefINS_9BitMatrixEEE:0000000000000000 _ZN5zxing5multi13MultiDetectorC2ENS_3RefINS_9BitMatrixEEE
+     /tmp/cckc0Tb5.s:440    .text._ZN5zxing5multi13MultiDetectorC2ENS_3RefINS_9BitMatrixEEE:0000000000000104 $d
 .ARM.extab.text._ZN5zxing5multi13MultiDetectorC2ENS_3RefINS_9BitMatrixEEE:0000000000000000 $d
 .ARM.exidx.text._ZN5zxing5multi13MultiDetectorC2ENS_3RefINS_9BitMatrixEEE:0000000000000000 $d
-     /tmp/ccHKCOQY.s:242    .text._ZN5zxing5multi13MultiDetectorC2ENS_3RefINS_9BitMatrixEEE:0000000000000000 _ZN5zxing5multi13MultiDetectorC1ENS_3RefINS_9BitMatrixEEE
-     /tmp/ccHKCOQY.s:472    .text._ZNSt6vectorIN5zxing3RefINS0_14DetectorResultEEESaIS3_EE19_M_emplace_back_auxIJS3_EEEvDpOT_:0000000000000000 $a
-     /tmp/ccHKCOQY.s:478    .text._ZNSt6vectorIN5zxing3RefINS0_14DetectorResultEEESaIS3_EE19_M_emplace_back_auxIJS3_EEEvDpOT_:0000000000000000 _ZNSt6vectorIN5zxing3RefINS0_14DetectorResultEEESaIS3_EE19_M_emplace_back_auxIJS3_EEEvDpOT_
+     /tmp/cckc0Tb5.s:242    .text._ZN5zxing5multi13MultiDetectorC2ENS_3RefINS_9BitMatrixEEE:0000000000000000 _ZN5zxing5multi13MultiDetectorC1ENS_3RefINS_9BitMatrixEEE
+     /tmp/cckc0Tb5.s:472    .text._ZNSt6vectorIN5zxing3RefINS0_14DetectorResultEEESaIS3_EE19_M_emplace_back_auxIJS3_EEEvDpOT_:0000000000000000 $a
+     /tmp/cckc0Tb5.s:478    .text._ZNSt6vectorIN5zxing3RefINS0_14DetectorResultEEESaIS3_EE19_M_emplace_back_auxIJS3_EEEvDpOT_:0000000000000000 _ZNSt6vectorIN5zxing3RefINS0_14DetectorResultEEESaIS3_EE19_M_emplace_back_auxIJS3_EEEvDpOT_
 .ARM.exidx.text._ZNSt6vectorIN5zxing3RefINS0_14DetectorResultEEESaIS3_EE19_M_emplace_back_auxIJS3_EEEvDpOT_:0000000000000000 $d
-     /tmp/ccHKCOQY.s:943    .text._ZNSt6vectorIN5zxing3RefINS0_14DetectorResultEEESaIS3_EE12emplace_backIJS3_EEEvDpOT_:0000000000000000 $a
-     /tmp/ccHKCOQY.s:949    .text._ZNSt6vectorIN5zxing3RefINS0_14DetectorResultEEESaIS3_EE12emplace_backIJS3_EEEvDpOT_:0000000000000000 _ZNSt6vectorIN5zxing3RefINS0_14DetectorResultEEESaIS3_EE12emplace_backIJS3_EEEvDpOT_
+     /tmp/cckc0Tb5.s:943    .text._ZNSt6vectorIN5zxing3RefINS0_14DetectorResultEEESaIS3_EE12emplace_backIJS3_EEEvDpOT_:0000000000000000 $a
+     /tmp/cckc0Tb5.s:949    .text._ZNSt6vectorIN5zxing3RefINS0_14DetectorResultEEESaIS3_EE12emplace_backIJS3_EEEvDpOT_:0000000000000000 _ZNSt6vectorIN5zxing3RefINS0_14DetectorResultEEESaIS3_EE12emplace_backIJS3_EEEvDpOT_
 .ARM.exidx.text._ZNSt6vectorIN5zxing3RefINS0_14DetectorResultEEESaIS3_EE12emplace_backIJS3_EEEvDpOT_:0000000000000000 $d
-     /tmp/ccHKCOQY.s:1077   .text._GLOBAL__sub_I__ZN5zxing5multi13MultiDetectorC2ENS_3RefINS_9BitMatrixEEE:0000000000000000 $a
-     /tmp/ccHKCOQY.s:1082   .text._GLOBAL__sub_I__ZN5zxing5multi13MultiDetectorC2ENS_3RefINS_9BitMatrixEEE:0000000000000000 _GLOBAL__sub_I__ZN5zxing5multi13MultiDetectorC2ENS_3RefINS_9BitMatrixEEE
+     /tmp/cckc0Tb5.s:1077   .text._GLOBAL__sub_I__ZN5zxing5multi13MultiDetectorC2ENS_3RefINS_9BitMatrixEEE:0000000000000000 $a
+     /tmp/cckc0Tb5.s:1082   .text._GLOBAL__sub_I__ZN5zxing5multi13MultiDetectorC2ENS_3RefINS_9BitMatrixEEE:0000000000000000 _GLOBAL__sub_I__ZN5zxing5multi13MultiDetectorC2ENS_3RefINS_9BitMatrixEEE
 .ARM.exidx.text._GLOBAL__sub_I__ZN5zxing5multi13MultiDetectorC2ENS_3RefINS_9BitMatrixEEE:0000000000000000 $d
-     /tmp/ccHKCOQY.s:1105   .init_array:0000000000000000 $d
-     /tmp/ccHKCOQY.s:1108   .text._ZN5zxing5multi13MultiDetector11detectMultiENS_11DecodeHintsE:0000000000000000 $a
-     /tmp/ccHKCOQY.s:1114   .text._ZN5zxing5multi13MultiDetector11detectMultiENS_11DecodeHintsE:0000000000000000 _ZN5zxing5multi13MultiDetector11detectMultiENS_11DecodeHintsE
+     /tmp/cckc0Tb5.s:1105   .init_array:0000000000000000 $d
+     /tmp/cckc0Tb5.s:1108   .text._ZN5zxing5multi13MultiDetector11detectMultiENS_11DecodeHintsE:0000000000000000 $a
+     /tmp/cckc0Tb5.s:1114   .text._ZN5zxing5multi13MultiDetector11detectMultiENS_11DecodeHintsE:0000000000000000 _ZN5zxing5multi13MultiDetector11detectMultiENS_11DecodeHintsE
 .ARM.extab.text._ZN5zxing5multi13MultiDetector11detectMultiENS_11DecodeHintsE:0000000000000000 $d
-     /tmp/ccHKCOQY.s:2164   .rodata._ZTIN5zxing15ReaderExceptionE:0000000000000000 _ZTIN5zxing15ReaderExceptionE
+     /tmp/cckc0Tb5.s:2164   .rodata._ZTIN5zxing15ReaderExceptionE:0000000000000000 _ZTIN5zxing15ReaderExceptionE
 .ARM.exidx.text._ZN5zxing5multi13MultiDetector11detectMultiENS_11DecodeHintsE:0000000000000000 $d
-     /tmp/ccHKCOQY.s:2139   .rodata._ZTSN5zxing9ExceptionE:0000000000000000 _ZTSN5zxing9ExceptionE
-     /tmp/ccHKCOQY.s:2136   .rodata._ZTSN5zxing9ExceptionE:0000000000000000 $d
-     /tmp/ccHKCOQY.s:2146   .rodata._ZTIN5zxing9ExceptionE:0000000000000000 _ZTIN5zxing9ExceptionE
-     /tmp/ccHKCOQY.s:2143   .rodata._ZTIN5zxing9ExceptionE:0000000000000000 $d
-     /tmp/ccHKCOQY.s:2192   .rodata._ZTSN5zxing5multi13MultiDetectorE:0000000000000000 _ZTSN5zxing5multi13MultiDetectorE
-     /tmp/ccHKCOQY.s:2184   .rodata._ZTIN5zxing5multi13MultiDetectorE:0000000000000000 _ZTIN5zxing5multi13MultiDetectorE
-     /tmp/ccHKCOQY.s:2157   .rodata._ZTSN5zxing15ReaderExceptionE:0000000000000000 _ZTSN5zxing15ReaderExceptionE
-     /tmp/ccHKCOQY.s:2154   .rodata._ZTSN5zxing15ReaderExceptionE:0000000000000000 $d
-     /tmp/ccHKCOQY.s:2161   .rodata._ZTIN5zxing15ReaderExceptionE:0000000000000000 $d
-     /tmp/ccHKCOQY.s:2199   .rodata._ZTVN5zxing5multi13MultiDetectorE:0000000000000000 _ZTVN5zxing5multi13MultiDetectorE
-     /tmp/ccHKCOQY.s:2170   .bss._ZStL8__ioinit:0000000000000000 $d
-     /tmp/ccHKCOQY.s:2174   .bss._ZStL8__ioinit:0000000000000000 _ZStL8__ioinit
-     /tmp/ccHKCOQY.s:2177   .rodata._ZNSt6vectorIN5zxing3RefINS0_14DetectorResultEEESaIS3_EE19_M_emplace_back_auxIJS3_EEEvDpOT_.str1.4:0000000000000000 $d
-     /tmp/ccHKCOQY.s:2181   .rodata._ZTIN5zxing5multi13MultiDetectorE:0000000000000000 $d
-     /tmp/ccHKCOQY.s:2189   .rodata._ZTSN5zxing5multi13MultiDetectorE:0000000000000000 $d
-     /tmp/ccHKCOQY.s:2195   .rodata._ZTVN5zxing5multi13MultiDetectorE:0000000000000000 $d
+     /tmp/cckc0Tb5.s:2139   .rodata._ZTSN5zxing9ExceptionE:0000000000000000 _ZTSN5zxing9ExceptionE
+     /tmp/cckc0Tb5.s:2136   .rodata._ZTSN5zxing9ExceptionE:0000000000000000 $d
+     /tmp/cckc0Tb5.s:2146   .rodata._ZTIN5zxing9ExceptionE:0000000000000000 _ZTIN5zxing9ExceptionE
+     /tmp/cckc0Tb5.s:2143   .rodata._ZTIN5zxing9ExceptionE:0000000000000000 $d
+     /tmp/cckc0Tb5.s:2192   .rodata._ZTSN5zxing5multi13MultiDetectorE:0000000000000000 _ZTSN5zxing5multi13MultiDetectorE
+     /tmp/cckc0Tb5.s:2184   .rodata._ZTIN5zxing5multi13MultiDetectorE:0000000000000000 _ZTIN5zxing5multi13MultiDetectorE
+     /tmp/cckc0Tb5.s:2157   .rodata._ZTSN5zxing15ReaderExceptionE:0000000000000000 _ZTSN5zxing15ReaderExceptionE
+     /tmp/cckc0Tb5.s:2154   .rodata._ZTSN5zxing15ReaderExceptionE:0000000000000000 $d
+     /tmp/cckc0Tb5.s:2161   .rodata._ZTIN5zxing15ReaderExceptionE:0000000000000000 $d
+     /tmp/cckc0Tb5.s:2199   .rodata._ZTVN5zxing5multi13MultiDetectorE:0000000000000000 _ZTVN5zxing5multi13MultiDetectorE
+     /tmp/cckc0Tb5.s:2170   .bss._ZStL8__ioinit:0000000000000000 $d
+     /tmp/cckc0Tb5.s:2174   .bss._ZStL8__ioinit:0000000000000000 _ZStL8__ioinit
+     /tmp/cckc0Tb5.s:2177   .rodata._ZNSt6vectorIN5zxing3RefINS0_14DetectorResultEEESaIS3_EE19_M_emplace_back_auxIJS3_EEEvDpOT_.str1.4:0000000000000000 $d
+     /tmp/cckc0Tb5.s:2181   .rodata._ZTIN5zxing5multi13MultiDetectorE:0000000000000000 $d
+     /tmp/cckc0Tb5.s:2189   .rodata._ZTSN5zxing5multi13MultiDetectorE:0000000000000000 $d
+     /tmp/cckc0Tb5.s:2195   .rodata._ZTVN5zxing5multi13MultiDetectorE:0000000000000000 $d
                      .debug_frame:0000000000000010 $d
                            .group:0000000000000000 wm4.0.cd1e96de8a8c4f34e746a820772853ad
                            .group:0000000000000000 wm4.cconfig.h.31.21483d26c3710eb58c7a44c20d82c775
