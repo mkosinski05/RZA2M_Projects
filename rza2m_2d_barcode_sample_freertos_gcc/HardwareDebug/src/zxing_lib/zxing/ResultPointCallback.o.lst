@@ -1,0 +1,444 @@
+   1              		.cpu cortex-a9
+   2              		.eabi_attribute 28, 1
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.file	"ResultPointCallback.cpp"
+  13              		.text
+  14              	.Ltext0:
+  15              		.cfi_sections	.debug_frame
+  16              		.section	.text._Z41__static_initialization_and_destruction_0ii,"ax",%progbits
+  17              		.align	2
+  18              		.syntax unified
+  19              		.arm
+  20              		.fpu neon
+  22              	_Z41__static_initialization_and_destruction_0ii:
+  23              		.fnstart
+  24              	.LFB1904:
+  25              		.file 1 "../src/zxing_lib/zxing/ResultPointCallback.cpp"
+   1:../src/zxing_lib/zxing/ResultPointCallback.cpp **** /*
+   2:../src/zxing_lib/zxing/ResultPointCallback.cpp ****  *  ResultPointCallback.cpp
+   3:../src/zxing_lib/zxing/ResultPointCallback.cpp ****  *  zxing
+   4:../src/zxing_lib/zxing/ResultPointCallback.cpp ****  *
+   5:../src/zxing_lib/zxing/ResultPointCallback.cpp ****  *  Copyright 2010 ZXing authors All rights reserved.
+   6:../src/zxing_lib/zxing/ResultPointCallback.cpp ****  *
+   7:../src/zxing_lib/zxing/ResultPointCallback.cpp ****  * Licensed under the Apache License, Version 2.0 (the "License");
+   8:../src/zxing_lib/zxing/ResultPointCallback.cpp ****  * you may not use this file except in compliance with the License.
+   9:../src/zxing_lib/zxing/ResultPointCallback.cpp ****  * You may obtain a copy of the License at
+  10:../src/zxing_lib/zxing/ResultPointCallback.cpp ****  *
+  11:../src/zxing_lib/zxing/ResultPointCallback.cpp ****  *      http://www.apache.org/licenses/LICENSE-2.0
+  12:../src/zxing_lib/zxing/ResultPointCallback.cpp ****  *
+  13:../src/zxing_lib/zxing/ResultPointCallback.cpp ****  * Unless required by applicable law or agreed to in writing, software
+  14:../src/zxing_lib/zxing/ResultPointCallback.cpp ****  * distributed under the License is distributed on an "AS IS" BASIS,
+  15:../src/zxing_lib/zxing/ResultPointCallback.cpp ****  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  16:../src/zxing_lib/zxing/ResultPointCallback.cpp ****  * See the License for the specific language governing permissions and
+  17:../src/zxing_lib/zxing/ResultPointCallback.cpp ****  * limitations under the License.
+  18:../src/zxing_lib/zxing/ResultPointCallback.cpp ****  */
+  19:../src/zxing_lib/zxing/ResultPointCallback.cpp **** 
+  20:../src/zxing_lib/zxing/ResultPointCallback.cpp **** #include <zxing/ResultPointCallback.h>
+  21:../src/zxing_lib/zxing/ResultPointCallback.cpp **** 
+  22:../src/zxing_lib/zxing/ResultPointCallback.cpp **** namespace zxing {
+  23:../src/zxing_lib/zxing/ResultPointCallback.cpp **** 
+  24:../src/zxing_lib/zxing/ResultPointCallback.cpp **** ResultPointCallback::~ResultPointCallback() {}
+  25:../src/zxing_lib/zxing/ResultPointCallback.cpp **** 
+  26:../src/zxing_lib/zxing/ResultPointCallback.cpp **** }
+  26              		.loc 1 26 0
+  27              		.cfi_startproc
+  28              		@ args = 0, pretend = 0, frame = 0
+  29              		@ frame_needed = 0, uses_anonymous_args = 0
+  30              	.LVL0:
+  31 0000 010050E3 		cmp	r0, #1
+  32 0004 1EFF2F11 		bxne	lr
+  33              		.loc 1 26 0 is_stmt 0 discriminator 1
+  34 0008 FF3F0FE3 		movw	r3, #65535
+  35 000c 030051E1 		cmp	r1, r3
+  36 0010 1EFF2F11 		bxne	lr
+  37              		.loc 1 26 0
+  38 0014 10402DE9 		push	{r4, lr}
+  39              		.cfi_def_cfa_offset 8
+  40              		.cfi_offset 4, -8
+  41              		.cfi_offset 14, -4
+  42              		.file 2 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+   1:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // Standard iostream objects -*- C++ -*-
+   2:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+   3:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // Copyright (C) 1997-2016 Free Software Foundation, Inc.
+   4:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** //
+   5:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // This file is part of the GNU ISO C++ Library.  This library is free
+   6:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // software; you can redistribute it and/or modify it under the
+   7:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // terms of the GNU General Public License as published by the
+   8:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // Free Software Foundation; either version 3, or (at your option)
+   9:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // any later version.
+  10:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  11:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // This library is distributed in the hope that it will be useful,
+  12:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // but WITHOUT ANY WARRANTY; without even the implied warranty of
+  13:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  14:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // GNU General Public License for more details.
+  15:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  16:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // Under Section 7 of GPL version 3, you are granted additional
+  17:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // permissions described in the GCC Runtime Library Exception, version
+  18:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // 3.1, as published by the Free Software Foundation.
+  19:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  20:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // You should have received a copy of the GNU General Public License and
+  21:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // a copy of the GCC Runtime Library Exception along with this program;
+  22:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+  23:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // <http://www.gnu.org/licenses/>.
+  24:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  25:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** /** @file include/iostream
+  26:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****  *  This is a Standard C++ Library header.
+  27:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****  */
+  28:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  29:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** //
+  30:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // ISO C++ 14882: 27.3  Standard iostream objects
+  31:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** //
+  32:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  33:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** #ifndef _GLIBCXX_IOSTREAM
+  34:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** #define _GLIBCXX_IOSTREAM 1
+  35:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  36:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** #pragma GCC system_header
+  37:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  38:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** #include <bits/c++config.h>
+  39:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** #include <ostream>
+  40:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** #include <istream>
+  41:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  42:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** namespace std _GLIBCXX_VISIBILITY(default)
+  43:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** {
+  44:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** _GLIBCXX_BEGIN_NAMESPACE_VERSION
+  45:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  46:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   /**
+  47:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  @name Standard Stream Objects
+  48:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *
+  49:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  The &lt;iostream&gt; header declares the eight <em>standard stream
+  50:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  objects</em>.  For other declarations, see
+  51:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  http://gcc.gnu.org/onlinedocs/libstdc++/manual/io.html
+  52:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  and the @link iosfwd I/O forward declarations @endlink
+  53:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *
+  54:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  They are required by default to cooperate with the global C
+  55:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  library's @c FILE streams, and to be available during program
+  56:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  startup and termination. For more information, see the section of the
+  57:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  manual linked to above.
+  58:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   */
+  59:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   //@{
+  60:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   extern istream cin;		/// Linked to standard input
+  61:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   extern ostream cout;		/// Linked to standard output
+  62:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   extern ostream cerr;		/// Linked to standard error (unbuffered)
+  63:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   extern ostream clog;		/// Linked to standard error (buffered)
+  64:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  65:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** #ifdef _GLIBCXX_USE_WCHAR_T
+  66:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   extern wistream wcin;		/// Linked to standard input
+  67:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   extern wostream wcout;	/// Linked to standard output
+  68:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   extern wostream wcerr;	/// Linked to standard error (unbuffered)
+  69:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   extern wostream wclog;	/// Linked to standard error (buffered)
+  70:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** #endif
+  71:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   //@}
+  72:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  73:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   // For construction of filebuffers for cout, cin, cerr, clog et. al.
+  74:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   static ios_base::Init __ioinit;
+  43              		.loc 2 74 0 is_stmt 1
+  44 0018 004000E3 		movw	r4, #:lower16:.LANCHOR0
+  45 001c 004040E3 		movt	r4, #:upper16:.LANCHOR0
+  46 0020 0400A0E1 		mov	r0, r4
+  47              	.LVL1:
+  48 0024 FEFFFFEB 		bl	_ZNSt8ios_base4InitC1Ev
+  49              	.LVL2:
+  50 0028 002000E3 		movw	r2, #:lower16:__dso_handle
+  51 002c 002040E3 		movt	r2, #:upper16:__dso_handle
+  52 0030 001000E3 		movw	r1, #:lower16:_ZNSt8ios_base4InitD1Ev
+  53 0034 001040E3 		movt	r1, #:upper16:_ZNSt8ios_base4InitD1Ev
+  54 0038 0400A0E1 		mov	r0, r4
+  55 003c FEFFFFEB 		bl	__aeabi_atexit
+  56              	.LVL3:
+  57 0040 1080BDE8 		pop	{r4, pc}
+  58              		.cfi_endproc
+  59              	.LFE1904:
+  60              		.cantunwind
+  61              		.fnend
+  63              		.section	.text._ZN5zxing19ResultPointCallbackD2Ev,"ax",%progbits
+  64              		.align	2
+  65              		.global	_ZN5zxing19ResultPointCallbackD2Ev
+  66              		.syntax unified
+  67              		.arm
+  68              		.fpu neon
+  70              	_ZN5zxing19ResultPointCallbackD2Ev:
+  71              		.fnstart
+  72              	.LFB1466:
+  24:../src/zxing_lib/zxing/ResultPointCallback.cpp **** 
+  73              		.loc 1 24 0
+  74              		.cfi_startproc
+  75              		@ args = 0, pretend = 0, frame = 0
+  76              		@ frame_needed = 0, uses_anonymous_args = 0
+  77              		@ link register save eliminated.
+  78              	.LVL4:
+  24:../src/zxing_lib/zxing/ResultPointCallback.cpp **** 
+  79              		.loc 1 24 0
+  80 0000 1EFF2FE1 		bx	lr
+  81              		.cfi_endproc
+  82              	.LFE1466:
+  83              		.cantunwind
+  84              		.fnend
+  86              		.global	_ZN5zxing19ResultPointCallbackD1Ev
+  87              		.set	_ZN5zxing19ResultPointCallbackD1Ev,_ZN5zxing19ResultPointCallbackD2Ev
+  88              		.section	.text._ZN5zxing19ResultPointCallbackD0Ev,"ax",%progbits
+  89              		.align	2
+  90              		.global	_ZN5zxing19ResultPointCallbackD0Ev
+  91              		.syntax unified
+  92              		.arm
+  93              		.fpu neon
+  95              	_ZN5zxing19ResultPointCallbackD0Ev:
+  96              		.fnstart
+  97              	.LFB1468:
+  24:../src/zxing_lib/zxing/ResultPointCallback.cpp **** 
+  98              		.loc 1 24 0
+  99              		.cfi_startproc
+ 100              		@ args = 0, pretend = 0, frame = 0
+ 101              		@ frame_needed = 0, uses_anonymous_args = 0
+ 102              	.LVL5:
+ 103 0000 10402DE9 		push	{r4, lr}
+ 104              		.cfi_def_cfa_offset 8
+ 105              		.cfi_offset 4, -8
+ 106              		.cfi_offset 14, -4
+ 107 0004 0040A0E1 		mov	r4, r0
+  24:../src/zxing_lib/zxing/ResultPointCallback.cpp **** 
+ 108              		.loc 1 24 0
+ 109 0008 0810A0E3 		mov	r1, #8
+ 110 000c FEFFFFEB 		bl	_ZdlPvj
+ 111              	.LVL6:
+ 112 0010 0400A0E1 		mov	r0, r4
+ 113 0014 1080BDE8 		pop	{r4, pc}
+ 114              		.cfi_endproc
+ 115              	.LFE1468:
+ 116              		.cantunwind
+ 117              		.fnend
+ 119              		.section	.text._GLOBAL__sub_I__ZN5zxing19ResultPointCallbackD2Ev,"ax",%progbits
+ 120              		.align	2
+ 121              		.syntax unified
+ 122              		.arm
+ 123              		.fpu neon
+ 125              	_GLOBAL__sub_I__ZN5zxing19ResultPointCallbackD2Ev:
+ 126              		.fnstart
+ 127              	.LFB1905:
+ 128              		.loc 1 26 0
+ 129              		.cfi_startproc
+ 130              		@ args = 0, pretend = 0, frame = 0
+ 131              		@ frame_needed = 0, uses_anonymous_args = 0
+ 132 0000 10402DE9 		push	{r4, lr}
+ 133              		.cfi_def_cfa_offset 8
+ 134              		.cfi_offset 4, -8
+ 135              		.cfi_offset 14, -4
+ 136              		.loc 1 26 0
+ 137 0004 FF1F0FE3 		movw	r1, #65535
+ 138 0008 0100A0E3 		mov	r0, #1
+ 139 000c FEFFFFEB 		bl	_Z41__static_initialization_and_destruction_0ii
+ 140              	.LVL7:
+ 141 0010 1080BDE8 		pop	{r4, pc}
+ 142              		.cfi_endproc
+ 143              	.LFE1905:
+ 144              		.cantunwind
+ 145              		.fnend
+ 147              		.section	.init_array,"aw",%init_array
+ 148              		.align	2
+ 149 0000 00000000 		.word	_GLOBAL__sub_I__ZN5zxing19ResultPointCallbackD2Ev(target1)
+ 150              		.weak	_ZTSN5zxing7CountedE
+ 151              		.section	.rodata._ZTSN5zxing7CountedE,"aG",%progbits,_ZTSN5zxing7CountedE,comdat
+ 152              		.align	2
+ 155              	_ZTSN5zxing7CountedE:
+ 156 0000 4E357A78 		.ascii	"N5zxing7CountedE\000"
+ 156      696E6737 
+ 156      436F756E 
+ 156      74656445 
+ 156      00
+ 157              		.weak	_ZTIN5zxing7CountedE
+ 158              		.section	.rodata._ZTIN5zxing7CountedE,"aG",%progbits,_ZTIN5zxing7CountedE,comdat
+ 159              		.align	2
+ 162              	_ZTIN5zxing7CountedE:
+ 163 0000 08000000 		.word	_ZTVN10__cxxabiv117__class_type_infoE+8
+ 164 0004 00000000 		.word	_ZTSN5zxing7CountedE
+ 165              		.global	_ZTSN5zxing19ResultPointCallbackE
+ 166              		.global	_ZTIN5zxing19ResultPointCallbackE
+ 167              		.global	_ZTVN5zxing19ResultPointCallbackE
+ 168              		.section	.bss._ZStL8__ioinit,"aw",%nobits
+ 169              		.align	2
+ 170              		.set	.LANCHOR0,. + 0
+ 173              	_ZStL8__ioinit:
+ 174 0000 00       		.space	1
+ 175              		.section	.rodata._ZTIN5zxing19ResultPointCallbackE,"a",%progbits
+ 176              		.align	2
+ 179              	_ZTIN5zxing19ResultPointCallbackE:
+ 180 0000 08000000 		.word	_ZTVN10__cxxabiv120__si_class_type_infoE+8
+ 181 0004 00000000 		.word	_ZTSN5zxing19ResultPointCallbackE
+ 182 0008 00000000 		.word	_ZTIN5zxing7CountedE
+ 183              		.section	.rodata._ZTSN5zxing19ResultPointCallbackE,"a",%progbits
+ 184              		.align	2
+ 187              	_ZTSN5zxing19ResultPointCallbackE:
+ 188 0000 4E357A78 		.ascii	"N5zxing19ResultPointCallbackE\000"
+ 188      696E6731 
+ 188      39526573 
+ 188      756C7450 
+ 188      6F696E74 
+ 189              		.section	.rodata._ZTVN5zxing19ResultPointCallbackE,"a",%progbits
+ 190              		.align	2
+ 193              	_ZTVN5zxing19ResultPointCallbackE:
+ 194 0000 00000000 		.word	0
+ 195 0004 00000000 		.word	_ZTIN5zxing19ResultPointCallbackE
+ 196 0008 00000000 		.word	0
+ 197 000c 00000000 		.word	0
+ 198 0010 00000000 		.word	__cxa_pure_virtual
+ 199              		.text
+ 200              	.Letext0:
+ 201              		.file 3 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+ 202              		.file 4 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+ 203              		.file 5 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+ 204              		.file 6 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+ 205              		.file 7 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+ 206              		.file 8 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+ 207              		.file 9 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+ 208              		.file 10 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 209              		.file 11 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 210              		.file 12 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 211              		.file 13 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 212              		.file 14 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 213              		.file 15 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 214              		.file 16 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 215              		.file 17 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 216              		.file 18 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 217              		.file 19 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 218              		.file 20 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 219              		.file 21 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 220              		.file 22 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 221              		.file 23 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 222              		.file 24 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 223              		.file 25 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 224              		.file 26 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 225              		.file 27 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 226              		.file 28 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 227              		.file 29 "<built-in>"
+ 228              		.file 30 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 229              		.file 31 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 230              		.file 32 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 231              		.file 33 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 232              		.file 34 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 233              		.file 35 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 234              		.file 36 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 235              		.file 37 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 236              		.file 38 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 237              		.file 39 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 238              		.file 40 "/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/co
+ 239              		.file 41 "/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Re
+ 240              		.file 42 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 ResultPointCallback.cpp
+     /tmp/cczWgxer.s:17     .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $a
+     /tmp/cczWgxer.s:22     .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 _Z41__static_initialization_and_destruction_0ii
+     /tmp/cczWgxer.s:170    .bss._ZStL8__ioinit:0000000000000000 .LANCHOR0
+.ARM.exidx.text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $d
+     /tmp/cczWgxer.s:64     .text._ZN5zxing19ResultPointCallbackD2Ev:0000000000000000 $a
+     /tmp/cczWgxer.s:70     .text._ZN5zxing19ResultPointCallbackD2Ev:0000000000000000 _ZN5zxing19ResultPointCallbackD2Ev
+.ARM.exidx.text._ZN5zxing19ResultPointCallbackD2Ev:0000000000000000 $d
+     /tmp/cczWgxer.s:70     .text._ZN5zxing19ResultPointCallbackD2Ev:0000000000000000 _ZN5zxing19ResultPointCallbackD1Ev
+     /tmp/cczWgxer.s:89     .text._ZN5zxing19ResultPointCallbackD0Ev:0000000000000000 $a
+     /tmp/cczWgxer.s:95     .text._ZN5zxing19ResultPointCallbackD0Ev:0000000000000000 _ZN5zxing19ResultPointCallbackD0Ev
+.ARM.exidx.text._ZN5zxing19ResultPointCallbackD0Ev:0000000000000000 $d
+     /tmp/cczWgxer.s:120    .text._GLOBAL__sub_I__ZN5zxing19ResultPointCallbackD2Ev:0000000000000000 $a
+     /tmp/cczWgxer.s:125    .text._GLOBAL__sub_I__ZN5zxing19ResultPointCallbackD2Ev:0000000000000000 _GLOBAL__sub_I__ZN5zxing19ResultPointCallbackD2Ev
+.ARM.exidx.text._GLOBAL__sub_I__ZN5zxing19ResultPointCallbackD2Ev:0000000000000000 $d
+     /tmp/cczWgxer.s:148    .init_array:0000000000000000 $d
+     /tmp/cczWgxer.s:155    .rodata._ZTSN5zxing7CountedE:0000000000000000 _ZTSN5zxing7CountedE
+     /tmp/cczWgxer.s:152    .rodata._ZTSN5zxing7CountedE:0000000000000000 $d
+     /tmp/cczWgxer.s:162    .rodata._ZTIN5zxing7CountedE:0000000000000000 _ZTIN5zxing7CountedE
+     /tmp/cczWgxer.s:159    .rodata._ZTIN5zxing7CountedE:0000000000000000 $d
+     /tmp/cczWgxer.s:187    .rodata._ZTSN5zxing19ResultPointCallbackE:0000000000000000 _ZTSN5zxing19ResultPointCallbackE
+     /tmp/cczWgxer.s:179    .rodata._ZTIN5zxing19ResultPointCallbackE:0000000000000000 _ZTIN5zxing19ResultPointCallbackE
+     /tmp/cczWgxer.s:193    .rodata._ZTVN5zxing19ResultPointCallbackE:0000000000000000 _ZTVN5zxing19ResultPointCallbackE
+     /tmp/cczWgxer.s:169    .bss._ZStL8__ioinit:0000000000000000 $d
+     /tmp/cczWgxer.s:173    .bss._ZStL8__ioinit:0000000000000000 _ZStL8__ioinit
+     /tmp/cczWgxer.s:176    .rodata._ZTIN5zxing19ResultPointCallbackE:0000000000000000 $d
+     /tmp/cczWgxer.s:184    .rodata._ZTSN5zxing19ResultPointCallbackE:0000000000000000 $d
+     /tmp/cczWgxer.s:190    .rodata._ZTVN5zxing19ResultPointCallbackE:0000000000000000 $d
+                     .debug_frame:0000000000000010 $d
+                           .group:0000000000000000 wm4.0.cd1e96de8a8c4f34e746a820772853ad
+                           .group:0000000000000000 wm4.cconfig.h.31.21483d26c3710eb58c7a44c20d82c775
+                           .group:0000000000000000 wm4.cpu_defines.h.31.54d44f9d3e7c42875c5a7fd49795eb93
+                           .group:0000000000000000 wm4.cconfig.h.515.5e729db314ae74226e291b4ae081e353
+                           .group:0000000000000000 wm4._newlib_version.h.4.3572908597b70d672d181fc7fc501c19
+                           .group:0000000000000000 wm4.newlib.h.21.59901f4bf241ab46c63694665baa7297
+                           .group:0000000000000000 wm4.features.h.22.5cdadbb3efe495d1c9e38350b8c376c7
+                           .group:0000000000000000 wm4.config.h.219.65a553ab5bef5482f0d7880b0d33015e
+                           .group:0000000000000000 wm4._ansi.h.23.1ee1144430bedaab1a14c7b57a6c8384
+                           .group:0000000000000000 wm4.stddef.h.39.fa2e86d241f4df50b9327c72832885e1
+                           .group:0000000000000000 wm4._default_types.h.6.959254cf5f09734ea7516c89e8bb21bd
+                           .group:0000000000000000 wm4.lock.h.2.1461d1fff82dffe8bfddc23307f6484f
+                           .group:0000000000000000 wm4._types.h.125.5cf8a495f1f7ef36777ad868a1e32068
+                           .group:0000000000000000 wm4.stddef.h.161.7e98c9c86da0ed2d27af2ef92af7d013
+                           .group:0000000000000000 wm4._types.h.183.c226d164ceca1f2ecb9ae9360c54a098
+                           .group:0000000000000000 wm4.reent.h.17.23b059516345f8f5abfa01ddc379570f
+                           .group:0000000000000000 wm4.wchar.h.8.acdef4366e64def8c588421024712d23
+                           .group:0000000000000000 wm4.stddef.h.161.9f48187563b2a85291a91832aa425498
+                           .group:0000000000000000 wm4.cdefs.h.47.9bc8274c84fddbf05edd550eb0bf48cd
+                           .group:0000000000000000 wm4.stdarg.h.34.3a23a216c0c293b3d2ea2e89281481e6
+                           .group:0000000000000000 wm4.wchar.h.29.7ec19a1c094c7903732828676a0a91b2
+                           .group:0000000000000000 wm4.wchar.h.76.90478bd2c784f576b769c4535c98839d
+                           .group:0000000000000000 wm4.cwchar.48.c4e882638bf84f6da89479dda6fe8e17
+                           .group:0000000000000000 wm4.atomic_lockfree_defines.h.31.d5c6334fb1e95c9462b052951f1411df
+                           .group:0000000000000000 wm4.exception_defines.h.31.ca6841b9be3287386aafc5c717935b2e
+                           .group:0000000000000000 wm4.concept_check.h.31.f19605d278e56917c68a56d378be308c
+                           .group:0000000000000000 wm4.type_traits.30.967137c3695c72a3f7c65b682f1a104e
+                           .group:0000000000000000 wm4.move.h.152.41d7b9e6779674d169b7813982cfa003
+                           .group:0000000000000000 wm4.cpp_type_traits.h.33.9f2bfd8c4471a9a299f6da3ec24c745c
+                           .group:0000000000000000 wm4.numeric_traits.h.30.aa01a98564b7e55086aad9e53c7e5c53
+                           .group:0000000000000000 wm4.assertions.h.30.51d443923f0d242550e04246a7819b39
+                           .group:0000000000000000 wm4.stl_iterator.h.406.6718c794fa6a1331f8340656b5c8c55c
+                           .group:0000000000000000 wm4.debug.h.30.5c1f223b12199e851d4d42805b788ccf
+                           .group:0000000000000000 wm4.stl_algobase.h.491.ec4060988bfff82dc579decdb75c72d6
+                           .group:0000000000000000 wm4.stdint.h.4.659be5aa44c4ab4eb7c7cc2b24d8ceee
+                           .group:0000000000000000 wm4._intsup.h.10.cce27fed8484c08a33f522034c30d2b5
+                           .group:0000000000000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:0000000000000000 wm4.stdint.h.23.4c107c5a20920bfc6e94fb2672bbd9ee
+                           .group:0000000000000000 wm4.stddef.h.161.38688f2eb958a8ed58fdb61ffe554c94
+                           .group:0000000000000000 wm4.locale.h.16.90d16f662e7119f5b192650a45179c6c
+                           .group:0000000000000000 wm4.clocale.45.c36d2d5b631a875aa5273176b54fdf0f
+                           .group:0000000000000000 wm4.ctype.h.2.cf64fe4c5e8c0ac0f52f1143312d4909
+                           .group:0000000000000000 wm4.cctype.45.0da5714876b0be7f2d816b53d9670403
+                           .group:0000000000000000 wm4.gthr.h.27.ceb1c66b926f052afcba57e8784df0d4
+                           .group:0000000000000000 wm4.gthrdefault.h.27.edc94d4398c0534988962be77dc3c2e1
+                           .group:0000000000000000 wm4.atomic_word.h.30.9e0ac69fd462d5e650933e05133b4afa
+                           .group:0000000000000000 wm4.allocator.h.52.0ceafb36dc1b82dbfa6b05003082e3f5
+                           .group:0000000000000000 wm4.stl_function.h.57.472a8ffdc5144ddcd047558cd884dda0
+                           .group:0000000000000000 wm4.alloc_traits.h.31.c41c7c4789404962122a4e991dfa3abf
+                           .group:0000000000000000 wm4.cstdlib.44.52c5efdfb0f3c176bd11e611a0b94959
+                           .group:0000000000000000 wm4.stdlib.h.13.4ed386f5c1a80d71e72172885d946ef2
+                           .group:0000000000000000 wm4.alloca.h.8.dfc0c703c47ec3e69746825b17d9e66d
+                           .group:0000000000000000 wm4.stdlib.h.56.d4493cd3736e51e9d56335045f26df45
+                           .group:0000000000000000 wm4.cstdlib.76.ae666499c8f9b0ace1b4b23fe143da2c
+                           .group:0000000000000000 wm4.stdio.h.27.3fc80220048df77954e38daec3bb9670
+                           .group:0000000000000000 wm4.types.h.40.e8c16e7ec36ba55f133d0616070e25fc
+                           .group:0000000000000000 wm4._endian.h.31.65a10590763c3dde1ac4a7f66d7d4891
+                           .group:0000000000000000 wm4.endian.h.9.49f3a4695c1b61e8a0808de3c4a106cb
+                           .group:0000000000000000 wm4._timeval.h.30.0e8bfd94e85db17dda3286ee81496fe6
+                           .group:0000000000000000 wm4.timespec.h.41.d855182eb0e690443ab8651bcedca6e1
+                           .group:0000000000000000 wm4.select.h.30.bbece7fa40993a78092dcc5805132560
+                           .group:0000000000000000 wm4.types.h.69.ed3eae3cf73030a737515151ebcab7a1
+                           .group:0000000000000000 wm4.stdio.h.2.4aa87247282eca6c8f36f9de33d8df1a
+                           .group:0000000000000000 wm4.stdio.h.81.edc2fd66146f9635463a729e8fe0add3
+                           .group:0000000000000000 wm4.cstdio.45.1ffaea3e7c26dce1e03f5847a7439edb
+                           .group:0000000000000000 wm4.errno.h.2.ba016d646105af6cad23be83630b6a3f
+                           .group:0000000000000000 wm4.errno.h.9.1ecd7b1049497a0ab61da0f6cbd4b0c6
+                           .group:0000000000000000 wm4.functional_hash.h.98.3bf7680ffcc8d24d09fa83ac1339c79d
+                           .group:0000000000000000 wm4.wctype.h.2.898a9b94aa35d125e245195b099726a8
+                           .group:0000000000000000 wm4.wctype.h.21.aec4d35c940c33b3f9c6f879c49edcd8
+                           .group:0000000000000000 wm4.cwctype.54.6582aca101688c1c3785d03bc15e2af6
+                           .group:0000000000000000 wm4.locale_facets.h.56.0d4bb655ce5e76ea564363ed7c5a34fc
+
+UNDEFINED SYMBOLS
+_ZNSt8ios_base4InitC1Ev
+__dso_handle
+_ZNSt8ios_base4InitD1Ev
+__aeabi_atexit
+_ZdlPvj
+_ZTVN10__cxxabiv117__class_type_infoE
+_ZTVN10__cxxabiv120__si_class_type_infoE
+__cxa_pure_virtual

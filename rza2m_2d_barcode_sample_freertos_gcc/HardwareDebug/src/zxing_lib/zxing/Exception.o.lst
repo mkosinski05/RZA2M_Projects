@@ -1,0 +1,283 @@
+   1              		.cpu cortex-a9
+   2              		.eabi_attribute 28, 1
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.file	"Exception.cpp"
+  13              		.text
+  14              	.Ltext0:
+  15              		.cfi_sections	.debug_frame
+  16              		.section	.text._ZN5zxing9Exception13deleteMessageEv,"ax",%progbits
+  17              		.align	2
+  18              		.global	_ZN5zxing9Exception13deleteMessageEv
+  19              		.syntax unified
+  20              		.arm
+  21              		.fpu neon
+  23              	_ZN5zxing9Exception13deleteMessageEv:
+  24              		.fnstart
+  25              	.LFB1335:
+  26              		.file 1 "../src/zxing_lib/zxing/Exception.cpp"
+   1:../src/zxing_lib/zxing/Exception.cpp **** // -*- mode:c++; tab-width:2; indent-tabs-mode:nil; c-basic-offset:2 -*-
+   2:../src/zxing_lib/zxing/Exception.cpp **** /*
+   3:../src/zxing_lib/zxing/Exception.cpp ****  *  Exception.cpp
+   4:../src/zxing_lib/zxing/Exception.cpp ****  *  ZXing
+   5:../src/zxing_lib/zxing/Exception.cpp ****  *
+   6:../src/zxing_lib/zxing/Exception.cpp ****  *  Created by Christian Brunschen on 03/06/2008.
+   7:../src/zxing_lib/zxing/Exception.cpp ****  *  Copyright 2008-2011 ZXing authors All rights reserved.
+   8:../src/zxing_lib/zxing/Exception.cpp ****  *
+   9:../src/zxing_lib/zxing/Exception.cpp ****  * Licensed under the Apache License, Version 2.0 (the "License");
+  10:../src/zxing_lib/zxing/Exception.cpp ****  * you may not use this file except in compliance with the License.
+  11:../src/zxing_lib/zxing/Exception.cpp ****  * You may obtain a copy of the License at
+  12:../src/zxing_lib/zxing/Exception.cpp ****  *
+  13:../src/zxing_lib/zxing/Exception.cpp ****  *      http://www.apache.org/licenses/LICENSE-2.0
+  14:../src/zxing_lib/zxing/Exception.cpp ****  *
+  15:../src/zxing_lib/zxing/Exception.cpp ****  * Unless required by applicable law or agreed to in writing, software
+  16:../src/zxing_lib/zxing/Exception.cpp ****  * distributed under the License is distributed on an "AS IS" BASIS,
+  17:../src/zxing_lib/zxing/Exception.cpp ****  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  18:../src/zxing_lib/zxing/Exception.cpp ****  * See the License for the specific language governing permissions and
+  19:../src/zxing_lib/zxing/Exception.cpp ****  * limitations under the License.
+  20:../src/zxing_lib/zxing/Exception.cpp **** 
+  21:../src/zxing_lib/zxing/Exception.cpp ****  */
+  22:../src/zxing_lib/zxing/Exception.cpp **** 
+  23:../src/zxing_lib/zxing/Exception.cpp **** #include <zxing/ZXing.h>
+  24:../src/zxing_lib/zxing/Exception.cpp **** #include <zxing/Exception.h>
+  25:../src/zxing_lib/zxing/Exception.cpp **** #include <string.h>
+  26:../src/zxing_lib/zxing/Exception.cpp **** 
+  27:../src/zxing_lib/zxing/Exception.cpp **** using zxing::Exception;
+  28:../src/zxing_lib/zxing/Exception.cpp **** 
+  29:../src/zxing_lib/zxing/Exception.cpp **** void Exception::deleteMessage() {
+  27              		.loc 1 29 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              	.LVL0:
+  30:../src/zxing_lib/zxing/Exception.cpp ****   delete [] message;
+  32              		.loc 1 30 0
+  33 0000 040090E5 		ldr	r0, [r0, #4]
+  34              	.LVL1:
+  35 0004 000050E3 		cmp	r0, #0
+  36 0008 1EFF2F01 		bxeq	lr
+  29:../src/zxing_lib/zxing/Exception.cpp ****   delete [] message;
+  37              		.loc 1 29 0 discriminator 1
+  38 000c 10402DE9 		push	{r4, lr}
+  39              		.cfi_def_cfa_offset 8
+  40              		.cfi_offset 4, -8
+  41              		.cfi_offset 14, -4
+  42              		.loc 1 30 0 discriminator 1
+  43 0010 FEFFFFEB 		bl	_ZdaPv
+  44              	.LVL2:
+  45 0014 1080BDE8 		pop	{r4, pc}
+  46              		.cfi_endproc
+  47              	.LFE1335:
+  48              		.cantunwind
+  49              		.fnend
+  51              		.section	.text._ZN5zxing9Exception4copyEPKc,"ax",%progbits
+  52              		.align	2
+  53              		.global	_ZN5zxing9Exception4copyEPKc
+  54              		.syntax unified
+  55              		.arm
+  56              		.fpu neon
+  58              	_ZN5zxing9Exception4copyEPKc:
+  59              		.fnstart
+  60              	.LFB1336:
+  31:../src/zxing_lib/zxing/Exception.cpp **** }
+  32:../src/zxing_lib/zxing/Exception.cpp **** 
+  33:../src/zxing_lib/zxing/Exception.cpp **** char const* Exception::copy(char const* msg) {
+  61              		.loc 1 33 0
+  62              		.cfi_startproc
+  63              		@ args = 0, pretend = 0, frame = 0
+  64              		@ frame_needed = 0, uses_anonymous_args = 0
+  65              	.LVL3:
+  66 0000 70402DE9 		push	{r4, r5, r6, lr}
+  67              		.save {r4, r5, r6, lr}
+  68              		.cfi_def_cfa_offset 16
+  69              		.cfi_offset 4, -16
+  70              		.cfi_offset 5, -12
+  71              		.cfi_offset 6, -8
+  72              		.cfi_offset 14, -4
+  73              	.LVL4:
+  74              	.LBB2:
+  34:../src/zxing_lib/zxing/Exception.cpp ****   char* message = 0;
+  35:../src/zxing_lib/zxing/Exception.cpp ****   if (msg) {
+  75              		.loc 1 35 0
+  76 0004 004050E2 		subs	r4, r0, #0
+  77 0008 0900000A 		beq	.L9
+  78              	.LBB3:
+  36:../src/zxing_lib/zxing/Exception.cpp ****     int l = strlen(msg)+1;
+  79              		.loc 1 36 0
+  80 000c 0400A0E1 		mov	r0, r4
+  81 0010 FEFFFFEB 		bl	strlen
+  82              	.LVL5:
+  37:../src/zxing_lib/zxing/Exception.cpp ****     if (l) {
+  83              		.loc 1 37 0
+  84 0014 010090E2 		adds	r0, r0, #1
+  85              	.LVL6:
+  86 0018 0700000A 		beq	.L10
+  38:../src/zxing_lib/zxing/Exception.cpp ****       message = new char[l];
+  87              		.loc 1 38 0
+  88 001c FEFFFFEB 		bl	_Znaj
+  89              	.LVL7:
+  90 0020 0050A0E1 		mov	r5, r0
+  91              	.LVL8:
+  39:../src/zxing_lib/zxing/Exception.cpp ****       strcpy(message, msg);
+  92              		.loc 1 39 0
+  93 0024 0410A0E1 		mov	r1, r4
+  94 0028 FEFFFFEB 		bl	strcpy
+  95              	.LVL9:
+  96              	.L8:
+  97              	.LBE3:
+  98              	.LBE2:
+  40:../src/zxing_lib/zxing/Exception.cpp ****     }
+  41:../src/zxing_lib/zxing/Exception.cpp ****   }
+  42:../src/zxing_lib/zxing/Exception.cpp ****   return message;
+  43:../src/zxing_lib/zxing/Exception.cpp **** }
+  99              		.loc 1 43 0
+ 100 002c 0500A0E1 		mov	r0, r5
+ 101 0030 7080BDE8 		pop	{r4, r5, r6, pc}
+ 102              	.LVL10:
+ 103              	.L9:
+  34:../src/zxing_lib/zxing/Exception.cpp ****   if (msg) {
+ 104              		.loc 1 34 0
+ 105 0034 0050A0E3 		mov	r5, #0
+ 106 0038 FBFFFFEA 		b	.L8
+ 107              	.LVL11:
+ 108              	.L10:
+ 109 003c 0050A0E3 		mov	r5, #0
+ 110 0040 F9FFFFEA 		b	.L8
+ 111              		.cfi_endproc
+ 112              	.LFE1336:
+ 113              		.fnend
+ 115              		.text
+ 116              	.Letext0:
+ 117              		.file 2 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+ 118              		.file 3 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+ 119              		.file 4 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+ 120              		.file 5 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+ 121              		.file 6 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+ 122              		.file 7 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+ 123              		.file 8 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+ 124              		.file 9 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+ 125              		.file 10 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 126              		.file 11 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 127              		.file 12 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 128              		.file 13 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 129              		.file 14 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 130              		.file 15 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 131              		.file 16 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 132              		.file 17 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 133              		.file 18 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 134              		.file 19 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 135              		.file 20 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 136              		.file 21 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 137              		.file 22 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 138              		.file 23 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 139              		.file 24 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 140              		.file 25 "<built-in>"
+ 141              		.file 26 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 142              		.file 27 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 143              		.file 28 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 144              		.file 29 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 145              		.file 30 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 146              		.file 31 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 147              		.file 32 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 148              		.file 33 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 149              		.file 34 "/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/ZX
+ 150              		.file 35 "/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Ex
+ 151              		.file 36 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 Exception.cpp
+     /tmp/ccjVWshb.s:17     .text._ZN5zxing9Exception13deleteMessageEv:0000000000000000 $a
+     /tmp/ccjVWshb.s:23     .text._ZN5zxing9Exception13deleteMessageEv:0000000000000000 _ZN5zxing9Exception13deleteMessageEv
+.ARM.exidx.text._ZN5zxing9Exception13deleteMessageEv:0000000000000000 $d
+     /tmp/ccjVWshb.s:52     .text._ZN5zxing9Exception4copyEPKc:0000000000000000 $a
+     /tmp/ccjVWshb.s:58     .text._ZN5zxing9Exception4copyEPKc:0000000000000000 _ZN5zxing9Exception4copyEPKc
+.ARM.exidx.text._ZN5zxing9Exception4copyEPKc:0000000000000000 $d
+                     .debug_frame:0000000000000010 $d
+                           .group:0000000000000000 wm4.0.cd1e96de8a8c4f34e746a820772853ad
+                           .group:0000000000000000 wm4.ZXing.h.18.e57217e2bd13bffdbef9ea3dcbec75d3
+                           .group:0000000000000000 wm4.cconfig.h.31.21483d26c3710eb58c7a44c20d82c775
+                           .group:0000000000000000 wm4.cpu_defines.h.31.54d44f9d3e7c42875c5a7fd49795eb93
+                           .group:0000000000000000 wm4.cconfig.h.515.5e729db314ae74226e291b4ae081e353
+                           .group:0000000000000000 wm4.limits.89.e98276b701ab74059cf673f13be29894
+                           .group:0000000000000000 wm4.cpp_type_traits.h.33.9f2bfd8c4471a9a299f6da3ec24c745c
+                           .group:0000000000000000 wm4._newlib_version.h.4.3572908597b70d672d181fc7fc501c19
+                           .group:0000000000000000 wm4.newlib.h.21.59901f4bf241ab46c63694665baa7297
+                           .group:0000000000000000 wm4.features.h.22.5cdadbb3efe495d1c9e38350b8c376c7
+                           .group:0000000000000000 wm4.config.h.219.65a553ab5bef5482f0d7880b0d33015e
+                           .group:0000000000000000 wm4._ansi.h.23.1ee1144430bedaab1a14c7b57a6c8384
+                           .group:0000000000000000 wm4.stddef.h.39.fa2e86d241f4df50b9327c72832885e1
+                           .group:0000000000000000 wm4._default_types.h.6.959254cf5f09734ea7516c89e8bb21bd
+                           .group:0000000000000000 wm4.lock.h.2.1461d1fff82dffe8bfddc23307f6484f
+                           .group:0000000000000000 wm4._types.h.125.5cf8a495f1f7ef36777ad868a1e32068
+                           .group:0000000000000000 wm4.stddef.h.161.7e98c9c86da0ed2d27af2ef92af7d013
+                           .group:0000000000000000 wm4._types.h.183.c226d164ceca1f2ecb9ae9360c54a098
+                           .group:0000000000000000 wm4.reent.h.17.23b059516345f8f5abfa01ddc379570f
+                           .group:0000000000000000 wm4.cdefs.h.47.9bc8274c84fddbf05edd550eb0bf48cd
+                           .group:0000000000000000 wm4.math.h.13.4f1ab8d1725735081bbdb9ebcf6dba66
+                           .group:0000000000000000 wm4.cmath.46.d6e5b776115d39075860ed881d18f087
+                           .group:0000000000000000 wm4.ZXing.h.127.586c16e6a699510970dac3542705a0b6
+                           .group:0000000000000000 wm4.exception_defines.h.31.ca6841b9be3287386aafc5c717935b2e
+                           .group:0000000000000000 wm4.numeric_traits.h.30.aa01a98564b7e55086aad9e53c7e5c53
+                           .group:0000000000000000 wm4.concept_check.h.31.f19605d278e56917c68a56d378be308c
+                           .group:0000000000000000 wm4.type_traits.30.967137c3695c72a3f7c65b682f1a104e
+                           .group:0000000000000000 wm4.move.h.152.41d7b9e6779674d169b7813982cfa003
+                           .group:0000000000000000 wm4.assertions.h.30.51d443923f0d242550e04246a7819b39
+                           .group:0000000000000000 wm4.stl_iterator.h.406.6718c794fa6a1331f8340656b5c8c55c
+                           .group:0000000000000000 wm4.debug.h.30.5c1f223b12199e851d4d42805b788ccf
+                           .group:0000000000000000 wm4.stl_algobase.h.491.ec4060988bfff82dc579decdb75c72d6
+                           .group:0000000000000000 wm4.wchar.h.2.f837619576d797e948eb58c44fac4678
+                           .group:0000000000000000 wm4.stddef.h.161.9f48187563b2a85291a91832aa425498
+                           .group:0000000000000000 wm4.stdarg.h.34.3a23a216c0c293b3d2ea2e89281481e6
+                           .group:0000000000000000 wm4.wchar.h.29.7ec19a1c094c7903732828676a0a91b2
+                           .group:0000000000000000 wm4.wchar.h.76.90478bd2c784f576b769c4535c98839d
+                           .group:0000000000000000 wm4.cwchar.48.c4e882638bf84f6da89479dda6fe8e17
+                           .group:0000000000000000 wm4.stdint.h.4.659be5aa44c4ab4eb7c7cc2b24d8ceee
+                           .group:0000000000000000 wm4._intsup.h.10.cce27fed8484c08a33f522034c30d2b5
+                           .group:0000000000000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:0000000000000000 wm4.stdint.h.23.4c107c5a20920bfc6e94fb2672bbd9ee
+                           .group:0000000000000000 wm4.atomic_lockfree_defines.h.31.d5c6334fb1e95c9462b052951f1411df
+                           .group:0000000000000000 wm4.allocator.h.52.0ceafb36dc1b82dbfa6b05003082e3f5
+                           .group:0000000000000000 wm4.locale.h.8.27d0fe4c0abbb6f8893a1fa7c1799fd9
+                           .group:0000000000000000 wm4.stddef.h.161.38688f2eb958a8ed58fdb61ffe554c94
+                           .group:0000000000000000 wm4.locale.h.16.90d16f662e7119f5b192650a45179c6c
+                           .group:0000000000000000 wm4.clocale.45.c36d2d5b631a875aa5273176b54fdf0f
+                           .group:0000000000000000 wm4.ctype.h.2.cf64fe4c5e8c0ac0f52f1143312d4909
+                           .group:0000000000000000 wm4.cctype.45.0da5714876b0be7f2d816b53d9670403
+                           .group:0000000000000000 wm4.stl_function.h.57.472a8ffdc5144ddcd047558cd884dda0
+                           .group:0000000000000000 wm4.gthr.h.27.ceb1c66b926f052afcba57e8784df0d4
+                           .group:0000000000000000 wm4.gthrdefault.h.27.edc94d4398c0534988962be77dc3c2e1
+                           .group:0000000000000000 wm4.atomic_word.h.30.9e0ac69fd462d5e650933e05133b4afa
+                           .group:0000000000000000 wm4.alloc_traits.h.31.c41c7c4789404962122a4e991dfa3abf
+                           .group:0000000000000000 wm4.cstdlib.44.52c5efdfb0f3c176bd11e611a0b94959
+                           .group:0000000000000000 wm4.stdlib.h.13.4ed386f5c1a80d71e72172885d946ef2
+                           .group:0000000000000000 wm4.alloca.h.8.dfc0c703c47ec3e69746825b17d9e66d
+                           .group:0000000000000000 wm4.stdlib.h.56.d4493cd3736e51e9d56335045f26df45
+                           .group:0000000000000000 wm4.cstdlib.76.ae666499c8f9b0ace1b4b23fe143da2c
+                           .group:0000000000000000 wm4.stdio.h.27.3fc80220048df77954e38daec3bb9670
+                           .group:0000000000000000 wm4.types.h.40.e8c16e7ec36ba55f133d0616070e25fc
+                           .group:0000000000000000 wm4._endian.h.31.65a10590763c3dde1ac4a7f66d7d4891
+                           .group:0000000000000000 wm4.endian.h.9.49f3a4695c1b61e8a0808de3c4a106cb
+                           .group:0000000000000000 wm4._timeval.h.30.0e8bfd94e85db17dda3286ee81496fe6
+                           .group:0000000000000000 wm4.timespec.h.41.d855182eb0e690443ab8651bcedca6e1
+                           .group:0000000000000000 wm4.select.h.30.bbece7fa40993a78092dcc5805132560
+                           .group:0000000000000000 wm4.types.h.69.ed3eae3cf73030a737515151ebcab7a1
+                           .group:0000000000000000 wm4.stdio.h.2.4aa87247282eca6c8f36f9de33d8df1a
+                           .group:0000000000000000 wm4.stdio.h.81.edc2fd66146f9635463a729e8fe0add3
+                           .group:0000000000000000 wm4.cstdio.45.1ffaea3e7c26dce1e03f5847a7439edb
+                           .group:0000000000000000 wm4.errno.h.2.ba016d646105af6cad23be83630b6a3f
+                           .group:0000000000000000 wm4.errno.h.9.1ecd7b1049497a0ab61da0f6cbd4b0c6
+                           .group:0000000000000000 wm4.functional_hash.h.98.3bf7680ffcc8d24d09fa83ac1339c79d
+                           .group:0000000000000000 wm4.string.h.8.c4b8571ce60dff2817f43fec8b86aecd
+
+UNDEFINED SYMBOLS
+_ZdaPv
+strlen
+_Znaj
+strcpy
+__aeabi_unwind_cpp_pr0

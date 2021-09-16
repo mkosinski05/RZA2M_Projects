@@ -1,0 +1,861 @@
+   1              		.cpu cortex-a9
+   2              		.eabi_attribute 28, 1
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.file	"IllegalArgumentException.cpp"
+  13              		.text
+  14              	.Ltext0:
+  15              		.cfi_sections	.debug_frame
+  16              		.section	.text._ZNK5zxing9Exception4whatEv,"axG",%progbits,_ZNK5zxing9Exception4whatEv,comdat
+  17              		.align	2
+  18              		.weak	_ZNK5zxing9Exception4whatEv
+  19              		.syntax unified
+  20              		.arm
+  21              		.fpu neon
+  23              	_ZNK5zxing9Exception4whatEv:
+  24              		.fnstart
+  25              	.LFB941:
+  26              		.file 1 "/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exc
+   1:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h **** // -*- mode:c++; tab-width:2; indent-tabs-mode:nil; c-basic-offset:2 -*-
+   2:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h **** #ifndef __EXCEPTION_H__
+   3:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h **** #define __EXCEPTION_H__
+   4:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h **** 
+   5:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h **** /*
+   6:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****  *  Exception.h
+   7:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****  *  ZXing
+   8:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****  *
+   9:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****  *  Copyright 2010 ZXing authors All rights reserved.
+  10:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****  *
+  11:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****  * Licensed under the Apache License, Version 2.0 (the "License");
+  12:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****  * you may not use this file except in compliance with the License.
+  13:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****  * You may obtain a copy of the License at
+  14:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****  *
+  15:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****  *      http://www.apache.org/licenses/LICENSE-2.0
+  16:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****  *
+  17:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****  * Unless required by applicable law or agreed to in writing, software
+  18:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****  * distributed under the License is distributed on an "AS IS" BASIS,
+  19:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  20:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****  * See the License for the specific language governing permissions and
+  21:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****  * limitations under the License.
+  22:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****  */
+  23:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h **** 
+  24:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h **** #include <string>
+  25:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h **** #include <exception>
+  26:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h **** 
+  27:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h **** namespace zxing {
+  28:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h **** 
+  29:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h **** class Exception : public std::exception {
+  30:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h **** private:
+  31:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****   char const* const message;
+  32:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h **** 
+  33:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h **** public:
+  34:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****   Exception() throw() : message(0) {}
+  35:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****   Exception(const char* msg) throw() : message(copy(msg)) {}
+  36:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****   Exception(Exception const& that) throw() : std::exception(that), message(copy(that.message)) {}
+  37:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****   ~Exception() throw() {
+  38:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****     if(message) {
+  39:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****       deleteMessage();
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****     }
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****   }
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****   char const* what() const throw() {return message ? message : "";}
+  27              		.loc 1 42 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              		@ link register save eliminated.
+  32              	.LVL0:
+  33              		.loc 1 42 0
+  34 0000 040090E5 		ldr	r0, [r0, #4]
+  35              	.LVL1:
+  36 0004 000050E3 		cmp	r0, #0
+  37 0008 1EFF2F11 		bxne	lr
+  38 000c 000000E3 		movw	r0, #:lower16:.LC0
+  39 0010 000040E3 		movt	r0, #:upper16:.LC0
+  40 0014 1EFF2FE1 		bx	lr
+  41              		.cfi_endproc
+  42              	.LFE941:
+  43              		.cantunwind
+  44              		.fnend
+  46              		.section	.text._ZN5zxing9ExceptionD2Ev,"axG",%progbits,_ZN5zxing9ExceptionD5Ev,comdat
+  47              		.align	2
+  48              		.weak	_ZN5zxing9ExceptionD2Ev
+  49              		.syntax unified
+  50              		.arm
+  51              		.fpu neon
+  53              	_ZN5zxing9ExceptionD2Ev:
+  54              		.fnstart
+  55              	.LFB938:
+  37:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****     if(message) {
+  56              		.loc 1 37 0
+  57              		.cfi_startproc
+  58              		.cfi_personality 0,__gxx_personality_v0
+  59              		.cfi_lsda 0,.LLSDA938
+  60              		@ args = 0, pretend = 0, frame = 0
+  61              		@ frame_needed = 0, uses_anonymous_args = 0
+  62              	.LVL2:
+  63 0000 70402DE9 		push	{r4, r5, r6, lr}
+  64              		.save {r4, r5, r6, lr}
+  65              		.cfi_def_cfa_offset 16
+  66              		.cfi_offset 4, -16
+  67              		.cfi_offset 5, -12
+  68              		.cfi_offset 6, -8
+  69              		.cfi_offset 14, -4
+  70 0004 0040A0E1 		mov	r4, r0
+  71              	.LBB17:
+  37:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****     if(message) {
+  72              		.loc 1 37 0
+  73 0008 48309FE5 		ldr	r3, .L10
+  74 000c 003080E5 		str	r3, [r0]
+  38:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****       deleteMessage();
+  75              		.loc 1 38 0
+  76 0010 043090E5 		ldr	r3, [r0, #4]
+  77 0014 000053E3 		cmp	r3, #0
+  78 0018 0A00000A 		beq	.L4
+  79              	.LEHB0:
+  39:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****     }
+  80              		.loc 1 39 0
+  81 001c FEFFFFEB 		bl	_ZN5zxing9Exception13deleteMessageEv
+  82              	.LVL3:
+  83              	.LEHE0:
+  84 0020 080000EA 		b	.L4
+  85              	.L7:
+  86 0024 0050A0E1 		mov	r5, r0
+  87 0028 0160A0E1 		mov	r6, r1
+  37:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****     if(message) {
+  88              		.loc 1 37 0
+  89 002c 0400A0E1 		mov	r0, r4
+  90 0030 FEFFFFEB 		bl	_ZNSt9exceptionD2Ev
+  91              	.LVL4:
+  92 0034 010076E3 		cmn	r6, #1
+  93 0038 0000000A 		beq	.L6
+  94              	.LEHB1:
+  95 003c FEFFFFEB 		bl	__cxa_end_cleanup
+  96              	.LVL5:
+  97              	.L6:
+  98              	.LBE17:
+  99 0040 0500A0E1 		mov	r0, r5
+ 100 0044 FEFFFFEB 		bl	__cxa_call_unexpected
+ 101              	.LVL6:
+ 102              	.LEHE1:
+ 103              	.L4:
+ 104              	.LBB18:
+ 105 0048 0400A0E1 		mov	r0, r4
+ 106 004c FEFFFFEB 		bl	_ZNSt9exceptionD2Ev
+ 107              	.LVL7:
+ 108              	.LBE18:
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****   char const* what() const throw() {return message ? message : "";}
+ 109              		.loc 1 41 0
+ 110 0050 0400A0E1 		mov	r0, r4
+ 111 0054 7080BDE8 		pop	{r4, r5, r6, pc}
+ 112              	.L11:
+ 113              		.align	2
+ 114              	.L10:
+ 115 0058 08000000 		.word	_ZTVN5zxing9ExceptionE+8
+ 116              		.cfi_endproc
+ 117              	.LFE938:
+ 118              		.global	__gxx_personality_v0
+ 119              		.personality	__gxx_personality_v0
+ 120              		.handlerdata
+ 121              		.align	2
+ 122              	.LLSDA938:
+ 123 0008 FF       		.byte	0xff
+ 124 0009 10       		.byte	0x10
+ 125 000a 11       		.uleb128 .LLSDATT938-.LLSDATTD938
+ 126              	.LLSDATTD938:
+ 127 000b 01       		.byte	0x1
+ 128 000c 08       		.uleb128 .LLSDACSE938-.LLSDACSB938
+ 129              	.LLSDACSB938:
+ 130 000d 1C       		.uleb128 .LEHB0-.LFB938
+ 131 000e 04       		.uleb128 .LEHE0-.LEHB0
+ 132 000f 24       		.uleb128 .L7-.LFB938
+ 133 0010 03       		.uleb128 0x3
+ 134 0011 3C       		.uleb128 .LEHB1-.LFB938
+ 135 0012 0C       		.uleb128 .LEHE1-.LEHB1
+ 136 0013 00       		.uleb128 0
+ 137 0014 00       		.uleb128 0
+ 138              	.LLSDACSE938:
+ 139 0015 7F       		.byte	0x7f
+ 140 0016 00       		.byte	0
+ 141 0017 00       		.byte	0
+ 142 0018 7D       		.byte	0x7d
+ 143 0019 000000   		.align	2
+ 144              	.LLSDATT938:
+ 145 001c 00000000 		.word	0
+ 146              		.section	.text._ZN5zxing9ExceptionD2Ev,"axG",%progbits,_ZN5zxing9ExceptionD5Ev,comdat
+ 147              		.fnend
+ 149              		.weak	_ZN5zxing9ExceptionD1Ev
+ 150              		.set	_ZN5zxing9ExceptionD1Ev,_ZN5zxing9ExceptionD2Ev
+ 151              		.section	.text._ZN5zxing24IllegalArgumentExceptionD2Ev,"ax",%progbits
+ 152              		.align	2
+ 153              		.global	_ZN5zxing24IllegalArgumentExceptionD2Ev
+ 154              		.syntax unified
+ 155              		.arm
+ 156              		.fpu neon
+ 158              	_ZN5zxing24IllegalArgumentExceptionD2Ev:
+ 159              		.fnstart
+ 160              	.LFB949:
+ 161              		.file 2 "../src/zxing_lib/zxing/common/IllegalArgumentException.cpp"
+   1:../src/zxing_lib/zxing/common/IllegalArgumentException.cpp **** /*
+   2:../src/zxing_lib/zxing/common/IllegalArgumentException.cpp ****  *  IllegalArgumentException.cpp
+   3:../src/zxing_lib/zxing/common/IllegalArgumentException.cpp ****  *  zxing
+   4:../src/zxing_lib/zxing/common/IllegalArgumentException.cpp ****  *
+   5:../src/zxing_lib/zxing/common/IllegalArgumentException.cpp ****  *  Created by Christian Brunschen on 06/05/2008.
+   6:../src/zxing_lib/zxing/common/IllegalArgumentException.cpp ****  *  Copyright 2008 Google UK. All rights reserved.
+   7:../src/zxing_lib/zxing/common/IllegalArgumentException.cpp ****  *
+   8:../src/zxing_lib/zxing/common/IllegalArgumentException.cpp ****  * Licensed under the Apache License, Version 2.0 (the "License");
+   9:../src/zxing_lib/zxing/common/IllegalArgumentException.cpp ****  * you may not use this file except in compliance with the License.
+  10:../src/zxing_lib/zxing/common/IllegalArgumentException.cpp ****  * You may obtain a copy of the License at
+  11:../src/zxing_lib/zxing/common/IllegalArgumentException.cpp ****  *
+  12:../src/zxing_lib/zxing/common/IllegalArgumentException.cpp ****  *      http://www.apache.org/licenses/LICENSE-2.0
+  13:../src/zxing_lib/zxing/common/IllegalArgumentException.cpp ****  *
+  14:../src/zxing_lib/zxing/common/IllegalArgumentException.cpp ****  * Unless required by applicable law or agreed to in writing, software
+  15:../src/zxing_lib/zxing/common/IllegalArgumentException.cpp ****  * distributed under the License is distributed on an "AS IS" BASIS,
+  16:../src/zxing_lib/zxing/common/IllegalArgumentException.cpp ****  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  17:../src/zxing_lib/zxing/common/IllegalArgumentException.cpp ****  * See the License for the specific language governing permissions and
+  18:../src/zxing_lib/zxing/common/IllegalArgumentException.cpp ****  * limitations under the License.
+  19:../src/zxing_lib/zxing/common/IllegalArgumentException.cpp ****  */
+  20:../src/zxing_lib/zxing/common/IllegalArgumentException.cpp **** 
+  21:../src/zxing_lib/zxing/common/IllegalArgumentException.cpp **** #include <zxing/common/IllegalArgumentException.h>
+  22:../src/zxing_lib/zxing/common/IllegalArgumentException.cpp **** 
+  23:../src/zxing_lib/zxing/common/IllegalArgumentException.cpp **** using zxing::IllegalArgumentException;
+  24:../src/zxing_lib/zxing/common/IllegalArgumentException.cpp **** 
+  25:../src/zxing_lib/zxing/common/IllegalArgumentException.cpp **** IllegalArgumentException::IllegalArgumentException() : Exception() {}
+  26:../src/zxing_lib/zxing/common/IllegalArgumentException.cpp **** IllegalArgumentException::IllegalArgumentException(const char *msg) : Exception(msg) {}
+  27:../src/zxing_lib/zxing/common/IllegalArgumentException.cpp **** IllegalArgumentException::~IllegalArgumentException() throw() {}
+ 162              		.loc 2 27 0
+ 163              		.cfi_startproc
+ 164              		.cfi_personality 0,__gxx_personality_v0
+ 165              		.cfi_lsda 0,.LLSDA949
+ 166              		@ args = 0, pretend = 0, frame = 0
+ 167              		@ frame_needed = 0, uses_anonymous_args = 0
+ 168              	.LVL8:
+ 169 0000 70402DE9 		push	{r4, r5, r6, lr}
+ 170              		.save {r4, r5, r6, lr}
+ 171              		.cfi_def_cfa_offset 16
+ 172              		.cfi_offset 4, -16
+ 173              		.cfi_offset 5, -12
+ 174              		.cfi_offset 6, -8
+ 175              		.cfi_offset 14, -4
+ 176 0004 0040A0E1 		mov	r4, r0
+ 177              	.LVL9:
+ 178              	.LBB23:
+ 179              	.LBB24:
+ 180              	.LBB25:
+ 181              	.LBB26:
+  37:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****     if(message) {
+ 182              		.loc 1 37 0
+ 183 0008 48309FE5 		ldr	r3, .L19
+ 184 000c 003080E5 		str	r3, [r0]
+  38:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****       deleteMessage();
+ 185              		.loc 1 38 0
+ 186 0010 043090E5 		ldr	r3, [r0, #4]
+ 187 0014 000053E3 		cmp	r3, #0
+ 188 0018 0A00000A 		beq	.L13
+ 189              	.LEHB2:
+  39:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****     }
+ 190              		.loc 1 39 0
+ 191 001c FEFFFFEB 		bl	_ZN5zxing9Exception13deleteMessageEv
+ 192              	.LVL10:
+ 193              	.LEHE2:
+ 194 0020 080000EA 		b	.L13
+ 195              	.L16:
+ 196 0024 0050A0E1 		mov	r5, r0
+ 197 0028 0160A0E1 		mov	r6, r1
+  37:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****     if(message) {
+ 198              		.loc 1 37 0
+ 199 002c 0400A0E1 		mov	r0, r4
+ 200 0030 FEFFFFEB 		bl	_ZNSt9exceptionD2Ev
+ 201              	.LVL11:
+ 202 0034 010076E3 		cmn	r6, #1
+ 203 0038 0000000A 		beq	.L15
+ 204              	.LEHB3:
+ 205 003c FEFFFFEB 		bl	__cxa_end_cleanup
+ 206              	.LVL12:
+ 207              	.L15:
+ 208              	.LBE26:
+ 209 0040 0500A0E1 		mov	r0, r5
+ 210 0044 FEFFFFEB 		bl	__cxa_call_unexpected
+ 211              	.LVL13:
+ 212              	.LEHE3:
+ 213              	.L13:
+ 214              	.LBB27:
+ 215 0048 0400A0E1 		mov	r0, r4
+ 216 004c FEFFFFEB 		bl	_ZNSt9exceptionD2Ev
+ 217              	.LVL14:
+ 218              	.LBE27:
+ 219              	.LBE25:
+ 220              	.LBE24:
+ 221              	.LBE23:
+ 222              		.loc 2 27 0
+ 223 0050 0400A0E1 		mov	r0, r4
+ 224 0054 7080BDE8 		pop	{r4, r5, r6, pc}
+ 225              	.L20:
+ 226              		.align	2
+ 227              	.L19:
+ 228 0058 08000000 		.word	_ZTVN5zxing9ExceptionE+8
+ 229              		.cfi_endproc
+ 230              	.LFE949:
+ 231              		.personality	__gxx_personality_v0
+ 232              		.handlerdata
+ 233              		.align	2
+ 234              	.LLSDA949:
+ 235 0008 FF       		.byte	0xff
+ 236 0009 10       		.byte	0x10
+ 237 000a 11       		.uleb128 .LLSDATT949-.LLSDATTD949
+ 238              	.LLSDATTD949:
+ 239 000b 01       		.byte	0x1
+ 240 000c 08       		.uleb128 .LLSDACSE949-.LLSDACSB949
+ 241              	.LLSDACSB949:
+ 242 000d 1C       		.uleb128 .LEHB2-.LFB949
+ 243 000e 04       		.uleb128 .LEHE2-.LEHB2
+ 244 000f 24       		.uleb128 .L16-.LFB949
+ 245 0010 03       		.uleb128 0x3
+ 246 0011 3C       		.uleb128 .LEHB3-.LFB949
+ 247 0012 0C       		.uleb128 .LEHE3-.LEHB3
+ 248 0013 00       		.uleb128 0
+ 249 0014 00       		.uleb128 0
+ 250              	.LLSDACSE949:
+ 251 0015 7F       		.byte	0x7f
+ 252 0016 00       		.byte	0
+ 253 0017 00       		.byte	0
+ 254 0018 7D       		.byte	0x7d
+ 255 0019 000000   		.align	2
+ 256              	.LLSDATT949:
+ 257 001c 00000000 		.word	0
+ 258              		.section	.text._ZN5zxing24IllegalArgumentExceptionD2Ev
+ 259              		.fnend
+ 261              		.global	_ZN5zxing24IllegalArgumentExceptionD1Ev
+ 262              		.set	_ZN5zxing24IllegalArgumentExceptionD1Ev,_ZN5zxing24IllegalArgumentExceptionD2Ev
+ 263              		.section	.text._ZN5zxing24IllegalArgumentExceptionD0Ev,"ax",%progbits
+ 264              		.align	2
+ 265              		.global	_ZN5zxing24IllegalArgumentExceptionD0Ev
+ 266              		.syntax unified
+ 267              		.arm
+ 268              		.fpu neon
+ 270              	_ZN5zxing24IllegalArgumentExceptionD0Ev:
+ 271              		.fnstart
+ 272              	.LFB951:
+ 273              		.loc 2 27 0
+ 274              		.cfi_startproc
+ 275              		@ args = 0, pretend = 0, frame = 0
+ 276              		@ frame_needed = 0, uses_anonymous_args = 0
+ 277              	.LVL15:
+ 278 0000 10402DE9 		push	{r4, lr}
+ 279              		.cfi_def_cfa_offset 8
+ 280              		.cfi_offset 4, -8
+ 281              		.cfi_offset 14, -4
+ 282 0004 0040A0E1 		mov	r4, r0
+ 283              		.loc 2 27 0
+ 284 0008 FEFFFFEB 		bl	_ZN5zxing24IllegalArgumentExceptionD1Ev
+ 285              	.LVL16:
+ 286 000c 0810A0E3 		mov	r1, #8
+ 287 0010 0400A0E1 		mov	r0, r4
+ 288 0014 FEFFFFEB 		bl	_ZdlPvj
+ 289              	.LVL17:
+ 290 0018 0400A0E1 		mov	r0, r4
+ 291 001c 1080BDE8 		pop	{r4, pc}
+ 292              		.cfi_endproc
+ 293              	.LFE951:
+ 294              		.cantunwind
+ 295              		.fnend
+ 297              		.section	.text._ZN5zxing9ExceptionD0Ev,"axG",%progbits,_ZN5zxing9ExceptionD5Ev,comdat
+ 298              		.align	2
+ 299              		.weak	_ZN5zxing9ExceptionD0Ev
+ 300              		.syntax unified
+ 301              		.arm
+ 302              		.fpu neon
+ 304              	_ZN5zxing9ExceptionD0Ev:
+ 305              		.fnstart
+ 306              	.LFB940:
+  37:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****     if(message) {
+ 307              		.loc 1 37 0
+ 308              		.cfi_startproc
+ 309              		.cfi_personality 0,__gxx_personality_v0
+ 310              		.cfi_lsda 0,.LLSDA940
+ 311              		@ args = 0, pretend = 0, frame = 0
+ 312              		@ frame_needed = 0, uses_anonymous_args = 0
+ 313              	.LVL18:
+ 314 0000 70402DE9 		push	{r4, r5, r6, lr}
+ 315              		.save {r4, r5, r6, lr}
+ 316              		.cfi_def_cfa_offset 16
+ 317              		.cfi_offset 4, -16
+ 318              		.cfi_offset 5, -12
+ 319              		.cfi_offset 6, -8
+ 320              		.cfi_offset 14, -4
+ 321 0004 0040A0E1 		mov	r4, r0
+ 322              	.LVL19:
+ 323              	.LBB31:
+ 324              	.LBB32:
+ 325              	.LBB33:
+  37:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****     if(message) {
+ 326              		.loc 1 37 0
+ 327 0008 54309FE5 		ldr	r3, .L30
+ 328 000c 003080E5 		str	r3, [r0]
+  38:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****       deleteMessage();
+ 329              		.loc 1 38 0
+ 330 0010 043090E5 		ldr	r3, [r0, #4]
+ 331 0014 000053E3 		cmp	r3, #0
+ 332 0018 0A00000A 		beq	.L24
+ 333              	.LEHB4:
+  39:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****     }
+ 334              		.loc 1 39 0
+ 335 001c FEFFFFEB 		bl	_ZN5zxing9Exception13deleteMessageEv
+ 336              	.LVL20:
+ 337              	.LEHE4:
+ 338 0020 080000EA 		b	.L24
+ 339              	.L27:
+ 340 0024 0050A0E1 		mov	r5, r0
+ 341 0028 0160A0E1 		mov	r6, r1
+  37:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****     if(message) {
+ 342              		.loc 1 37 0
+ 343 002c 0400A0E1 		mov	r0, r4
+ 344 0030 FEFFFFEB 		bl	_ZNSt9exceptionD2Ev
+ 345              	.LVL21:
+ 346 0034 010076E3 		cmn	r6, #1
+ 347 0038 0000000A 		beq	.L26
+ 348              	.LEHB5:
+ 349 003c FEFFFFEB 		bl	__cxa_end_cleanup
+ 350              	.LVL22:
+ 351              	.L26:
+ 352              	.LBE33:
+ 353 0040 0500A0E1 		mov	r0, r5
+ 354 0044 FEFFFFEB 		bl	__cxa_call_unexpected
+ 355              	.LVL23:
+ 356              	.LEHE5:
+ 357              	.L24:
+ 358              	.LBB34:
+ 359 0048 0400A0E1 		mov	r0, r4
+ 360 004c FEFFFFEB 		bl	_ZNSt9exceptionD2Ev
+ 361              	.LVL24:
+ 362              	.LBE34:
+ 363              	.LBE32:
+ 364              	.LBE31:
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****   char const* what() const throw() {return message ? message : "";}
+ 365              		.loc 1 41 0
+ 366 0050 0810A0E3 		mov	r1, #8
+ 367 0054 0400A0E1 		mov	r0, r4
+ 368 0058 FEFFFFEB 		bl	_ZdlPvj
+ 369              	.LVL25:
+ 370 005c 0400A0E1 		mov	r0, r4
+ 371 0060 7080BDE8 		pop	{r4, r5, r6, pc}
+ 372              	.L31:
+ 373              		.align	2
+ 374              	.L30:
+ 375 0064 08000000 		.word	_ZTVN5zxing9ExceptionE+8
+ 376              		.cfi_endproc
+ 377              	.LFE940:
+ 378              		.personality	__gxx_personality_v0
+ 379              		.handlerdata
+ 380              		.align	2
+ 381              	.LLSDA940:
+ 382 0008 FF       		.byte	0xff
+ 383 0009 10       		.byte	0x10
+ 384 000a 11       		.uleb128 .LLSDATT940-.LLSDATTD940
+ 385              	.LLSDATTD940:
+ 386 000b 01       		.byte	0x1
+ 387 000c 08       		.uleb128 .LLSDACSE940-.LLSDACSB940
+ 388              	.LLSDACSB940:
+ 389 000d 1C       		.uleb128 .LEHB4-.LFB940
+ 390 000e 04       		.uleb128 .LEHE4-.LEHB4
+ 391 000f 24       		.uleb128 .L27-.LFB940
+ 392 0010 03       		.uleb128 0x3
+ 393 0011 3C       		.uleb128 .LEHB5-.LFB940
+ 394 0012 0C       		.uleb128 .LEHE5-.LEHB5
+ 395 0013 00       		.uleb128 0
+ 396 0014 00       		.uleb128 0
+ 397              	.LLSDACSE940:
+ 398 0015 7F       		.byte	0x7f
+ 399 0016 00       		.byte	0
+ 400 0017 00       		.byte	0
+ 401 0018 7D       		.byte	0x7d
+ 402 0019 000000   		.align	2
+ 403              	.LLSDATT940:
+ 404 001c 00000000 		.word	0
+ 405              		.section	.text._ZN5zxing9ExceptionD0Ev,"axG",%progbits,_ZN5zxing9ExceptionD5Ev,comdat
+ 406              		.fnend
+ 408              		.section	.text._ZN5zxing24IllegalArgumentExceptionC2Ev,"ax",%progbits
+ 409              		.align	2
+ 410              		.global	_ZN5zxing24IllegalArgumentExceptionC2Ev
+ 411              		.syntax unified
+ 412              		.arm
+ 413              		.fpu neon
+ 415              	_ZN5zxing24IllegalArgumentExceptionC2Ev:
+ 416              		.fnstart
+ 417              	.LFB943:
+  25:../src/zxing_lib/zxing/common/IllegalArgumentException.cpp **** IllegalArgumentException::IllegalArgumentException(const char *msg) : Exception(msg) {}
+ 418              		.loc 2 25 0
+ 419              		.cfi_startproc
+ 420              		@ args = 0, pretend = 0, frame = 0
+ 421              		@ frame_needed = 0, uses_anonymous_args = 0
+ 422              		@ link register save eliminated.
+ 423              	.LVL26:
+ 424              	.LBB35:
+ 425              	.LBB36:
+ 426              	.LBB37:
+  34:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****   Exception(const char* msg) throw() : message(copy(msg)) {}
+ 427              		.loc 1 34 0
+ 428 0000 0020A0E3 		mov	r2, #0
+ 429 0004 042080E5 		str	r2, [r0, #4]
+ 430              	.LVL27:
+ 431              	.LBE37:
+ 432              	.LBE36:
+  25:../src/zxing_lib/zxing/common/IllegalArgumentException.cpp **** IllegalArgumentException::IllegalArgumentException(const char *msg) : Exception(msg) {}
+ 433              		.loc 2 25 0
+ 434 0008 04209FE5 		ldr	r2, .L33
+ 435 000c 002080E5 		str	r2, [r0]
+ 436              	.LBE35:
+ 437 0010 1EFF2FE1 		bx	lr
+ 438              	.L34:
+ 439              		.align	2
+ 440              	.L33:
+ 441 0014 08000000 		.word	.LANCHOR0+8
+ 442              		.cfi_endproc
+ 443              	.LFE943:
+ 444              		.cantunwind
+ 445              		.fnend
+ 447              		.global	_ZN5zxing24IllegalArgumentExceptionC1Ev
+ 448              		.set	_ZN5zxing24IllegalArgumentExceptionC1Ev,_ZN5zxing24IllegalArgumentExceptionC2Ev
+ 449              		.section	.text._ZN5zxing24IllegalArgumentExceptionC2EPKc,"ax",%progbits
+ 450              		.align	2
+ 451              		.global	_ZN5zxing24IllegalArgumentExceptionC2EPKc
+ 452              		.syntax unified
+ 453              		.arm
+ 454              		.fpu neon
+ 456              	_ZN5zxing24IllegalArgumentExceptionC2EPKc:
+ 457              		.fnstart
+ 458              	.LFB946:
+  26:../src/zxing_lib/zxing/common/IllegalArgumentException.cpp **** IllegalArgumentException::~IllegalArgumentException() throw() {}
+ 459              		.loc 2 26 0
+ 460              		.cfi_startproc
+ 461              		.cfi_personality 0,__gxx_personality_v0
+ 462              		.cfi_lsda 0,.LLSDA946
+ 463              		@ args = 0, pretend = 0, frame = 0
+ 464              		@ frame_needed = 0, uses_anonymous_args = 0
+ 465              	.LVL28:
+ 466 0000 70402DE9 		push	{r4, r5, r6, lr}
+ 467              		.save {r4, r5, r6, lr}
+ 468              		.cfi_def_cfa_offset 16
+ 469              		.cfi_offset 4, -16
+ 470              		.cfi_offset 5, -12
+ 471              		.cfi_offset 6, -8
+ 472              		.cfi_offset 14, -4
+ 473 0004 0040A0E1 		mov	r4, r0
+ 474              	.LVL29:
+ 475              	.LBB44:
+ 476              	.LBB45:
+ 477              	.LBB46:
+ 478              	.LBB47:
+  35:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Exception.h ****   Exception(Exception const& that) throw() : std::exception(that), message(copy(that.message)) {}
+ 479              		.loc 1 35 0
+ 480 0008 44309FE5 		ldr	r3, .L43
+ 481 000c 003080E5 		str	r3, [r0]
+ 482 0010 0100A0E1 		mov	r0, r1
+ 483              	.LVL30:
+ 484              	.LEHB6:
+ 485 0014 FEFFFFEB 		bl	_ZN5zxing9Exception4copyEPKc
+ 486              	.LVL31:
+ 487              	.LEHE6:
+ 488 0018 080000EA 		b	.L42
+ 489              	.L38:
+ 490 001c 0050A0E1 		mov	r5, r0
+ 491 0020 0160A0E1 		mov	r6, r1
+ 492 0024 0400A0E1 		mov	r0, r4
+ 493 0028 FEFFFFEB 		bl	_ZNSt9exceptionD2Ev
+ 494              	.LVL32:
+ 495 002c 010076E3 		cmn	r6, #1
+ 496 0030 0000000A 		beq	.L37
+ 497              	.LEHB7:
+ 498 0034 FEFFFFEB 		bl	__cxa_end_cleanup
+ 499              	.LVL33:
+ 500              	.L37:
+ 501              	.LBE47:
+ 502 0038 0500A0E1 		mov	r0, r5
+ 503 003c FEFFFFEB 		bl	__cxa_call_unexpected
+ 504              	.LVL34:
+ 505              	.LEHE7:
+ 506              	.L42:
+ 507              	.LBB48:
+ 508 0040 040084E5 		str	r0, [r4, #4]
+ 509              	.LVL35:
+ 510              	.LBE48:
+ 511              	.LBE46:
+ 512              	.LBE45:
+  26:../src/zxing_lib/zxing/common/IllegalArgumentException.cpp **** IllegalArgumentException::~IllegalArgumentException() throw() {}
+ 513              		.loc 2 26 0
+ 514 0044 0C309FE5 		ldr	r3, .L43+4
+ 515 0048 003084E5 		str	r3, [r4]
+ 516              	.LBE44:
+ 517 004c 0400A0E1 		mov	r0, r4
+ 518 0050 7080BDE8 		pop	{r4, r5, r6, pc}
+ 519              	.L44:
+ 520              		.align	2
+ 521              	.L43:
+ 522 0054 08000000 		.word	_ZTVN5zxing9ExceptionE+8
+ 523 0058 08000000 		.word	.LANCHOR0+8
+ 524              		.cfi_endproc
+ 525              	.LFE946:
+ 526              		.personality	__gxx_personality_v0
+ 527              		.handlerdata
+ 528              		.align	2
+ 529              	.LLSDA946:
+ 530 0008 FF       		.byte	0xff
+ 531 0009 10       		.byte	0x10
+ 532 000a 11       		.uleb128 .LLSDATT946-.LLSDATTD946
+ 533              	.LLSDATTD946:
+ 534 000b 01       		.byte	0x1
+ 535 000c 08       		.uleb128 .LLSDACSE946-.LLSDACSB946
+ 536              	.LLSDACSB946:
+ 537 000d 14       		.uleb128 .LEHB6-.LFB946
+ 538 000e 04       		.uleb128 .LEHE6-.LEHB6
+ 539 000f 1C       		.uleb128 .L38-.LFB946
+ 540 0010 03       		.uleb128 0x3
+ 541 0011 34       		.uleb128 .LEHB7-.LFB946
+ 542 0012 0C       		.uleb128 .LEHE7-.LEHB7
+ 543 0013 00       		.uleb128 0
+ 544 0014 00       		.uleb128 0
+ 545              	.LLSDACSE946:
+ 546 0015 7F       		.byte	0x7f
+ 547 0016 00       		.byte	0
+ 548 0017 00       		.byte	0
+ 549 0018 7D       		.byte	0x7d
+ 550 0019 000000   		.align	2
+ 551              	.LLSDATT946:
+ 552 001c 00000000 		.word	0
+ 553              		.section	.text._ZN5zxing24IllegalArgumentExceptionC2EPKc
+ 554              		.fnend
+ 556              		.global	_ZN5zxing24IllegalArgumentExceptionC1EPKc
+ 557              		.set	_ZN5zxing24IllegalArgumentExceptionC1EPKc,_ZN5zxing24IllegalArgumentExceptionC2EPKc
+ 558              		.weak	_ZTSN5zxing9ExceptionE
+ 559              		.section	.rodata._ZTSN5zxing9ExceptionE,"aG",%progbits,_ZTSN5zxing9ExceptionE,comdat
+ 560              		.align	2
+ 563              	_ZTSN5zxing9ExceptionE:
+ 564 0000 4E357A78 		.ascii	"N5zxing9ExceptionE\000"
+ 564      696E6739 
+ 564      45786365 
+ 564      7074696F 
+ 564      6E4500
+ 565              		.weak	_ZTIN5zxing9ExceptionE
+ 566              		.section	.rodata._ZTIN5zxing9ExceptionE,"aG",%progbits,_ZTIN5zxing9ExceptionE,comdat
+ 567              		.align	2
+ 570              	_ZTIN5zxing9ExceptionE:
+ 571 0000 08000000 		.word	_ZTVN10__cxxabiv120__si_class_type_infoE+8
+ 572 0004 00000000 		.word	_ZTSN5zxing9ExceptionE
+ 573 0008 00000000 		.word	_ZTISt9exception
+ 574              		.global	_ZTSN5zxing24IllegalArgumentExceptionE
+ 575              		.global	_ZTIN5zxing24IllegalArgumentExceptionE
+ 576              		.weak	_ZTVN5zxing9ExceptionE
+ 577              		.section	.rodata._ZTVN5zxing9ExceptionE,"aG",%progbits,_ZTVN5zxing9ExceptionE,comdat
+ 578              		.align	2
+ 581              	_ZTVN5zxing9ExceptionE:
+ 582 0000 00000000 		.word	0
+ 583 0004 00000000 		.word	_ZTIN5zxing9ExceptionE
+ 584 0008 00000000 		.word	_ZN5zxing9ExceptionD1Ev
+ 585 000c 00000000 		.word	_ZN5zxing9ExceptionD0Ev
+ 586 0010 00000000 		.word	_ZNK5zxing9Exception4whatEv
+ 587              		.global	_ZTVN5zxing24IllegalArgumentExceptionE
+ 588              		.section	.rodata._ZNK5zxing9Exception4whatEv.str1.4,"aMS",%progbits,1
+ 589              		.align	2
+ 590              	.LC0:
+ 591 0000 00       		.ascii	"\000"
+ 592              		.section	.rodata._ZTIN5zxing24IllegalArgumentExceptionE,"a",%progbits
+ 593              		.align	2
+ 596              	_ZTIN5zxing24IllegalArgumentExceptionE:
+ 597 0000 08000000 		.word	_ZTVN10__cxxabiv120__si_class_type_infoE+8
+ 598 0004 00000000 		.word	_ZTSN5zxing24IllegalArgumentExceptionE
+ 599 0008 00000000 		.word	_ZTIN5zxing9ExceptionE
+ 600              		.section	.rodata._ZTSN5zxing24IllegalArgumentExceptionE,"a",%progbits
+ 601              		.align	2
+ 604              	_ZTSN5zxing24IllegalArgumentExceptionE:
+ 605 0000 4E357A78 		.ascii	"N5zxing24IllegalArgumentExceptionE\000"
+ 605      696E6732 
+ 605      34496C6C 
+ 605      6567616C 
+ 605      41726775 
+ 606              		.section	.rodata._ZTVN5zxing24IllegalArgumentExceptionE,"a",%progbits
+ 607              		.align	2
+ 608              		.set	.LANCHOR0,. + 0
+ 611              	_ZTVN5zxing24IllegalArgumentExceptionE:
+ 612 0000 00000000 		.word	0
+ 613 0004 00000000 		.word	_ZTIN5zxing24IllegalArgumentExceptionE
+ 614 0008 00000000 		.word	_ZN5zxing24IllegalArgumentExceptionD1Ev
+ 615 000c 00000000 		.word	_ZN5zxing24IllegalArgumentExceptionD0Ev
+ 616 0010 00000000 		.word	_ZNK5zxing9Exception4whatEv
+ 617              		.text
+ 618              	.Letext0:
+ 619              		.file 3 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+ 620              		.file 4 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+ 621              		.file 5 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+ 622              		.file 6 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+ 623              		.file 7 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+ 624              		.file 8 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+ 625              		.file 9 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+ 626              		.file 10 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 627              		.file 11 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 628              		.file 12 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 629              		.file 13 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 630              		.file 14 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 631              		.file 15 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 632              		.file 16 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 633              		.file 17 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 634              		.file 18 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 635              		.file 19 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 636              		.file 20 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 637              		.file 21 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 638              		.file 22 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 639              		.file 23 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 640              		.file 24 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 641              		.file 25 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 642              		.file 26 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 643              		.file 27 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 644              		.file 28 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 645              		.file 29 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 646              		.file 30 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 647              		.file 31 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 648              		.file 32 "<built-in>"
+ 649              		.file 33 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 650              		.file 34 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 651              		.file 35 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 652              		.file 36 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 653              		.file 37 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 654              		.file 38 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 655              		.file 39 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 656              		.file 40 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 657              		.file 41 "/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/co
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 IllegalArgumentException.cpp
+     /tmp/cc3TtIza.s:17     .text._ZNK5zxing9Exception4whatEv:0000000000000000 $a
+     /tmp/cc3TtIza.s:23     .text._ZNK5zxing9Exception4whatEv:0000000000000000 _ZNK5zxing9Exception4whatEv
+     /tmp/cc3TtIza.s:590    .rodata._ZNK5zxing9Exception4whatEv.str1.4:0000000000000000 .LC0
+.ARM.exidx.text._ZNK5zxing9Exception4whatEv:0000000000000000 $d
+     /tmp/cc3TtIza.s:47     .text._ZN5zxing9ExceptionD2Ev:0000000000000000 $a
+     /tmp/cc3TtIza.s:53     .text._ZN5zxing9ExceptionD2Ev:0000000000000000 _ZN5zxing9ExceptionD2Ev
+     /tmp/cc3TtIza.s:115    .text._ZN5zxing9ExceptionD2Ev:0000000000000058 $d
+     /tmp/cc3TtIza.s:581    .rodata._ZTVN5zxing9ExceptionE:0000000000000000 _ZTVN5zxing9ExceptionE
+.ARM.extab.text._ZN5zxing9ExceptionD2Ev:0000000000000000 $d
+.ARM.exidx.text._ZN5zxing9ExceptionD2Ev:0000000000000000 $d
+     /tmp/cc3TtIza.s:53     .text._ZN5zxing9ExceptionD2Ev:0000000000000000 _ZN5zxing9ExceptionD1Ev
+     /tmp/cc3TtIza.s:152    .text._ZN5zxing24IllegalArgumentExceptionD2Ev:0000000000000000 $a
+     /tmp/cc3TtIza.s:158    .text._ZN5zxing24IllegalArgumentExceptionD2Ev:0000000000000000 _ZN5zxing24IllegalArgumentExceptionD2Ev
+     /tmp/cc3TtIza.s:228    .text._ZN5zxing24IllegalArgumentExceptionD2Ev:0000000000000058 $d
+.ARM.extab.text._ZN5zxing24IllegalArgumentExceptionD2Ev:0000000000000000 $d
+.ARM.exidx.text._ZN5zxing24IllegalArgumentExceptionD2Ev:0000000000000000 $d
+     /tmp/cc3TtIza.s:158    .text._ZN5zxing24IllegalArgumentExceptionD2Ev:0000000000000000 _ZN5zxing24IllegalArgumentExceptionD1Ev
+     /tmp/cc3TtIza.s:264    .text._ZN5zxing24IllegalArgumentExceptionD0Ev:0000000000000000 $a
+     /tmp/cc3TtIza.s:270    .text._ZN5zxing24IllegalArgumentExceptionD0Ev:0000000000000000 _ZN5zxing24IllegalArgumentExceptionD0Ev
+.ARM.exidx.text._ZN5zxing24IllegalArgumentExceptionD0Ev:0000000000000000 $d
+     /tmp/cc3TtIza.s:298    .text._ZN5zxing9ExceptionD0Ev:0000000000000000 $a
+     /tmp/cc3TtIza.s:304    .text._ZN5zxing9ExceptionD0Ev:0000000000000000 _ZN5zxing9ExceptionD0Ev
+     /tmp/cc3TtIza.s:375    .text._ZN5zxing9ExceptionD0Ev:0000000000000064 $d
+.ARM.extab.text._ZN5zxing9ExceptionD0Ev:0000000000000000 $d
+.ARM.exidx.text._ZN5zxing9ExceptionD0Ev:0000000000000000 $d
+     /tmp/cc3TtIza.s:409    .text._ZN5zxing24IllegalArgumentExceptionC2Ev:0000000000000000 $a
+     /tmp/cc3TtIza.s:415    .text._ZN5zxing24IllegalArgumentExceptionC2Ev:0000000000000000 _ZN5zxing24IllegalArgumentExceptionC2Ev
+     /tmp/cc3TtIza.s:441    .text._ZN5zxing24IllegalArgumentExceptionC2Ev:0000000000000014 $d
+.ARM.exidx.text._ZN5zxing24IllegalArgumentExceptionC2Ev:0000000000000000 $d
+     /tmp/cc3TtIza.s:415    .text._ZN5zxing24IllegalArgumentExceptionC2Ev:0000000000000000 _ZN5zxing24IllegalArgumentExceptionC1Ev
+     /tmp/cc3TtIza.s:450    .text._ZN5zxing24IllegalArgumentExceptionC2EPKc:0000000000000000 $a
+     /tmp/cc3TtIza.s:456    .text._ZN5zxing24IllegalArgumentExceptionC2EPKc:0000000000000000 _ZN5zxing24IllegalArgumentExceptionC2EPKc
+     /tmp/cc3TtIza.s:522    .text._ZN5zxing24IllegalArgumentExceptionC2EPKc:0000000000000054 $d
+.ARM.extab.text._ZN5zxing24IllegalArgumentExceptionC2EPKc:0000000000000000 $d
+.ARM.exidx.text._ZN5zxing24IllegalArgumentExceptionC2EPKc:0000000000000000 $d
+     /tmp/cc3TtIza.s:456    .text._ZN5zxing24IllegalArgumentExceptionC2EPKc:0000000000000000 _ZN5zxing24IllegalArgumentExceptionC1EPKc
+     /tmp/cc3TtIza.s:563    .rodata._ZTSN5zxing9ExceptionE:0000000000000000 _ZTSN5zxing9ExceptionE
+     /tmp/cc3TtIza.s:560    .rodata._ZTSN5zxing9ExceptionE:0000000000000000 $d
+     /tmp/cc3TtIza.s:570    .rodata._ZTIN5zxing9ExceptionE:0000000000000000 _ZTIN5zxing9ExceptionE
+     /tmp/cc3TtIza.s:567    .rodata._ZTIN5zxing9ExceptionE:0000000000000000 $d
+     /tmp/cc3TtIza.s:604    .rodata._ZTSN5zxing24IllegalArgumentExceptionE:0000000000000000 _ZTSN5zxing24IllegalArgumentExceptionE
+     /tmp/cc3TtIza.s:596    .rodata._ZTIN5zxing24IllegalArgumentExceptionE:0000000000000000 _ZTIN5zxing24IllegalArgumentExceptionE
+     /tmp/cc3TtIza.s:578    .rodata._ZTVN5zxing9ExceptionE:0000000000000000 $d
+     /tmp/cc3TtIza.s:611    .rodata._ZTVN5zxing24IllegalArgumentExceptionE:0000000000000000 _ZTVN5zxing24IllegalArgumentExceptionE
+     /tmp/cc3TtIza.s:589    .rodata._ZNK5zxing9Exception4whatEv.str1.4:0000000000000000 $d
+     /tmp/cc3TtIza.s:593    .rodata._ZTIN5zxing24IllegalArgumentExceptionE:0000000000000000 $d
+     /tmp/cc3TtIza.s:601    .rodata._ZTSN5zxing24IllegalArgumentExceptionE:0000000000000000 $d
+     /tmp/cc3TtIza.s:607    .rodata._ZTVN5zxing24IllegalArgumentExceptionE:0000000000000000 $d
+                     .debug_frame:0000000000000010 $d
+                           .group:0000000000000000 _ZN5zxing9ExceptionD5Ev
+                           .group:0000000000000000 wm4.0.cd1e96de8a8c4f34e746a820772853ad
+                           .group:0000000000000000 wm4.cconfig.h.31.21483d26c3710eb58c7a44c20d82c775
+                           .group:0000000000000000 wm4.cpu_defines.h.31.54d44f9d3e7c42875c5a7fd49795eb93
+                           .group:0000000000000000 wm4.cconfig.h.515.5e729db314ae74226e291b4ae081e353
+                           .group:0000000000000000 wm4.exception_defines.h.31.ca6841b9be3287386aafc5c717935b2e
+                           .group:0000000000000000 wm4.cpp_type_traits.h.33.9f2bfd8c4471a9a299f6da3ec24c745c
+                           .group:0000000000000000 wm4.numeric_traits.h.30.aa01a98564b7e55086aad9e53c7e5c53
+                           .group:0000000000000000 wm4.concept_check.h.31.f19605d278e56917c68a56d378be308c
+                           .group:0000000000000000 wm4.type_traits.30.967137c3695c72a3f7c65b682f1a104e
+                           .group:0000000000000000 wm4.move.h.152.41d7b9e6779674d169b7813982cfa003
+                           .group:0000000000000000 wm4.assertions.h.30.51d443923f0d242550e04246a7819b39
+                           .group:0000000000000000 wm4.stl_iterator.h.406.6718c794fa6a1331f8340656b5c8c55c
+                           .group:0000000000000000 wm4.debug.h.30.5c1f223b12199e851d4d42805b788ccf
+                           .group:0000000000000000 wm4.stl_algobase.h.491.ec4060988bfff82dc579decdb75c72d6
+                           .group:0000000000000000 wm4._newlib_version.h.4.3572908597b70d672d181fc7fc501c19
+                           .group:0000000000000000 wm4.newlib.h.21.59901f4bf241ab46c63694665baa7297
+                           .group:0000000000000000 wm4.features.h.22.5cdadbb3efe495d1c9e38350b8c376c7
+                           .group:0000000000000000 wm4.config.h.219.65a553ab5bef5482f0d7880b0d33015e
+                           .group:0000000000000000 wm4._ansi.h.23.1ee1144430bedaab1a14c7b57a6c8384
+                           .group:0000000000000000 wm4.stddef.h.39.fa2e86d241f4df50b9327c72832885e1
+                           .group:0000000000000000 wm4._default_types.h.6.959254cf5f09734ea7516c89e8bb21bd
+                           .group:0000000000000000 wm4.lock.h.2.1461d1fff82dffe8bfddc23307f6484f
+                           .group:0000000000000000 wm4._types.h.125.5cf8a495f1f7ef36777ad868a1e32068
+                           .group:0000000000000000 wm4.stddef.h.161.7e98c9c86da0ed2d27af2ef92af7d013
+                           .group:0000000000000000 wm4._types.h.183.c226d164ceca1f2ecb9ae9360c54a098
+                           .group:0000000000000000 wm4.reent.h.17.23b059516345f8f5abfa01ddc379570f
+                           .group:0000000000000000 wm4.wchar.h.8.acdef4366e64def8c588421024712d23
+                           .group:0000000000000000 wm4.stddef.h.161.9f48187563b2a85291a91832aa425498
+                           .group:0000000000000000 wm4.cdefs.h.47.9bc8274c84fddbf05edd550eb0bf48cd
+                           .group:0000000000000000 wm4.stdarg.h.34.3a23a216c0c293b3d2ea2e89281481e6
+                           .group:0000000000000000 wm4.wchar.h.29.7ec19a1c094c7903732828676a0a91b2
+                           .group:0000000000000000 wm4.wchar.h.76.90478bd2c784f576b769c4535c98839d
+                           .group:0000000000000000 wm4.cwchar.48.c4e882638bf84f6da89479dda6fe8e17
+                           .group:0000000000000000 wm4.stdint.h.4.659be5aa44c4ab4eb7c7cc2b24d8ceee
+                           .group:0000000000000000 wm4._intsup.h.10.cce27fed8484c08a33f522034c30d2b5
+                           .group:0000000000000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:0000000000000000 wm4.stdint.h.23.4c107c5a20920bfc6e94fb2672bbd9ee
+                           .group:0000000000000000 wm4.atomic_lockfree_defines.h.31.d5c6334fb1e95c9462b052951f1411df
+                           .group:0000000000000000 wm4.allocator.h.52.0ceafb36dc1b82dbfa6b05003082e3f5
+                           .group:0000000000000000 wm4.stddef.h.161.38688f2eb958a8ed58fdb61ffe554c94
+                           .group:0000000000000000 wm4.locale.h.16.90d16f662e7119f5b192650a45179c6c
+                           .group:0000000000000000 wm4.clocale.45.c36d2d5b631a875aa5273176b54fdf0f
+                           .group:0000000000000000 wm4.ctype.h.2.cf64fe4c5e8c0ac0f52f1143312d4909
+                           .group:0000000000000000 wm4.cctype.45.0da5714876b0be7f2d816b53d9670403
+                           .group:0000000000000000 wm4.stl_function.h.57.472a8ffdc5144ddcd047558cd884dda0
+                           .group:0000000000000000 wm4.gthr.h.27.ceb1c66b926f052afcba57e8784df0d4
+                           .group:0000000000000000 wm4.gthrdefault.h.27.edc94d4398c0534988962be77dc3c2e1
+                           .group:0000000000000000 wm4.atomic_word.h.30.9e0ac69fd462d5e650933e05133b4afa
+                           .group:0000000000000000 wm4.alloc_traits.h.31.c41c7c4789404962122a4e991dfa3abf
+                           .group:0000000000000000 wm4.cstdlib.44.52c5efdfb0f3c176bd11e611a0b94959
+                           .group:0000000000000000 wm4.stdlib.h.13.4ed386f5c1a80d71e72172885d946ef2
+                           .group:0000000000000000 wm4.alloca.h.8.dfc0c703c47ec3e69746825b17d9e66d
+                           .group:0000000000000000 wm4.stdlib.h.56.d4493cd3736e51e9d56335045f26df45
+                           .group:0000000000000000 wm4.cstdlib.76.ae666499c8f9b0ace1b4b23fe143da2c
+                           .group:0000000000000000 wm4.stdio.h.27.3fc80220048df77954e38daec3bb9670
+                           .group:0000000000000000 wm4.types.h.40.e8c16e7ec36ba55f133d0616070e25fc
+                           .group:0000000000000000 wm4._endian.h.31.65a10590763c3dde1ac4a7f66d7d4891
+                           .group:0000000000000000 wm4.endian.h.9.49f3a4695c1b61e8a0808de3c4a106cb
+                           .group:0000000000000000 wm4._timeval.h.30.0e8bfd94e85db17dda3286ee81496fe6
+                           .group:0000000000000000 wm4.timespec.h.41.d855182eb0e690443ab8651bcedca6e1
+                           .group:0000000000000000 wm4.select.h.30.bbece7fa40993a78092dcc5805132560
+                           .group:0000000000000000 wm4.types.h.69.ed3eae3cf73030a737515151ebcab7a1
+                           .group:0000000000000000 wm4.stdio.h.2.4aa87247282eca6c8f36f9de33d8df1a
+                           .group:0000000000000000 wm4.stdio.h.81.edc2fd66146f9635463a729e8fe0add3
+                           .group:0000000000000000 wm4.cstdio.45.1ffaea3e7c26dce1e03f5847a7439edb
+                           .group:0000000000000000 wm4.errno.h.2.ba016d646105af6cad23be83630b6a3f
+                           .group:0000000000000000 wm4.errno.h.9.1ecd7b1049497a0ab61da0f6cbd4b0c6
+                           .group:0000000000000000 wm4.functional_hash.h.98.3bf7680ffcc8d24d09fa83ac1339c79d
+
+UNDEFINED SYMBOLS
+__gxx_personality_v0
+_ZN5zxing9Exception13deleteMessageEv
+_ZNSt9exceptionD2Ev
+__cxa_end_cleanup
+__cxa_call_unexpected
+_ZdlPvj
+_ZN5zxing9Exception4copyEPKc
+_ZTVN10__cxxabiv120__si_class_type_infoE
+_ZTISt9exception

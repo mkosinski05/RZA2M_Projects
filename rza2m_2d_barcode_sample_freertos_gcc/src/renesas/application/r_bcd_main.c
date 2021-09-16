@@ -281,13 +281,13 @@ void R_BCD_MainSetReedsolomonTime(uint32_t time)
 
     return;
 }
-void R_BSD_ImageRotate(uint32_t in_adr, uint32_t out_adr, uint32_t width, uint32_t height) {
-	param_imr.src;
-	param_imr.dst;
-	param_imr.src_width;
-	param_imr.src_height;
-	param_imr.dst_stride;
-	param_imr.mode;
+void R_BSD_ImageRotate(uint32_t in_adr, uint32_t out_adr, uint16_t width, uint16_t height) {
+	param_imr.src = in_adr;
+	param_imr.dst = out_adr;
+	param_imr.src_width = width;
+	param_imr.src_height = height;
+	param_imr.dst_stride = 0;
+	param_imr.mode = 1;
 
 	/* Initialize variables to be used in termination judgment of the DRP library */
 	drp_lib_status[TILE_0] = DRP_NOT_FINISH;
@@ -311,7 +311,7 @@ void R_BSD_ImageRotate(uint32_t in_adr, uint32_t out_adr, uint32_t width, uint32
 	PerformSetEndTime(7);
 
 	/* Invalidate and clean all D cache */
-	R_CACHE_L1DataCleanInvalidLine((void *)out_adr, (width * height)/8);
+	R_CACHE_L1DataCleanInvalidLine((void *)out_adr, (uint32_t)(width * height)/8);
 
 }
 /**********************************************************************************************************************
@@ -590,7 +590,7 @@ void sample_main(void)
         	/* Stop Camera Capture*/
         	R_RVAPI_CaptureStartMIPI();
         	/* Rotate image and output to input buffer*/
-        	R_BSD_ImageRotate( p_output_bufadr, p_input_bufadr, R_BCD_CAMERA_WIDTH, R_BCD_CAMERA_HEIGHT, 1);
+        	R_BSD_ImageRotate( (uint32_t)p_output_bufadr, (uint32_t)p_input_bufadr, R_BCD_CAMERA_WIDTH, R_BCD_CAMERA_HEIGHT );
 
         	/* ZXing process */
         	result = zxing_decode_image(

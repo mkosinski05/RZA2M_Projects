@@ -1,0 +1,1294 @@
+   1              		.cpu cortex-a9
+   2              		.eabi_attribute 28, 1
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.file	"FinderPattern.cpp"
+  13              		.text
+  14              	.Ltext0:
+  15              		.cfi_sections	.debug_frame
+  16              		.section	.text._ZN5zxing6qrcode13FinderPatternD2Ev,"axG",%progbits,_ZN5zxing6qrcode13FinderPattern
+  17              		.align	2
+  18              		.weak	_ZN5zxing6qrcode13FinderPatternD2Ev
+  19              		.syntax unified
+  20              		.arm
+  21              		.fpu neon
+  23              	_ZN5zxing6qrcode13FinderPatternD2Ev:
+  24              		.fnstart
+  25              	.LFB2469:
+  26              		.file 1 "/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/qrc
+   1:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/qrcode/detector/FinderPattern.h **** // -*- mode:c++; tab-width:2; indent-tabs-mode:nil; c-basic-offset:2 -*-
+   2:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/qrcode/detector/FinderPattern.h **** #ifndef __FINDER_PATTERN_H__
+   3:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/qrcode/detector/FinderPattern.h **** #define __FINDER_PATTERN_H__
+   4:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/qrcode/detector/FinderPattern.h **** 
+   5:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/qrcode/detector/FinderPattern.h **** /*
+   6:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/qrcode/detector/FinderPattern.h ****  *  FinderPattern.h
+   7:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/qrcode/detector/FinderPattern.h ****  *  zxing
+   8:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/qrcode/detector/FinderPattern.h ****  *
+   9:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/qrcode/detector/FinderPattern.h ****  *  Copyright 2010 ZXing authors All rights reserved.
+  10:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/qrcode/detector/FinderPattern.h ****  *
+  11:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/qrcode/detector/FinderPattern.h ****  * Licensed under the Apache License, Version 2.0 (the "License");
+  12:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/qrcode/detector/FinderPattern.h ****  * you may not use this file except in compliance with the License.
+  13:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/qrcode/detector/FinderPattern.h ****  * You may obtain a copy of the License at
+  14:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/qrcode/detector/FinderPattern.h ****  *
+  15:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/qrcode/detector/FinderPattern.h ****  *      http://www.apache.org/licenses/LICENSE-2.0
+  16:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/qrcode/detector/FinderPattern.h ****  *
+  17:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/qrcode/detector/FinderPattern.h ****  * Unless required by applicable law or agreed to in writing, software
+  18:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/qrcode/detector/FinderPattern.h ****  * distributed under the License is distributed on an "AS IS" BASIS,
+  19:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/qrcode/detector/FinderPattern.h ****  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  20:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/qrcode/detector/FinderPattern.h ****  * See the License for the specific language governing permissions and
+  21:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/qrcode/detector/FinderPattern.h ****  * limitations under the License.
+  22:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/qrcode/detector/FinderPattern.h ****  */
+  23:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/qrcode/detector/FinderPattern.h **** 
+  24:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/qrcode/detector/FinderPattern.h **** #include <zxing/ResultPoint.h>
+  25:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/qrcode/detector/FinderPattern.h **** #include <cmath>
+  26:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/qrcode/detector/FinderPattern.h **** 
+  27:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/qrcode/detector/FinderPattern.h **** namespace zxing {
+  28:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/qrcode/detector/FinderPattern.h **** 	namespace qrcode {
+  29:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/qrcode/detector/FinderPattern.h **** 		
+  30:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/qrcode/detector/FinderPattern.h **** 		class FinderPattern : public ResultPoint {
+  27              		.loc 1 30 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              	.LVL0:
+  32 0000 10402DE9 		push	{r4, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 4, -8
+  35              		.cfi_offset 14, -4
+  36 0004 0040A0E1 		mov	r4, r0
+  37              	.LBB20:
+  38              		.loc 1 30 0
+  39 0008 0C309FE5 		ldr	r3, .L3
+  40 000c 003080E5 		str	r3, [r0]
+  41 0010 FEFFFFEB 		bl	_ZN5zxing11ResultPointD2Ev
+  42              	.LVL1:
+  43              	.LBE20:
+  44 0014 0400A0E1 		mov	r0, r4
+  45 0018 1080BDE8 		pop	{r4, pc}
+  46              	.L4:
+  47              		.align	2
+  48              	.L3:
+  49 001c 08000000 		.word	_ZTVN5zxing6qrcode13FinderPatternE+8
+  50              		.cfi_endproc
+  51              	.LFE2469:
+  52              		.cantunwind
+  53              		.fnend
+  55              		.weak	_ZN5zxing6qrcode13FinderPatternD1Ev
+  56              		.set	_ZN5zxing6qrcode13FinderPatternD1Ev,_ZN5zxing6qrcode13FinderPatternD2Ev
+  57              		.section	.text._ZN5zxing6qrcode13FinderPatternD0Ev,"axG",%progbits,_ZN5zxing6qrcode13FinderPattern
+  58              		.align	2
+  59              		.weak	_ZN5zxing6qrcode13FinderPatternD0Ev
+  60              		.syntax unified
+  61              		.arm
+  62              		.fpu neon
+  64              	_ZN5zxing6qrcode13FinderPatternD0Ev:
+  65              		.fnstart
+  66              	.LFB2471:
+  67              		.loc 1 30 0
+  68              		.cfi_startproc
+  69              		@ args = 0, pretend = 0, frame = 0
+  70              		@ frame_needed = 0, uses_anonymous_args = 0
+  71              	.LVL2:
+  72 0000 10402DE9 		push	{r4, lr}
+  73              		.cfi_def_cfa_offset 8
+  74              		.cfi_offset 4, -8
+  75              		.cfi_offset 14, -4
+  76 0004 0040A0E1 		mov	r4, r0
+  77              	.LVL3:
+  78              	.LBB21:
+  79              	.LBB22:
+  80              		.loc 1 30 0
+  81 0008 18309FE5 		ldr	r3, .L7
+  82 000c 003080E5 		str	r3, [r0]
+  83 0010 FEFFFFEB 		bl	_ZN5zxing11ResultPointD2Ev
+  84              	.LVL4:
+  85              	.LBE22:
+  86              	.LBE21:
+  87 0014 1810A0E3 		mov	r1, #24
+  88 0018 0400A0E1 		mov	r0, r4
+  89 001c FEFFFFEB 		bl	_ZdlPvj
+  90              	.LVL5:
+  91 0020 0400A0E1 		mov	r0, r4
+  92 0024 1080BDE8 		pop	{r4, pc}
+  93              	.L8:
+  94              		.align	2
+  95              	.L7:
+  96 0028 08000000 		.word	_ZTVN5zxing6qrcode13FinderPatternE+8
+  97              		.cfi_endproc
+  98              	.LFE2471:
+  99              		.cantunwind
+ 100              		.fnend
+ 102              		.section	.text._Z41__static_initialization_and_destruction_0ii,"ax",%progbits
+ 103              		.align	2
+ 104              		.syntax unified
+ 105              		.arm
+ 106              		.fpu neon
+ 108              	_Z41__static_initialization_and_destruction_0ii:
+ 109              		.fnstart
+ 110              	.LFB2472:
+ 111              		.file 2 "../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp"
+   1:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** // -*- mode:c++; tab-width:2; indent-tabs-mode:nil; c-basic-offset:2 -*-
+   2:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** /*
+   3:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****  *  FinderPattern.cpp
+   4:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****  *  zxing
+   5:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****  *
+   6:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****  *  Created by Christian Brunschen on 13/05/2008.
+   7:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****  *  Copyright 2008 ZXing authors All rights reserved.
+   8:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****  *
+   9:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****  * Licensed under the Apache License, Version 2.0 (the "License");
+  10:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****  * you may not use this file except in compliance with the License.
+  11:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****  * You may obtain a copy of the License at
+  12:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****  *
+  13:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****  *      http://www.apache.org/licenses/LICENSE-2.0
+  14:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****  *
+  15:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****  * Unless required by applicable law or agreed to in writing, software
+  16:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****  * distributed under the License is distributed on an "AS IS" BASIS,
+  17:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  18:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****  * See the License for the specific language governing permissions and
+  19:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****  * limitations under the License.
+  20:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****  */
+  21:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** 
+  22:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** #include <zxing/qrcode/detector/FinderPattern.h>
+  23:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** 
+  24:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** using std::abs;
+  25:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** using zxing::Ref;
+  26:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** using zxing::qrcode::FinderPattern;		
+  27:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** 
+  28:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** FinderPattern::FinderPattern(float posX, float posY, float estimatedModuleSize)
+  29:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****     : ResultPoint(posX,posY), estimatedModuleSize_(estimatedModuleSize), count_(1) {}
+  30:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** 		
+  31:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** FinderPattern::FinderPattern(float posX, float posY, float estimatedModuleSize, int count)
+  32:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****     : ResultPoint(posX,posY), estimatedModuleSize_(estimatedModuleSize), count_(count) {}
+  33:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** 		
+  34:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** int FinderPattern::getCount() const {
+  35:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****   return count_;
+  36:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** }
+  37:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** 		
+  38:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** float FinderPattern::getEstimatedModuleSize() const {
+  39:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****   return estimatedModuleSize_;
+  40:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** }
+  41:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** 		
+  42:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** void FinderPattern::incrementCount() {
+  43:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****   count_++;
+  44:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****   // cerr << "ic " << getX() << " " << getY() << " " << count_ << endl;
+  45:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** }
+  46:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** 		
+  47:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** /*
+  48:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****   bool FinderPattern::aboutEquals(float moduleSize, float i, float j) const {
+  49:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****   return abs(i - posY_) <= moduleSize && abs(j - posX_) <= moduleSize && (abs(moduleSize - estimate
+  50:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****   <= 1.0f || abs(moduleSize - estimatedModuleSize_) / estimatedModuleSize_ <= 0.1f);
+  51:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****   }
+  52:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** */
+  53:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** bool FinderPattern::aboutEquals(float moduleSize, float i, float j) const {
+  54:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****   if (abs(i - getY()) <= moduleSize && abs(j - getX()) <= moduleSize) {
+  55:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****     float moduleSizeDiff = abs(moduleSize - estimatedModuleSize_);
+  56:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****     return moduleSizeDiff <= 1.0f || moduleSizeDiff <= estimatedModuleSize_;
+  57:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****   }
+  58:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****   return false;
+  59:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** }
+  60:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** 		
+  61:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** Ref<FinderPattern> FinderPattern::combineEstimate(float i, float j, float newModuleSize) const {
+  62:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****   // fprintf(stderr, "ce %f %f %f\n", i, j, newModuleSize);
+  63:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** 
+  64:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****   int combinedCount = count_ + 1;
+  65:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****   float combinedX = (count_ * getX() + j) / combinedCount;
+  66:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****   float combinedY = (count_ * getY() + i) / combinedCount;
+  67:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****   float combinedModuleSize = (count_ * getEstimatedModuleSize() + newModuleSize) / combinedCount;
+  68:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****   return Ref<FinderPattern>(new FinderPattern(combinedX, combinedY, combinedModuleSize, combinedCou
+  69:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** }
+ 112              		.loc 2 69 0
+ 113              		.cfi_startproc
+ 114              		@ args = 0, pretend = 0, frame = 0
+ 115              		@ frame_needed = 0, uses_anonymous_args = 0
+ 116              	.LVL6:
+ 117 0000 010050E3 		cmp	r0, #1
+ 118 0004 1EFF2F11 		bxne	lr
+ 119              		.loc 2 69 0 is_stmt 0 discriminator 1
+ 120 0008 FF3F0FE3 		movw	r3, #65535
+ 121 000c 030051E1 		cmp	r1, r3
+ 122 0010 1EFF2F11 		bxne	lr
+ 123              		.loc 2 69 0
+ 124 0014 10402DE9 		push	{r4, lr}
+ 125              		.cfi_def_cfa_offset 8
+ 126              		.cfi_offset 4, -8
+ 127              		.cfi_offset 14, -4
+ 128              		.file 3 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+   1:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // Standard iostream objects -*- C++ -*-
+   2:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+   3:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // Copyright (C) 1997-2016 Free Software Foundation, Inc.
+   4:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** //
+   5:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // This file is part of the GNU ISO C++ Library.  This library is free
+   6:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // software; you can redistribute it and/or modify it under the
+   7:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // terms of the GNU General Public License as published by the
+   8:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // Free Software Foundation; either version 3, or (at your option)
+   9:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // any later version.
+  10:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  11:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // This library is distributed in the hope that it will be useful,
+  12:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // but WITHOUT ANY WARRANTY; without even the implied warranty of
+  13:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  14:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // GNU General Public License for more details.
+  15:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  16:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // Under Section 7 of GPL version 3, you are granted additional
+  17:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // permissions described in the GCC Runtime Library Exception, version
+  18:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // 3.1, as published by the Free Software Foundation.
+  19:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  20:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // You should have received a copy of the GNU General Public License and
+  21:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // a copy of the GCC Runtime Library Exception along with this program;
+  22:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+  23:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // <http://www.gnu.org/licenses/>.
+  24:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  25:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** /** @file include/iostream
+  26:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****  *  This is a Standard C++ Library header.
+  27:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****  */
+  28:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  29:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** //
+  30:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // ISO C++ 14882: 27.3  Standard iostream objects
+  31:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** //
+  32:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  33:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** #ifndef _GLIBCXX_IOSTREAM
+  34:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** #define _GLIBCXX_IOSTREAM 1
+  35:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  36:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** #pragma GCC system_header
+  37:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  38:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** #include <bits/c++config.h>
+  39:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** #include <ostream>
+  40:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** #include <istream>
+  41:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  42:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** namespace std _GLIBCXX_VISIBILITY(default)
+  43:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** {
+  44:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** _GLIBCXX_BEGIN_NAMESPACE_VERSION
+  45:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  46:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   /**
+  47:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  @name Standard Stream Objects
+  48:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *
+  49:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  The &lt;iostream&gt; header declares the eight <em>standard stream
+  50:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  objects</em>.  For other declarations, see
+  51:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  http://gcc.gnu.org/onlinedocs/libstdc++/manual/io.html
+  52:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  and the @link iosfwd I/O forward declarations @endlink
+  53:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *
+  54:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  They are required by default to cooperate with the global C
+  55:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  library's @c FILE streams, and to be available during program
+  56:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  startup and termination. For more information, see the section of the
+  57:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  manual linked to above.
+  58:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   */
+  59:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   //@{
+  60:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   extern istream cin;		/// Linked to standard input
+  61:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   extern ostream cout;		/// Linked to standard output
+  62:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   extern ostream cerr;		/// Linked to standard error (unbuffered)
+  63:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   extern ostream clog;		/// Linked to standard error (buffered)
+  64:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  65:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** #ifdef _GLIBCXX_USE_WCHAR_T
+  66:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   extern wistream wcin;		/// Linked to standard input
+  67:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   extern wostream wcout;	/// Linked to standard output
+  68:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   extern wostream wcerr;	/// Linked to standard error (unbuffered)
+  69:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   extern wostream wclog;	/// Linked to standard error (buffered)
+  70:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** #endif
+  71:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   //@}
+  72:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  73:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   // For construction of filebuffers for cout, cin, cerr, clog et. al.
+  74:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   static ios_base::Init __ioinit;
+ 129              		.loc 3 74 0 is_stmt 1
+ 130 0018 004000E3 		movw	r4, #:lower16:.LANCHOR0
+ 131 001c 004040E3 		movt	r4, #:upper16:.LANCHOR0
+ 132 0020 0400A0E1 		mov	r0, r4
+ 133              	.LVL7:
+ 134 0024 FEFFFFEB 		bl	_ZNSt8ios_base4InitC1Ev
+ 135              	.LVL8:
+ 136 0028 002000E3 		movw	r2, #:lower16:__dso_handle
+ 137 002c 002040E3 		movt	r2, #:upper16:__dso_handle
+ 138 0030 001000E3 		movw	r1, #:lower16:_ZNSt8ios_base4InitD1Ev
+ 139 0034 001040E3 		movt	r1, #:upper16:_ZNSt8ios_base4InitD1Ev
+ 140 0038 0400A0E1 		mov	r0, r4
+ 141 003c FEFFFFEB 		bl	__aeabi_atexit
+ 142              	.LVL9:
+ 143 0040 1080BDE8 		pop	{r4, pc}
+ 144              		.cfi_endproc
+ 145              	.LFE2472:
+ 146              		.cantunwind
+ 147              		.fnend
+ 149              		.section	.text._ZN5zxing6qrcode13FinderPatternC2Efff,"ax",%progbits
+ 150              		.align	2
+ 151              		.global	_ZN5zxing6qrcode13FinderPatternC2Efff
+ 152              		.syntax unified
+ 153              		.arm
+ 154              		.fpu neon
+ 156              	_ZN5zxing6qrcode13FinderPatternC2Efff:
+ 157              		.fnstart
+ 158              	.LFB2010:
+  28:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****     : ResultPoint(posX,posY), estimatedModuleSize_(estimatedModuleSize), count_(1) {}
+ 159              		.loc 2 28 0
+ 160              		.cfi_startproc
+ 161              		@ args = 0, pretend = 0, frame = 0
+ 162              		@ frame_needed = 0, uses_anonymous_args = 0
+ 163              	.LVL10:
+ 164 0000 10402DE9 		push	{r4, lr}
+ 165              		.save {r4, lr}
+ 166              		.cfi_def_cfa_offset 8
+ 167              		.cfi_offset 4, -8
+ 168              		.cfi_offset 14, -4
+ 169 0004 028B2DED 		vpush.64	{d8}
+ 170              		.vsave {d8}
+ 171              		.cfi_def_cfa_offset 16
+ 172              		.cfi_offset 80, -16
+ 173              		.cfi_offset 81, -12
+ 174 0008 0040A0E1 		mov	r4, r0
+ 175 000c 418AB0EE 		vmov.f32	s16, s2
+ 176              	.LBB23:
+  29:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** 		
+ 177              		.loc 2 29 0
+ 178 0010 FEFFFFEB 		bl	_ZN5zxing11ResultPointC2Eff
+ 179              	.LVL11:
+ 180 0014 18309FE5 		ldr	r3, .L17
+ 181 0018 003084E5 		str	r3, [r4]
+ 182 001c 048A84ED 		vstr.32	s16, [r4, #16]
+ 183 0020 0130A0E3 		mov	r3, #1
+ 184 0024 143084E5 		str	r3, [r4, #20]
+ 185              	.LBE23:
+ 186 0028 0400A0E1 		mov	r0, r4
+ 187 002c 028BBDEC 		vldm	sp!, {d8}
+ 188              		.cfi_restore 80
+ 189              		.cfi_restore 81
+ 190              		.cfi_def_cfa_offset 8
+ 191              	.LVL12:
+ 192 0030 1080BDE8 		pop	{r4, pc}
+ 193              	.LVL13:
+ 194              	.L18:
+ 195              		.align	2
+ 196              	.L17:
+ 197 0034 08000000 		.word	_ZTVN5zxing6qrcode13FinderPatternE+8
+ 198              		.cfi_endproc
+ 199              	.LFE2010:
+ 200              		.fnend
+ 202              		.global	_ZN5zxing6qrcode13FinderPatternC1Efff
+ 203              		.set	_ZN5zxing6qrcode13FinderPatternC1Efff,_ZN5zxing6qrcode13FinderPatternC2Efff
+ 204              		.section	.text._ZN5zxing6qrcode13FinderPatternC2Efffi,"ax",%progbits
+ 205              		.align	2
+ 206              		.global	_ZN5zxing6qrcode13FinderPatternC2Efffi
+ 207              		.syntax unified
+ 208              		.arm
+ 209              		.fpu neon
+ 211              	_ZN5zxing6qrcode13FinderPatternC2Efffi:
+ 212              		.fnstart
+ 213              	.LFB2013:
+  31:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****     : ResultPoint(posX,posY), estimatedModuleSize_(estimatedModuleSize), count_(count) {}
+ 214              		.loc 2 31 0
+ 215              		.cfi_startproc
+ 216              		@ args = 0, pretend = 0, frame = 0
+ 217              		@ frame_needed = 0, uses_anonymous_args = 0
+ 218              	.LVL14:
+ 219 0000 70402DE9 		push	{r4, r5, r6, lr}
+ 220              		.save {r4, r5, r6, lr}
+ 221              		.cfi_def_cfa_offset 16
+ 222              		.cfi_offset 4, -16
+ 223              		.cfi_offset 5, -12
+ 224              		.cfi_offset 6, -8
+ 225              		.cfi_offset 14, -4
+ 226 0004 028B2DED 		vpush.64	{d8}
+ 227              		.vsave {d8}
+ 228              		.cfi_def_cfa_offset 24
+ 229              		.cfi_offset 80, -24
+ 230              		.cfi_offset 81, -20
+ 231 0008 0040A0E1 		mov	r4, r0
+ 232 000c 418AB0EE 		vmov.f32	s16, s2
+ 233 0010 0150A0E1 		mov	r5, r1
+ 234              	.LBB24:
+  32:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** 		
+ 235              		.loc 2 32 0
+ 236 0014 FEFFFFEB 		bl	_ZN5zxing11ResultPointC2Eff
+ 237              	.LVL15:
+ 238 0018 14309FE5 		ldr	r3, .L21
+ 239 001c 003084E5 		str	r3, [r4]
+ 240 0020 048A84ED 		vstr.32	s16, [r4, #16]
+ 241 0024 145084E5 		str	r5, [r4, #20]
+ 242              	.LBE24:
+ 243 0028 0400A0E1 		mov	r0, r4
+ 244 002c 028BBDEC 		vldm	sp!, {d8}
+ 245              		.cfi_restore 80
+ 246              		.cfi_restore 81
+ 247              		.cfi_def_cfa_offset 16
+ 248              	.LVL16:
+ 249 0030 7080BDE8 		pop	{r4, r5, r6, pc}
+ 250              	.LVL17:
+ 251              	.L22:
+ 252              		.align	2
+ 253              	.L21:
+ 254 0034 08000000 		.word	_ZTVN5zxing6qrcode13FinderPatternE+8
+ 255              		.cfi_endproc
+ 256              	.LFE2013:
+ 257              		.fnend
+ 259              		.global	_ZN5zxing6qrcode13FinderPatternC1Efffi
+ 260              		.set	_ZN5zxing6qrcode13FinderPatternC1Efffi,_ZN5zxing6qrcode13FinderPatternC2Efffi
+ 261              		.section	.text._ZNK5zxing6qrcode13FinderPattern8getCountEv,"ax",%progbits
+ 262              		.align	2
+ 263              		.global	_ZNK5zxing6qrcode13FinderPattern8getCountEv
+ 264              		.syntax unified
+ 265              		.arm
+ 266              		.fpu neon
+ 268              	_ZNK5zxing6qrcode13FinderPattern8getCountEv:
+ 269              		.fnstart
+ 270              	.LFB2015:
+  34:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****   return count_;
+ 271              		.loc 2 34 0
+ 272              		.cfi_startproc
+ 273              		@ args = 0, pretend = 0, frame = 0
+ 274              		@ frame_needed = 0, uses_anonymous_args = 0
+ 275              		@ link register save eliminated.
+ 276              	.LVL18:
+  36:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** 		
+ 277              		.loc 2 36 0
+ 278 0000 140090E5 		ldr	r0, [r0, #20]
+ 279              	.LVL19:
+ 280 0004 1EFF2FE1 		bx	lr
+ 281              		.cfi_endproc
+ 282              	.LFE2015:
+ 283              		.cantunwind
+ 284              		.fnend
+ 286              		.section	.text._ZNK5zxing6qrcode13FinderPattern22getEstimatedModuleSizeEv,"ax",%progbits
+ 287              		.align	2
+ 288              		.global	_ZNK5zxing6qrcode13FinderPattern22getEstimatedModuleSizeEv
+ 289              		.syntax unified
+ 290              		.arm
+ 291              		.fpu neon
+ 293              	_ZNK5zxing6qrcode13FinderPattern22getEstimatedModuleSizeEv:
+ 294              		.fnstart
+ 295              	.LFB2016:
+  38:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****   return estimatedModuleSize_;
+ 296              		.loc 2 38 0
+ 297              		.cfi_startproc
+ 298              		@ args = 0, pretend = 0, frame = 0
+ 299              		@ frame_needed = 0, uses_anonymous_args = 0
+ 300              		@ link register save eliminated.
+ 301              	.LVL20:
+  40:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** 		
+ 302              		.loc 2 40 0
+ 303 0000 040A90ED 		vldr.32	s0, [r0, #16]
+ 304 0004 1EFF2FE1 		bx	lr
+ 305              		.cfi_endproc
+ 306              	.LFE2016:
+ 307              		.cantunwind
+ 308              		.fnend
+ 310              		.section	.text._ZN5zxing6qrcode13FinderPattern14incrementCountEv,"ax",%progbits
+ 311              		.align	2
+ 312              		.global	_ZN5zxing6qrcode13FinderPattern14incrementCountEv
+ 313              		.syntax unified
+ 314              		.arm
+ 315              		.fpu neon
+ 317              	_ZN5zxing6qrcode13FinderPattern14incrementCountEv:
+ 318              		.fnstart
+ 319              	.LFB2017:
+  42:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****   count_++;
+ 320              		.loc 2 42 0
+ 321              		.cfi_startproc
+ 322              		@ args = 0, pretend = 0, frame = 0
+ 323              		@ frame_needed = 0, uses_anonymous_args = 0
+ 324              		@ link register save eliminated.
+ 325              	.LVL21:
+  43:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****   // cerr << "ic " << getX() << " " << getY() << " " << count_ << endl;
+ 326              		.loc 2 43 0
+ 327 0000 143090E5 		ldr	r3, [r0, #20]
+ 328 0004 013083E2 		add	r3, r3, #1
+ 329 0008 143080E5 		str	r3, [r0, #20]
+ 330 000c 1EFF2FE1 		bx	lr
+ 331              		.cfi_endproc
+ 332              	.LFE2017:
+ 333              		.cantunwind
+ 334              		.fnend
+ 336              		.section	.text._ZNK5zxing6qrcode13FinderPattern11aboutEqualsEfff,"ax",%progbits
+ 337              		.align	2
+ 338              		.global	_ZNK5zxing6qrcode13FinderPattern11aboutEqualsEfff
+ 339              		.syntax unified
+ 340              		.arm
+ 341              		.fpu neon
+ 343              	_ZNK5zxing6qrcode13FinderPattern11aboutEqualsEfff:
+ 344              		.fnstart
+ 345              	.LFB2018:
+  53:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****   if (abs(i - getY()) <= moduleSize && abs(j - getX()) <= moduleSize) {
+ 346              		.loc 2 53 0
+ 347              		.cfi_startproc
+ 348              		@ args = 0, pretend = 0, frame = 0
+ 349              		@ frame_needed = 0, uses_anonymous_args = 0
+ 350              	.LVL22:
+ 351 0000 10402DE9 		push	{r4, lr}
+ 352              		.save {r4, lr}
+ 353              		.cfi_def_cfa_offset 8
+ 354              		.cfi_offset 4, -8
+ 355              		.cfi_offset 14, -4
+ 356 0004 048B2DED 		vpush.64	{d8, d9}
+ 357              		.vsave {d8, d9}
+ 358              		.cfi_def_cfa_offset 24
+ 359              		.cfi_offset 80, -24
+ 360              		.cfi_offset 81, -20
+ 361              		.cfi_offset 82, -16
+ 362              		.cfi_offset 83, -12
+ 363 0008 0040A0E1 		mov	r4, r0
+ 364 000c 408AF0EE 		vmov.f32	s17, s0
+ 365 0010 608AB0EE 		vmov.f32	s16, s1
+ 366 0014 419AB0EE 		vmov.f32	s18, s2
+ 367              	.LBB25:
+  54:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****     float moduleSizeDiff = abs(moduleSize - estimatedModuleSize_);
+ 368              		.loc 2 54 0
+ 369 0018 003090E5 		ldr	r3, [r0]
+ 370 001c 0C3093E5 		ldr	r3, [r3, #12]
+ 371 0020 33FF2FE1 		blx	r3
+ 372              	.LVL23:
+ 373 0024 400A38EE 		vsub.f32	s0, s16, s0
+ 374              	.LVL24:
+ 375              	.LBB26:
+ 376              	.LBB27:
+ 377              		.file 4 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+   1:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** // -*- C++ -*- C forwarding header.
+   2:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** 
+   3:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** // Copyright (C) 1997-2016 Free Software Foundation, Inc.
+   4:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** //
+   5:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** // This file is part of the GNU ISO C++ Library.  This library is free
+   6:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** // software; you can redistribute it and/or modify it under the
+   7:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** // terms of the GNU General Public License as published by the
+   8:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** // Free Software Foundation; either version 3, or (at your option)
+   9:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** // any later version.
+  10:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** 
+  11:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** // This library is distributed in the hope that it will be useful,
+  12:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** // but WITHOUT ANY WARRANTY; without even the implied warranty of
+  13:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  14:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** // GNU General Public License for more details.
+  15:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** 
+  16:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** // Under Section 7 of GPL version 3, you are granted additional
+  17:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** // permissions described in the GCC Runtime Library Exception, version
+  18:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** // 3.1, as published by the Free Software Foundation.
+  19:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** 
+  20:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** // You should have received a copy of the GNU General Public License and
+  21:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** // a copy of the GCC Runtime Library Exception along with this program;
+  22:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+  23:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** // <http://www.gnu.org/licenses/>.
+  24:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** 
+  25:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** /** @file include/cmath
+  26:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath ****  *  This is a Standard C++ Library file.  You should @c \#include this file
+  27:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath ****  *  in your programs, rather than any of the @a *.h implementation files.
+  28:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath ****  *
+  29:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath ****  *  This is the C++ version of the Standard C Library header @c math.h,
+  30:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath ****  *  and its contents are (mostly) the same as that header, but are all
+  31:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath ****  *  contained in the namespace @c std (except for names which are defined
+  32:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath ****  *  as macros in C).
+  33:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath ****  */
+  34:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** 
+  35:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** //
+  36:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** // ISO C++ 14882: 26.5  C library
+  37:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** //
+  38:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** 
+  39:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #pragma GCC system_header
+  40:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** 
+  41:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #include <bits/c++config.h>
+  42:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #include <bits/cpp_type_traits.h>
+  43:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #include <ext/type_traits.h>
+  44:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #define _GLIBCXX_INCLUDE_NEXT_C_HEADERS
+  45:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #include_next <math.h>
+  46:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #undef _GLIBCXX_INCLUDE_NEXT_C_HEADERS
+  47:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** 
+  48:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #ifndef _GLIBCXX_CMATH
+  49:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #define _GLIBCXX_CMATH 1
+  50:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** 
+  51:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** // Get rid of those macros defined in <math.h> in lieu of real functions.
+  52:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #undef abs
+  53:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #undef div
+  54:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #undef acos
+  55:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #undef asin
+  56:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #undef atan
+  57:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #undef atan2
+  58:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #undef ceil
+  59:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #undef cos
+  60:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #undef cosh
+  61:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #undef exp
+  62:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #undef fabs
+  63:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #undef floor
+  64:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #undef fmod
+  65:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #undef frexp
+  66:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #undef ldexp
+  67:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #undef log
+  68:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #undef log10
+  69:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #undef modf
+  70:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #undef pow
+  71:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #undef sin
+  72:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #undef sinh
+  73:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #undef sqrt
+  74:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #undef tan
+  75:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #undef tanh
+  76:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** 
+  77:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** extern "C++"
+  78:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** {
+  79:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** namespace std _GLIBCXX_VISIBILITY(default)
+  80:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** {
+  81:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** _GLIBCXX_BEGIN_NAMESPACE_VERSION
+  82:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** 
+  83:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #ifndef __CORRECT_ISO_CPP_MATH_H_PROTO
+  84:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath ****   inline _GLIBCXX_CONSTEXPR double
+  85:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath ****   abs(double __x)
+  86:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath ****   { return __builtin_fabs(__x); }
+  87:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #endif
+  88:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** 
+  89:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath **** #ifndef __CORRECT_ISO_CPP_MATH_H_PROTO
+  90:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath ****   inline _GLIBCXX_CONSTEXPR float
+  91:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath ****   abs(float __x)
+  92:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/cmath ****   { return __builtin_fabsf(__x); }
+ 378              		.loc 4 92 0
+ 379 0028 C00AB0EE 		vabs.f32	s0, s0
+ 380              	.LVL25:
+ 381              	.LBE27:
+ 382              	.LBE26:
+  54:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****     float moduleSizeDiff = abs(moduleSize - estimatedModuleSize_);
+ 383              		.loc 2 54 0
+ 384 002c C08AF4EE 		vcmpe.f32	s17, s0
+ 385 0030 10FAF1EE 		vmrs	APSR_nzcv, FPSCR
+ 386 0034 0E0000AA 		bge	.L40
+ 387 0038 0000A0E3 		mov	r0, #0
+ 388              	.L27:
+  54:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****     float moduleSizeDiff = abs(moduleSize - estimatedModuleSize_);
+ 389              		.loc 2 54 0 is_stmt 0 discriminator 6
+ 390 003c 000050E3 		cmp	r0, #0
+ 391 0040 0900000A 		beq	.L30
+ 392              	.LBB28:
+  55:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****     return moduleSizeDiff <= 1.0f || moduleSizeDiff <= estimatedModuleSize_;
+ 393              		.loc 2 55 0 is_stmt 1
+ 394 0044 047AD4ED 		vldr.32	s15, [r4, #16]
+ 395 0048 E78A78EE 		vsub.f32	s17, s17, s15
+ 396              	.LVL26:
+ 397              	.LBB29:
+ 398              	.LBB30:
+ 399              		.loc 4 92 0
+ 400 004c E88AF0EE 		vabs.f32	s17, s17
+ 401              	.LVL27:
+ 402              	.LBE30:
+ 403              	.LBE29:
+  56:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****   }
+ 404              		.loc 2 56 0
+ 405 0050 007AB7EE 		vmov.f32	s14, #1.0e+0
+ 406 0054 C78AF4EE 		vcmpe.f32	s17, s14
+ 407 0058 10FAF1EE 		vmrs	APSR_nzcv, FPSCR
+ 408 005c 0200009A 		bls	.L30
+  56:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****   }
+ 409              		.loc 2 56 0 is_stmt 0 discriminator 2
+ 410 0060 E78AF4EE 		vcmpe.f32	s17, s15
+ 411 0064 10FAF1EE 		vmrs	APSR_nzcv, FPSCR
+ 412 0068 0000A083 		movhi	r0, #0
+ 413              	.L30:
+ 414              	.LBE28:
+ 415              	.LBE25:
+  59:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** 		
+ 416              		.loc 2 59 0 is_stmt 1
+ 417 006c 048BBDEC 		vldm	sp!, {d8-d9}
+ 418              		.cfi_remember_state
+ 419              		.cfi_restore 82
+ 420              		.cfi_restore 83
+ 421              		.cfi_restore 80
+ 422              		.cfi_restore 81
+ 423              		.cfi_def_cfa_offset 8
+ 424              	.LVL28:
+ 425 0070 1080BDE8 		pop	{r4, pc}
+ 426              	.LVL29:
+ 427              	.L40:
+ 428              		.cfi_restore_state
+ 429              	.LBB33:
+  54:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****     float moduleSizeDiff = abs(moduleSize - estimatedModuleSize_);
+ 430              		.loc 2 54 0 discriminator 1
+ 431 0074 003094E5 		ldr	r3, [r4]
+ 432 0078 083093E5 		ldr	r3, [r3, #8]
+ 433 007c 0400A0E1 		mov	r0, r4
+ 434 0080 33FF2FE1 		blx	r3
+ 435              	.LVL30:
+ 436 0084 400A39EE 		vsub.f32	s0, s18, s0
+ 437              	.LVL31:
+ 438              	.LBB31:
+ 439              	.LBB32:
+ 440              		.loc 4 92 0 discriminator 1
+ 441 0088 C00AB0EE 		vabs.f32	s0, s0
+ 442              	.LVL32:
+ 443              	.LBE32:
+ 444              	.LBE31:
+  54:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****     float moduleSizeDiff = abs(moduleSize - estimatedModuleSize_);
+ 445              		.loc 2 54 0 discriminator 1
+ 446 008c C08AF4EE 		vcmpe.f32	s17, s0
+ 447 0090 10FAF1EE 		vmrs	APSR_nzcv, FPSCR
+  54:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****     float moduleSizeDiff = abs(moduleSize - estimatedModuleSize_);
+ 448              		.loc 2 54 0 is_stmt 0
+ 449 0094 0100A0A3 		movge	r0, #1
+ 450 0098 E7FFFFAA 		bge	.L27
+ 451              	.L38:
+ 452 009c 0000A0E3 		mov	r0, #0
+ 453 00a0 E5FFFFEA 		b	.L27
+ 454              	.LBE33:
+ 455              		.cfi_endproc
+ 456              	.LFE2018:
+ 457              		.fnend
+ 459              		.section	.text._ZNK5zxing6qrcode13FinderPattern15combineEstimateEfff,"ax",%progbits
+ 460              		.align	2
+ 461              		.global	_ZNK5zxing6qrcode13FinderPattern15combineEstimateEfff
+ 462              		.syntax unified
+ 463              		.arm
+ 464              		.fpu neon
+ 466              	_ZNK5zxing6qrcode13FinderPattern15combineEstimateEfff:
+ 467              		.fnstart
+ 468              	.LFB2019:
+  61:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****   // fprintf(stderr, "ce %f %f %f\n", i, j, newModuleSize);
+ 469              		.loc 2 61 0 is_stmt 1
+ 470              		.cfi_startproc
+ 471              		.cfi_personality 0,__gxx_personality_v0
+ 472              		.cfi_lsda 0,.LLSDA2019
+ 473              		@ args = 0, pretend = 0, frame = 0
+ 474              		@ frame_needed = 0, uses_anonymous_args = 0
+ 475              	.LVL33:
+ 476 0000 F0412DE9 		push	{r4, r5, r6, r7, r8, lr}
+ 477              		.save {r4, r5, r6, r7, r8, lr}
+ 478              		.cfi_def_cfa_offset 24
+ 479              		.cfi_offset 4, -24
+ 480              		.cfi_offset 5, -20
+ 481              		.cfi_offset 6, -16
+ 482              		.cfi_offset 7, -12
+ 483              		.cfi_offset 8, -8
+ 484              		.cfi_offset 14, -4
+ 485 0004 068B2DED 		vpush.64	{d8, d9, d10}
+ 486              		.vsave {d8, d9, d10}
+ 487              		.cfi_def_cfa_offset 48
+ 488              		.cfi_offset 80, -48
+ 489              		.cfi_offset 81, -44
+ 490              		.cfi_offset 82, -40
+ 491              		.cfi_offset 83, -36
+ 492              		.cfi_offset 84, -32
+ 493              		.cfi_offset 85, -28
+ 494 0008 0050A0E1 		mov	r5, r0
+ 495 000c 0140A0E1 		mov	r4, r1
+ 496 0010 409AB0EE 		vmov.f32	s18, s0
+ 497 0014 608AB0EE 		vmov.f32	s16, s1
+ 498 0018 418AF0EE 		vmov.f32	s17, s2
+  64:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****   float combinedX = (count_ * getX() + j) / combinedCount;
+ 499              		.loc 2 64 0
+ 500 001c 146091E5 		ldr	r6, [r1, #20]
+ 501 0020 017086E2 		add	r7, r6, #1
+ 502              	.LVL34:
+  65:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****   float combinedY = (count_ * getY() + i) / combinedCount;
+ 503              		.loc 2 65 0
+ 504 0024 003091E5 		ldr	r3, [r1]
+ 505 0028 083093E5 		ldr	r3, [r3, #8]
+ 506 002c 0100A0E1 		mov	r0, r1
+ 507              	.LVL35:
+ 508              	.LEHB0:
+ 509 0030 33FF2FE1 		blx	r3
+ 510              	.LVL36:
+ 511 0034 906A07EE 		vmov	s15, r6	@ int
+ 512 0038 E77AF8EE 		vcvt.f32.s32	s15, s15
+ 513 003c 808A07EE 		vmla.f32	s16, s15, s0
+ 514              	.LVL37:
+ 515 0040 487AF0EE 		vmov.f32	s15, s16
+ 516 0044 107A07EE 		vmov	s14, r7	@ int
+ 517 0048 C78AB8EE 		vcvt.f32.s32	s16, s14
+ 518 004c 889AC7EE 		vdiv.f32	s19, s15, s16
+ 519              	.LVL38:
+  66:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****   float combinedModuleSize = (count_ * getEstimatedModuleSize() + newModuleSize) / combinedCount;
+ 520              		.loc 2 66 0
+ 521 0050 146094E5 		ldr	r6, [r4, #20]
+ 522 0054 003094E5 		ldr	r3, [r4]
+ 523 0058 0C3093E5 		ldr	r3, [r3, #12]
+ 524 005c 0400A0E1 		mov	r0, r4
+ 525 0060 33FF2FE1 		blx	r3
+ 526              	.LVL39:
+ 527 0064 906A07EE 		vmov	s15, r6	@ int
+ 528 0068 E77AF8EE 		vcvt.f32.s32	s15, s15
+ 529 006c 809A07EE 		vmla.f32	s18, s15, s0
+ 530              	.LVL40:
+ 531 0070 08AA89EE 		vdiv.f32	s20, s18, s16
+ 532              	.LVL41:
+  67:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp ****   return Ref<FinderPattern>(new FinderPattern(combinedX, combinedY, combinedModuleSize, combinedCou
+ 533              		.loc 2 67 0
+ 534 0074 146094E5 		ldr	r6, [r4, #20]
+ 535 0078 0400A0E1 		mov	r0, r4
+ 536 007c FEFFFFEB 		bl	_ZNK5zxing6qrcode13FinderPattern22getEstimatedModuleSizeEv
+ 537              	.LVL42:
+ 538 0080 906A07EE 		vmov	s15, r6	@ int
+ 539 0084 E77AF8EE 		vcvt.f32.s32	s15, s15
+ 540 0088 808A47EE 		vmla.f32	s17, s15, s0
+ 541              	.LVL43:
+ 542 008c 889A88EE 		vdiv.f32	s18, s17, s16
+ 543              	.LVL44:
+  68:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** }
+ 544              		.loc 2 68 0
+ 545 0090 1800A0E3 		mov	r0, #24
+ 546 0094 FEFFFFEB 		bl	_Znwj
+ 547              	.LVL45:
+ 548              	.LEHE0:
+ 549 0098 0040A0E1 		mov	r4, r0
+ 550              	.LVL46:
+ 551 009c 0710A0E1 		mov	r1, r7
+ 552 00a0 491AB0EE 		vmov.f32	s2, s18
+ 553 00a4 4A0AF0EE 		vmov.f32	s1, s20
+ 554 00a8 690AB0EE 		vmov.f32	s0, s19
+ 555              	.LEHB1:
+ 556 00ac FEFFFFEB 		bl	_ZN5zxing6qrcode13FinderPatternC1Efffi
+ 557              	.LVL47:
+ 558              	.LEHE1:
+ 559              	.LBB42:
+ 560              	.LBB43:
+ 561              		.file 5 "/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/com
+   1:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** // -*- mode:c++; tab-width:2; indent-tabs-mode:nil; c-basic-offset:2 -*-
+   2:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** #ifndef __COUNTED_H__
+   3:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** #define __COUNTED_H__
+   4:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** 
+   5:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** /*
+   6:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  *  Copyright 2010 ZXing authors All rights reserved.
+   7:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  *
+   8:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  * Licensed under the Apache License, Version 2.0 (the "License");
+   9:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  * you may not use this file except in compliance with the License.
+  10:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  * You may obtain a copy of the License at
+  11:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  *
+  12:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  *      http://www.apache.org/licenses/LICENSE-2.0
+  13:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  *
+  14:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  * Unless required by applicable law or agreed to in writing, software
+  15:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  * distributed under the License is distributed on an "AS IS" BASIS,
+  16:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  17:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  * See the License for the specific language governing permissions and
+  18:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  * limitations under the License.
+  19:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  */
+  20:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** 
+  21:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** #include <iostream>
+  22:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** 
+  23:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** namespace zxing {
+  24:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** 
+  25:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** /* base class for reference-counted objects */
+  26:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** class Counted {
+  27:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** private:
+  28:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   unsigned int count_;
+  29:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** public:
+  30:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   Counted() :
+  31:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_(0) {
+  32:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+  33:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   virtual ~Counted() {
+  34:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+  35:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   Counted *retain() {
+  36:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     count_++;
+  37:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     return this;
+  38:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+  39:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   void release() {
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     count_--;
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+  44:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+  45:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+  46:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** 
+  47:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** 
+  48:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   /* return the current count for denugging purposes or similar */
+  49:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   int count() const {
+  50:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     return count_;
+  51:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+  52:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** };
+  53:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** 
+  54:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** /* counting reference to reference-counted objects */
+  55:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** template<typename T> class Ref {
+  56:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** private:
+  57:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** public:
+  58:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   T *object_;
+  59:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   explicit Ref(T *o = 0) :
+  60:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_(0) {
+ 562              		.loc 5 60 0
+ 563 00b0 0030A0E3 		mov	r3, #0
+ 564 00b4 003085E5 		str	r3, [r5]
+ 565              	.LVL48:
+ 566              	.LBB44:
+ 567              	.LBB45:
+  61:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     reset(o);
+  62:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+  63:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   Ref(const Ref &other) :
+  64:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_(0) {
+  65:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     reset(other.object_);
+  66:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+  67:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** 
+  68:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   template<class Y>
+  69:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   Ref(const Ref<Y> &other) :
+  70:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_(0) {
+  71:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     reset(other.object_);
+  72:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+  73:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** 
+  74:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   ~Ref() {
+  75:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (object_) {
+  76:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_->release();
+  77:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+  78:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+  79:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** 
+  80:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   void reset(T *o) {
+  81:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (o) {
+ 568              		.loc 5 81 0
+ 569 00b8 030054E1 		cmp	r4, r3
+ 570              	.LVL49:
+ 571              	.LBB46:
+ 572              	.LBB47:
+  36:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     return this;
+ 573              		.loc 5 36 0
+ 574 00bc 04309415 		ldrne	r3, [r4, #4]
+ 575 00c0 01308312 		addne	r3, r3, #1
+ 576 00c4 04308415 		strne	r3, [r4, #4]
+ 577              	.LVL50:
+ 578              	.L42:
+ 579              	.LBE47:
+ 580              	.LBE46:
+  82:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       o->retain();
+  83:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+  84:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (object_ != 0) {
+ 581              		.loc 5 84 0
+ 582 00c8 000095E5 		ldr	r0, [r5]
+ 583 00cc 000050E3 		cmp	r0, #0
+ 584 00d0 0400000A 		beq	.L43
+ 585              	.LVL51:
+ 586              	.LBB48:
+ 587              	.LBB49:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 588              		.loc 5 40 0
+ 589 00d4 043090E5 		ldr	r3, [r0, #4]
+ 590 00d8 013043E2 		sub	r3, r3, #1
+ 591 00dc 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 592              		.loc 5 41 0
+ 593 00e0 000053E3 		cmp	r3, #0
+ 594 00e4 0300000A 		beq	.L48
+ 595              	.LVL52:
+ 596              	.L43:
+ 597              	.LBE49:
+ 598              	.LBE48:
+  85:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_->release();
+  86:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+  87:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     object_ = o;
+ 599              		.loc 5 87 0
+ 600 00e8 004085E5 		str	r4, [r5]
+ 601              	.LVL53:
+ 602              	.LBE45:
+ 603              	.LBE44:
+ 604              	.LBE43:
+ 605              	.LBE42:
+ 606              		.loc 2 69 0
+ 607 00ec 0500A0E1 		mov	r0, r5
+ 608 00f0 068BBDEC 		vldm	sp!, {d8-d10}
+ 609              		.cfi_remember_state
+ 610              		.cfi_restore 84
+ 611              		.cfi_restore 85
+ 612              		.cfi_restore 82
+ 613              		.cfi_restore 83
+ 614              		.cfi_restore 80
+ 615              		.cfi_restore 81
+ 616              		.cfi_def_cfa_offset 24
+ 617              	.LVL54:
+ 618 00f4 F081BDE8 		pop	{r4, r5, r6, r7, r8, pc}
+ 619              	.LVL55:
+ 620              	.L48:
+ 621              		.cfi_restore_state
+ 622              	.LBB55:
+ 623              	.LBB54:
+ 624              	.LBB53:
+ 625              	.LBB52:
+ 626              	.LBB51:
+ 627              	.LBB50:
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 628              		.loc 5 42 0
+ 629 00f8 01300FE3 		movw	r3, #61441
+ 630 00fc AD3E4DE3 		movt	r3, 57005
+ 631 0100 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 632              		.loc 5 43 0
+ 633 0104 003090E5 		ldr	r3, [r0]
+ 634 0108 043093E5 		ldr	r3, [r3, #4]
+ 635 010c 33FF2FE1 		blx	r3
+ 636              	.LVL56:
+ 637 0110 F4FFFFEA 		b	.L43
+ 638              	.LVL57:
+ 639              	.L45:
+ 640              	.LBE50:
+ 641              	.LBE51:
+ 642              	.LBE52:
+ 643              	.LBE53:
+ 644              	.LBE54:
+ 645              	.LBE55:
+  68:../src/zxing_lib/zxing/qrcode/detector/FinderPattern.cpp **** }
+ 646              		.loc 2 68 0
+ 647 0114 1810A0E3 		mov	r1, #24
+ 648 0118 0400A0E1 		mov	r0, r4
+ 649 011c FEFFFFEB 		bl	_ZdlPvj
+ 650              	.LVL58:
+ 651              	.LEHB2:
+ 652 0120 FEFFFFEB 		bl	__cxa_end_cleanup
+ 653              	.LVL59:
+ 654              	.LEHE2:
+ 655              		.cfi_endproc
+ 656              	.LFE2019:
+ 657              		.global	__gxx_personality_v0
+ 658              		.personality	__gxx_personality_v0
+ 659              		.handlerdata
+ 660              	.LLSDA2019:
+ 661 0008 FF       		.byte	0xff
+ 662 0009 FF       		.byte	0xff
+ 663 000a 01       		.byte	0x1
+ 664 000b 0F       		.uleb128 .LLSDACSE2019-.LLSDACSB2019
+ 665              	.LLSDACSB2019:
+ 666 000c 30       		.uleb128 .LEHB0-.LFB2019
+ 667 000d 68       		.uleb128 .LEHE0-.LEHB0
+ 668 000e 00       		.uleb128 0
+ 669 000f 00       		.uleb128 0
+ 670 0010 AC01     		.uleb128 .LEHB1-.LFB2019
+ 671 0012 04       		.uleb128 .LEHE1-.LEHB1
+ 672 0013 9402     		.uleb128 .L45-.LFB2019
+ 673 0015 00       		.uleb128 0
+ 674 0016 A002     		.uleb128 .LEHB2-.LFB2019
+ 675 0018 04       		.uleb128 .LEHE2-.LEHB2
+ 676 0019 00       		.uleb128 0
+ 677 001a 00       		.uleb128 0
+ 678              	.LLSDACSE2019:
+ 679              		.section	.text._ZNK5zxing6qrcode13FinderPattern15combineEstimateEfff
+ 680              		.fnend
+ 682              		.section	.text._GLOBAL__sub_I__ZN5zxing6qrcode13FinderPatternC2Efff,"ax",%progbits
+ 683              		.align	2
+ 684              		.syntax unified
+ 685              		.arm
+ 686              		.fpu neon
+ 688              	_GLOBAL__sub_I__ZN5zxing6qrcode13FinderPatternC2Efff:
+ 689              		.fnstart
+ 690              	.LFB2473:
+ 691              		.loc 2 69 0
+ 692              		.cfi_startproc
+ 693              		@ args = 0, pretend = 0, frame = 0
+ 694              		@ frame_needed = 0, uses_anonymous_args = 0
+ 695 0000 10402DE9 		push	{r4, lr}
+ 696              		.cfi_def_cfa_offset 8
+ 697              		.cfi_offset 4, -8
+ 698              		.cfi_offset 14, -4
+ 699              		.loc 2 69 0
+ 700 0004 FF1F0FE3 		movw	r1, #65535
+ 701 0008 0100A0E3 		mov	r0, #1
+ 702 000c FEFFFFEB 		bl	_Z41__static_initialization_and_destruction_0ii
+ 703              	.LVL60:
+ 704 0010 1080BDE8 		pop	{r4, pc}
+ 705              		.cfi_endproc
+ 706              	.LFE2473:
+ 707              		.cantunwind
+ 708              		.fnend
+ 710              		.section	.init_array,"aw",%init_array
+ 711              		.align	2
+ 712 0000 00000000 		.word	_GLOBAL__sub_I__ZN5zxing6qrcode13FinderPatternC2Efff(target1)
+ 713              		.weak	_ZTSN5zxing6qrcode13FinderPatternE
+ 714              		.section	.rodata._ZTSN5zxing6qrcode13FinderPatternE,"aG",%progbits,_ZTSN5zxing6qrcode13FinderPatte
+ 715              		.align	2
+ 718              	_ZTSN5zxing6qrcode13FinderPatternE:
+ 719 0000 4E357A78 		.ascii	"N5zxing6qrcode13FinderPatternE\000"
+ 719      696E6736 
+ 719      7172636F 
+ 719      64653133 
+ 719      46696E64 
+ 720              		.weak	_ZTIN5zxing6qrcode13FinderPatternE
+ 721              		.section	.rodata._ZTIN5zxing6qrcode13FinderPatternE,"aG",%progbits,_ZTIN5zxing6qrcode13FinderPatte
+ 722              		.align	2
+ 725              	_ZTIN5zxing6qrcode13FinderPatternE:
+ 726 0000 08000000 		.word	_ZTVN10__cxxabiv120__si_class_type_infoE+8
+ 727 0004 00000000 		.word	_ZTSN5zxing6qrcode13FinderPatternE
+ 728 0008 00000000 		.word	_ZTIN5zxing11ResultPointE
+ 729              		.weak	_ZTVN5zxing6qrcode13FinderPatternE
+ 730              		.section	.rodata._ZTVN5zxing6qrcode13FinderPatternE,"aG",%progbits,_ZTVN5zxing6qrcode13FinderPatte
+ 731              		.align	2
+ 734              	_ZTVN5zxing6qrcode13FinderPatternE:
+ 735 0000 00000000 		.word	0
+ 736 0004 00000000 		.word	_ZTIN5zxing6qrcode13FinderPatternE
+ 737 0008 00000000 		.word	_ZN5zxing6qrcode13FinderPatternD1Ev
+ 738 000c 00000000 		.word	_ZN5zxing6qrcode13FinderPatternD0Ev
+ 739 0010 00000000 		.word	_ZNK5zxing11ResultPoint4getXEv
+ 740 0014 00000000 		.word	_ZNK5zxing11ResultPoint4getYEv
+ 741              		.section	.bss._ZStL8__ioinit,"aw",%nobits
+ 742              		.align	2
+ 743              		.set	.LANCHOR0,. + 0
+ 746              	_ZStL8__ioinit:
+ 747 0000 00       		.space	1
+ 748              		.text
+ 749              	.Letext0:
+ 750              		.file 6 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+ 751              		.file 7 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+ 752              		.file 8 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+ 753              		.file 9 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+ 754              		.file 10 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 755              		.file 11 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 756              		.file 12 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 757              		.file 13 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 758              		.file 14 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 759              		.file 15 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 760              		.file 16 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 761              		.file 17 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 762              		.file 18 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 763              		.file 19 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 764              		.file 20 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 765              		.file 21 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 766              		.file 22 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 767              		.file 23 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 768              		.file 24 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 769              		.file 25 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 770              		.file 26 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 771              		.file 27 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 772              		.file 28 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 773              		.file 29 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 774              		.file 30 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 775              		.file 31 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 776              		.file 32 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 777              		.file 33 "<built-in>"
+ 778              		.file 34 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 779              		.file 35 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 780              		.file 36 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 781              		.file 37 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 782              		.file 38 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 783              		.file 39 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 784              		.file 40 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 785              		.file 41 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 786              		.file 42 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 787              		.file 43 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 788              		.file 44 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 789              		.file 45 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 FinderPattern.cpp
+     /tmp/ccALgQUZ.s:17     .text._ZN5zxing6qrcode13FinderPatternD2Ev:0000000000000000 $a
+     /tmp/ccALgQUZ.s:23     .text._ZN5zxing6qrcode13FinderPatternD2Ev:0000000000000000 _ZN5zxing6qrcode13FinderPatternD2Ev
+     /tmp/ccALgQUZ.s:49     .text._ZN5zxing6qrcode13FinderPatternD2Ev:000000000000001c $d
+     /tmp/ccALgQUZ.s:734    .rodata._ZTVN5zxing6qrcode13FinderPatternE:0000000000000000 _ZTVN5zxing6qrcode13FinderPatternE
+.ARM.exidx.text._ZN5zxing6qrcode13FinderPatternD2Ev:0000000000000000 $d
+     /tmp/ccALgQUZ.s:23     .text._ZN5zxing6qrcode13FinderPatternD2Ev:0000000000000000 _ZN5zxing6qrcode13FinderPatternD1Ev
+     /tmp/ccALgQUZ.s:58     .text._ZN5zxing6qrcode13FinderPatternD0Ev:0000000000000000 $a
+     /tmp/ccALgQUZ.s:64     .text._ZN5zxing6qrcode13FinderPatternD0Ev:0000000000000000 _ZN5zxing6qrcode13FinderPatternD0Ev
+     /tmp/ccALgQUZ.s:96     .text._ZN5zxing6qrcode13FinderPatternD0Ev:0000000000000028 $d
+.ARM.exidx.text._ZN5zxing6qrcode13FinderPatternD0Ev:0000000000000000 $d
+     /tmp/ccALgQUZ.s:103    .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $a
+     /tmp/ccALgQUZ.s:108    .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 _Z41__static_initialization_and_destruction_0ii
+     /tmp/ccALgQUZ.s:743    .bss._ZStL8__ioinit:0000000000000000 .LANCHOR0
+.ARM.exidx.text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $d
+     /tmp/ccALgQUZ.s:150    .text._ZN5zxing6qrcode13FinderPatternC2Efff:0000000000000000 $a
+     /tmp/ccALgQUZ.s:156    .text._ZN5zxing6qrcode13FinderPatternC2Efff:0000000000000000 _ZN5zxing6qrcode13FinderPatternC2Efff
+     /tmp/ccALgQUZ.s:197    .text._ZN5zxing6qrcode13FinderPatternC2Efff:0000000000000034 $d
+.ARM.exidx.text._ZN5zxing6qrcode13FinderPatternC2Efff:0000000000000000 $d
+     /tmp/ccALgQUZ.s:156    .text._ZN5zxing6qrcode13FinderPatternC2Efff:0000000000000000 _ZN5zxing6qrcode13FinderPatternC1Efff
+     /tmp/ccALgQUZ.s:205    .text._ZN5zxing6qrcode13FinderPatternC2Efffi:0000000000000000 $a
+     /tmp/ccALgQUZ.s:211    .text._ZN5zxing6qrcode13FinderPatternC2Efffi:0000000000000000 _ZN5zxing6qrcode13FinderPatternC2Efffi
+     /tmp/ccALgQUZ.s:254    .text._ZN5zxing6qrcode13FinderPatternC2Efffi:0000000000000034 $d
+.ARM.exidx.text._ZN5zxing6qrcode13FinderPatternC2Efffi:0000000000000000 $d
+     /tmp/ccALgQUZ.s:211    .text._ZN5zxing6qrcode13FinderPatternC2Efffi:0000000000000000 _ZN5zxing6qrcode13FinderPatternC1Efffi
+     /tmp/ccALgQUZ.s:262    .text._ZNK5zxing6qrcode13FinderPattern8getCountEv:0000000000000000 $a
+     /tmp/ccALgQUZ.s:268    .text._ZNK5zxing6qrcode13FinderPattern8getCountEv:0000000000000000 _ZNK5zxing6qrcode13FinderPattern8getCountEv
+.ARM.exidx.text._ZNK5zxing6qrcode13FinderPattern8getCountEv:0000000000000000 $d
+     /tmp/ccALgQUZ.s:287    .text._ZNK5zxing6qrcode13FinderPattern22getEstimatedModuleSizeEv:0000000000000000 $a
+     /tmp/ccALgQUZ.s:293    .text._ZNK5zxing6qrcode13FinderPattern22getEstimatedModuleSizeEv:0000000000000000 _ZNK5zxing6qrcode13FinderPattern22getEstimatedModuleSizeEv
+.ARM.exidx.text._ZNK5zxing6qrcode13FinderPattern22getEstimatedModuleSizeEv:0000000000000000 $d
+     /tmp/ccALgQUZ.s:311    .text._ZN5zxing6qrcode13FinderPattern14incrementCountEv:0000000000000000 $a
+     /tmp/ccALgQUZ.s:317    .text._ZN5zxing6qrcode13FinderPattern14incrementCountEv:0000000000000000 _ZN5zxing6qrcode13FinderPattern14incrementCountEv
+.ARM.exidx.text._ZN5zxing6qrcode13FinderPattern14incrementCountEv:0000000000000000 $d
+     /tmp/ccALgQUZ.s:337    .text._ZNK5zxing6qrcode13FinderPattern11aboutEqualsEfff:0000000000000000 $a
+     /tmp/ccALgQUZ.s:343    .text._ZNK5zxing6qrcode13FinderPattern11aboutEqualsEfff:0000000000000000 _ZNK5zxing6qrcode13FinderPattern11aboutEqualsEfff
+.ARM.exidx.text._ZNK5zxing6qrcode13FinderPattern11aboutEqualsEfff:0000000000000000 $d
+     /tmp/ccALgQUZ.s:460    .text._ZNK5zxing6qrcode13FinderPattern15combineEstimateEfff:0000000000000000 $a
+     /tmp/ccALgQUZ.s:466    .text._ZNK5zxing6qrcode13FinderPattern15combineEstimateEfff:0000000000000000 _ZNK5zxing6qrcode13FinderPattern15combineEstimateEfff
+.ARM.extab.text._ZNK5zxing6qrcode13FinderPattern15combineEstimateEfff:0000000000000000 $d
+.ARM.exidx.text._ZNK5zxing6qrcode13FinderPattern15combineEstimateEfff:0000000000000000 $d
+     /tmp/ccALgQUZ.s:683    .text._GLOBAL__sub_I__ZN5zxing6qrcode13FinderPatternC2Efff:0000000000000000 $a
+     /tmp/ccALgQUZ.s:688    .text._GLOBAL__sub_I__ZN5zxing6qrcode13FinderPatternC2Efff:0000000000000000 _GLOBAL__sub_I__ZN5zxing6qrcode13FinderPatternC2Efff
+.ARM.exidx.text._GLOBAL__sub_I__ZN5zxing6qrcode13FinderPatternC2Efff:0000000000000000 $d
+     /tmp/ccALgQUZ.s:711    .init_array:0000000000000000 $d
+     /tmp/ccALgQUZ.s:718    .rodata._ZTSN5zxing6qrcode13FinderPatternE:0000000000000000 _ZTSN5zxing6qrcode13FinderPatternE
+     /tmp/ccALgQUZ.s:715    .rodata._ZTSN5zxing6qrcode13FinderPatternE:0000000000000000 $d
+     /tmp/ccALgQUZ.s:725    .rodata._ZTIN5zxing6qrcode13FinderPatternE:0000000000000000 _ZTIN5zxing6qrcode13FinderPatternE
+     /tmp/ccALgQUZ.s:722    .rodata._ZTIN5zxing6qrcode13FinderPatternE:0000000000000000 $d
+     /tmp/ccALgQUZ.s:731    .rodata._ZTVN5zxing6qrcode13FinderPatternE:0000000000000000 $d
+     /tmp/ccALgQUZ.s:742    .bss._ZStL8__ioinit:0000000000000000 $d
+     /tmp/ccALgQUZ.s:746    .bss._ZStL8__ioinit:0000000000000000 _ZStL8__ioinit
+                     .debug_frame:0000000000000010 $d
+                           .group:0000000000000000 _ZN5zxing6qrcode13FinderPatternD5Ev
+                           .group:0000000000000000 wm4.0.cd1e96de8a8c4f34e746a820772853ad
+                           .group:0000000000000000 wm4.cconfig.h.31.21483d26c3710eb58c7a44c20d82c775
+                           .group:0000000000000000 wm4.cpu_defines.h.31.54d44f9d3e7c42875c5a7fd49795eb93
+                           .group:0000000000000000 wm4.cconfig.h.515.5e729db314ae74226e291b4ae081e353
+                           .group:0000000000000000 wm4._newlib_version.h.4.3572908597b70d672d181fc7fc501c19
+                           .group:0000000000000000 wm4.newlib.h.21.59901f4bf241ab46c63694665baa7297
+                           .group:0000000000000000 wm4.features.h.22.5cdadbb3efe495d1c9e38350b8c376c7
+                           .group:0000000000000000 wm4.config.h.219.65a553ab5bef5482f0d7880b0d33015e
+                           .group:0000000000000000 wm4._ansi.h.23.1ee1144430bedaab1a14c7b57a6c8384
+                           .group:0000000000000000 wm4.stddef.h.39.fa2e86d241f4df50b9327c72832885e1
+                           .group:0000000000000000 wm4._default_types.h.6.959254cf5f09734ea7516c89e8bb21bd
+                           .group:0000000000000000 wm4.lock.h.2.1461d1fff82dffe8bfddc23307f6484f
+                           .group:0000000000000000 wm4._types.h.125.5cf8a495f1f7ef36777ad868a1e32068
+                           .group:0000000000000000 wm4.stddef.h.161.7e98c9c86da0ed2d27af2ef92af7d013
+                           .group:0000000000000000 wm4._types.h.183.c226d164ceca1f2ecb9ae9360c54a098
+                           .group:0000000000000000 wm4.reent.h.17.23b059516345f8f5abfa01ddc379570f
+                           .group:0000000000000000 wm4.wchar.h.8.acdef4366e64def8c588421024712d23
+                           .group:0000000000000000 wm4.stddef.h.161.9f48187563b2a85291a91832aa425498
+                           .group:0000000000000000 wm4.cdefs.h.47.9bc8274c84fddbf05edd550eb0bf48cd
+                           .group:0000000000000000 wm4.stdarg.h.34.3a23a216c0c293b3d2ea2e89281481e6
+                           .group:0000000000000000 wm4.wchar.h.29.7ec19a1c094c7903732828676a0a91b2
+                           .group:0000000000000000 wm4.wchar.h.76.90478bd2c784f576b769c4535c98839d
+                           .group:0000000000000000 wm4.cwchar.48.c4e882638bf84f6da89479dda6fe8e17
+                           .group:0000000000000000 wm4.atomic_lockfree_defines.h.31.d5c6334fb1e95c9462b052951f1411df
+                           .group:0000000000000000 wm4.exception_defines.h.31.ca6841b9be3287386aafc5c717935b2e
+                           .group:0000000000000000 wm4.concept_check.h.31.f19605d278e56917c68a56d378be308c
+                           .group:0000000000000000 wm4.type_traits.30.967137c3695c72a3f7c65b682f1a104e
+                           .group:0000000000000000 wm4.move.h.152.41d7b9e6779674d169b7813982cfa003
+                           .group:0000000000000000 wm4.cpp_type_traits.h.33.9f2bfd8c4471a9a299f6da3ec24c745c
+                           .group:0000000000000000 wm4.numeric_traits.h.30.aa01a98564b7e55086aad9e53c7e5c53
+                           .group:0000000000000000 wm4.assertions.h.30.51d443923f0d242550e04246a7819b39
+                           .group:0000000000000000 wm4.stl_iterator.h.406.6718c794fa6a1331f8340656b5c8c55c
+                           .group:0000000000000000 wm4.debug.h.30.5c1f223b12199e851d4d42805b788ccf
+                           .group:0000000000000000 wm4.stl_algobase.h.491.ec4060988bfff82dc579decdb75c72d6
+                           .group:0000000000000000 wm4.stdint.h.4.659be5aa44c4ab4eb7c7cc2b24d8ceee
+                           .group:0000000000000000 wm4._intsup.h.10.cce27fed8484c08a33f522034c30d2b5
+                           .group:0000000000000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:0000000000000000 wm4.stdint.h.23.4c107c5a20920bfc6e94fb2672bbd9ee
+                           .group:0000000000000000 wm4.stddef.h.161.38688f2eb958a8ed58fdb61ffe554c94
+                           .group:0000000000000000 wm4.locale.h.16.90d16f662e7119f5b192650a45179c6c
+                           .group:0000000000000000 wm4.clocale.45.c36d2d5b631a875aa5273176b54fdf0f
+                           .group:0000000000000000 wm4.ctype.h.2.cf64fe4c5e8c0ac0f52f1143312d4909
+                           .group:0000000000000000 wm4.cctype.45.0da5714876b0be7f2d816b53d9670403
+                           .group:0000000000000000 wm4.gthr.h.27.ceb1c66b926f052afcba57e8784df0d4
+                           .group:0000000000000000 wm4.gthrdefault.h.27.edc94d4398c0534988962be77dc3c2e1
+                           .group:0000000000000000 wm4.atomic_word.h.30.9e0ac69fd462d5e650933e05133b4afa
+                           .group:0000000000000000 wm4.allocator.h.52.0ceafb36dc1b82dbfa6b05003082e3f5
+                           .group:0000000000000000 wm4.stl_function.h.57.472a8ffdc5144ddcd047558cd884dda0
+                           .group:0000000000000000 wm4.alloc_traits.h.31.c41c7c4789404962122a4e991dfa3abf
+                           .group:0000000000000000 wm4.cstdlib.44.52c5efdfb0f3c176bd11e611a0b94959
+                           .group:0000000000000000 wm4.stdlib.h.13.4ed386f5c1a80d71e72172885d946ef2
+                           .group:0000000000000000 wm4.alloca.h.8.dfc0c703c47ec3e69746825b17d9e66d
+                           .group:0000000000000000 wm4.stdlib.h.56.d4493cd3736e51e9d56335045f26df45
+                           .group:0000000000000000 wm4.cstdlib.76.ae666499c8f9b0ace1b4b23fe143da2c
+                           .group:0000000000000000 wm4.stdio.h.27.3fc80220048df77954e38daec3bb9670
+                           .group:0000000000000000 wm4.types.h.40.e8c16e7ec36ba55f133d0616070e25fc
+                           .group:0000000000000000 wm4._endian.h.31.65a10590763c3dde1ac4a7f66d7d4891
+                           .group:0000000000000000 wm4.endian.h.9.49f3a4695c1b61e8a0808de3c4a106cb
+                           .group:0000000000000000 wm4._timeval.h.30.0e8bfd94e85db17dda3286ee81496fe6
+                           .group:0000000000000000 wm4.timespec.h.41.d855182eb0e690443ab8651bcedca6e1
+                           .group:0000000000000000 wm4.select.h.30.bbece7fa40993a78092dcc5805132560
+                           .group:0000000000000000 wm4.types.h.69.ed3eae3cf73030a737515151ebcab7a1
+                           .group:0000000000000000 wm4.stdio.h.2.4aa87247282eca6c8f36f9de33d8df1a
+                           .group:0000000000000000 wm4.stdio.h.81.edc2fd66146f9635463a729e8fe0add3
+                           .group:0000000000000000 wm4.cstdio.45.1ffaea3e7c26dce1e03f5847a7439edb
+                           .group:0000000000000000 wm4.errno.h.2.ba016d646105af6cad23be83630b6a3f
+                           .group:0000000000000000 wm4.errno.h.9.1ecd7b1049497a0ab61da0f6cbd4b0c6
+                           .group:0000000000000000 wm4.functional_hash.h.98.3bf7680ffcc8d24d09fa83ac1339c79d
+                           .group:0000000000000000 wm4.wctype.h.2.898a9b94aa35d125e245195b099726a8
+                           .group:0000000000000000 wm4.wctype.h.21.aec4d35c940c33b3f9c6f879c49edcd8
+                           .group:0000000000000000 wm4.cwctype.54.6582aca101688c1c3785d03bc15e2af6
+                           .group:0000000000000000 wm4.locale_facets.h.56.0d4bb655ce5e76ea564363ed7c5a34fc
+                           .group:0000000000000000 wm4.math.h.13.4f1ab8d1725735081bbdb9ebcf6dba66
+                           .group:0000000000000000 wm4.cmath.46.d6e5b776115d39075860ed881d18f087
+
+UNDEFINED SYMBOLS
+_ZN5zxing11ResultPointD2Ev
+_ZdlPvj
+_ZNSt8ios_base4InitC1Ev
+__dso_handle
+_ZNSt8ios_base4InitD1Ev
+__aeabi_atexit
+_ZN5zxing11ResultPointC2Eff
+__aeabi_unwind_cpp_pr0
+__gxx_personality_v0
+_Znwj
+__cxa_end_cleanup
+_ZTVN10__cxxabiv120__si_class_type_infoE
+_ZTIN5zxing11ResultPointE
+_ZNK5zxing11ResultPoint4getXEv
+_ZNK5zxing11ResultPoint4getYEv

@@ -1,0 +1,3525 @@
+   1              		.cpu cortex-a9
+   2              		.eabi_attribute 28, 1
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.file	"BigIntegerAlgorithms.cpp"
+  13              		.text
+  14              	.Ltext0:
+  15              		.cfi_sections	.debug_frame
+  16              		.section	.text._Z17extendedEuclidean10BigIntegerS_RS_S0_S0_,"ax",%progbits
+  17              		.align	2
+  18              		.global	_Z17extendedEuclidean10BigIntegerS_RS_S0_S0_
+  19              		.syntax unified
+  20              		.arm
+  21              		.fpu neon
+  23              	_Z17extendedEuclidean10BigIntegerS_RS_S0_S0_:
+  24              		.fnstart
+  25              	.LFB104:
+  26              		.file 1 "../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp"
+   1:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** #include "BigIntegerAlgorithms.hh"
+   2:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 
+   3:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** BigUnsigned gcd(BigUnsigned a, BigUnsigned b) {
+   4:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 	BigUnsigned trash;
+   5:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 	// Neat in-place alternating technique.
+   6:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 	for (;;) {
+   7:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 		if (b.isZero())
+   8:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 			return a;
+   9:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 		a.divideWithRemainder(b, trash);
+  10:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 		if (a.isZero())
+  11:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 			return b;
+  12:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 		b.divideWithRemainder(a, trash);
+  13:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 	}
+  14:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** }
+  15:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 
+  16:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** void extendedEuclidean(BigInteger m, BigInteger n,
+  17:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 		BigInteger &g, BigInteger &r, BigInteger &s) {
+  27              		.loc 1 17 0
+  28              		.cfi_startproc
+  29              		.cfi_personality 0,__gxx_personality_v0
+  30              		.cfi_lsda 0,.LLSDA104
+  31              		@ args = 4, pretend = 0, frame = 144
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              	.LVL0:
+  34 0000 F0412DE9 		push	{r4, r5, r6, r7, r8, lr}
+  35              		.save {r4, r5, r6, r7, r8, lr}
+  36              		.cfi_def_cfa_offset 24
+  37              		.cfi_offset 4, -24
+  38              		.cfi_offset 5, -20
+  39              		.cfi_offset 6, -16
+  40              		.cfi_offset 7, -12
+  41              		.cfi_offset 8, -8
+  42              		.cfi_offset 14, -4
+  43              		.pad #144
+  44 0004 90D04DE2 		sub	sp, sp, #144
+  45              		.cfi_def_cfa_offset 168
+  46 0008 A8809DE5 		ldr	r8, [sp, #168]
+  18:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 	if (&g == &r || &g == &s || &r == &s)
+  47              		.loc 1 18 0
+  48 000c 080052E1 		cmp	r2, r8
+  49 0010 03005211 		cmpne	r2, r3
+  50 0014 0C00000A 		beq	.L2
+  51 0018 0050A0E1 		mov	r5, r0
+  52 001c 0140A0E1 		mov	r4, r1
+  53 0020 0260A0E1 		mov	r6, r2
+  54 0024 0370A0E1 		mov	r7, r3
+  55              		.loc 1 18 0 is_stmt 0 discriminator 1
+  56 0028 080053E1 		cmp	r3, r8
+  57 002c 0600000A 		beq	.L2
+  19:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 		throw "BigInteger extendedEuclidean: Outputs are aliased";
+  20:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 	BigInteger r1(1), s1(0), r2(0), s2(1), q;
+  58              		.loc 1 20 0 is_stmt 1
+  59 0030 0110A0E3 		mov	r1, #1
+  60              	.LVL1:
+  61 0034 40008DE2 		add	r0, sp, #64
+  62              	.LVL2:
+  63              	.LEHB0:
+  64 0038 FEFFFFEB 		bl	_ZN10BigIntegerC1Ei
+  65              	.LVL3:
+  66              	.LEHE0:
+  67 003c 0010A0E3 		mov	r1, #0
+  68 0040 30008DE2 		add	r0, sp, #48
+  69              	.LEHB1:
+  70 0044 FEFFFFEB 		bl	_ZN10BigIntegerC1Ei
+  71              	.LVL4:
+  72              	.LEHE1:
+  73 0048 080000EA 		b	.L63
+  74              	.LVL5:
+  75              	.L2:
+  19:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 		throw "BigInteger extendedEuclidean: Outputs are aliased";
+  76              		.loc 1 19 0
+  77 004c 0400A0E3 		mov	r0, #4
+  78              	.LVL6:
+  79 0050 FEFFFFEB 		bl	__cxa_allocate_exception
+  80              	.LVL7:
+  81 0054 003000E3 		movw	r3, #:lower16:.LC0
+  82 0058 003040E3 		movt	r3, #:upper16:.LC0
+  83 005c 003080E5 		str	r3, [r0]
+  84 0060 0020A0E3 		mov	r2, #0
+  85 0064 001000E3 		movw	r1, #:lower16:_ZTIPKc
+  86 0068 001040E3 		movt	r1, #:upper16:_ZTIPKc
+  87              	.LEHB2:
+  88 006c FEFFFFEB 		bl	__cxa_throw
+  89              	.LVL8:
+  90              	.LEHE2:
+  91              	.L63:
+  92              		.loc 1 20 0 discriminator 3
+  93 0070 0010A0E3 		mov	r1, #0
+  94 0074 20008DE2 		add	r0, sp, #32
+  95              	.LEHB3:
+  96 0078 FEFFFFEB 		bl	_ZN10BigIntegerC1Ei
+  97              	.LVL9:
+  98              	.LEHE3:
+  99              		.loc 1 20 0 is_stmt 0 discriminator 5
+ 100 007c 0110A0E3 		mov	r1, #1
+ 101 0080 10008DE2 		add	r0, sp, #16
+ 102              	.LEHB4:
+ 103 0084 FEFFFFEB 		bl	_ZN10BigIntegerC1Ei
+ 104              	.LVL10:
+ 105              	.LEHE4:
+ 106              	.LBB610:
+ 107              	.LBB611:
+ 108              	.LBB612:
+ 109              		.file 2 "../src/zxing_lib/bigint/BigInteger.hh"
+   1:../src/zxing_lib/bigint/BigInteger.hh **** #ifndef BIGINTEGER_H
+   2:../src/zxing_lib/bigint/BigInteger.hh **** #define BIGINTEGER_H
+   3:../src/zxing_lib/bigint/BigInteger.hh **** 
+   4:../src/zxing_lib/bigint/BigInteger.hh **** #include "BigUnsigned.hh"
+   5:../src/zxing_lib/bigint/BigInteger.hh **** 
+   6:../src/zxing_lib/bigint/BigInteger.hh **** /* A BigInteger object represents a signed integer of size limited only by
+   7:../src/zxing_lib/bigint/BigInteger.hh ****  * available memory.  BigUnsigneds support most mathematical operators and can
+   8:../src/zxing_lib/bigint/BigInteger.hh ****  * be converted to and from most primitive integer types.
+   9:../src/zxing_lib/bigint/BigInteger.hh ****  *
+  10:../src/zxing_lib/bigint/BigInteger.hh ****  * A BigInteger is just an aggregate of a BigUnsigned and a sign.  (It is no
+  11:../src/zxing_lib/bigint/BigInteger.hh ****  * longer derived from BigUnsigned because that led to harmful implicit
+  12:../src/zxing_lib/bigint/BigInteger.hh ****  * conversions.) */
+  13:../src/zxing_lib/bigint/BigInteger.hh **** class BigInteger {
+  14:../src/zxing_lib/bigint/BigInteger.hh **** 
+  15:../src/zxing_lib/bigint/BigInteger.hh **** public:
+  16:../src/zxing_lib/bigint/BigInteger.hh **** 	typedef BigUnsigned::Blk Blk;
+  17:../src/zxing_lib/bigint/BigInteger.hh **** 	typedef BigUnsigned::Index Index;
+  18:../src/zxing_lib/bigint/BigInteger.hh **** 	typedef BigUnsigned::CmpRes CmpRes;
+  19:../src/zxing_lib/bigint/BigInteger.hh **** 	static const CmpRes
+  20:../src/zxing_lib/bigint/BigInteger.hh **** 		less    = BigUnsigned::less   ,
+  21:../src/zxing_lib/bigint/BigInteger.hh **** 		equal   = BigUnsigned::equal  ,
+  22:../src/zxing_lib/bigint/BigInteger.hh **** 		greater = BigUnsigned::greater;
+  23:../src/zxing_lib/bigint/BigInteger.hh **** 	// Enumeration for the sign of a BigInteger.
+  24:../src/zxing_lib/bigint/BigInteger.hh **** 	enum Sign { negative = -1, zero = 0, positive = 1 };
+  25:../src/zxing_lib/bigint/BigInteger.hh **** 
+  26:../src/zxing_lib/bigint/BigInteger.hh **** protected:
+  27:../src/zxing_lib/bigint/BigInteger.hh **** 	Sign sign;
+  28:../src/zxing_lib/bigint/BigInteger.hh **** 	BigUnsigned mag;
+  29:../src/zxing_lib/bigint/BigInteger.hh **** 
+  30:../src/zxing_lib/bigint/BigInteger.hh **** public:
+  31:../src/zxing_lib/bigint/BigInteger.hh **** 	// Constructs zero.
+  32:../src/zxing_lib/bigint/BigInteger.hh **** 	BigInteger() : sign(zero), mag() {}
+ 110              		.loc 2 32 0 is_stmt 1
+ 111 0088 0030A0E3 		mov	r3, #0
+ 112 008c 0030CDE5 		strb	r3, [sp]
+ 113              	.LVL11:
+ 114              	.LBB613:
+ 115              	.LBB614:
+ 116              	.LBB615:
+ 117              	.LBB616:
+ 118              		.file 3 "../src/zxing_lib/bigint/NumberlikeArray.hh"
+   1:../src/zxing_lib/bigint/NumberlikeArray.hh **** #ifndef NUMBERLIKEARRAY_H
+   2:../src/zxing_lib/bigint/NumberlikeArray.hh **** #define NUMBERLIKEARRAY_H
+   3:../src/zxing_lib/bigint/NumberlikeArray.hh **** 
+   4:../src/zxing_lib/bigint/NumberlikeArray.hh **** // Make sure we have NULL.
+   5:../src/zxing_lib/bigint/NumberlikeArray.hh **** #ifndef NULL
+   6:../src/zxing_lib/bigint/NumberlikeArray.hh **** #define NULL 0
+   7:../src/zxing_lib/bigint/NumberlikeArray.hh **** #endif
+   8:../src/zxing_lib/bigint/NumberlikeArray.hh **** 
+   9:../src/zxing_lib/bigint/NumberlikeArray.hh **** /* A NumberlikeArray<Blk> object holds a heap-allocated array of Blk with a
+  10:../src/zxing_lib/bigint/NumberlikeArray.hh ****  * length and a capacity and provides basic memory management features.
+  11:../src/zxing_lib/bigint/NumberlikeArray.hh ****  * BigUnsigned and BigUnsignedInABase both subclass it.
+  12:../src/zxing_lib/bigint/NumberlikeArray.hh ****  *
+  13:../src/zxing_lib/bigint/NumberlikeArray.hh ****  * NumberlikeArray provides no information hiding.  Subclasses should use
+  14:../src/zxing_lib/bigint/NumberlikeArray.hh ****  * nonpublic inheritance and manually expose members as desired using
+  15:../src/zxing_lib/bigint/NumberlikeArray.hh ****  * declarations like this:
+  16:../src/zxing_lib/bigint/NumberlikeArray.hh ****  *
+  17:../src/zxing_lib/bigint/NumberlikeArray.hh ****  * public:
+  18:../src/zxing_lib/bigint/NumberlikeArray.hh ****  *     NumberlikeArray< the-type-argument >::getLength;
+  19:../src/zxing_lib/bigint/NumberlikeArray.hh ****  */
+  20:../src/zxing_lib/bigint/NumberlikeArray.hh **** template <class Blk>
+  21:../src/zxing_lib/bigint/NumberlikeArray.hh **** class NumberlikeArray {
+  22:../src/zxing_lib/bigint/NumberlikeArray.hh **** public:
+  23:../src/zxing_lib/bigint/NumberlikeArray.hh **** 
+  24:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	// Type for the index of a block in the array
+  25:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	typedef unsigned int Index;
+  26:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	// The number of bits in a block, defined below.
+  27:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	static const unsigned int N;
+  28:../src/zxing_lib/bigint/NumberlikeArray.hh **** 
+  29:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	// The current allocated capacity of this NumberlikeArray (in blocks)
+  30:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	Index cap;
+  31:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	// The actual length of the value stored in this NumberlikeArray (in blocks)
+  32:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	Index len;
+  33:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	// Heap-allocated array of the blocks (can be NULL if len == 0)
+  34:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	Blk *blk;
+  35:../src/zxing_lib/bigint/NumberlikeArray.hh **** 
+  36:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	// Constructs a ``zero'' NumberlikeArray with the given capacity.
+  37:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	NumberlikeArray(Index c) : cap(c), len(0) { 
+  38:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		blk = (cap > 0) ? (new Blk[cap]) : NULL;
+  39:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+  40:../src/zxing_lib/bigint/NumberlikeArray.hh **** 
+  41:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	/* Constructs a zero NumberlikeArray without allocating a backing array.
+  42:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	 * A subclass that doesn't know the needed capacity at initialization
+  43:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	 * time can use this constructor and then overwrite blk without first
+  44:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	 * deleting it. */
+  45:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	NumberlikeArray() : cap(0), len(0) {
+ 119              		.loc 3 45 0
+ 120 0090 04308DE5 		str	r3, [sp, #4]
+ 121 0094 08308DE5 		str	r3, [sp, #8]
+  46:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		blk = NULL;
+ 122              		.loc 3 46 0
+ 123 0098 0C308DE5 		str	r3, [sp, #12]
+ 124              	.LVL12:
+ 125 009c 8B0000EA 		b	.L24
+ 126              	.L70:
+ 127              	.LBE616:
+ 128              	.LBE615:
+ 129              	.LBE614:
+ 130              	.LBE613:
+ 131              	.LBE612:
+ 132              	.LBE611:
+ 133              	.LBE610:
+  21:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 	/* Invariants:
+  22:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 	 * r1*m(orig) + s1*n(orig) == m(current)
+  23:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 	 * r2*m(orig) + s2*n(orig) == n(current) */
+  24:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 	for (;;) {
+  25:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 		if (n.isZero()) {
+  26:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 			r = r1; s = s1; g = m;
+ 134              		.loc 1 26 0
+ 135 00a0 40108DE2 		add	r1, sp, #64
+ 136 00a4 0700A0E1 		mov	r0, r7
+ 137              	.LEHB5:
+ 138 00a8 FEFFFFEB 		bl	_ZN10BigIntegeraSERKS_
+ 139              	.LVL13:
+ 140              		.loc 1 26 0 is_stmt 0 discriminator 1
+ 141 00ac 30108DE2 		add	r1, sp, #48
+ 142 00b0 0800A0E1 		mov	r0, r8
+ 143 00b4 FEFFFFEB 		bl	_ZN10BigIntegeraSERKS_
+ 144              	.LVL14:
+ 145              		.loc 1 26 0 discriminator 2
+ 146 00b8 0510A0E1 		mov	r1, r5
+ 147 00bc 0600A0E1 		mov	r0, r6
+ 148 00c0 FEFFFFEB 		bl	_ZN10BigIntegeraSERKS_
+ 149              	.LVL15:
+ 150              	.LEHE5:
+ 151 00c4 890000EA 		b	.L5
+ 152              	.L71:
+ 153              	.LVL16:
+ 154              	.LBB617:
+ 155              	.LBB618:
+ 156              	.LBB619:
+ 157              	.LBB620:
+ 158              		.loc 2 32 0 is_stmt 1
+ 159 00c8 0030A0E3 		mov	r3, #0
+ 160 00cc 5030CDE5 		strb	r3, [sp, #80]
+ 161              	.LVL17:
+ 162              	.LBB621:
+ 163              	.LBB622:
+ 164              	.LBB623:
+  45:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		blk = NULL;
+ 165              		.loc 3 45 0
+ 166 00d0 54308DE5 		str	r3, [sp, #84]
+ 167 00d4 58308DE5 		str	r3, [sp, #88]
+ 168              		.loc 3 46 0
+ 169 00d8 5C308DE5 		str	r3, [sp, #92]
+ 170              	.LVL18:
+ 171              	.LBE623:
+ 172              	.LBE622:
+ 173              	.LBE621:
+ 174              	.LBE620:
+ 175              	.LBE619:
+  33:../src/zxing_lib/bigint/BigInteger.hh **** 
+  34:../src/zxing_lib/bigint/BigInteger.hh **** 	// Copy constructor
+  35:../src/zxing_lib/bigint/BigInteger.hh **** 	BigInteger(const BigInteger &x) : sign(x.sign), mag(x.mag) {};
+  36:../src/zxing_lib/bigint/BigInteger.hh **** 
+  37:../src/zxing_lib/bigint/BigInteger.hh **** 	// Assignment operator
+  38:../src/zxing_lib/bigint/BigInteger.hh **** 	void operator=(const BigInteger &x);
+  39:../src/zxing_lib/bigint/BigInteger.hh **** 
+  40:../src/zxing_lib/bigint/BigInteger.hh **** 	// Constructor that copies from a given array of blocks with a sign.
+  41:../src/zxing_lib/bigint/BigInteger.hh **** 	BigInteger(const Blk *b, Index blen, Sign s);
+  42:../src/zxing_lib/bigint/BigInteger.hh **** 
+  43:../src/zxing_lib/bigint/BigInteger.hh **** 	// Nonnegative constructor that copies from a given array of blocks.
+  44:../src/zxing_lib/bigint/BigInteger.hh **** 	BigInteger(const Blk *b, Index blen) : mag(b, blen) {
+  45:../src/zxing_lib/bigint/BigInteger.hh **** 		sign = mag.isZero() ? zero : positive;
+  46:../src/zxing_lib/bigint/BigInteger.hh **** 	}
+  47:../src/zxing_lib/bigint/BigInteger.hh **** 
+  48:../src/zxing_lib/bigint/BigInteger.hh **** 	// Constructor from a BigUnsigned and a sign
+  49:../src/zxing_lib/bigint/BigInteger.hh **** 	BigInteger(const BigUnsigned &x, Sign s);
+  50:../src/zxing_lib/bigint/BigInteger.hh **** 
+  51:../src/zxing_lib/bigint/BigInteger.hh **** 	// Nonnegative constructor from a BigUnsigned
+  52:../src/zxing_lib/bigint/BigInteger.hh **** 	BigInteger(const BigUnsigned &x) : mag(x) {
+  53:../src/zxing_lib/bigint/BigInteger.hh **** 		sign = mag.isZero() ? zero : positive;
+  54:../src/zxing_lib/bigint/BigInteger.hh **** 	}
+  55:../src/zxing_lib/bigint/BigInteger.hh **** 
+  56:../src/zxing_lib/bigint/BigInteger.hh **** 	// Constructors from primitive integer types
+  57:../src/zxing_lib/bigint/BigInteger.hh **** 	BigInteger(unsigned long  x);
+  58:../src/zxing_lib/bigint/BigInteger.hh **** 	BigInteger(         long  x);
+  59:../src/zxing_lib/bigint/BigInteger.hh **** 	BigInteger(unsigned int   x);
+  60:../src/zxing_lib/bigint/BigInteger.hh **** 	BigInteger(         int   x);
+  61:../src/zxing_lib/bigint/BigInteger.hh **** 	BigInteger(unsigned short x);
+  62:../src/zxing_lib/bigint/BigInteger.hh **** 	BigInteger(         short x);
+  63:../src/zxing_lib/bigint/BigInteger.hh **** 
+  64:../src/zxing_lib/bigint/BigInteger.hh **** 	/* Converters to primitive integer types
+  65:../src/zxing_lib/bigint/BigInteger.hh **** 	 * The implicit conversion operators caused trouble, so these are now
+  66:../src/zxing_lib/bigint/BigInteger.hh **** 	 * named. */
+  67:../src/zxing_lib/bigint/BigInteger.hh **** 	unsigned long  toUnsignedLong () const;
+  68:../src/zxing_lib/bigint/BigInteger.hh **** 	long           toLong         () const;
+  69:../src/zxing_lib/bigint/BigInteger.hh **** 	unsigned int   toUnsignedInt  () const;
+  70:../src/zxing_lib/bigint/BigInteger.hh **** 	int            toInt          () const;
+  71:../src/zxing_lib/bigint/BigInteger.hh **** 	unsigned short toUnsignedShort() const;
+  72:../src/zxing_lib/bigint/BigInteger.hh **** 	short          toShort        () const;
+  73:../src/zxing_lib/bigint/BigInteger.hh **** protected:
+  74:../src/zxing_lib/bigint/BigInteger.hh **** 	// Helper
+  75:../src/zxing_lib/bigint/BigInteger.hh **** 	template <class X> X convertToUnsignedPrimitive() const;
+  76:../src/zxing_lib/bigint/BigInteger.hh **** 	template <class X, class UX> X convertToSignedPrimitive() const;
+  77:../src/zxing_lib/bigint/BigInteger.hh **** public:
+  78:../src/zxing_lib/bigint/BigInteger.hh **** 
+  79:../src/zxing_lib/bigint/BigInteger.hh **** 	// ACCESSORS
+  80:../src/zxing_lib/bigint/BigInteger.hh **** 	Sign getSign() const { return sign; }
+  81:../src/zxing_lib/bigint/BigInteger.hh **** 	/* The client can't do any harm by holding a read-only reference to the
+  82:../src/zxing_lib/bigint/BigInteger.hh **** 	 * magnitude. */
+  83:../src/zxing_lib/bigint/BigInteger.hh **** 	const BigUnsigned &getMagnitude() const { return mag; }
+  84:../src/zxing_lib/bigint/BigInteger.hh **** 
+  85:../src/zxing_lib/bigint/BigInteger.hh **** 	// Some accessors that go through to the magnitude
+  86:../src/zxing_lib/bigint/BigInteger.hh **** 	Index getLength() const { return mag.getLength(); }
+  87:../src/zxing_lib/bigint/BigInteger.hh **** 	Index getCapacity() const { return mag.getCapacity(); }
+  88:../src/zxing_lib/bigint/BigInteger.hh **** 	Blk getBlock(Index i) const { return mag.getBlock(i); }
+  89:../src/zxing_lib/bigint/BigInteger.hh **** 	bool isZero() const { return sign == zero; } // A bit special
+  90:../src/zxing_lib/bigint/BigInteger.hh **** 
+  91:../src/zxing_lib/bigint/BigInteger.hh **** 	// COMPARISONS
+  92:../src/zxing_lib/bigint/BigInteger.hh **** 
+  93:../src/zxing_lib/bigint/BigInteger.hh **** 	// Compares this to x like Perl's <=>
+  94:../src/zxing_lib/bigint/BigInteger.hh **** 	CmpRes compareTo(const BigInteger &x) const;
+  95:../src/zxing_lib/bigint/BigInteger.hh **** 
+  96:../src/zxing_lib/bigint/BigInteger.hh **** 	// Ordinary comparison operators
+  97:../src/zxing_lib/bigint/BigInteger.hh **** 	bool operator ==(const BigInteger &x) const {
+  98:../src/zxing_lib/bigint/BigInteger.hh **** 		return sign == x.sign && mag == x.mag;
+  99:../src/zxing_lib/bigint/BigInteger.hh **** 	}
+ 100:../src/zxing_lib/bigint/BigInteger.hh **** 	bool operator !=(const BigInteger &x) const { return !operator ==(x); };
+ 101:../src/zxing_lib/bigint/BigInteger.hh **** 	bool operator < (const BigInteger &x) const { return compareTo(x) == less   ; }
+ 102:../src/zxing_lib/bigint/BigInteger.hh **** 	bool operator <=(const BigInteger &x) const { return compareTo(x) != greater; }
+ 103:../src/zxing_lib/bigint/BigInteger.hh **** 	bool operator >=(const BigInteger &x) const { return compareTo(x) != less   ; }
+ 104:../src/zxing_lib/bigint/BigInteger.hh **** 	bool operator > (const BigInteger &x) const { return compareTo(x) == greater; }
+ 105:../src/zxing_lib/bigint/BigInteger.hh **** 
+ 106:../src/zxing_lib/bigint/BigInteger.hh **** 	// OPERATORS -- See the discussion in BigUnsigned.hh.
+ 107:../src/zxing_lib/bigint/BigInteger.hh **** 	void add     (const BigInteger &a, const BigInteger &b);
+ 108:../src/zxing_lib/bigint/BigInteger.hh **** 	void subtract(const BigInteger &a, const BigInteger &b);
+ 109:../src/zxing_lib/bigint/BigInteger.hh **** 	void multiply(const BigInteger &a, const BigInteger &b);
+ 110:../src/zxing_lib/bigint/BigInteger.hh **** 	/* See the comment on BigUnsigned::divideWithRemainder.  Semantics
+ 111:../src/zxing_lib/bigint/BigInteger.hh **** 	 * differ from those of primitive integers when negatives and/or zeros
+ 112:../src/zxing_lib/bigint/BigInteger.hh **** 	 * are involved. */
+ 113:../src/zxing_lib/bigint/BigInteger.hh **** 	void divideWithRemainder(const BigInteger &b, BigInteger &q);
+ 114:../src/zxing_lib/bigint/BigInteger.hh **** 	void negate(const BigInteger &a);
+ 115:../src/zxing_lib/bigint/BigInteger.hh **** 	
+ 116:../src/zxing_lib/bigint/BigInteger.hh **** 	/* Bitwise operators are not provided for BigIntegers.  Use
+ 117:../src/zxing_lib/bigint/BigInteger.hh **** 	 * getMagnitude to get the magnitude and operate on that instead. */
+ 118:../src/zxing_lib/bigint/BigInteger.hh **** 
+ 119:../src/zxing_lib/bigint/BigInteger.hh **** 	BigInteger operator +(const BigInteger &x) const;
+ 120:../src/zxing_lib/bigint/BigInteger.hh **** 	BigInteger operator -(const BigInteger &x) const;
+ 121:../src/zxing_lib/bigint/BigInteger.hh **** 	BigInteger operator *(const BigInteger &x) const;
+ 122:../src/zxing_lib/bigint/BigInteger.hh **** 	BigInteger operator /(const BigInteger &x) const;
+ 123:../src/zxing_lib/bigint/BigInteger.hh **** 	BigInteger operator %(const BigInteger &x) const;
+ 124:../src/zxing_lib/bigint/BigInteger.hh **** 	BigInteger operator -() const;
+ 125:../src/zxing_lib/bigint/BigInteger.hh **** 
+ 126:../src/zxing_lib/bigint/BigInteger.hh **** 	void operator +=(const BigInteger &x);
+ 127:../src/zxing_lib/bigint/BigInteger.hh **** 	void operator -=(const BigInteger &x);
+ 128:../src/zxing_lib/bigint/BigInteger.hh **** 	void operator *=(const BigInteger &x);
+ 129:../src/zxing_lib/bigint/BigInteger.hh **** 	void operator /=(const BigInteger &x);
+ 130:../src/zxing_lib/bigint/BigInteger.hh **** 	void operator %=(const BigInteger &x);
+ 131:../src/zxing_lib/bigint/BigInteger.hh **** 	void flipSign();
+ 132:../src/zxing_lib/bigint/BigInteger.hh **** 
+ 133:../src/zxing_lib/bigint/BigInteger.hh **** 	// INCREMENT/DECREMENT OPERATORS
+ 134:../src/zxing_lib/bigint/BigInteger.hh **** 	void operator ++(   );
+ 135:../src/zxing_lib/bigint/BigInteger.hh **** 	void operator ++(int);
+ 136:../src/zxing_lib/bigint/BigInteger.hh **** 	void operator --(   );
+ 137:../src/zxing_lib/bigint/BigInteger.hh **** 	void operator --(int);
+ 138:../src/zxing_lib/bigint/BigInteger.hh **** };
+ 139:../src/zxing_lib/bigint/BigInteger.hh **** 
+ 140:../src/zxing_lib/bigint/BigInteger.hh **** // NORMAL OPERATORS
+ 141:../src/zxing_lib/bigint/BigInteger.hh **** /* These create an object to hold the result and invoke
+ 142:../src/zxing_lib/bigint/BigInteger.hh ****  * the appropriate put-here operation on it, passing
+ 143:../src/zxing_lib/bigint/BigInteger.hh ****  * this and x.  The new object is then returned. */
+ 144:../src/zxing_lib/bigint/BigInteger.hh **** inline BigInteger BigInteger::operator +(const BigInteger &x) const {
+ 145:../src/zxing_lib/bigint/BigInteger.hh **** 	BigInteger ans;
+ 146:../src/zxing_lib/bigint/BigInteger.hh **** 	ans.add(*this, x);
+ 147:../src/zxing_lib/bigint/BigInteger.hh **** 	return ans;
+ 148:../src/zxing_lib/bigint/BigInteger.hh **** }
+ 149:../src/zxing_lib/bigint/BigInteger.hh **** inline BigInteger BigInteger::operator -(const BigInteger &x) const {
+ 150:../src/zxing_lib/bigint/BigInteger.hh **** 	BigInteger ans;
+ 151:../src/zxing_lib/bigint/BigInteger.hh **** 	ans.subtract(*this, x);
+ 152:../src/zxing_lib/bigint/BigInteger.hh **** 	return ans;
+ 153:../src/zxing_lib/bigint/BigInteger.hh **** }
+ 154:../src/zxing_lib/bigint/BigInteger.hh **** inline BigInteger BigInteger::operator *(const BigInteger &x) const {
+ 155:../src/zxing_lib/bigint/BigInteger.hh **** 	BigInteger ans;
+ 156:../src/zxing_lib/bigint/BigInteger.hh **** 	ans.multiply(*this, x);
+ 176              		.loc 2 156 0
+ 177 00dc 20208DE2 		add	r2, sp, #32
+ 178              	.LVL19:
+ 179 00e0 0D10A0E1 		mov	r1, sp
+ 180 00e4 50008DE2 		add	r0, sp, #80
+ 181              	.LEHB6:
+ 182 00e8 FEFFFFEB 		bl	_ZN10BigInteger8multiplyERKS_S1_
+ 183              	.LVL20:
+ 184              	.LEHE6:
+ 185 00ec 180000EA 		b	.L64
+ 186              	.L54:
+ 187              	.LVL21:
+ 188              	.LBB624:
+ 189              	.LBB625:
+ 190              	.LBB626:
+ 191              	.LBB627:
+  47:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+  48:../src/zxing_lib/bigint/NumberlikeArray.hh **** 
+  49:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	// Destructor.  Note that `delete NULL' is a no-op.
+  50:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	~NumberlikeArray() {
+  51:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		delete [] blk;
+ 192              		.loc 3 51 0
+ 193 00f0 5C009DE5 		ldr	r0, [sp, #92]
+ 194 00f4 000050E3 		cmp	r0, #0
+ 195 00f8 0000000A 		beq	.L9
+ 196 00fc FEFFFFEB 		bl	_ZdaPv
+ 197              	.LVL22:
+ 198              	.L9:
+ 199              	.LBE627:
+ 200              	.LBE626:
+ 201              	.LBE625:
+ 202              	.LBE624:
+ 203              	.LBE618:
+ 204              	.LBE617:
+ 205              	.LBB628:
+ 206              	.LBB629:
+ 207              	.LBB630:
+ 208              	.LBB631:
+ 209              	.LBB632:
+ 210 0100 0C009DE5 		ldr	r0, [sp, #12]
+ 211 0104 000050E3 		cmp	r0, #0
+ 212 0108 0000000A 		beq	.L38
+ 213 010c FEFFFFEB 		bl	_ZdaPv
+ 214              	.LVL23:
+ 215              	.L38:
+ 216              	.LBE632:
+ 217              	.LBE631:
+ 218              	.LBE630:
+ 219              	.LBE629:
+ 220              	.LBE628:
+ 221              	.LBB633:
+ 222              	.LBB634:
+ 223              	.LBB635:
+ 224              	.LBB636:
+ 225              	.LBB637:
+ 226 0110 1C009DE5 		ldr	r0, [sp, #28]
+ 227 0114 000050E3 		cmp	r0, #0
+ 228 0118 0000000A 		beq	.L40
+ 229 011c FEFFFFEB 		bl	_ZdaPv
+ 230              	.LVL24:
+ 231              	.L40:
+ 232              	.LBE637:
+ 233              	.LBE636:
+ 234              	.LBE635:
+ 235              	.LBE634:
+ 236              	.LBE633:
+ 237              	.LBB638:
+ 238              	.LBB639:
+ 239              	.LBB640:
+ 240              	.LBB641:
+ 241              	.LBB642:
+ 242              		.loc 3 51 0 is_stmt 0 discriminator 6
+ 243 0120 2C009DE5 		ldr	r0, [sp, #44]
+ 244 0124 000050E3 		cmp	r0, #0
+ 245 0128 0000000A 		beq	.L42
+ 246              		.loc 3 51 0
+ 247 012c FEFFFFEB 		bl	_ZdaPv
+ 248              	.LVL25:
+ 249              	.L42:
+ 250              	.LBE642:
+ 251              	.LBE641:
+ 252              	.LBE640:
+ 253              	.LBE639:
+ 254              	.LBE638:
+ 255              	.LBB643:
+ 256              	.LBB644:
+ 257              	.LBB645:
+ 258              	.LBB646:
+ 259              	.LBB647:
+ 260              		.loc 3 51 0 discriminator 4
+ 261 0130 3C009DE5 		ldr	r0, [sp, #60]
+ 262 0134 000050E3 		cmp	r0, #0
+ 263 0138 0000000A 		beq	.L44
+ 264              		.loc 3 51 0
+ 265 013c FEFFFFEB 		bl	_ZdaPv
+ 266              	.LVL26:
+ 267              	.L44:
+ 268              	.LBE647:
+ 269              	.LBE646:
+ 270              	.LBE645:
+ 271              	.LBE644:
+ 272              	.LBE643:
+ 273              	.LBB648:
+ 274              	.LBB649:
+ 275              	.LBB650:
+ 276              	.LBB651:
+ 277              		.loc 3 51 0 discriminator 2
+ 278 0140 4C009DE5 		ldr	r0, [sp, #76]
+ 279 0144 000050E3 		cmp	r0, #0
+ 280 0148 0000000A 		beq	.L45
+ 281              		.loc 3 51 0
+ 282 014c FEFFFFEB 		bl	_ZdaPv
+ 283              	.LVL27:
+ 284              	.L45:
+ 285              	.LEHB7:
+ 286 0150 FEFFFFEB 		bl	__cxa_end_cleanup
+ 287              	.LVL28:
+ 288              	.LEHE7:
+ 289              	.L64:
+ 290              	.LBE651:
+ 291              	.LBE650:
+ 292              	.LBE649:
+ 293              	.LBE648:
+ 294              	.LBB652:
+ 295              	.LBB653:
+ 157:../src/zxing_lib/bigint/BigInteger.hh **** 	return ans;
+ 158:../src/zxing_lib/bigint/BigInteger.hh **** }
+ 159:../src/zxing_lib/bigint/BigInteger.hh **** inline BigInteger BigInteger::operator /(const BigInteger &x) const {
+ 160:../src/zxing_lib/bigint/BigInteger.hh **** 	if (x.isZero()) throw "BigInteger::operator /: division by zero";
+ 161:../src/zxing_lib/bigint/BigInteger.hh **** 	BigInteger q, r;
+ 162:../src/zxing_lib/bigint/BigInteger.hh **** 	r = *this;
+ 163:../src/zxing_lib/bigint/BigInteger.hh **** 	r.divideWithRemainder(x, q);
+ 164:../src/zxing_lib/bigint/BigInteger.hh **** 	return q;
+ 165:../src/zxing_lib/bigint/BigInteger.hh **** }
+ 166:../src/zxing_lib/bigint/BigInteger.hh **** inline BigInteger BigInteger::operator %(const BigInteger &x) const {
+ 167:../src/zxing_lib/bigint/BigInteger.hh **** 	if (x.isZero()) throw "BigInteger::operator %: division by zero";
+ 168:../src/zxing_lib/bigint/BigInteger.hh **** 	BigInteger q, r;
+ 169:../src/zxing_lib/bigint/BigInteger.hh **** 	r = *this;
+ 170:../src/zxing_lib/bigint/BigInteger.hh **** 	r.divideWithRemainder(x, q);
+ 171:../src/zxing_lib/bigint/BigInteger.hh **** 	return r;
+ 172:../src/zxing_lib/bigint/BigInteger.hh **** }
+ 173:../src/zxing_lib/bigint/BigInteger.hh **** inline BigInteger BigInteger::operator -() const {
+ 174:../src/zxing_lib/bigint/BigInteger.hh **** 	BigInteger ans;
+ 175:../src/zxing_lib/bigint/BigInteger.hh **** 	ans.negate(*this);
+ 176:../src/zxing_lib/bigint/BigInteger.hh **** 	return ans;
+ 177:../src/zxing_lib/bigint/BigInteger.hh **** }
+ 178:../src/zxing_lib/bigint/BigInteger.hh **** 
+ 179:../src/zxing_lib/bigint/BigInteger.hh **** /*
+ 180:../src/zxing_lib/bigint/BigInteger.hh ****  * ASSIGNMENT OPERATORS
+ 181:../src/zxing_lib/bigint/BigInteger.hh ****  * 
+ 182:../src/zxing_lib/bigint/BigInteger.hh ****  * Now the responsibility for making a temporary copy if necessary
+ 183:../src/zxing_lib/bigint/BigInteger.hh ****  * belongs to the put-here operations.  See Assignment Operators in
+ 184:../src/zxing_lib/bigint/BigInteger.hh ****  * BigUnsigned.hh.
+ 185:../src/zxing_lib/bigint/BigInteger.hh ****  */
+ 186:../src/zxing_lib/bigint/BigInteger.hh **** inline void BigInteger::operator +=(const BigInteger &x) {
+ 187:../src/zxing_lib/bigint/BigInteger.hh **** 	add(*this, x);
+ 188:../src/zxing_lib/bigint/BigInteger.hh **** }
+ 189:../src/zxing_lib/bigint/BigInteger.hh **** inline void BigInteger::operator -=(const BigInteger &x) {
+ 190:../src/zxing_lib/bigint/BigInteger.hh **** 	subtract(*this, x);
+ 296              		.loc 2 190 0 is_stmt 1
+ 297 0154 50208DE2 		add	r2, sp, #80
+ 298              	.LVL29:
+ 299 0158 40108DE2 		add	r1, sp, #64
+ 300              	.LVL30:
+ 301 015c 0100A0E1 		mov	r0, r1
+ 302              	.LEHB8:
+ 303 0160 FEFFFFEB 		bl	_ZN10BigInteger8subtractERKS_S1_
+ 304              	.LVL31:
+ 305              	.LEHE8:
+ 306              	.LBE653:
+ 307              	.LBE652:
+ 308              	.LBB654:
+ 309              	.LBB655:
+ 310              	.LBB656:
+ 311              	.LBB657:
+ 312              		.loc 3 51 0
+ 313 0164 5C009DE5 		ldr	r0, [sp, #92]
+ 314 0168 000050E3 		cmp	r0, #0
+ 315 016c 0000000A 		beq	.L10
+ 316 0170 FEFFFFEB 		bl	_ZdaPv
+ 317              	.LVL32:
+ 318              	.L10:
+ 319              	.LBE657:
+ 320              	.LBE656:
+ 321              	.LBE655:
+ 322              	.LBE654:
+ 323              	.LBB658:
+ 324              	.LBB659:
+ 325              	.LBB660:
+ 326              	.LBB661:
+  32:../src/zxing_lib/bigint/BigInteger.hh **** 
+ 327              		.loc 2 32 0
+ 328 0174 0030A0E3 		mov	r3, #0
+ 329 0178 6030CDE5 		strb	r3, [sp, #96]
+ 330              	.LVL33:
+ 331              	.LBB662:
+ 332              	.LBB663:
+ 333              	.LBB664:
+  45:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		blk = NULL;
+ 334              		.loc 3 45 0
+ 335 017c 64308DE5 		str	r3, [sp, #100]
+ 336 0180 68308DE5 		str	r3, [sp, #104]
+  46:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+ 337              		.loc 3 46 0
+ 338 0184 6C308DE5 		str	r3, [sp, #108]
+ 339              	.LVL34:
+ 340              	.LBE664:
+ 341              	.LBE663:
+ 342              	.LBE662:
+ 343              	.LBE661:
+ 344              	.LBE660:
+ 156:../src/zxing_lib/bigint/BigInteger.hh **** 	return ans;
+ 345              		.loc 2 156 0
+ 346 0188 10208DE2 		add	r2, sp, #16
+ 347              	.LVL35:
+ 348 018c 0D10A0E1 		mov	r1, sp
+ 349 0190 60008DE2 		add	r0, sp, #96
+ 350              	.LEHB9:
+ 351 0194 FEFFFFEB 		bl	_ZN10BigInteger8multiplyERKS_S1_
+ 352              	.LVL36:
+ 353              	.LEHE9:
+ 354 0198 040000EA 		b	.L65
+ 355              	.L55:
+ 356              	.LVL37:
+ 357              	.LBB665:
+ 358              	.LBB666:
+ 359              	.LBB667:
+ 360              	.LBB668:
+ 361              		.loc 3 51 0
+ 362 019c 6C009DE5 		ldr	r0, [sp, #108]
+ 363 01a0 000050E3 		cmp	r0, #0
+ 364 01a4 D5FFFF0A 		beq	.L9
+ 365 01a8 FEFFFFEB 		bl	_ZdaPv
+ 366              	.LVL38:
+ 367 01ac D3FFFFEA 		b	.L9
+ 368              	.L65:
+ 369              	.LVL39:
+ 370              	.LBE668:
+ 371              	.LBE667:
+ 372              	.LBE666:
+ 373              	.LBE665:
+ 374              	.LBE659:
+ 375              	.LBE658:
+ 376              	.LBB669:
+ 377              	.LBB670:
+ 378              		.loc 2 190 0
+ 379 01b0 60208DE2 		add	r2, sp, #96
+ 380              	.LVL40:
+ 381 01b4 30108DE2 		add	r1, sp, #48
+ 382              	.LVL41:
+ 383 01b8 0100A0E1 		mov	r0, r1
+ 384              	.LEHB10:
+ 385 01bc FEFFFFEB 		bl	_ZN10BigInteger8subtractERKS_S1_
+ 386              	.LVL42:
+ 387              	.LEHE10:
+ 388              	.LBE670:
+ 389              	.LBE669:
+ 390              	.LBB671:
+ 391              	.LBB672:
+ 392              	.LBB673:
+ 393              	.LBB674:
+ 394              		.loc 3 51 0
+ 395 01c0 6C009DE5 		ldr	r0, [sp, #108]
+ 396 01c4 000050E3 		cmp	r0, #0
+ 397 01c8 0000000A 		beq	.L14
+ 398 01cc FEFFFFEB 		bl	_ZdaPv
+ 399              	.LVL43:
+ 400              	.L14:
+ 401              	.LBE674:
+ 402              	.LBE673:
+ 403              	.LBE672:
+ 404              	.LBE671:
+ 405              	.LBB675:
+ 406              	.LBB676:
+  89:../src/zxing_lib/bigint/BigInteger.hh **** 
+ 407              		.loc 2 89 0
+ 408 01d0 D030D5E1 		ldrsb	r3, [r5]
+ 409              	.LVL44:
+ 410              	.LBE676:
+ 411              	.LBE675:
+  27:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 			return;
+  28:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 		}
+  29:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 		// Subtract q times the second invariant from the first invariant.
+  30:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 		m.divideWithRemainder(n, q);
+  31:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 		r1 -= q*r2; s1 -= q*s2;
+  32:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 
+  33:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 		if (m.isZero()) {
+ 412              		.loc 1 33 0
+ 413 01d4 000053E3 		cmp	r3, #0
+ 414 01d8 0400000A 		beq	.L66
+  34:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 			r = r2; s = s2; g = n;
+  35:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 			return;
+  36:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 		}
+  37:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 		// Subtract q times the first invariant from the second invariant.
+  38:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 		n.divideWithRemainder(m, q);
+ 415              		.loc 1 38 0
+ 416 01dc 0D20A0E1 		mov	r2, sp
+ 417 01e0 0510A0E1 		mov	r1, r5
+ 418 01e4 0400A0E1 		mov	r0, r4
+ 419              	.LEHB11:
+ 420 01e8 FEFFFFEB 		bl	_ZN10BigInteger19divideWithRemainderERKS_RS_
+ 421              	.LVL45:
+ 422 01ec 090000EA 		b	.L67
+ 423              	.L66:
+  34:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 			r = r2; s = s2; g = n;
+ 424              		.loc 1 34 0
+ 425 01f0 20108DE2 		add	r1, sp, #32
+ 426 01f4 0700A0E1 		mov	r0, r7
+ 427 01f8 FEFFFFEB 		bl	_ZN10BigIntegeraSERKS_
+ 428              	.LVL46:
+  34:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 			r = r2; s = s2; g = n;
+ 429              		.loc 1 34 0 is_stmt 0 discriminator 1
+ 430 01fc 10108DE2 		add	r1, sp, #16
+ 431 0200 0800A0E1 		mov	r0, r8
+ 432 0204 FEFFFFEB 		bl	_ZN10BigIntegeraSERKS_
+ 433              	.LVL47:
+  34:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 			r = r2; s = s2; g = n;
+ 434              		.loc 1 34 0 discriminator 2
+ 435 0208 0410A0E1 		mov	r1, r4
+ 436 020c 0600A0E1 		mov	r0, r6
+ 437 0210 FEFFFFEB 		bl	_ZN10BigIntegeraSERKS_
+ 438              	.LVL48:
+ 439              	.LEHE11:
+ 440 0214 350000EA 		b	.L5
+ 441              	.L67:
+ 442              	.LVL49:
+ 443              	.LBB677:
+ 444              	.LBB678:
+ 445              	.LBB679:
+ 446              	.LBB680:
+  32:../src/zxing_lib/bigint/BigInteger.hh **** 
+ 447              		.loc 2 32 0 is_stmt 1
+ 448 0218 0030A0E3 		mov	r3, #0
+ 449 021c 7030CDE5 		strb	r3, [sp, #112]
+ 450              	.LVL50:
+ 451              	.LBB681:
+ 452              	.LBB682:
+ 453              	.LBB683:
+  45:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		blk = NULL;
+ 454              		.loc 3 45 0
+ 455 0220 74308DE5 		str	r3, [sp, #116]
+ 456 0224 78308DE5 		str	r3, [sp, #120]
+  46:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+ 457              		.loc 3 46 0
+ 458 0228 7C308DE5 		str	r3, [sp, #124]
+ 459              	.LVL51:
+ 460              	.LBE683:
+ 461              	.LBE682:
+ 462              	.LBE681:
+ 463              	.LBE680:
+ 464              	.LBE679:
+ 156:../src/zxing_lib/bigint/BigInteger.hh **** 	return ans;
+ 465              		.loc 2 156 0
+ 466 022c 40208DE2 		add	r2, sp, #64
+ 467              	.LVL52:
+ 468 0230 0D10A0E1 		mov	r1, sp
+ 469 0234 70008DE2 		add	r0, sp, #112
+ 470              	.LEHB12:
+ 471 0238 FEFFFFEB 		bl	_ZN10BigInteger8multiplyERKS_S1_
+ 472              	.LVL53:
+ 473              	.LEHE12:
+ 474 023c 040000EA 		b	.L68
+ 475              	.L56:
+ 476              	.LVL54:
+ 477              	.LBB684:
+ 478              	.LBB685:
+ 479              	.LBB686:
+ 480              	.LBB687:
+ 481              		.loc 3 51 0
+ 482 0240 7C009DE5 		ldr	r0, [sp, #124]
+ 483 0244 000050E3 		cmp	r0, #0
+ 484 0248 ACFFFF0A 		beq	.L9
+ 485 024c FEFFFFEB 		bl	_ZdaPv
+ 486              	.LVL55:
+ 487 0250 AAFFFFEA 		b	.L9
+ 488              	.L68:
+ 489              	.LVL56:
+ 490              	.LBE687:
+ 491              	.LBE686:
+ 492              	.LBE685:
+ 493              	.LBE684:
+ 494              	.LBE678:
+ 495              	.LBE677:
+ 496              	.LBB688:
+ 497              	.LBB689:
+ 498              		.loc 2 190 0
+ 499 0254 70208DE2 		add	r2, sp, #112
+ 500              	.LVL57:
+ 501 0258 20108DE2 		add	r1, sp, #32
+ 502              	.LVL58:
+ 503 025c 0100A0E1 		mov	r0, r1
+ 504              	.LEHB13:
+ 505 0260 FEFFFFEB 		bl	_ZN10BigInteger8subtractERKS_S1_
+ 506              	.LVL59:
+ 507              	.LEHE13:
+ 508              	.LBE689:
+ 509              	.LBE688:
+ 510              	.LBB690:
+ 511              	.LBB691:
+ 512              	.LBB692:
+ 513              	.LBB693:
+ 514              		.loc 3 51 0
+ 515 0264 7C009DE5 		ldr	r0, [sp, #124]
+ 516 0268 000050E3 		cmp	r0, #0
+ 517 026c 0000000A 		beq	.L19
+ 518 0270 FEFFFFEB 		bl	_ZdaPv
+ 519              	.LVL60:
+ 520              	.L19:
+ 521              	.LBE693:
+ 522              	.LBE692:
+ 523              	.LBE691:
+ 524              	.LBE690:
+ 525              	.LBB694:
+ 526              	.LBB695:
+ 527              	.LBB696:
+ 528              	.LBB697:
+  32:../src/zxing_lib/bigint/BigInteger.hh **** 
+ 529              		.loc 2 32 0
+ 530 0274 0030A0E3 		mov	r3, #0
+ 531 0278 8030CDE5 		strb	r3, [sp, #128]
+ 532              	.LVL61:
+ 533              	.LBB698:
+ 534              	.LBB699:
+ 535              	.LBB700:
+  45:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		blk = NULL;
+ 536              		.loc 3 45 0
+ 537 027c 84308DE5 		str	r3, [sp, #132]
+ 538 0280 88308DE5 		str	r3, [sp, #136]
+  46:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+ 539              		.loc 3 46 0
+ 540 0284 8C308DE5 		str	r3, [sp, #140]
+ 541              	.LVL62:
+ 542              	.LBE700:
+ 543              	.LBE699:
+ 544              	.LBE698:
+ 545              	.LBE697:
+ 546              	.LBE696:
+ 156:../src/zxing_lib/bigint/BigInteger.hh **** 	return ans;
+ 547              		.loc 2 156 0
+ 548 0288 30208DE2 		add	r2, sp, #48
+ 549              	.LVL63:
+ 550 028c 0D10A0E1 		mov	r1, sp
+ 551 0290 80008DE2 		add	r0, sp, #128
+ 552              	.LEHB14:
+ 553 0294 FEFFFFEB 		bl	_ZN10BigInteger8multiplyERKS_S1_
+ 554              	.LVL64:
+ 555              	.LEHE14:
+ 556 0298 040000EA 		b	.L69
+ 557              	.L57:
+ 558              	.LVL65:
+ 559              	.LBB701:
+ 560              	.LBB702:
+ 561              	.LBB703:
+ 562              	.LBB704:
+ 563              		.loc 3 51 0
+ 564 029c 8C009DE5 		ldr	r0, [sp, #140]
+ 565 02a0 000050E3 		cmp	r0, #0
+ 566 02a4 95FFFF0A 		beq	.L9
+ 567 02a8 FEFFFFEB 		bl	_ZdaPv
+ 568              	.LVL66:
+ 569 02ac 93FFFFEA 		b	.L9
+ 570              	.L69:
+ 571              	.LVL67:
+ 572              	.LBE704:
+ 573              	.LBE703:
+ 574              	.LBE702:
+ 575              	.LBE701:
+ 576              	.LBE695:
+ 577              	.LBE694:
+ 578              	.LBB705:
+ 579              	.LBB706:
+ 580              		.loc 2 190 0
+ 581 02b0 80208DE2 		add	r2, sp, #128
+ 582              	.LVL68:
+ 583 02b4 10108DE2 		add	r1, sp, #16
+ 584              	.LVL69:
+ 585 02b8 0100A0E1 		mov	r0, r1
+ 586              	.LEHB15:
+ 587 02bc FEFFFFEB 		bl	_ZN10BigInteger8subtractERKS_S1_
+ 588              	.LVL70:
+ 589              	.LEHE15:
+ 590              	.LBE706:
+ 591              	.LBE705:
+ 592              	.LBB707:
+ 593              	.LBB708:
+ 594              	.LBB709:
+ 595              	.LBB710:
+ 596              		.loc 3 51 0
+ 597 02c0 8C009DE5 		ldr	r0, [sp, #140]
+ 598 02c4 000050E3 		cmp	r0, #0
+ 599 02c8 0000000A 		beq	.L24
+ 600 02cc FEFFFFEB 		bl	_ZdaPv
+ 601              	.LVL71:
+ 602              	.L24:
+ 603              	.LBE710:
+ 604              	.LBE709:
+ 605              	.LBE708:
+ 606              	.LBE707:
+ 607              	.LBB711:
+ 608              	.LBB712:
+  89:../src/zxing_lib/bigint/BigInteger.hh **** 
+ 609              		.loc 2 89 0
+ 610 02d0 D030D4E1 		ldrsb	r3, [r4]
+ 611              	.LVL72:
+ 612              	.LBE712:
+ 613              	.LBE711:
+  25:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 			r = r1; s = s1; g = m;
+ 614              		.loc 1 25 0
+ 615 02d4 000053E3 		cmp	r3, #0
+ 616 02d8 70FFFF0A 		beq	.L70
+  30:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 		r1 -= q*r2; s1 -= q*s2;
+ 617              		.loc 1 30 0
+ 618 02dc 0D20A0E1 		mov	r2, sp
+ 619 02e0 0410A0E1 		mov	r1, r4
+ 620 02e4 0500A0E1 		mov	r0, r5
+ 621              	.LEHB16:
+ 622 02e8 FEFFFFEB 		bl	_ZN10BigInteger19divideWithRemainderERKS_RS_
+ 623              	.LVL73:
+ 624              	.LEHE16:
+ 625 02ec 75FFFFEA 		b	.L71
+ 626              	.L5:
+ 627              	.LVL74:
+ 628              	.LBB713:
+ 629              	.LBB714:
+ 630              	.LBB715:
+ 631              	.LBB716:
+ 632              	.LBB717:
+ 633              		.loc 3 51 0
+ 634 02f0 0C009DE5 		ldr	r0, [sp, #12]
+ 635 02f4 000050E3 		cmp	r0, #0
+ 636 02f8 0000000A 		beq	.L25
+ 637 02fc FEFFFFEB 		bl	_ZdaPv
+ 638              	.LVL75:
+ 639              	.L25:
+ 640              	.LBE717:
+ 641              	.LBE716:
+ 642              	.LBE715:
+ 643              	.LBE714:
+ 644              	.LBE713:
+ 645              	.LBB718:
+ 646              	.LBB719:
+ 647              	.LBB720:
+ 648              	.LBB721:
+ 649              	.LBB722:
+ 650 0300 1C009DE5 		ldr	r0, [sp, #28]
+ 651 0304 000050E3 		cmp	r0, #0
+ 652 0308 0000000A 		beq	.L26
+ 653 030c FEFFFFEB 		bl	_ZdaPv
+ 654              	.LVL76:
+ 655              	.L26:
+ 656              	.LBE722:
+ 657              	.LBE721:
+ 658              	.LBE720:
+ 659              	.LBE719:
+ 660              	.LBE718:
+ 661              	.LBB723:
+ 662              	.LBB724:
+ 663              	.LBB725:
+ 664              	.LBB726:
+ 665              	.LBB727:
+ 666 0310 2C009DE5 		ldr	r0, [sp, #44]
+ 667 0314 000050E3 		cmp	r0, #0
+ 668 0318 0000000A 		beq	.L27
+ 669 031c FEFFFFEB 		bl	_ZdaPv
+ 670              	.LVL77:
+ 671              	.L27:
+ 672              	.LBE727:
+ 673              	.LBE726:
+ 674              	.LBE725:
+ 675              	.LBE724:
+ 676              	.LBE723:
+ 677              	.LBB728:
+ 678              	.LBB729:
+ 679              	.LBB730:
+ 680              	.LBB731:
+ 681              	.LBB732:
+ 682 0320 3C009DE5 		ldr	r0, [sp, #60]
+ 683 0324 000050E3 		cmp	r0, #0
+ 684 0328 0000000A 		beq	.L28
+ 685 032c FEFFFFEB 		bl	_ZdaPv
+ 686              	.LVL78:
+ 687              	.L28:
+ 688              	.LBE732:
+ 689              	.LBE731:
+ 690              	.LBE730:
+ 691              	.LBE729:
+ 692              	.LBE728:
+ 693              	.LBB733:
+ 694              	.LBB734:
+ 695              	.LBB735:
+ 696              	.LBB736:
+ 697 0330 4C009DE5 		ldr	r0, [sp, #76]
+ 698 0334 000050E3 		cmp	r0, #0
+ 699 0338 0000000A 		beq	.L1
+ 700 033c FEFFFFEB 		bl	_ZdaPv
+ 701              	.LVL79:
+ 702              	.L1:
+ 703              	.LBE736:
+ 704              	.LBE735:
+ 705              	.LBE734:
+ 706              	.LBE733:
+  39:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 		r2 -= q*r1; s2 -= q*s1;
+  40:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 	}
+  41:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** }
+ 707              		.loc 1 41 0
+ 708 0340 90D08DE2 		add	sp, sp, #144
+ 709              		.cfi_remember_state
+ 710              		.cfi_def_cfa_offset 24
+ 711              	.LVL80:
+ 712              		@ sp needed
+ 713 0344 F081BDE8 		pop	{r4, r5, r6, r7, r8, pc}
+ 714              	.LVL81:
+ 715              	.L50:
+ 716              		.cfi_restore_state
+ 717              	.LBB737:
+ 718              	.LBB738:
+ 719              	.LBB739:
+ 720              	.LBB740:
+ 721              		.loc 3 51 0
+ 722 0348 5C009DE5 		ldr	r0, [sp, #92]
+ 723 034c 000050E3 		cmp	r0, #0
+ 724 0350 6AFFFF0A 		beq	.L9
+ 725 0354 FEFFFFEB 		bl	_ZdaPv
+ 726              	.LVL82:
+ 727 0358 68FFFFEA 		b	.L9
+ 728              	.LVL83:
+ 729              	.L51:
+ 730              	.LBE740:
+ 731              	.LBE739:
+ 732              	.LBE738:
+ 733              	.LBE737:
+ 734              	.LBB741:
+ 735              	.LBB742:
+ 736              	.LBB743:
+ 737              	.LBB744:
+ 738 035c 6C009DE5 		ldr	r0, [sp, #108]
+ 739 0360 000050E3 		cmp	r0, #0
+ 740 0364 65FFFF0A 		beq	.L9
+ 741 0368 FEFFFFEB 		bl	_ZdaPv
+ 742              	.LVL84:
+ 743 036c 63FFFFEA 		b	.L9
+ 744              	.LVL85:
+ 745              	.L52:
+ 746              	.LBE744:
+ 747              	.LBE743:
+ 748              	.LBE742:
+ 749              	.LBE741:
+ 750              	.LBB745:
+ 751              	.LBB746:
+ 752              	.LBB747:
+ 753              	.LBB748:
+ 754 0370 7C009DE5 		ldr	r0, [sp, #124]
+ 755 0374 000050E3 		cmp	r0, #0
+ 756 0378 60FFFF0A 		beq	.L9
+ 757 037c FEFFFFEB 		bl	_ZdaPv
+ 758              	.LVL86:
+ 759 0380 5EFFFFEA 		b	.L9
+ 760              	.LVL87:
+ 761              	.L53:
+ 762              	.LBE748:
+ 763              	.LBE747:
+ 764              	.LBE746:
+ 765              	.LBE745:
+ 766              	.LBB749:
+ 767              	.LBB750:
+ 768              	.LBB751:
+ 769              	.LBB752:
+ 770 0384 8C009DE5 		ldr	r0, [sp, #140]
+ 771 0388 000050E3 		cmp	r0, #0
+ 772 038c 5BFFFF0A 		beq	.L9
+ 773 0390 FEFFFFEB 		bl	_ZdaPv
+ 774              	.LVL88:
+ 775 0394 59FFFFEA 		b	.L9
+ 776              	.LVL89:
+ 777              	.L49:
+ 778 0398 58FFFFEA 		b	.L9
+ 779              	.LVL90:
+ 780              	.L48:
+ 781 039c 5FFFFFEA 		b	.L40
+ 782              	.L47:
+ 783 03a0 62FFFFEA 		b	.L42
+ 784              	.L46:
+ 785 03a4 65FFFFEA 		b	.L44
+ 786              	.LBE752:
+ 787              	.LBE751:
+ 788              	.LBE750:
+ 789              	.LBE749:
+ 790              		.cfi_endproc
+ 791              	.LFE104:
+ 792              		.global	__gxx_personality_v0
+ 793              		.personality	__gxx_personality_v0
+ 794              		.handlerdata
+ 795              	.LLSDA104:
+ 796 0008 FF       		.byte	0xff
+ 797 0009 FF       		.byte	0xff
+ 798 000a 01       		.byte	0x1
+ 799 000b 5F       		.uleb128 .LLSDACSE104-.LLSDACSB104
+ 800              	.LLSDACSB104:
+ 801 000c 38       		.uleb128 .LEHB0-.LFB104
+ 802 000d 04       		.uleb128 .LEHE0-.LEHB0
+ 803 000e 00       		.uleb128 0
+ 804 000f 00       		.uleb128 0
+ 805 0010 44       		.uleb128 .LEHB1-.LFB104
+ 806 0011 04       		.uleb128 .LEHE1-.LEHB1
+ 807 0012 A407     		.uleb128 .L46-.LFB104
+ 808 0014 00       		.uleb128 0
+ 809 0015 6C       		.uleb128 .LEHB2-.LFB104
+ 810 0016 04       		.uleb128 .LEHE2-.LEHB2
+ 811 0017 00       		.uleb128 0
+ 812 0018 00       		.uleb128 0
+ 813 0019 78       		.uleb128 .LEHB3-.LFB104
+ 814 001a 04       		.uleb128 .LEHE3-.LEHB3
+ 815 001b A007     		.uleb128 .L47-.LFB104
+ 816 001d 00       		.uleb128 0
+ 817 001e 8401     		.uleb128 .LEHB4-.LFB104
+ 818 0020 04       		.uleb128 .LEHE4-.LEHB4
+ 819 0021 9C07     		.uleb128 .L48-.LFB104
+ 820 0023 00       		.uleb128 0
+ 821 0024 A801     		.uleb128 .LEHB5-.LFB104
+ 822 0026 1C       		.uleb128 .LEHE5-.LEHB5
+ 823 0027 9807     		.uleb128 .L49-.LFB104
+ 824 0029 00       		.uleb128 0
+ 825 002a E801     		.uleb128 .LEHB6-.LFB104
+ 826 002c 04       		.uleb128 .LEHE6-.LEHB6
+ 827 002d F001     		.uleb128 .L54-.LFB104
+ 828 002f 00       		.uleb128 0
+ 829 0030 D002     		.uleb128 .LEHB7-.LFB104
+ 830 0032 04       		.uleb128 .LEHE7-.LEHB7
+ 831 0033 00       		.uleb128 0
+ 832 0034 00       		.uleb128 0
+ 833 0035 E002     		.uleb128 .LEHB8-.LFB104
+ 834 0037 04       		.uleb128 .LEHE8-.LEHB8
+ 835 0038 C806     		.uleb128 .L50-.LFB104
+ 836 003a 00       		.uleb128 0
+ 837 003b 9403     		.uleb128 .LEHB9-.LFB104
+ 838 003d 04       		.uleb128 .LEHE9-.LEHB9
+ 839 003e 9C03     		.uleb128 .L55-.LFB104
+ 840 0040 00       		.uleb128 0
+ 841 0041 BC03     		.uleb128 .LEHB10-.LFB104
+ 842 0043 04       		.uleb128 .LEHE10-.LEHB10
+ 843 0044 DC06     		.uleb128 .L51-.LFB104
+ 844 0046 00       		.uleb128 0
+ 845 0047 E803     		.uleb128 .LEHB11-.LFB104
+ 846 0049 2C       		.uleb128 .LEHE11-.LEHB11
+ 847 004a 9807     		.uleb128 .L49-.LFB104
+ 848 004c 00       		.uleb128 0
+ 849 004d B804     		.uleb128 .LEHB12-.LFB104
+ 850 004f 04       		.uleb128 .LEHE12-.LEHB12
+ 851 0050 C004     		.uleb128 .L56-.LFB104
+ 852 0052 00       		.uleb128 0
+ 853 0053 E004     		.uleb128 .LEHB13-.LFB104
+ 854 0055 04       		.uleb128 .LEHE13-.LEHB13
+ 855 0056 F006     		.uleb128 .L52-.LFB104
+ 856 0058 00       		.uleb128 0
+ 857 0059 9405     		.uleb128 .LEHB14-.LFB104
+ 858 005b 04       		.uleb128 .LEHE14-.LEHB14
+ 859 005c 9C05     		.uleb128 .L57-.LFB104
+ 860 005e 00       		.uleb128 0
+ 861 005f BC05     		.uleb128 .LEHB15-.LFB104
+ 862 0061 04       		.uleb128 .LEHE15-.LEHB15
+ 863 0062 8407     		.uleb128 .L53-.LFB104
+ 864 0064 00       		.uleb128 0
+ 865 0065 E805     		.uleb128 .LEHB16-.LFB104
+ 866 0067 04       		.uleb128 .LEHE16-.LEHB16
+ 867 0068 9807     		.uleb128 .L49-.LFB104
+ 868 006a 00       		.uleb128 0
+ 869              	.LLSDACSE104:
+ 870              		.section	.text._Z17extendedEuclidean10BigIntegerS_RS_S0_S0_
+ 871              		.fnend
+ 873              		.section	.text._ZN15NumberlikeArrayImEC2ERKS0_,"axG",%progbits,_ZN15NumberlikeArrayImEC5ERKS0_,com
+ 874              		.align	2
+ 875              		.weak	_ZN15NumberlikeArrayImEC2ERKS0_
+ 876              		.syntax unified
+ 877              		.arm
+ 878              		.fpu neon
+ 880              	_ZN15NumberlikeArrayImEC2ERKS0_:
+ 881              		.fnstart
+ 882              	.LFB117:
+  52:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+  53:../src/zxing_lib/bigint/NumberlikeArray.hh **** 
+  54:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	/* Ensures that the array has at least the requested capacity; may
+  55:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	 * destroy the contents. */
+  56:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	void allocate(Index c);
+  57:../src/zxing_lib/bigint/NumberlikeArray.hh **** 
+  58:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	/* Ensures that the array has at least the requested capacity; does not
+  59:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	 * destroy the contents. */
+  60:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	void allocateAndCopy(Index c);
+  61:../src/zxing_lib/bigint/NumberlikeArray.hh **** 
+  62:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	// Copy constructor
+  63:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	NumberlikeArray(const NumberlikeArray<Blk> &x);
+  64:../src/zxing_lib/bigint/NumberlikeArray.hh **** 
+  65:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	// Assignment operator
+  66:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	void operator=(const NumberlikeArray<Blk> &x);
+  67:../src/zxing_lib/bigint/NumberlikeArray.hh **** 
+  68:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	// Constructor that copies from a given array of blocks
+  69:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	NumberlikeArray(const Blk *b, Index blen);
+  70:../src/zxing_lib/bigint/NumberlikeArray.hh **** 
+  71:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	// ACCESSORS
+  72:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	Index getCapacity()     const { return cap;      }
+  73:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	Index getLength()       const { return len;      }
+  74:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	Blk   getBlock(Index i) const { return blk[i];   }
+  75:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	bool  isEmpty()         const { return len == 0; }
+  76:../src/zxing_lib/bigint/NumberlikeArray.hh **** 
+  77:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	/* Equality comparison: checks if both objects have the same length and
+  78:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	 * equal (==) array elements to that length.  Subclasses may wish to
+  79:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	 * override. */
+  80:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	bool operator ==(const NumberlikeArray<Blk> &x) const;
+  81:../src/zxing_lib/bigint/NumberlikeArray.hh **** 
+  82:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	bool operator !=(const NumberlikeArray<Blk> &x) const {
+  83:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		return !operator ==(x);
+  84:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+  85:../src/zxing_lib/bigint/NumberlikeArray.hh **** };
+  86:../src/zxing_lib/bigint/NumberlikeArray.hh **** 
+  87:../src/zxing_lib/bigint/NumberlikeArray.hh **** /* BEGIN TEMPLATE DEFINITIONS.  They are present here so that source files that
+  88:../src/zxing_lib/bigint/NumberlikeArray.hh ****  * include this header file can generate the necessary real definitions. */
+  89:../src/zxing_lib/bigint/NumberlikeArray.hh **** 
+  90:../src/zxing_lib/bigint/NumberlikeArray.hh **** template <class Blk>
+  91:../src/zxing_lib/bigint/NumberlikeArray.hh **** const unsigned int NumberlikeArray<Blk>::N = 8 * sizeof(Blk);
+  92:../src/zxing_lib/bigint/NumberlikeArray.hh **** 
+  93:../src/zxing_lib/bigint/NumberlikeArray.hh **** template <class Blk>
+  94:../src/zxing_lib/bigint/NumberlikeArray.hh **** void NumberlikeArray<Blk>::allocate(Index c) {
+  95:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	// If the requested capacity is more than the current capacity...
+  96:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	if (c > cap) {
+  97:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		// Delete the old number array
+  98:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		delete [] blk;
+  99:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		// Allocate the new array
+ 100:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		cap = c;
+ 101:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		blk = new Blk[cap];
+ 102:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+ 103:../src/zxing_lib/bigint/NumberlikeArray.hh **** }
+ 104:../src/zxing_lib/bigint/NumberlikeArray.hh **** 
+ 105:../src/zxing_lib/bigint/NumberlikeArray.hh **** template <class Blk>
+ 106:../src/zxing_lib/bigint/NumberlikeArray.hh **** void NumberlikeArray<Blk>::allocateAndCopy(Index c) {
+ 107:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	// If the requested capacity is more than the current capacity...
+ 108:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	if (c > cap) {
+ 109:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		Blk *oldBlk = blk;
+ 110:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		// Allocate the new number array
+ 111:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		cap = c;
+ 112:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		blk = new Blk[cap];
+ 113:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		// Copy number blocks
+ 114:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		Index i;
+ 115:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		for (i = 0; i < len; i++)
+ 116:../src/zxing_lib/bigint/NumberlikeArray.hh **** 			blk[i] = oldBlk[i];
+ 117:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		// Delete the old array
+ 118:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		delete [] oldBlk;
+ 119:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+ 120:../src/zxing_lib/bigint/NumberlikeArray.hh **** }
+ 121:../src/zxing_lib/bigint/NumberlikeArray.hh **** 
+ 122:../src/zxing_lib/bigint/NumberlikeArray.hh **** template <class Blk>
+ 123:../src/zxing_lib/bigint/NumberlikeArray.hh **** NumberlikeArray<Blk>::NumberlikeArray(const NumberlikeArray<Blk> &x)
+ 883              		.loc 3 123 0
+ 884              		.cfi_startproc
+ 885              		@ args = 0, pretend = 0, frame = 0
+ 886              		@ frame_needed = 0, uses_anonymous_args = 0
+ 887              	.LVL91:
+ 888 0000 70402DE9 		push	{r4, r5, r6, lr}
+ 889              		.save {r4, r5, r6, lr}
+ 890              		.cfi_def_cfa_offset 16
+ 891              		.cfi_offset 4, -16
+ 892              		.cfi_offset 5, -12
+ 893              		.cfi_offset 6, -8
+ 894              		.cfi_offset 14, -4
+ 895 0004 0040A0E1 		mov	r4, r0
+ 896              	.LBB753:
+ 124:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		: len(x.len) {
+ 897              		.loc 3 124 0
+ 898 0008 040091E5 		ldr	r0, [r1, #4]
+ 899              	.LVL92:
+ 900 000c 040084E5 		str	r0, [r4, #4]
+ 901              	.LBB754:
+ 125:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	// Create array
+ 126:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	cap = len;
+ 902              		.loc 3 126 0
+ 903 0010 000084E5 		str	r0, [r4]
+ 127:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	blk = new Blk[cap];
+ 904              		.loc 3 127 0
+ 905 0014 2E0270E3 		cmn	r0, #-536870910
+ 906 0018 0D00008A 		bhi	.L73
+ 907 001c 0150A0E1 		mov	r5, r1
+ 908              		.loc 3 127 0 is_stmt 0 discriminator 1
+ 909 0020 0001A0E1 		lsl	r0, r0, #2
+ 910 0024 FEFFFFEB 		bl	_Znaj
+ 911              	.LVL93:
+ 912 0028 080084E5 		str	r0, [r4, #8]
+ 913              	.LVL94:
+ 128:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	// Copy blocks
+ 129:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	Index i;
+ 130:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	for (i = 0; i < len; i++)
+ 914              		.loc 3 130 0 is_stmt 1 discriminator 1
+ 915 002c 0030A0E3 		mov	r3, #0
+ 916              	.LVL95:
+ 917              	.L74:
+ 918              		.loc 3 130 0 is_stmt 0 discriminator 3
+ 919 0030 042094E5 		ldr	r2, [r4, #4]
+ 920 0034 020053E1 		cmp	r3, r2
+ 921 0038 0600002A 		bcs	.L75
+ 131:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		blk[i] = x.blk[i];
+ 922              		.loc 3 131 0 is_stmt 1 discriminator 2
+ 923 003c 082094E5 		ldr	r2, [r4, #8]
+ 924 0040 081095E5 		ldr	r1, [r5, #8]
+ 925 0044 031191E7 		ldr	r1, [r1, r3, lsl #2]
+ 926 0048 031182E7 		str	r1, [r2, r3, lsl #2]
+ 130:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		blk[i] = x.blk[i];
+ 927              		.loc 3 130 0 discriminator 2
+ 928 004c 013083E2 		add	r3, r3, #1
+ 929              	.LVL96:
+ 930 0050 F6FFFFEA 		b	.L74
+ 931              	.LVL97:
+ 932              	.L73:
+ 127:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	// Copy blocks
+ 933              		.loc 3 127 0 discriminator 2
+ 934 0054 FEFFFFEB 		bl	__cxa_throw_bad_array_new_length
+ 935              	.LVL98:
+ 936              	.L75:
+ 937              	.LBE754:
+ 938              	.LBE753:
+ 132:../src/zxing_lib/bigint/NumberlikeArray.hh **** }
+ 939              		.loc 3 132 0
+ 940 0058 0400A0E1 		mov	r0, r4
+ 941 005c 7080BDE8 		pop	{r4, r5, r6, pc}
+ 942              		.cfi_endproc
+ 943              	.LFE117:
+ 944              		.fnend
+ 946              		.weak	_ZN15NumberlikeArrayImEC1ERKS0_
+ 947              		.set	_ZN15NumberlikeArrayImEC1ERKS0_,_ZN15NumberlikeArrayImEC2ERKS0_
+ 948              		.section	.text._Z3gcd11BigUnsignedS_,"ax",%progbits
+ 949              		.align	2
+ 950              		.global	_Z3gcd11BigUnsignedS_
+ 951              		.syntax unified
+ 952              		.arm
+ 953              		.fpu neon
+ 955              	_Z3gcd11BigUnsignedS_:
+ 956              		.fnstart
+ 957              	.LFB103:
+   3:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 	BigUnsigned trash;
+ 958              		.loc 1 3 0
+ 959              		.cfi_startproc
+ 960              		.cfi_personality 0,__gxx_personality_v0
+ 961              		.cfi_lsda 0,.LLSDA103
+ 962              		@ args = 0, pretend = 0, frame = 16
+ 963              		@ frame_needed = 0, uses_anonymous_args = 0
+ 964              	.LVL99:
+ 965 0000 70402DE9 		push	{r4, r5, r6, lr}
+ 966              		.save {r4, r5, r6, lr}
+ 967              		.cfi_def_cfa_offset 16
+ 968              		.cfi_offset 4, -16
+ 969              		.cfi_offset 5, -12
+ 970              		.cfi_offset 6, -8
+ 971              		.cfi_offset 14, -4
+ 972              		.pad #16
+ 973 0004 10D04DE2 		sub	sp, sp, #16
+ 974              		.cfi_def_cfa_offset 32
+ 975 0008 0060A0E1 		mov	r6, r0
+ 976 000c 0150A0E1 		mov	r5, r1
+ 977 0010 0240A0E1 		mov	r4, r2
+ 978              	.LVL100:
+ 979              	.LBB755:
+ 980              	.LBB756:
+ 981              	.LBB757:
+ 982              	.LBB758:
+  45:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		blk = NULL;
+ 983              		.loc 3 45 0
+ 984 0014 0030A0E3 		mov	r3, #0
+ 985 0018 04308DE5 		str	r3, [sp, #4]
+ 986 001c 08308DE5 		str	r3, [sp, #8]
+  46:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+ 987              		.loc 3 46 0
+ 988 0020 0C308DE5 		str	r3, [sp, #12]
+ 989              	.LVL101:
+ 990              	.L81:
+ 991              	.LBE758:
+ 992              	.LBE757:
+ 993              	.LBE756:
+ 994              	.LBE755:
+ 995              	.LBB759:
+ 996              	.LBB760:
+ 997              	.LBB761:
+  75:../src/zxing_lib/bigint/NumberlikeArray.hh **** 
+ 998              		.loc 3 75 0
+ 999 0024 043094E5 		ldr	r3, [r4, #4]
+ 1000              	.LVL102:
+ 1001              	.LBE761:
+ 1002              	.LBE760:
+ 1003              	.LBE759:
+   7:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 			return a;
+ 1004              		.loc 1 7 0
+ 1005 0028 000053E3 		cmp	r3, #0
+ 1006 002c 0400000A 		beq	.L87
+   9:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 		if (a.isZero())
+ 1007              		.loc 1 9 0
+ 1008 0030 04208DE2 		add	r2, sp, #4
+ 1009              	.LVL103:
+ 1010 0034 0410A0E1 		mov	r1, r4
+ 1011 0038 0500A0E1 		mov	r0, r5
+ 1012              	.LEHB17:
+ 1013 003c FEFFFFEB 		bl	_ZN11BigUnsigned19divideWithRemainderERKS_RS_
+ 1014              	.LVL104:
+ 1015 0040 030000EA 		b	.L88
+ 1016              	.L87:
+ 1017              	.LVL105:
+ 1018              	.LBB762:
+ 1019              	.LBB763:
+ 1020              		.file 4 "../src/zxing_lib/bigint/BigUnsigned.hh"
+   1:../src/zxing_lib/bigint/BigUnsigned.hh **** #ifndef BIGUNSIGNED_H
+   2:../src/zxing_lib/bigint/BigUnsigned.hh **** #define BIGUNSIGNED_H
+   3:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+   4:../src/zxing_lib/bigint/BigUnsigned.hh **** #include "NumberlikeArray.hh"
+   5:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+   6:../src/zxing_lib/bigint/BigUnsigned.hh **** /* A BigUnsigned object represents a nonnegative integer of size limited only by
+   7:../src/zxing_lib/bigint/BigUnsigned.hh ****  * available memory.  BigUnsigneds support most mathematical operators and can
+   8:../src/zxing_lib/bigint/BigUnsigned.hh ****  * be converted to and from most primitive integer types.
+   9:../src/zxing_lib/bigint/BigUnsigned.hh ****  *
+  10:../src/zxing_lib/bigint/BigUnsigned.hh ****  * The number is stored as a NumberlikeArray of unsigned longs as if it were
+  11:../src/zxing_lib/bigint/BigUnsigned.hh ****  * written in base 256^sizeof(unsigned long).  The least significant block is
+  12:../src/zxing_lib/bigint/BigUnsigned.hh ****  * first, and the length is such that the most significant block is nonzero. */
+  13:../src/zxing_lib/bigint/BigUnsigned.hh **** class BigUnsigned : protected NumberlikeArray<unsigned long> {
+  14:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+  15:../src/zxing_lib/bigint/BigUnsigned.hh **** public:
+  16:../src/zxing_lib/bigint/BigUnsigned.hh **** 	// Enumeration for the result of a comparison.
+  17:../src/zxing_lib/bigint/BigUnsigned.hh **** 	enum CmpRes { less = -1, equal = 0, greater = 1 };
+  18:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+  19:../src/zxing_lib/bigint/BigUnsigned.hh **** 	// BigUnsigneds are built with a Blk type of unsigned long.
+  20:../src/zxing_lib/bigint/BigUnsigned.hh **** 	typedef unsigned long Blk;
+  21:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+  22:../src/zxing_lib/bigint/BigUnsigned.hh **** 	typedef NumberlikeArray<Blk>::Index Index;
+  23:../src/zxing_lib/bigint/BigUnsigned.hh **** 	using NumberlikeArray<Blk>::N;
+  24:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+  25:../src/zxing_lib/bigint/BigUnsigned.hh **** protected:
+  26:../src/zxing_lib/bigint/BigUnsigned.hh **** 	// Creates a BigUnsigned with a capacity; for internal use.
+  27:../src/zxing_lib/bigint/BigUnsigned.hh **** 	BigUnsigned(int, Index c) : NumberlikeArray<Blk>(0, c) {}
+  28:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+  29:../src/zxing_lib/bigint/BigUnsigned.hh **** 	// Decreases len to eliminate any leading zero blocks.
+  30:../src/zxing_lib/bigint/BigUnsigned.hh **** 	void zapLeadingZeros() { 
+  31:../src/zxing_lib/bigint/BigUnsigned.hh **** 		while (len > 0 && blk[len - 1] == 0)
+  32:../src/zxing_lib/bigint/BigUnsigned.hh **** 			len--;
+  33:../src/zxing_lib/bigint/BigUnsigned.hh **** 	}
+  34:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+  35:../src/zxing_lib/bigint/BigUnsigned.hh **** public:
+  36:../src/zxing_lib/bigint/BigUnsigned.hh **** 	// Constructs zero.
+  37:../src/zxing_lib/bigint/BigUnsigned.hh **** 	BigUnsigned() : NumberlikeArray<Blk>() {}
+  38:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+  39:../src/zxing_lib/bigint/BigUnsigned.hh **** 	// Copy constructor
+  40:../src/zxing_lib/bigint/BigUnsigned.hh **** 	BigUnsigned(const BigUnsigned &x) : NumberlikeArray<Blk>(x) {}
+ 1021              		.loc 4 40 0
+ 1022 0044 0510A0E1 		mov	r1, r5
+ 1023 0048 0600A0E1 		mov	r0, r6
+ 1024 004c FEFFFFEB 		bl	_ZN15NumberlikeArrayImEC2ERKS0_
+ 1025              	.LVL106:
+ 1026 0050 0A0000EA 		b	.L79
+ 1027              	.LVL107:
+ 1028              	.L88:
+ 1029              	.LBE763:
+ 1030              	.LBE762:
+ 1031              	.LBB764:
+ 1032              	.LBB765:
+ 1033              	.LBB766:
+  75:../src/zxing_lib/bigint/NumberlikeArray.hh **** 
+ 1034              		.loc 3 75 0
+ 1035 0054 043095E5 		ldr	r3, [r5, #4]
+ 1036              	.LVL108:
+ 1037              	.LBE766:
+ 1038              	.LBE765:
+ 1039              	.LBE764:
+  10:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 			return b;
+ 1040              		.loc 1 10 0
+ 1041 0058 000053E3 		cmp	r3, #0
+ 1042 005c 0400000A 		beq	.L89
+  12:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 	}
+ 1043              		.loc 1 12 0
+ 1044 0060 04208DE2 		add	r2, sp, #4
+ 1045              	.LVL109:
+ 1046 0064 0510A0E1 		mov	r1, r5
+ 1047 0068 0400A0E1 		mov	r0, r4
+ 1048 006c FEFFFFEB 		bl	_ZN11BigUnsigned19divideWithRemainderERKS_RS_
+ 1049              	.LVL110:
+ 1050 0070 EBFFFFEA 		b	.L81
+ 1051              	.L89:
+ 1052              	.LVL111:
+ 1053              	.LBB767:
+ 1054              	.LBB768:
+ 1055              		.loc 4 40 0
+ 1056 0074 0410A0E1 		mov	r1, r4
+ 1057 0078 0600A0E1 		mov	r0, r6
+ 1058 007c FEFFFFEB 		bl	_ZN15NumberlikeArrayImEC2ERKS0_
+ 1059              	.LVL112:
+ 1060              	.LEHE17:
+ 1061              	.L79:
+ 1062              	.LBE768:
+ 1063              	.LBE767:
+ 1064              	.LBB769:
+ 1065              	.LBB770:
+ 1066              	.LBB771:
+  51:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+ 1067              		.loc 3 51 0
+ 1068 0080 0C009DE5 		ldr	r0, [sp, #12]
+ 1069 0084 000050E3 		cmp	r0, #0
+ 1070 0088 0000000A 		beq	.L77
+ 1071 008c FEFFFFEB 		bl	_ZdaPv
+ 1072              	.LVL113:
+ 1073              	.L77:
+ 1074              	.LBE771:
+ 1075              	.LBE770:
+ 1076              	.LBE769:
+  14:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 
+ 1077              		.loc 1 14 0
+ 1078 0090 0600A0E1 		mov	r0, r6
+ 1079 0094 10D08DE2 		add	sp, sp, #16
+ 1080              		.cfi_remember_state
+ 1081              		.cfi_def_cfa_offset 16
+ 1082              		@ sp needed
+ 1083 0098 7080BDE8 		pop	{r4, r5, r6, pc}
+ 1084              	.LVL114:
+ 1085              	.L85:
+ 1086              		.cfi_restore_state
+ 1087              	.LBB772:
+ 1088              	.LBB773:
+ 1089              	.LBB774:
+  51:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+ 1090              		.loc 3 51 0
+ 1091 009c 0C009DE5 		ldr	r0, [sp, #12]
+ 1092 00a0 000050E3 		cmp	r0, #0
+ 1093 00a4 0000000A 		beq	.L84
+ 1094 00a8 FEFFFFEB 		bl	_ZdaPv
+ 1095              	.LVL115:
+ 1096              	.L84:
+ 1097              	.LEHB18:
+ 1098 00ac FEFFFFEB 		bl	__cxa_end_cleanup
+ 1099              	.LVL116:
+ 1100              	.LEHE18:
+ 1101              	.LBE774:
+ 1102              	.LBE773:
+ 1103              	.LBE772:
+ 1104              		.cfi_endproc
+ 1105              	.LFE103:
+ 1106              		.personality	__gxx_personality_v0
+ 1107              		.handlerdata
+ 1108              	.LLSDA103:
+ 1109 0008 FF       		.byte	0xff
+ 1110 0009 FF       		.byte	0xff
+ 1111 000a 01       		.byte	0x1
+ 1112 000b 0A       		.uleb128 .LLSDACSE103-.LLSDACSB103
+ 1113              	.LLSDACSB103:
+ 1114 000c 3C       		.uleb128 .LEHB17-.LFB103
+ 1115 000d 44       		.uleb128 .LEHE17-.LEHB17
+ 1116 000e 9C01     		.uleb128 .L85-.LFB103
+ 1117 0010 00       		.uleb128 0
+ 1118 0011 AC01     		.uleb128 .LEHB18-.LFB103
+ 1119 0013 04       		.uleb128 .LEHE18-.LEHB18
+ 1120 0014 00       		.uleb128 0
+ 1121 0015 00       		.uleb128 0
+ 1122              	.LLSDACSE103:
+ 1123              		.section	.text._Z3gcd11BigUnsignedS_
+ 1124              		.fnend
+ 1126              		.section	.text._Z6modexpRK10BigIntegerRK11BigUnsignedS4_,"ax",%progbits
+ 1127              		.align	2
+ 1128              		.global	_Z6modexpRK10BigIntegerRK11BigUnsignedS4_
+ 1129              		.syntax unified
+ 1130              		.arm
+ 1131              		.fpu neon
+ 1133              	_Z6modexpRK10BigIntegerRK11BigUnsignedS4_:
+ 1134              		.fnstart
+ 1135              	.LFB106:
+  42:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 
+  43:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** BigUnsigned modinv(const BigInteger &x, const BigUnsigned &n) {
+  44:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 	BigInteger g, r, s;
+  45:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 	extendedEuclidean(x, n, g, r, s);
+  46:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 	if (g == 1)
+  47:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 		// r*x + s*n == 1, so r*x === 1 (mod n), so r is the answer.
+  48:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 		return (r % n).getMagnitude(); // (r % n) will be nonnegative
+  49:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 	else
+  50:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 		throw "BigInteger modinv: x and n have a common factor";
+  51:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** }
+  52:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 
+  53:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** BigUnsigned modexp(const BigInteger &base, const BigUnsigned &exponent,
+  54:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 		const BigUnsigned &modulus) {
+ 1136              		.loc 1 54 0
+ 1137              		.cfi_startproc
+ 1138              		.cfi_personality 0,__gxx_personality_v0
+ 1139              		.cfi_lsda 0,.LLSDA106
+ 1140              		@ args = 0, pretend = 0, frame = 88
+ 1141              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1142              	.LVL117:
+ 1143 0000 F0402DE9 		push	{r4, r5, r6, r7, lr}
+ 1144              		.save {r4, r5, r6, r7, lr}
+ 1145              		.cfi_def_cfa_offset 20
+ 1146              		.cfi_offset 4, -20
+ 1147              		.cfi_offset 5, -16
+ 1148              		.cfi_offset 6, -12
+ 1149              		.cfi_offset 7, -8
+ 1150              		.cfi_offset 14, -4
+ 1151              		.pad #92
+ 1152 0004 5CD04DE2 		sub	sp, sp, #92
+ 1153              		.cfi_def_cfa_offset 112
+ 1154 0008 0050A0E1 		mov	r5, r0
+ 1155 000c 0140A0E1 		mov	r4, r1
+ 1156 0010 0270A0E1 		mov	r7, r2
+ 1157 0014 0360A0E1 		mov	r6, r3
+  55:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 	BigUnsigned ans = 1, base2 = (base % modulus).getMagnitude();
+ 1158              		.loc 1 55 0
+ 1159 0018 0110A0E3 		mov	r1, #1
+ 1160              	.LVL118:
+ 1161              	.LEHB19:
+ 1162 001c FEFFFFEB 		bl	_ZN11BigUnsignedC1Ei
+ 1163              	.LVL119:
+ 1164              	.LEHE19:
+ 1165              	.LBB879:
+ 1166              	.LBB880:
+ 1167              	.LBB881:
+ 1168              	.LBB882:
+ 1169              	.LBB883:
+ 1170              	.LBB884:
+ 1171              		.loc 4 40 0
+ 1172 0020 0610A0E1 		mov	r1, r6
+ 1173 0024 4C008DE2 		add	r0, sp, #76
+ 1174              	.LVL120:
+ 1175              	.LEHB20:
+ 1176 0028 FEFFFFEB 		bl	_ZN15NumberlikeArrayImEC2ERKS0_
+ 1177              	.LVL121:
+ 1178              	.LEHE20:
+ 1179              	.LBE884:
+ 1180              	.LBE883:
+ 1181              	.LBE882:
+ 1182              	.LBB885:
+ 1183              	.LBB886:
+ 1184              	.LBB887:
+  75:../src/zxing_lib/bigint/NumberlikeArray.hh **** 
+ 1185              		.loc 3 75 0
+ 1186 002c 50309DE5 		ldr	r3, [sp, #80]
+ 1187              	.LVL122:
+ 1188              	.LBE887:
+ 1189              	.LBE886:
+ 1190              	.LBE885:
+  53:../src/zxing_lib/bigint/BigInteger.hh **** 	}
+ 1191              		.loc 2 53 0
+ 1192 0030 000053E3 		cmp	r3, #0
+ 1193 0034 0130A013 		movne	r3, #1
+ 1194              	.L91:
+ 1195 0038 4830CDE5 		strb	r3, [sp, #72]
+ 1196              	.LVL123:
+ 1197              	.LBE881:
+ 1198              	.LBE880:
+ 1199              	.LBE879:
+ 1200              	.LBB888:
+ 1201              	.LBB889:
+ 167:../src/zxing_lib/bigint/BigInteger.hh **** 	BigInteger q, r;
+ 1202              		.loc 2 167 0
+ 1203 003c 000053E3 		cmp	r3, #0
+ 1204 0040 0C00000A 		beq	.L132
+ 1205              	.LVL124:
+ 1206              	.LBB890:
+ 1207              	.LBB891:
+ 1208              	.LBB892:
+  32:../src/zxing_lib/bigint/BigInteger.hh **** 
+ 1209              		.loc 2 32 0
+ 1210 0044 0030A0E3 		mov	r3, #0
+ 1211 0048 1C30CDE5 		strb	r3, [sp, #28]
+ 1212              	.LVL125:
+ 1213              	.LBB893:
+ 1214              	.LBB894:
+ 1215              	.LBB895:
+ 1216              	.LBB896:
+  45:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		blk = NULL;
+ 1217              		.loc 3 45 0
+ 1218 004c 20308DE5 		str	r3, [sp, #32]
+ 1219 0050 24308DE5 		str	r3, [sp, #36]
+  46:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+ 1220              		.loc 3 46 0
+ 1221 0054 28308DE5 		str	r3, [sp, #40]
+ 1222              	.LVL126:
+ 1223              	.LBE896:
+ 1224              	.LBE895:
+ 1225              	.LBE894:
+ 1226              	.LBE893:
+ 1227              	.LBE892:
+ 1228              	.LBE891:
+ 1229              	.LBE890:
+ 1230              	.LBB897:
+ 1231              	.LBB898:
+  32:../src/zxing_lib/bigint/BigInteger.hh **** 
+ 1232              		.loc 2 32 0
+ 1233 0058 3830CDE5 		strb	r3, [sp, #56]
+ 1234              	.LVL127:
+ 1235              	.LBB899:
+ 1236              	.LBB900:
+ 1237              	.LBB901:
+  45:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		blk = NULL;
+ 1238              		.loc 3 45 0
+ 1239 005c 3C308DE5 		str	r3, [sp, #60]
+ 1240 0060 40308DE5 		str	r3, [sp, #64]
+  46:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+ 1241              		.loc 3 46 0
+ 1242 0064 44308DE5 		str	r3, [sp, #68]
+ 1243              	.LVL128:
+ 1244              	.LBE901:
+ 1245              	.LBE900:
+ 1246              	.LBE899:
+ 1247              	.LBE898:
+ 1248              	.LBE897:
+ 169:../src/zxing_lib/bigint/BigInteger.hh **** 	r.divideWithRemainder(x, q);
+ 1249              		.loc 2 169 0
+ 1250 0068 0410A0E1 		mov	r1, r4
+ 1251 006c 38008DE2 		add	r0, sp, #56
+ 1252              	.LEHB21:
+ 1253 0070 FEFFFFEB 		bl	_ZN10BigIntegeraSERKS_
+ 1254              	.LVL129:
+ 1255              	.LEHE21:
+ 1256 0074 090000EA 		b	.L133
+ 1257              	.L132:
+ 167:../src/zxing_lib/bigint/BigInteger.hh **** 	BigInteger q, r;
+ 1258              		.loc 2 167 0
+ 1259 0078 0400A0E3 		mov	r0, #4
+ 1260 007c FEFFFFEB 		bl	__cxa_allocate_exception
+ 1261              	.LVL130:
+ 1262 0080 003000E3 		movw	r3, #:lower16:.LC1
+ 1263 0084 003040E3 		movt	r3, #:upper16:.LC1
+ 1264 0088 003080E5 		str	r3, [r0]
+ 1265 008c 0020A0E3 		mov	r2, #0
+ 1266 0090 001000E3 		movw	r1, #:lower16:_ZTIPKc
+ 1267 0094 001040E3 		movt	r1, #:upper16:_ZTIPKc
+ 1268              	.LEHB22:
+ 1269 0098 FEFFFFEB 		bl	__cxa_throw
+ 1270              	.LVL131:
+ 1271              	.LEHE22:
+ 1272              	.L124:
+ 1273 009c 130000EA 		b	.L98
+ 1274              	.L133:
+ 170:../src/zxing_lib/bigint/BigInteger.hh **** 	return r;
+ 1275              		.loc 2 170 0
+ 1276 00a0 1C208DE2 		add	r2, sp, #28
+ 1277 00a4 48108DE2 		add	r1, sp, #72
+ 1278              	.LVL132:
+ 1279 00a8 38008DE2 		add	r0, sp, #56
+ 1280              	.LEHB23:
+ 1281 00ac FEFFFFEB 		bl	_ZN10BigInteger19divideWithRemainderERKS_RS_
+ 1282              	.LVL133:
+ 1283              	.LEHE23:
+ 1284              	.LBB902:
+ 1285              	.LBB903:
+ 1286              	.LBB904:
+ 1287              	.LBB905:
+  51:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+ 1288              		.loc 3 51 0
+ 1289 00b0 28009DE5 		ldr	r0, [sp, #40]
+ 1290 00b4 000050E3 		cmp	r0, #0
+ 1291 00b8 0000000A 		beq	.L93
+ 1292 00bc FEFFFFEB 		bl	_ZdaPv
+ 1293              	.LVL134:
+ 1294              	.L93:
+ 1295              	.LBE905:
+ 1296              	.LBE904:
+ 1297              	.LBE903:
+ 1298              	.LBE902:
+ 1299              	.LBE889:
+ 1300              	.LBE888:
+ 1301              	.LBB915:
+ 1302              	.LBB916:
+ 1303              	.LBB917:
+ 1304              		.loc 4 40 0
+ 1305 00c0 3C108DE2 		add	r1, sp, #60
+ 1306 00c4 2C008DE2 		add	r0, sp, #44
+ 1307              	.LVL135:
+ 1308              	.LEHB24:
+ 1309 00c8 FEFFFFEB 		bl	_ZN15NumberlikeArrayImEC2ERKS0_
+ 1310              	.LVL136:
+ 1311              	.LEHE24:
+ 1312 00cc 100000EA 		b	.L134
+ 1313              	.LVL137:
+ 1314              	.L127:
+ 1315              	.LBE917:
+ 1316              	.LBE916:
+ 1317              	.LBE915:
+ 1318              	.LBB918:
+ 1319              	.LBB914:
+ 1320              	.LBB906:
+ 1321              	.LBB907:
+ 1322              	.LBB908:
+ 1323              	.LBB909:
+  51:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+ 1324              		.loc 3 51 0
+ 1325 00d0 44009DE5 		ldr	r0, [sp, #68]
+ 1326 00d4 000050E3 		cmp	r0, #0
+ 1327 00d8 0000000A 		beq	.L96
+ 1328 00dc FEFFFFEB 		bl	_ZdaPv
+ 1329              	.LVL138:
+ 1330              	.L96:
+ 1331              	.LBE909:
+ 1332              	.LBE908:
+ 1333              	.LBE907:
+ 1334              	.LBE906:
+ 1335              	.LBB910:
+ 1336              	.LBB911:
+ 1337              	.LBB912:
+ 1338              	.LBB913:
+ 1339 00e0 28009DE5 		ldr	r0, [sp, #40]
+ 1340 00e4 000050E3 		cmp	r0, #0
+ 1341 00e8 0000000A 		beq	.L98
+ 1342 00ec FEFFFFEB 		bl	_ZdaPv
+ 1343              	.LVL139:
+ 1344              	.L98:
+ 1345              	.LBE913:
+ 1346              	.LBE912:
+ 1347              	.LBE911:
+ 1348              	.LBE910:
+ 1349              	.LBE914:
+ 1350              	.LBE918:
+ 1351              	.LBB919:
+ 1352              	.LBB920:
+ 1353              	.LBB921:
+ 1354              	.LBB922:
+ 1355 00f0 54009DE5 		ldr	r0, [sp, #84]
+ 1356 00f4 000050E3 		cmp	r0, #0
+ 1357 00f8 0000000A 		beq	.L119
+ 1358 00fc FEFFFFEB 		bl	_ZdaPv
+ 1359              	.LVL140:
+ 1360              	.L119:
+ 1361              	.LBE922:
+ 1362              	.LBE921:
+ 1363              	.LBE920:
+ 1364              	.LBE919:
+ 1365              	.LBB923:
+ 1366              	.LBB924:
+ 1367              	.LBB925:
+ 1368 0100 080095E5 		ldr	r0, [r5, #8]
+ 1369 0104 000050E3 		cmp	r0, #0
+ 1370 0108 0000000A 		beq	.L121
+ 1371 010c FEFFFFEB 		bl	_ZdaPv
+ 1372              	.LVL141:
+ 1373              	.L121:
+ 1374              	.LEHB25:
+ 1375 0110 FEFFFFEB 		bl	__cxa_end_cleanup
+ 1376              	.LVL142:
+ 1377              	.LEHE25:
+ 1378              	.L134:
+ 1379              	.LBE925:
+ 1380              	.LBE924:
+ 1381              	.LBE923:
+ 1382              	.LBB926:
+ 1383              	.LBB927:
+ 1384              	.LBB928:
+ 1385              	.LBB929:
+ 1386 0114 44009DE5 		ldr	r0, [sp, #68]
+ 1387 0118 000050E3 		cmp	r0, #0
+ 1388 011c 0000000A 		beq	.L99
+ 1389 0120 FEFFFFEB 		bl	_ZdaPv
+ 1390              	.LVL143:
+ 1391              	.L99:
+ 1392              	.LBE929:
+ 1393              	.LBE928:
+ 1394              	.LBE927:
+ 1395              	.LBE926:
+ 1396              	.LBB930:
+ 1397              	.LBB931:
+ 1398              	.LBB932:
+ 1399              	.LBB933:
+ 1400 0124 54009DE5 		ldr	r0, [sp, #84]
+ 1401 0128 000050E3 		cmp	r0, #0
+ 1402 012c 0000000A 		beq	.L100
+ 1403 0130 FEFFFFEB 		bl	_ZdaPv
+ 1404              	.LVL144:
+ 1405              	.L100:
+ 1406              	.LBE933:
+ 1407              	.LBE932:
+ 1408              	.LBE931:
+ 1409              	.LBE930:
+  56:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 	BigUnsigned::Index i = exponent.bitLength();
+ 1410              		.loc 1 56 0
+ 1411 0134 0700A0E1 		mov	r0, r7
+ 1412              	.LEHB26:
+ 1413 0138 FEFFFFEB 		bl	_ZNK11BigUnsigned9bitLengthEv
+ 1414              	.LVL145:
+ 1415              	.LEHE26:
+ 1416 013c 0040A0E1 		mov	r4, r0
+ 1417              	.LVL146:
+ 1418 0140 220000EA 		b	.L101
+ 1419              	.LVL147:
+ 1420              	.L138:
+ 1421              	.LBB934:
+ 1422              	.LBB935:
+ 1423              	.LBB936:
+ 1424              	.LBB937:
+ 1425              	.LBB938:
+  75:../src/zxing_lib/bigint/NumberlikeArray.hh **** 
+ 1426              		.loc 3 75 0
+ 1427 0144 043096E5 		ldr	r3, [r6, #4]
+ 1428              	.LVL148:
+ 1429              	.LBE938:
+ 1430              	.LBE937:
+ 1431              	.LBE936:
+  41:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+  42:../src/zxing_lib/bigint/BigUnsigned.hh **** 	// Assignment operator
+  43:../src/zxing_lib/bigint/BigUnsigned.hh **** 	void operator=(const BigUnsigned &x) {
+  44:../src/zxing_lib/bigint/BigUnsigned.hh **** 		NumberlikeArray<Blk>::operator =(x);
+  45:../src/zxing_lib/bigint/BigUnsigned.hh **** 	}
+  46:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+  47:../src/zxing_lib/bigint/BigUnsigned.hh **** 	// Constructor that copies from a given array of blocks.
+  48:../src/zxing_lib/bigint/BigUnsigned.hh **** 	BigUnsigned(const Blk *b, Index blen) : NumberlikeArray<Blk>(b, blen) {
+  49:../src/zxing_lib/bigint/BigUnsigned.hh **** 		// Eliminate any leading zeros we may have been passed.
+  50:../src/zxing_lib/bigint/BigUnsigned.hh **** 		zapLeadingZeros();
+  51:../src/zxing_lib/bigint/BigUnsigned.hh **** 	}
+  52:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+  53:../src/zxing_lib/bigint/BigUnsigned.hh **** 	// Destructor.  NumberlikeArray does the delete for us.
+  54:../src/zxing_lib/bigint/BigUnsigned.hh **** 	~BigUnsigned() {}
+  55:../src/zxing_lib/bigint/BigUnsigned.hh **** 	
+  56:../src/zxing_lib/bigint/BigUnsigned.hh **** 	// Constructors from primitive integer types
+  57:../src/zxing_lib/bigint/BigUnsigned.hh **** 	BigUnsigned(unsigned long  x);
+  58:../src/zxing_lib/bigint/BigUnsigned.hh **** 	BigUnsigned(         long  x);
+  59:../src/zxing_lib/bigint/BigUnsigned.hh **** 	BigUnsigned(unsigned int   x);
+  60:../src/zxing_lib/bigint/BigUnsigned.hh **** 	BigUnsigned(         int   x);
+  61:../src/zxing_lib/bigint/BigUnsigned.hh **** 	BigUnsigned(unsigned short x);
+  62:../src/zxing_lib/bigint/BigUnsigned.hh **** 	BigUnsigned(         short x);
+  63:../src/zxing_lib/bigint/BigUnsigned.hh **** protected:
+  64:../src/zxing_lib/bigint/BigUnsigned.hh **** 	// Helpers
+  65:../src/zxing_lib/bigint/BigUnsigned.hh **** 	template <class X> void initFromPrimitive      (X x);
+  66:../src/zxing_lib/bigint/BigUnsigned.hh **** 	template <class X> void initFromSignedPrimitive(X x);
+  67:../src/zxing_lib/bigint/BigUnsigned.hh **** public:
+  68:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+  69:../src/zxing_lib/bigint/BigUnsigned.hh **** 	/* Converters to primitive integer types
+  70:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * The implicit conversion operators caused trouble, so these are now
+  71:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * named. */
+  72:../src/zxing_lib/bigint/BigUnsigned.hh **** 	unsigned long  toUnsignedLong () const;
+  73:../src/zxing_lib/bigint/BigUnsigned.hh **** 	long           toLong         () const;
+  74:../src/zxing_lib/bigint/BigUnsigned.hh **** 	unsigned int   toUnsignedInt  () const;
+  75:../src/zxing_lib/bigint/BigUnsigned.hh **** 	int            toInt          () const;
+  76:../src/zxing_lib/bigint/BigUnsigned.hh **** 	unsigned short toUnsignedShort() const;
+  77:../src/zxing_lib/bigint/BigUnsigned.hh **** 	short          toShort        () const;
+  78:../src/zxing_lib/bigint/BigUnsigned.hh **** protected:
+  79:../src/zxing_lib/bigint/BigUnsigned.hh **** 	// Helpers
+  80:../src/zxing_lib/bigint/BigUnsigned.hh **** 	template <class X> X convertToSignedPrimitive() const;
+  81:../src/zxing_lib/bigint/BigUnsigned.hh **** 	template <class X> X convertToPrimitive      () const;
+  82:../src/zxing_lib/bigint/BigUnsigned.hh **** public:
+  83:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+  84:../src/zxing_lib/bigint/BigUnsigned.hh **** 	// BIT/BLOCK ACCESSORS
+  85:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+  86:../src/zxing_lib/bigint/BigUnsigned.hh **** 	// Expose these from NumberlikeArray directly.
+  87:../src/zxing_lib/bigint/BigUnsigned.hh **** 	using NumberlikeArray<Blk>::getCapacity;
+  88:../src/zxing_lib/bigint/BigUnsigned.hh **** 	using NumberlikeArray<Blk>::getLength;
+  89:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+  90:../src/zxing_lib/bigint/BigUnsigned.hh **** 	/* Returns the requested block, or 0 if it is beyond the length (as if
+  91:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * the number had 0s infinitely to the left). */
+  92:../src/zxing_lib/bigint/BigUnsigned.hh **** 	Blk getBlock(Index i) const { return i >= len ? 0 : blk[i]; }
+  93:../src/zxing_lib/bigint/BigUnsigned.hh **** 	/* Sets the requested block.  The number grows or shrinks as necessary. */
+  94:../src/zxing_lib/bigint/BigUnsigned.hh **** 	void setBlock(Index i, Blk newBlock);
+  95:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+  96:../src/zxing_lib/bigint/BigUnsigned.hh **** 	// The number is zero if and only if the canonical length is zero.
+  97:../src/zxing_lib/bigint/BigUnsigned.hh **** 	bool isZero() const { return NumberlikeArray<Blk>::isEmpty(); }
+  98:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+  99:../src/zxing_lib/bigint/BigUnsigned.hh **** 	/* Returns the length of the number in bits, i.e., zero if the number
+ 100:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * is zero and otherwise one more than the largest value of bi for
+ 101:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * which getBit(bi) returns true. */
+ 102:../src/zxing_lib/bigint/BigUnsigned.hh **** 	Index bitLength() const;
+ 103:../src/zxing_lib/bigint/BigUnsigned.hh **** 	/* Get the state of bit bi, which has value 2^bi.  Bits beyond the
+ 104:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * number's length are considered to be 0. */
+ 105:../src/zxing_lib/bigint/BigUnsigned.hh **** 	bool getBit(Index bi) const {
+ 106:../src/zxing_lib/bigint/BigUnsigned.hh **** 		return (getBlock(bi / N) & (Blk(1) << (bi % N))) != 0;
+ 107:../src/zxing_lib/bigint/BigUnsigned.hh **** 	}
+ 108:../src/zxing_lib/bigint/BigUnsigned.hh **** 	/* Sets the state of bit bi to newBit.  The number grows or shrinks as
+ 109:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * necessary. */
+ 110:../src/zxing_lib/bigint/BigUnsigned.hh **** 	void setBit(Index bi, bool newBit);
+ 111:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+ 112:../src/zxing_lib/bigint/BigUnsigned.hh **** 	// COMPARISONS
+ 113:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+ 114:../src/zxing_lib/bigint/BigUnsigned.hh **** 	// Compares this to x like Perl's <=>
+ 115:../src/zxing_lib/bigint/BigUnsigned.hh **** 	CmpRes compareTo(const BigUnsigned &x) const;
+ 116:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+ 117:../src/zxing_lib/bigint/BigUnsigned.hh **** 	// Ordinary comparison operators
+ 118:../src/zxing_lib/bigint/BigUnsigned.hh **** 	bool operator ==(const BigUnsigned &x) const {
+ 119:../src/zxing_lib/bigint/BigUnsigned.hh **** 		return NumberlikeArray<Blk>::operator ==(x);
+ 120:../src/zxing_lib/bigint/BigUnsigned.hh **** 	}
+ 121:../src/zxing_lib/bigint/BigUnsigned.hh **** 	bool operator !=(const BigUnsigned &x) const {
+ 122:../src/zxing_lib/bigint/BigUnsigned.hh **** 		return NumberlikeArray<Blk>::operator !=(x);
+ 123:../src/zxing_lib/bigint/BigUnsigned.hh **** 	}
+ 124:../src/zxing_lib/bigint/BigUnsigned.hh **** 	bool operator < (const BigUnsigned &x) const { return compareTo(x) == less   ; }
+ 125:../src/zxing_lib/bigint/BigUnsigned.hh **** 	bool operator <=(const BigUnsigned &x) const { return compareTo(x) != greater; }
+ 126:../src/zxing_lib/bigint/BigUnsigned.hh **** 	bool operator >=(const BigUnsigned &x) const { return compareTo(x) != less   ; }
+ 127:../src/zxing_lib/bigint/BigUnsigned.hh **** 	bool operator > (const BigUnsigned &x) const { return compareTo(x) == greater; }
+ 128:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+ 129:../src/zxing_lib/bigint/BigUnsigned.hh **** 	/*
+ 130:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * BigUnsigned and BigInteger both provide three kinds of operators.
+ 131:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * Here ``big-integer'' refers to BigInteger or BigUnsigned.
+ 132:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 *
+ 133:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * (1) Overloaded ``return-by-value'' operators:
+ 134:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 *     +, -, *, /, %, unary -, &, |, ^, <<, >>.
+ 135:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * Big-integer code using these operators looks identical to code using
+ 136:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * the primitive integer types.  These operators take one or two
+ 137:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * big-integer inputs and return a big-integer result, which can then
+ 138:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * be assigned to a BigInteger variable or used in an expression.
+ 139:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * Example:
+ 140:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 *     BigInteger a(1), b = 1;
+ 141:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 *     BigInteger c = a + b;
+ 142:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 *
+ 143:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * (2) Overloaded assignment operators:
+ 144:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 *     +=, -=, *=, /=, %=, flipSign, &=, |=, ^=, <<=, >>=, ++, --.
+ 145:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * Again, these are used on big integers just like on ints.  They take
+ 146:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * one writable big integer that both provides an operand and receives a
+ 147:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * result.  Most also take a second read-only operand.
+ 148:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * Example:
+ 149:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 *     BigInteger a(1), b(1);
+ 150:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 *     a += b;
+ 151:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 *
+ 152:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * (3) Copy-less operations: `add', `subtract', etc.
+ 153:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * These named methods take operands as arguments and store the result
+ 154:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * in the receiver (*this), avoiding unnecessary copies and allocations.
+ 155:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * `divideWithRemainder' is special: it both takes the dividend from and
+ 156:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * stores the remainder into the receiver, and it takes a separate
+ 157:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * object in which to store the quotient.  NOTE: If you are wondering
+ 158:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * why these don't return a value, you probably mean to use the
+ 159:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * overloaded return-by-value operators instead.
+ 160:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * 
+ 161:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * Examples:
+ 162:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 *     BigInteger a(43), b(7), c, d;
+ 163:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 *
+ 164:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 *     c = a + b;   // Now c == 50.
+ 165:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 *     c.add(a, b); // Same effect but without the two copies.
+ 166:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 *
+ 167:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 *     c.divideWithRemainder(b, d);
+ 168:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 *     // 50 / 7; now d == 7 (quotient) and c == 1 (remainder).
+ 169:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 *
+ 170:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 *     // ``Aliased'' calls now do the right thing using a temporary
+ 171:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 *     // copy, but see note on `divideWithRemainder'.
+ 172:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 *     a.add(a, b); 
+ 173:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 */
+ 174:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+ 175:../src/zxing_lib/bigint/BigUnsigned.hh **** 	// COPY-LESS OPERATIONS
+ 176:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+ 177:../src/zxing_lib/bigint/BigUnsigned.hh **** 	// These 8: Arguments are read-only operands, result is saved in *this.
+ 178:../src/zxing_lib/bigint/BigUnsigned.hh **** 	void add(const BigUnsigned &a, const BigUnsigned &b);
+ 179:../src/zxing_lib/bigint/BigUnsigned.hh **** 	void subtract(const BigUnsigned &a, const BigUnsigned &b);
+ 180:../src/zxing_lib/bigint/BigUnsigned.hh **** 	void multiply(const BigUnsigned &a, const BigUnsigned &b);
+ 181:../src/zxing_lib/bigint/BigUnsigned.hh **** 	void bitAnd(const BigUnsigned &a, const BigUnsigned &b);
+ 182:../src/zxing_lib/bigint/BigUnsigned.hh **** 	void bitOr(const BigUnsigned &a, const BigUnsigned &b);
+ 183:../src/zxing_lib/bigint/BigUnsigned.hh **** 	void bitXor(const BigUnsigned &a, const BigUnsigned &b);
+ 184:../src/zxing_lib/bigint/BigUnsigned.hh **** 	/* Negative shift amounts translate to opposite-direction shifts,
+ 185:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * except for -2^(8*sizeof(int)-1) which is unimplemented. */
+ 186:../src/zxing_lib/bigint/BigUnsigned.hh **** 	void bitShiftLeft(const BigUnsigned &a, int b);
+ 187:../src/zxing_lib/bigint/BigUnsigned.hh **** 	void bitShiftRight(const BigUnsigned &a, int b);
+ 188:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+ 189:../src/zxing_lib/bigint/BigUnsigned.hh **** 	/* `a.divideWithRemainder(b, q)' is like `q = a / b, a %= b'.
+ 190:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * / and % use semantics similar to Knuth's, which differ from the
+ 191:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * primitive integer semantics under division by zero.  See the
+ 192:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * implementation in BigUnsigned.cc for details.
+ 193:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * `a.divideWithRemainder(b, a)' throws an exception: it doesn't make
+ 194:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * sense to write quotient and remainder into the same variable. */
+ 195:../src/zxing_lib/bigint/BigUnsigned.hh **** 	void divideWithRemainder(const BigUnsigned &b, BigUnsigned &q);
+ 196:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+ 197:../src/zxing_lib/bigint/BigUnsigned.hh **** 	/* `divide' and `modulo' are no longer offered.  Use
+ 198:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * `divideWithRemainder' instead. */
+ 199:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+ 200:../src/zxing_lib/bigint/BigUnsigned.hh **** 	// OVERLOADED RETURN-BY-VALUE OPERATORS
+ 201:../src/zxing_lib/bigint/BigUnsigned.hh **** 	BigUnsigned operator +(const BigUnsigned &x) const;
+ 202:../src/zxing_lib/bigint/BigUnsigned.hh **** 	BigUnsigned operator -(const BigUnsigned &x) const;
+ 203:../src/zxing_lib/bigint/BigUnsigned.hh **** 	BigUnsigned operator *(const BigUnsigned &x) const;
+ 204:../src/zxing_lib/bigint/BigUnsigned.hh **** 	BigUnsigned operator /(const BigUnsigned &x) const;
+ 205:../src/zxing_lib/bigint/BigUnsigned.hh **** 	BigUnsigned operator %(const BigUnsigned &x) const;
+ 206:../src/zxing_lib/bigint/BigUnsigned.hh **** 	/* OK, maybe unary minus could succeed in one case, but it really
+ 207:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * shouldn't be used, so it isn't provided. */
+ 208:../src/zxing_lib/bigint/BigUnsigned.hh **** 	BigUnsigned operator &(const BigUnsigned &x) const;
+ 209:../src/zxing_lib/bigint/BigUnsigned.hh **** 	BigUnsigned operator |(const BigUnsigned &x) const;
+ 210:../src/zxing_lib/bigint/BigUnsigned.hh **** 	BigUnsigned operator ^(const BigUnsigned &x) const;
+ 211:../src/zxing_lib/bigint/BigUnsigned.hh **** 	BigUnsigned operator <<(int b) const;
+ 212:../src/zxing_lib/bigint/BigUnsigned.hh **** 	BigUnsigned operator >>(int b) const;
+ 213:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+ 214:../src/zxing_lib/bigint/BigUnsigned.hh **** 	// OVERLOADED ASSIGNMENT OPERATORS
+ 215:../src/zxing_lib/bigint/BigUnsigned.hh **** 	void operator +=(const BigUnsigned &x);
+ 216:../src/zxing_lib/bigint/BigUnsigned.hh **** 	void operator -=(const BigUnsigned &x);
+ 217:../src/zxing_lib/bigint/BigUnsigned.hh **** 	void operator *=(const BigUnsigned &x);
+ 218:../src/zxing_lib/bigint/BigUnsigned.hh **** 	void operator /=(const BigUnsigned &x);
+ 219:../src/zxing_lib/bigint/BigUnsigned.hh **** 	void operator %=(const BigUnsigned &x);
+ 220:../src/zxing_lib/bigint/BigUnsigned.hh **** 	void operator &=(const BigUnsigned &x);
+ 221:../src/zxing_lib/bigint/BigUnsigned.hh **** 	void operator |=(const BigUnsigned &x);
+ 222:../src/zxing_lib/bigint/BigUnsigned.hh **** 	void operator ^=(const BigUnsigned &x);
+ 223:../src/zxing_lib/bigint/BigUnsigned.hh **** 	void operator <<=(int b);
+ 224:../src/zxing_lib/bigint/BigUnsigned.hh **** 	void operator >>=(int b);
+ 225:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+ 226:../src/zxing_lib/bigint/BigUnsigned.hh **** 	/* INCREMENT/DECREMENT OPERATORS
+ 227:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * To discourage messy coding, these do not return *this, so prefix
+ 228:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * and postfix behave the same. */
+ 229:../src/zxing_lib/bigint/BigUnsigned.hh **** 	void operator ++(   );
+ 230:../src/zxing_lib/bigint/BigUnsigned.hh **** 	void operator ++(int);
+ 231:../src/zxing_lib/bigint/BigUnsigned.hh **** 	void operator --(   );
+ 232:../src/zxing_lib/bigint/BigUnsigned.hh **** 	void operator --(int);
+ 233:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+ 234:../src/zxing_lib/bigint/BigUnsigned.hh **** 	// Helper function that needs access to BigUnsigned internals
+ 235:../src/zxing_lib/bigint/BigUnsigned.hh **** 	friend Blk getShiftedBlock(const BigUnsigned &num, Index x,
+ 236:../src/zxing_lib/bigint/BigUnsigned.hh **** 			unsigned int y);
+ 237:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+ 238:../src/zxing_lib/bigint/BigUnsigned.hh **** 	// See BigInteger.cc.
+ 239:../src/zxing_lib/bigint/BigUnsigned.hh **** 	template <class X>
+ 240:../src/zxing_lib/bigint/BigUnsigned.hh **** 	friend X convertBigUnsignedToPrimitiveAccess(const BigUnsigned &a);
+ 241:../src/zxing_lib/bigint/BigUnsigned.hh **** };
+ 242:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+ 243:../src/zxing_lib/bigint/BigUnsigned.hh **** /* Implementing the return-by-value and assignment operators in terms of the
+ 244:../src/zxing_lib/bigint/BigUnsigned.hh ****  * copy-less operations.  The copy-less operations are responsible for making
+ 245:../src/zxing_lib/bigint/BigUnsigned.hh ****  * any necessary temporary copies to work around aliasing. */
+ 246:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+ 247:../src/zxing_lib/bigint/BigUnsigned.hh **** inline BigUnsigned BigUnsigned::operator +(const BigUnsigned &x) const {
+ 248:../src/zxing_lib/bigint/BigUnsigned.hh **** 	BigUnsigned ans;
+ 249:../src/zxing_lib/bigint/BigUnsigned.hh **** 	ans.add(*this, x);
+ 250:../src/zxing_lib/bigint/BigUnsigned.hh **** 	return ans;
+ 251:../src/zxing_lib/bigint/BigUnsigned.hh **** }
+ 252:../src/zxing_lib/bigint/BigUnsigned.hh **** inline BigUnsigned BigUnsigned::operator -(const BigUnsigned &x) const {
+ 253:../src/zxing_lib/bigint/BigUnsigned.hh **** 	BigUnsigned ans;
+ 254:../src/zxing_lib/bigint/BigUnsigned.hh **** 	ans.subtract(*this, x);
+ 255:../src/zxing_lib/bigint/BigUnsigned.hh **** 	return ans;
+ 256:../src/zxing_lib/bigint/BigUnsigned.hh **** }
+ 257:../src/zxing_lib/bigint/BigUnsigned.hh **** inline BigUnsigned BigUnsigned::operator *(const BigUnsigned &x) const {
+ 258:../src/zxing_lib/bigint/BigUnsigned.hh **** 	BigUnsigned ans;
+ 259:../src/zxing_lib/bigint/BigUnsigned.hh **** 	ans.multiply(*this, x);
+ 260:../src/zxing_lib/bigint/BigUnsigned.hh **** 	return ans;
+ 261:../src/zxing_lib/bigint/BigUnsigned.hh **** }
+ 262:../src/zxing_lib/bigint/BigUnsigned.hh **** inline BigUnsigned BigUnsigned::operator /(const BigUnsigned &x) const {
+ 263:../src/zxing_lib/bigint/BigUnsigned.hh **** 	if (x.isZero()) throw "BigUnsigned::operator /: division by zero";
+ 264:../src/zxing_lib/bigint/BigUnsigned.hh **** 	BigUnsigned q, r;
+ 265:../src/zxing_lib/bigint/BigUnsigned.hh **** 	r = *this;
+ 266:../src/zxing_lib/bigint/BigUnsigned.hh **** 	r.divideWithRemainder(x, q);
+ 267:../src/zxing_lib/bigint/BigUnsigned.hh **** 	return q;
+ 268:../src/zxing_lib/bigint/BigUnsigned.hh **** }
+ 269:../src/zxing_lib/bigint/BigUnsigned.hh **** inline BigUnsigned BigUnsigned::operator %(const BigUnsigned &x) const {
+ 270:../src/zxing_lib/bigint/BigUnsigned.hh **** 	if (x.isZero()) throw "BigUnsigned::operator %: division by zero";
+ 271:../src/zxing_lib/bigint/BigUnsigned.hh **** 	BigUnsigned q, r;
+ 272:../src/zxing_lib/bigint/BigUnsigned.hh **** 	r = *this;
+ 273:../src/zxing_lib/bigint/BigUnsigned.hh **** 	r.divideWithRemainder(x, q);
+ 274:../src/zxing_lib/bigint/BigUnsigned.hh **** 	return r;
+ 275:../src/zxing_lib/bigint/BigUnsigned.hh **** }
+ 276:../src/zxing_lib/bigint/BigUnsigned.hh **** inline BigUnsigned BigUnsigned::operator &(const BigUnsigned &x) const {
+ 277:../src/zxing_lib/bigint/BigUnsigned.hh **** 	BigUnsigned ans;
+ 278:../src/zxing_lib/bigint/BigUnsigned.hh **** 	ans.bitAnd(*this, x);
+ 279:../src/zxing_lib/bigint/BigUnsigned.hh **** 	return ans;
+ 280:../src/zxing_lib/bigint/BigUnsigned.hh **** }
+ 281:../src/zxing_lib/bigint/BigUnsigned.hh **** inline BigUnsigned BigUnsigned::operator |(const BigUnsigned &x) const {
+ 282:../src/zxing_lib/bigint/BigUnsigned.hh **** 	BigUnsigned ans;
+ 283:../src/zxing_lib/bigint/BigUnsigned.hh **** 	ans.bitOr(*this, x);
+ 284:../src/zxing_lib/bigint/BigUnsigned.hh **** 	return ans;
+ 285:../src/zxing_lib/bigint/BigUnsigned.hh **** }
+ 286:../src/zxing_lib/bigint/BigUnsigned.hh **** inline BigUnsigned BigUnsigned::operator ^(const BigUnsigned &x) const {
+ 287:../src/zxing_lib/bigint/BigUnsigned.hh **** 	BigUnsigned ans;
+ 288:../src/zxing_lib/bigint/BigUnsigned.hh **** 	ans.bitXor(*this, x);
+ 289:../src/zxing_lib/bigint/BigUnsigned.hh **** 	return ans;
+ 290:../src/zxing_lib/bigint/BigUnsigned.hh **** }
+ 291:../src/zxing_lib/bigint/BigUnsigned.hh **** inline BigUnsigned BigUnsigned::operator <<(int b) const {
+ 292:../src/zxing_lib/bigint/BigUnsigned.hh **** 	BigUnsigned ans;
+ 293:../src/zxing_lib/bigint/BigUnsigned.hh **** 	ans.bitShiftLeft(*this, b);
+ 294:../src/zxing_lib/bigint/BigUnsigned.hh **** 	return ans;
+ 295:../src/zxing_lib/bigint/BigUnsigned.hh **** }
+ 296:../src/zxing_lib/bigint/BigUnsigned.hh **** inline BigUnsigned BigUnsigned::operator >>(int b) const {
+ 297:../src/zxing_lib/bigint/BigUnsigned.hh **** 	BigUnsigned ans;
+ 298:../src/zxing_lib/bigint/BigUnsigned.hh **** 	ans.bitShiftRight(*this, b);
+ 299:../src/zxing_lib/bigint/BigUnsigned.hh **** 	return ans;
+ 300:../src/zxing_lib/bigint/BigUnsigned.hh **** }
+ 301:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+ 302:../src/zxing_lib/bigint/BigUnsigned.hh **** inline void BigUnsigned::operator +=(const BigUnsigned &x) {
+ 303:../src/zxing_lib/bigint/BigUnsigned.hh **** 	add(*this, x);
+ 304:../src/zxing_lib/bigint/BigUnsigned.hh **** }
+ 305:../src/zxing_lib/bigint/BigUnsigned.hh **** inline void BigUnsigned::operator -=(const BigUnsigned &x) {
+ 306:../src/zxing_lib/bigint/BigUnsigned.hh **** 	subtract(*this, x);
+ 307:../src/zxing_lib/bigint/BigUnsigned.hh **** }
+ 308:../src/zxing_lib/bigint/BigUnsigned.hh **** inline void BigUnsigned::operator *=(const BigUnsigned &x) {
+ 309:../src/zxing_lib/bigint/BigUnsigned.hh **** 	multiply(*this, x);
+ 310:../src/zxing_lib/bigint/BigUnsigned.hh **** }
+ 311:../src/zxing_lib/bigint/BigUnsigned.hh **** inline void BigUnsigned::operator /=(const BigUnsigned &x) {
+ 312:../src/zxing_lib/bigint/BigUnsigned.hh **** 	if (x.isZero()) throw "BigUnsigned::operator /=: division by zero";
+ 313:../src/zxing_lib/bigint/BigUnsigned.hh **** 	/* The following technique is slightly faster than copying *this first
+ 314:../src/zxing_lib/bigint/BigUnsigned.hh **** 	 * when x is large. */
+ 315:../src/zxing_lib/bigint/BigUnsigned.hh **** 	BigUnsigned q;
+ 316:../src/zxing_lib/bigint/BigUnsigned.hh **** 	divideWithRemainder(x, q);
+ 317:../src/zxing_lib/bigint/BigUnsigned.hh **** 	// *this contains the remainder, but we overwrite it with the quotient.
+ 318:../src/zxing_lib/bigint/BigUnsigned.hh **** 	*this = q;
+ 319:../src/zxing_lib/bigint/BigUnsigned.hh **** }
+ 320:../src/zxing_lib/bigint/BigUnsigned.hh **** inline void BigUnsigned::operator %=(const BigUnsigned &x) {
+ 321:../src/zxing_lib/bigint/BigUnsigned.hh **** 	if (x.isZero()) throw "BigUnsigned::operator %=: division by zero";
+ 1432              		.loc 4 321 0
+ 1433 0148 000053E3 		cmp	r3, #0
+ 1434 014c 0800000A 		beq	.L135
+ 1435              	.LVL149:
+ 1436              	.LBB939:
+ 1437              	.LBB940:
+ 1438              	.LBB941:
+ 1439              	.LBB942:
+  45:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		blk = NULL;
+ 1440              		.loc 3 45 0
+ 1441 0150 0030A0E3 		mov	r3, #0
+ 1442 0154 04308DE5 		str	r3, [sp, #4]
+ 1443 0158 08308DE5 		str	r3, [sp, #8]
+  46:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+ 1444              		.loc 3 46 0
+ 1445 015c 0C308DE5 		str	r3, [sp, #12]
+ 1446              	.LVL150:
+ 1447              	.LBE942:
+ 1448              	.LBE941:
+ 1449              	.LBE940:
+ 1450              	.LBE939:
+ 322:../src/zxing_lib/bigint/BigUnsigned.hh **** 	BigUnsigned q;
+ 323:../src/zxing_lib/bigint/BigUnsigned.hh **** 	// Mods *this by x.  Don't care about quotient left in q.
+ 324:../src/zxing_lib/bigint/BigUnsigned.hh **** 	divideWithRemainder(x, q);
+ 1451              		.loc 4 324 0
+ 1452 0160 04208DE2 		add	r2, sp, #4
+ 1453 0164 0610A0E1 		mov	r1, r6
+ 1454 0168 0500A0E1 		mov	r0, r5
+ 1455              	.LEHB27:
+ 1456 016c FEFFFFEB 		bl	_ZN11BigUnsigned19divideWithRemainderERKS_RS_
+ 1457              	.LVL151:
+ 1458              	.LEHE27:
+ 1459 0170 090000EA 		b	.L136
+ 1460              	.L135:
+ 321:../src/zxing_lib/bigint/BigUnsigned.hh **** 	BigUnsigned q;
+ 1461              		.loc 4 321 0
+ 1462 0174 0400A0E3 		mov	r0, #4
+ 1463 0178 FEFFFFEB 		bl	__cxa_allocate_exception
+ 1464              	.LVL152:
+ 1465 017c 003000E3 		movw	r3, #:lower16:.LC2
+ 1466 0180 003040E3 		movt	r3, #:upper16:.LC2
+ 1467 0184 003080E5 		str	r3, [r0]
+ 1468 0188 0020A0E3 		mov	r2, #0
+ 1469 018c 001000E3 		movw	r1, #:lower16:_ZTIPKc
+ 1470 0190 001040E3 		movt	r1, #:upper16:_ZTIPKc
+ 1471              	.LEHB28:
+ 1472 0194 FEFFFFEB 		bl	__cxa_throw
+ 1473              	.LVL153:
+ 1474              	.L126:
+ 1475 0198 180000EA 		b	.L109
+ 1476              	.LVL154:
+ 1477              	.L136:
+ 1478              	.LBB943:
+ 1479              	.LBB944:
+ 1480              	.LBB945:
+  51:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+ 1481              		.loc 3 51 0
+ 1482 019c 0C009DE5 		ldr	r0, [sp, #12]
+ 1483 01a0 000050E3 		cmp	r0, #0
+ 1484 01a4 0000000A 		beq	.L104
+ 1485 01a8 FEFFFFEB 		bl	_ZdaPv
+ 1486              	.LVL155:
+ 1487              	.L104:
+ 1488              	.LBE945:
+ 1489              	.LBE944:
+ 1490              	.LBE943:
+ 1491              	.LBE935:
+ 1492              	.LBE934:
+ 1493              	.LBB950:
+ 1494              	.LBB951:
+ 106:../src/zxing_lib/bigint/BigUnsigned.hh **** 	}
+ 1495              		.loc 4 106 0
+ 1496 01ac A432A0E1 		lsr	r3, r4, #5
+ 1497              	.LVL156:
+ 1498              	.LBB952:
+ 1499              	.LBB953:
+  92:../src/zxing_lib/bigint/BigUnsigned.hh **** 	/* Sets the requested block.  The number grows or shrinks as necessary. */
+ 1500              		.loc 4 92 0
+ 1501 01b0 042097E5 		ldr	r2, [r7, #4]
+ 1502 01b4 020053E1 		cmp	r3, r2
+ 1503 01b8 1500003A 		bcc	.L105
+ 1504 01bc 0030A0E3 		mov	r3, #0
+ 1505              	.LVL157:
+ 1506              	.L106:
+ 1507              	.LBE953:
+ 1508              	.LBE952:
+ 106:../src/zxing_lib/bigint/BigUnsigned.hh **** 	}
+ 1509              		.loc 4 106 0
+ 1510 01c0 1F2004E2 		and	r2, r4, #31
+ 1511 01c4 3332A0E1 		lsr	r3, r3, r2
+ 1512              	.LVL158:
+ 1513              	.LBE951:
+ 1514              	.LBE950:
+  57:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 	// For each bit of the exponent, most to least significant...
+  58:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 	while (i > 0) {
+  59:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 		i--;
+  60:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 		// Square.
+  61:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 		ans *= ans;
+  62:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 		ans %= modulus;
+  63:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 		// And multiply if the bit is a 1.
+  64:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 		if (exponent.getBit(i)) {
+ 1515              		.loc 1 64 0
+ 1516 01c8 010013E3 		tst	r3, #1
+ 1517 01cc 1300001A 		bne	.L137
+ 1518              	.LVL159:
+ 1519              	.L101:
+  58:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 		i--;
+ 1520              		.loc 1 58 0
+ 1521 01d0 000054E3 		cmp	r4, #0
+ 1522 01d4 3400000A 		beq	.L102
+  59:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 		// Square.
+ 1523              		.loc 1 59 0
+ 1524 01d8 014044E2 		sub	r4, r4, #1
+ 1525              	.LVL160:
+ 1526              	.LBB957:
+ 1527              	.LBB958:
+ 309:../src/zxing_lib/bigint/BigUnsigned.hh **** }
+ 1528              		.loc 4 309 0
+ 1529 01dc 0520A0E1 		mov	r2, r5
+ 1530 01e0 0510A0E1 		mov	r1, r5
+ 1531 01e4 0500A0E1 		mov	r0, r5
+ 1532 01e8 FEFFFFEB 		bl	_ZN11BigUnsigned8multiplyERKS_S1_
+ 1533              	.LVL161:
+ 1534 01ec D4FFFFEA 		b	.L138
+ 1535              	.LVL162:
+ 1536              	.L128:
+ 1537              	.LBE958:
+ 1538              	.LBE957:
+ 1539              	.LBB959:
+ 1540              	.LBB949:
+ 1541              	.LBB946:
+ 1542              	.LBB947:
+ 1543              	.LBB948:
+  51:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+ 1544              		.loc 3 51 0
+ 1545 01f0 0C009DE5 		ldr	r0, [sp, #12]
+ 1546 01f4 000050E3 		cmp	r0, #0
+ 1547 01f8 0000000A 		beq	.L109
+ 1548 01fc FEFFFFEB 		bl	_ZdaPv
+ 1549              	.LVL163:
+ 1550              	.L109:
+ 1551              	.LBE948:
+ 1552              	.LBE947:
+ 1553              	.LBE946:
+ 1554              	.LBE949:
+ 1555              	.LBE959:
+ 1556              	.LBB960:
+ 1557              	.LBB961:
+ 1558              	.LBB962:
+ 1559              	.LBB963:
+ 1560 0200 34009DE5 		ldr	r0, [sp, #52]
+ 1561 0204 000050E3 		cmp	r0, #0
+ 1562 0208 BCFFFF0A 		beq	.L119
+ 1563 020c FEFFFFEB 		bl	_ZdaPv
+ 1564              	.LVL164:
+ 1565 0210 BAFFFFEA 		b	.L119
+ 1566              	.LVL165:
+ 1567              	.L105:
+ 1568              	.LBE963:
+ 1569              	.LBE962:
+ 1570              	.LBE961:
+ 1571              	.LBE960:
+ 1572              	.LBB964:
+ 1573              	.LBB956:
+ 1574              	.LBB955:
+ 1575              	.LBB954:
+  92:../src/zxing_lib/bigint/BigUnsigned.hh **** 	/* Sets the requested block.  The number grows or shrinks as necessary. */
+ 1576              		.loc 4 92 0
+ 1577 0214 082097E5 		ldr	r2, [r7, #8]
+ 1578 0218 033192E7 		ldr	r3, [r2, r3, lsl #2]
+ 1579              	.LVL166:
+ 1580 021c E7FFFFEA 		b	.L106
+ 1581              	.LVL167:
+ 1582              	.L137:
+ 1583              	.LBE954:
+ 1584              	.LBE955:
+ 1585              	.LBE956:
+ 1586              	.LBE964:
+ 1587              	.LBB965:
+ 1588              	.LBB966:
+ 309:../src/zxing_lib/bigint/BigUnsigned.hh **** }
+ 1589              		.loc 4 309 0
+ 1590 0220 2C208DE2 		add	r2, sp, #44
+ 1591              	.LVL168:
+ 1592 0224 0510A0E1 		mov	r1, r5
+ 1593 0228 0500A0E1 		mov	r0, r5
+ 1594 022c FEFFFFEB 		bl	_ZN11BigUnsigned8multiplyERKS_S1_
+ 1595              	.LVL169:
+ 1596              	.LEHE28:
+ 1597              	.LBE966:
+ 1598              	.LBE965:
+ 1599              	.LBB967:
+ 1600              	.LBB968:
+ 1601              	.LBB969:
+ 1602              	.LBB970:
+ 1603              	.LBB971:
+  75:../src/zxing_lib/bigint/NumberlikeArray.hh **** 
+ 1604              		.loc 3 75 0
+ 1605 0230 043096E5 		ldr	r3, [r6, #4]
+ 1606              	.LVL170:
+ 1607              	.LBE971:
+ 1608              	.LBE970:
+ 1609              	.LBE969:
+ 321:../src/zxing_lib/bigint/BigUnsigned.hh **** 	BigUnsigned q;
+ 1610              		.loc 4 321 0
+ 1611 0234 000053E3 		cmp	r3, #0
+ 1612 0238 0800000A 		beq	.L139
+ 1613              	.LVL171:
+ 1614              	.LBB972:
+ 1615              	.LBB973:
+ 1616              	.LBB974:
+ 1617              	.LBB975:
+  45:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		blk = NULL;
+ 1618              		.loc 3 45 0
+ 1619 023c 0030A0E3 		mov	r3, #0
+ 1620 0240 10308DE5 		str	r3, [sp, #16]
+ 1621 0244 14308DE5 		str	r3, [sp, #20]
+  46:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+ 1622              		.loc 3 46 0
+ 1623 0248 18308DE5 		str	r3, [sp, #24]
+ 1624              	.LVL172:
+ 1625              	.LBE975:
+ 1626              	.LBE974:
+ 1627              	.LBE973:
+ 1628              	.LBE972:
+ 1629              		.loc 4 324 0
+ 1630 024c 10208DE2 		add	r2, sp, #16
+ 1631 0250 0610A0E1 		mov	r1, r6
+ 1632 0254 0500A0E1 		mov	r0, r5
+ 1633              	.LEHB29:
+ 1634 0258 FEFFFFEB 		bl	_ZN11BigUnsigned19divideWithRemainderERKS_RS_
+ 1635              	.LVL173:
+ 1636              	.LEHE29:
+ 1637 025c 080000EA 		b	.L140
+ 1638              	.L139:
+ 321:../src/zxing_lib/bigint/BigUnsigned.hh **** 	BigUnsigned q;
+ 1639              		.loc 4 321 0
+ 1640 0260 0400A0E3 		mov	r0, #4
+ 1641 0264 FEFFFFEB 		bl	__cxa_allocate_exception
+ 1642              	.LVL174:
+ 1643 0268 003000E3 		movw	r3, #:lower16:.LC2
+ 1644 026c 003040E3 		movt	r3, #:upper16:.LC2
+ 1645 0270 003080E5 		str	r3, [r0]
+ 1646 0274 0020A0E3 		mov	r2, #0
+ 1647 0278 001000E3 		movw	r1, #:lower16:_ZTIPKc
+ 1648 027c 001040E3 		movt	r1, #:upper16:_ZTIPKc
+ 1649              	.LEHB30:
+ 1650 0280 FEFFFFEB 		bl	__cxa_throw
+ 1651              	.LVL175:
+ 1652              	.LEHE30:
+ 1653              	.L140:
+ 1654              	.LBB976:
+ 1655              	.LBB977:
+ 1656              	.LBB978:
+  51:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+ 1657              		.loc 3 51 0
+ 1658 0284 18009DE5 		ldr	r0, [sp, #24]
+ 1659 0288 000050E3 		cmp	r0, #0
+ 1660 028c CFFFFF0A 		beq	.L101
+ 1661 0290 FEFFFFEB 		bl	_ZdaPv
+ 1662              	.LVL176:
+ 1663 0294 CDFFFFEA 		b	.L101
+ 1664              	.L129:
+ 1665              	.LVL177:
+ 1666              	.LBE978:
+ 1667              	.LBE977:
+ 1668              	.LBE976:
+ 1669              	.LBB979:
+ 1670              	.LBB980:
+ 1671              	.LBB981:
+ 1672 0298 18009DE5 		ldr	r0, [sp, #24]
+ 1673 029c 000050E3 		cmp	r0, #0
+ 1674 02a0 D6FFFF0A 		beq	.L109
+ 1675 02a4 FEFFFFEB 		bl	_ZdaPv
+ 1676              	.LVL178:
+ 1677 02a8 D4FFFFEA 		b	.L109
+ 1678              	.LVL179:
+ 1679              	.L102:
+ 1680              	.LBE981:
+ 1681              	.LBE980:
+ 1682              	.LBE979:
+ 1683              	.LBE968:
+ 1684              	.LBE967:
+ 1685              	.LBB982:
+ 1686              	.LBB983:
+ 1687              	.LBB984:
+ 1688 02ac 34009DE5 		ldr	r0, [sp, #52]
+ 1689 02b0 000050E3 		cmp	r0, #0
+ 1690 02b4 0000000A 		beq	.L90
+ 1691 02b8 FEFFFFEB 		bl	_ZdaPv
+ 1692              	.LVL180:
+ 1693              	.L90:
+ 1694              	.LBE984:
+ 1695              	.LBE983:
+ 1696              	.LBE982:
+  65:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 			ans *= base2;
+  66:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 			ans %= modulus;
+  67:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 		}
+  68:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 	}
+  69:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 	return ans;
+  70:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** }
+ 1697              		.loc 1 70 0
+ 1698 02bc 0500A0E1 		mov	r0, r5
+ 1699 02c0 5CD08DE2 		add	sp, sp, #92
+ 1700              		.cfi_remember_state
+ 1701              		.cfi_def_cfa_offset 20
+ 1702              		@ sp needed
+ 1703 02c4 F080BDE8 		pop	{r4, r5, r6, r7, pc}
+ 1704              	.LVL181:
+ 1705              	.L125:
+ 1706              		.cfi_restore_state
+ 1707              	.LBB985:
+ 1708              	.LBB986:
+ 1709              	.LBB987:
+ 1710              	.LBB988:
+  51:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+ 1711              		.loc 3 51 0
+ 1712 02c8 44009DE5 		ldr	r0, [sp, #68]
+ 1713 02cc 000050E3 		cmp	r0, #0
+ 1714 02d0 86FFFF0A 		beq	.L98
+ 1715 02d4 FEFFFFEB 		bl	_ZdaPv
+ 1716              	.LVL182:
+ 1717 02d8 84FFFFEA 		b	.L98
+ 1718              	.LVL183:
+ 1719              	.L123:
+ 1720 02dc 87FFFFEA 		b	.L119
+ 1721              	.LBE988:
+ 1722              	.LBE987:
+ 1723              	.LBE986:
+ 1724              	.LBE985:
+ 1725              		.cfi_endproc
+ 1726              	.LFE106:
+ 1727              		.personality	__gxx_personality_v0
+ 1728              		.handlerdata
+ 1729              	.LLSDA106:
+ 1730 0008 FF       		.byte	0xff
+ 1731 0009 FF       		.byte	0xff
+ 1732 000a 01       		.byte	0x1
+ 1733 000b 44       		.uleb128 .LLSDACSE106-.LLSDACSB106
+ 1734              	.LLSDACSB106:
+ 1735 000c 1C       		.uleb128 .LEHB19-.LFB106
+ 1736 000d 04       		.uleb128 .LEHE19-.LEHB19
+ 1737 000e 00       		.uleb128 0
+ 1738 000f 00       		.uleb128 0
+ 1739 0010 28       		.uleb128 .LEHB20-.LFB106
+ 1740 0011 04       		.uleb128 .LEHE20-.LEHB20
+ 1741 0012 DC05     		.uleb128 .L123-.LFB106
+ 1742 0014 00       		.uleb128 0
+ 1743 0015 70       		.uleb128 .LEHB21-.LFB106
+ 1744 0016 04       		.uleb128 .LEHE21-.LEHB21
+ 1745 0017 D001     		.uleb128 .L127-.LFB106
+ 1746 0019 00       		.uleb128 0
+ 1747 001a 9801     		.uleb128 .LEHB22-.LFB106
+ 1748 001c 04       		.uleb128 .LEHE22-.LEHB22
+ 1749 001d 9C01     		.uleb128 .L124-.LFB106
+ 1750 001f 00       		.uleb128 0
+ 1751 0020 AC01     		.uleb128 .LEHB23-.LFB106
+ 1752 0022 04       		.uleb128 .LEHE23-.LEHB23
+ 1753 0023 D001     		.uleb128 .L127-.LFB106
+ 1754 0025 00       		.uleb128 0
+ 1755 0026 C801     		.uleb128 .LEHB24-.LFB106
+ 1756 0028 04       		.uleb128 .LEHE24-.LEHB24
+ 1757 0029 C805     		.uleb128 .L125-.LFB106
+ 1758 002b 00       		.uleb128 0
+ 1759 002c 9002     		.uleb128 .LEHB25-.LFB106
+ 1760 002e 04       		.uleb128 .LEHE25-.LEHB25
+ 1761 002f 00       		.uleb128 0
+ 1762 0030 00       		.uleb128 0
+ 1763 0031 B802     		.uleb128 .LEHB26-.LFB106
+ 1764 0033 04       		.uleb128 .LEHE26-.LEHB26
+ 1765 0034 9803     		.uleb128 .L126-.LFB106
+ 1766 0036 00       		.uleb128 0
+ 1767 0037 EC02     		.uleb128 .LEHB27-.LFB106
+ 1768 0039 04       		.uleb128 .LEHE27-.LEHB27
+ 1769 003a F003     		.uleb128 .L128-.LFB106
+ 1770 003c 00       		.uleb128 0
+ 1771 003d 9403     		.uleb128 .LEHB28-.LFB106
+ 1772 003f 9C01     		.uleb128 .LEHE28-.LEHB28
+ 1773 0041 9803     		.uleb128 .L126-.LFB106
+ 1774 0043 00       		.uleb128 0
+ 1775 0044 D804     		.uleb128 .LEHB29-.LFB106
+ 1776 0046 04       		.uleb128 .LEHE29-.LEHB29
+ 1777 0047 9805     		.uleb128 .L129-.LFB106
+ 1778 0049 00       		.uleb128 0
+ 1779 004a 8005     		.uleb128 .LEHB30-.LFB106
+ 1780 004c 04       		.uleb128 .LEHE30-.LEHB30
+ 1781 004d 9803     		.uleb128 .L126-.LFB106
+ 1782 004f 00       		.uleb128 0
+ 1783              	.LLSDACSE106:
+ 1784              		.section	.text._Z6modexpRK10BigIntegerRK11BigUnsignedS4_
+ 1785              		.fnend
+ 1787              		.section	.text._ZNK15NumberlikeArrayImEeqERKS0_,"axG",%progbits,_ZNK15NumberlikeArrayImEeqERKS0_,c
+ 1788              		.align	2
+ 1789              		.weak	_ZNK15NumberlikeArrayImEeqERKS0_
+ 1790              		.syntax unified
+ 1791              		.arm
+ 1792              		.fpu neon
+ 1794              	_ZNK15NumberlikeArrayImEeqERKS0_:
+ 1795              		.fnstart
+ 1796              	.LFB121:
+ 133:../src/zxing_lib/bigint/NumberlikeArray.hh **** 
+ 134:../src/zxing_lib/bigint/NumberlikeArray.hh **** template <class Blk>
+ 135:../src/zxing_lib/bigint/NumberlikeArray.hh **** void NumberlikeArray<Blk>::operator=(const NumberlikeArray<Blk> &x) {
+ 136:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	/* Calls like a = a have no effect; catch them before the aliasing
+ 137:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	 * causes a problem */
+ 138:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	if (this == &x)
+ 139:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		return;
+ 140:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	// Copy length
+ 141:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	len = x.len;
+ 142:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	// Expand array if necessary
+ 143:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	allocate(len);
+ 144:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	// Copy number blocks
+ 145:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	Index i;
+ 146:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	for (i = 0; i < len; i++)
+ 147:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		blk[i] = x.blk[i];
+ 148:../src/zxing_lib/bigint/NumberlikeArray.hh **** }
+ 149:../src/zxing_lib/bigint/NumberlikeArray.hh **** 
+ 150:../src/zxing_lib/bigint/NumberlikeArray.hh **** template <class Blk>
+ 151:../src/zxing_lib/bigint/NumberlikeArray.hh **** NumberlikeArray<Blk>::NumberlikeArray(const Blk *b, Index blen)
+ 152:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		: cap(blen), len(blen) {
+ 153:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	// Create array
+ 154:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	blk = new Blk[cap];
+ 155:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	// Copy blocks
+ 156:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	Index i;
+ 157:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	for (i = 0; i < len; i++)
+ 158:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		blk[i] = b[i];
+ 159:../src/zxing_lib/bigint/NumberlikeArray.hh **** }
+ 160:../src/zxing_lib/bigint/NumberlikeArray.hh **** 
+ 161:../src/zxing_lib/bigint/NumberlikeArray.hh **** template <class Blk>
+ 162:../src/zxing_lib/bigint/NumberlikeArray.hh **** bool NumberlikeArray<Blk>::operator ==(const NumberlikeArray<Blk> &x) const {
+ 1797              		.loc 3 162 0
+ 1798              		.cfi_startproc
+ 1799              		@ args = 0, pretend = 0, frame = 0
+ 1800              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1801              	.LVL184:
+ 1802 0000 04E02DE5 		str	lr, [sp, #-4]!
+ 1803              		.cfi_def_cfa_offset 4
+ 1804              		.cfi_offset 14, -4
+ 1805              	.LBB989:
+ 163:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	if (len != x.len)
+ 1806              		.loc 3 163 0
+ 1807 0004 04E090E5 		ldr	lr, [r0, #4]
+ 1808 0008 043091E5 		ldr	r3, [r1, #4]
+ 1809 000c 03005EE1 		cmp	lr, r3
+ 1810 0010 0100000A 		beq	.L148
+ 164:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		// Definitely unequal.
+ 165:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		return false;
+ 1811              		.loc 3 165 0
+ 1812 0014 0000A0E3 		mov	r0, #0
+ 1813              	.LVL185:
+ 1814 0018 04F09DE4 		ldr	pc, [sp], #4
+ 1815              	.LVL186:
+ 1816              	.L148:
+ 1817 001c 0030A0E3 		mov	r3, #0
+ 1818              	.L143:
+ 1819              	.LVL187:
+ 1820              	.LBB990:
+ 166:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	else {
+ 167:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		// Compare corresponding blocks one by one.
+ 168:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		Index i;
+ 169:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		for (i = 0; i < len; i++)
+ 1821              		.loc 3 169 0 discriminator 1
+ 1822 0020 0E0053E1 		cmp	r3, lr
+ 1823 0024 0700002A 		bcs	.L145
+ 170:../src/zxing_lib/bigint/NumberlikeArray.hh **** 			if (blk[i] != x.blk[i])
+ 1824              		.loc 3 170 0
+ 1825 0028 082090E5 		ldr	r2, [r0, #8]
+ 1826 002c 03C192E7 		ldr	ip, [r2, r3, lsl #2]
+ 1827 0030 082091E5 		ldr	r2, [r1, #8]
+ 1828 0034 032192E7 		ldr	r2, [r2, r3, lsl #2]
+ 1829 0038 02005CE1 		cmp	ip, r2
+ 1830 003c 0300001A 		bne	.L146
+ 169:../src/zxing_lib/bigint/NumberlikeArray.hh **** 			if (blk[i] != x.blk[i])
+ 1831              		.loc 3 169 0 discriminator 2
+ 1832 0040 013083E2 		add	r3, r3, #1
+ 1833              	.LVL188:
+ 1834 0044 F5FFFFEA 		b	.L143
+ 1835              	.L145:
+ 171:../src/zxing_lib/bigint/NumberlikeArray.hh **** 				return false;
+ 172:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		// No blocks differed, so the objects are equal.
+ 173:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		return true;
+ 1836              		.loc 3 173 0
+ 1837 0048 0100A0E3 		mov	r0, #1
+ 1838              	.LVL189:
+ 1839 004c 04F09DE4 		ldr	pc, [sp], #4
+ 1840              	.LVL190:
+ 1841              	.L146:
+ 171:../src/zxing_lib/bigint/NumberlikeArray.hh **** 				return false;
+ 1842              		.loc 3 171 0
+ 1843 0050 0000A0E3 		mov	r0, #0
+ 1844              	.LVL191:
+ 1845              	.LBE990:
+ 1846              	.LBE989:
+ 174:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+ 175:../src/zxing_lib/bigint/NumberlikeArray.hh **** }
+ 1847              		.loc 3 175 0
+ 1848 0054 04F09DE4 		ldr	pc, [sp], #4
+ 1849              		.cfi_endproc
+ 1850              	.LFE121:
+ 1851              		.cantunwind
+ 1852              		.fnend
+ 1854              		.section	.text._Z6modinvRK10BigIntegerRK11BigUnsigned,"ax",%progbits
+ 1855              		.align	2
+ 1856              		.global	_Z6modinvRK10BigIntegerRK11BigUnsigned
+ 1857              		.syntax unified
+ 1858              		.arm
+ 1859              		.fpu neon
+ 1861              	_Z6modinvRK10BigIntegerRK11BigUnsigned:
+ 1862              		.fnstart
+ 1863              	.LFB105:
+  43:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 	BigInteger g, r, s;
+ 1864              		.loc 1 43 0
+ 1865              		.cfi_startproc
+ 1866              		.cfi_personality 0,__gxx_personality_v0
+ 1867              		.cfi_lsda 0,.LLSDA105
+ 1868              		@ args = 0, pretend = 0, frame = 144
+ 1869              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1870              	.LVL192:
+ 1871 0000 70402DE9 		push	{r4, r5, r6, lr}
+ 1872              		.save {r4, r5, r6, lr}
+ 1873              		.cfi_def_cfa_offset 16
+ 1874              		.cfi_offset 4, -16
+ 1875              		.cfi_offset 5, -12
+ 1876              		.cfi_offset 6, -8
+ 1877              		.cfi_offset 14, -4
+ 1878              		.pad #152
+ 1879 0004 98D04DE2 		sub	sp, sp, #152
+ 1880              		.cfi_def_cfa_offset 168
+ 1881 0008 0050A0E1 		mov	r5, r0
+ 1882 000c 0240A0E1 		mov	r4, r2
+ 1883              	.LVL193:
+ 1884              	.LBB1134:
+ 1885              	.LBB1135:
+ 1886              	.LBB1136:
+  32:../src/zxing_lib/bigint/BigInteger.hh **** 
+ 1887              		.loc 2 32 0
+ 1888 0010 0030A0E3 		mov	r3, #0
+ 1889 0014 3830CDE5 		strb	r3, [sp, #56]
+ 1890              	.LVL194:
+ 1891              	.LBB1137:
+ 1892              	.LBB1138:
+ 1893              	.LBB1139:
+ 1894              	.LBB1140:
+  45:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		blk = NULL;
+ 1895              		.loc 3 45 0
+ 1896 0018 3C308DE5 		str	r3, [sp, #60]
+ 1897 001c 40308DE5 		str	r3, [sp, #64]
+  46:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+ 1898              		.loc 3 46 0
+ 1899 0020 44308DE5 		str	r3, [sp, #68]
+ 1900              	.LVL195:
+ 1901              	.LBE1140:
+ 1902              	.LBE1139:
+ 1903              	.LBE1138:
+ 1904              	.LBE1137:
+ 1905              	.LBE1136:
+ 1906              	.LBE1135:
+ 1907              	.LBE1134:
+ 1908              	.LBB1141:
+ 1909              	.LBB1142:
+ 1910              	.LBB1143:
+  32:../src/zxing_lib/bigint/BigInteger.hh **** 
+ 1911              		.loc 2 32 0
+ 1912 0024 2830CDE5 		strb	r3, [sp, #40]
+ 1913              	.LVL196:
+ 1914              	.LBB1144:
+ 1915              	.LBB1145:
+ 1916              	.LBB1146:
+ 1917              	.LBB1147:
+  45:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		blk = NULL;
+ 1918              		.loc 3 45 0
+ 1919 0028 2C308DE5 		str	r3, [sp, #44]
+ 1920 002c 30308DE5 		str	r3, [sp, #48]
+  46:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+ 1921              		.loc 3 46 0
+ 1922 0030 34308DE5 		str	r3, [sp, #52]
+ 1923              	.LVL197:
+ 1924              	.LBE1147:
+ 1925              	.LBE1146:
+ 1926              	.LBE1145:
+ 1927              	.LBE1144:
+ 1928              	.LBE1143:
+ 1929              	.LBE1142:
+ 1930              	.LBE1141:
+ 1931              	.LBB1148:
+ 1932              	.LBB1149:
+ 1933              	.LBB1150:
+  32:../src/zxing_lib/bigint/BigInteger.hh **** 
+ 1934              		.loc 2 32 0
+ 1935 0034 1830CDE5 		strb	r3, [sp, #24]
+ 1936              	.LVL198:
+ 1937              	.LBB1151:
+ 1938              	.LBB1152:
+ 1939              	.LBB1153:
+ 1940              	.LBB1154:
+  45:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		blk = NULL;
+ 1941              		.loc 3 45 0
+ 1942 0038 1C308DE5 		str	r3, [sp, #28]
+ 1943 003c 20308DE5 		str	r3, [sp, #32]
+  46:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+ 1944              		.loc 3 46 0
+ 1945 0040 24308DE5 		str	r3, [sp, #36]
+ 1946              	.LVL199:
+ 1947              	.LBE1154:
+ 1948              	.LBE1153:
+ 1949              	.LBE1152:
+ 1950              	.LBE1151:
+ 1951              	.LBE1150:
+ 1952              	.LBE1149:
+ 1953              	.LBE1148:
+ 1954              	.LBB1155:
+ 1955              	.LBB1156:
+ 1956              	.LBB1157:
+  35:../src/zxing_lib/bigint/BigInteger.hh **** 
+ 1957              		.loc 2 35 0
+ 1958 0044 D430D1E0 		ldrsb	r3, [r1], #4
+ 1959              	.LVL200:
+ 1960 0048 4830CDE5 		strb	r3, [sp, #72]
+ 1961              	.LVL201:
+ 1962              	.LBB1158:
+ 1963              	.LBB1159:
+ 1964              	.LBB1160:
+  40:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+ 1965              		.loc 4 40 0
+ 1966 004c 4C008DE2 		add	r0, sp, #76
+ 1967              	.LVL202:
+ 1968              	.LEHB31:
+ 1969 0050 FEFFFFEB 		bl	_ZN15NumberlikeArrayImEC2ERKS0_
+ 1970              	.LVL203:
+ 1971              	.LEHE31:
+ 1972              	.LBE1160:
+ 1973              	.LBE1159:
+ 1974              	.LBE1158:
+ 1975              	.LBE1157:
+ 1976              	.LBE1156:
+ 1977              	.LBE1155:
+ 1978              	.LBB1161:
+ 1979              	.LBB1162:
+ 1980              	.LBB1163:
+ 1981              	.LBB1164:
+ 1982              	.LBB1165:
+ 1983              	.LBB1166:
+ 1984 0054 0410A0E1 		mov	r1, r4
+ 1985 0058 5C008DE2 		add	r0, sp, #92
+ 1986              	.LVL204:
+ 1987              	.LEHB32:
+ 1988 005c FEFFFFEB 		bl	_ZN15NumberlikeArrayImEC2ERKS0_
+ 1989              	.LVL205:
+ 1990              	.LEHE32:
+ 1991              	.LBE1166:
+ 1992              	.LBE1165:
+ 1993              	.LBE1164:
+ 1994              	.LBB1167:
+ 1995              	.LBB1168:
+ 1996              	.LBB1169:
+  75:../src/zxing_lib/bigint/NumberlikeArray.hh **** 
+ 1997              		.loc 3 75 0
+ 1998 0060 60309DE5 		ldr	r3, [sp, #96]
+ 1999              	.LVL206:
+ 2000              	.LBE1169:
+ 2001              	.LBE1168:
+ 2002              	.LBE1167:
+  53:../src/zxing_lib/bigint/BigInteger.hh **** 	}
+ 2003              		.loc 2 53 0
+ 2004 0064 000053E3 		cmp	r3, #0
+ 2005 0068 0130A013 		movne	r3, #1
+ 2006              	.L150:
+ 2007 006c 5830CDE5 		strb	r3, [sp, #88]
+ 2008              	.LVL207:
+ 2009              	.LBE1163:
+ 2010              	.LBE1162:
+ 2011              	.LBE1161:
+  45:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 	if (g == 1)
+ 2012              		.loc 1 45 0
+ 2013 0070 18308DE2 		add	r3, sp, #24
+ 2014 0074 00308DE5 		str	r3, [sp]
+ 2015 0078 28308DE2 		add	r3, sp, #40
+ 2016 007c 38208DE2 		add	r2, sp, #56
+ 2017 0080 58108DE2 		add	r1, sp, #88
+ 2018 0084 48008DE2 		add	r0, sp, #72
+ 2019              	.LEHB33:
+ 2020 0088 FEFFFFEB 		bl	_Z17extendedEuclidean10BigIntegerS_RS_S0_S0_
+ 2021              	.LVL208:
+ 2022              	.LEHE33:
+ 2023              	.LBB1170:
+ 2024              	.LBB1171:
+ 2025              	.LBB1172:
+ 2026              	.LBB1173:
+  51:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+ 2027              		.loc 3 51 0
+ 2028 008c 64009DE5 		ldr	r0, [sp, #100]
+ 2029 0090 000050E3 		cmp	r0, #0
+ 2030 0094 0000000A 		beq	.L151
+ 2031 0098 FEFFFFEB 		bl	_ZdaPv
+ 2032              	.LVL209:
+ 2033              	.L151:
+ 2034              	.LBE1173:
+ 2035              	.LBE1172:
+ 2036              	.LBE1171:
+ 2037              	.LBE1170:
+ 2038              	.LBB1174:
+ 2039              	.LBB1175:
+ 2040              	.LBB1176:
+ 2041              	.LBB1177:
+ 2042 009c 54009DE5 		ldr	r0, [sp, #84]
+ 2043 00a0 000050E3 		cmp	r0, #0
+ 2044 00a4 0000000A 		beq	.L152
+ 2045 00a8 FEFFFFEB 		bl	_ZdaPv
+ 2046              	.LVL210:
+ 2047              	.L152:
+ 2048              	.LBE1177:
+ 2049              	.LBE1176:
+ 2050              	.LBE1175:
+ 2051              	.LBE1174:
+  46:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 		// r*x + s*n == 1, so r*x === 1 (mod n), so r is the answer.
+ 2052              		.loc 1 46 0
+ 2053 00ac 0110A0E3 		mov	r1, #1
+ 2054 00b0 68008DE2 		add	r0, sp, #104
+ 2055              	.LEHB34:
+ 2056 00b4 FEFFFFEB 		bl	_ZN10BigIntegerC1Ei
+ 2057              	.LVL211:
+ 2058              	.LBB1178:
+ 2059              	.LBB1179:
+  98:../src/zxing_lib/bigint/BigInteger.hh **** 	}
+ 2060              		.loc 2 98 0
+ 2061 00b8 D823DDE1 		ldrsb	r2, [sp, #56]
+ 2062 00bc D836DDE1 		ldrsb	r3, [sp, #104]
+ 2063 00c0 030052E1 		cmp	r2, r3
+ 2064 00c4 0A00000A 		beq	.L191
+ 2065 00c8 0060A0E3 		mov	r6, #0
+ 2066              	.L153:
+ 2067              	.LVL212:
+ 2068              	.LBE1179:
+ 2069              	.LBE1178:
+ 2070              	.LBB1183:
+ 2071              	.LBB1184:
+ 2072              	.LBB1185:
+ 2073              	.LBB1186:
+  51:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+ 2074              		.loc 3 51 0
+ 2075 00cc 74009DE5 		ldr	r0, [sp, #116]
+ 2076 00d0 000050E3 		cmp	r0, #0
+ 2077 00d4 0000000A 		beq	.L154
+ 2078 00d8 FEFFFFEB 		bl	_ZdaPv
+ 2079              	.LVL213:
+ 2080              	.L154:
+ 2081              	.LBE1186:
+ 2082              	.LBE1185:
+ 2083              	.LBE1184:
+ 2084              	.LBE1183:
+  46:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 		// r*x + s*n == 1, so r*x === 1 (mod n), so r is the answer.
+ 2085              		.loc 1 46 0
+ 2086 00dc 000056E3 		cmp	r6, #0
+ 2087 00e0 5500000A 		beq	.L155
+ 2088              	.LVL214:
+ 2089              	.LBB1187:
+ 2090              	.LBB1188:
+ 2091              	.LBB1189:
+ 2092              	.LBB1190:
+ 2093              	.LBB1191:
+ 2094              	.LBB1192:
+  40:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+ 2095              		.loc 4 40 0
+ 2096 00e4 0410A0E1 		mov	r1, r4
+ 2097 00e8 8C008DE2 		add	r0, sp, #140
+ 2098              	.LVL215:
+ 2099 00ec FEFFFFEB 		bl	_ZN15NumberlikeArrayImEC2ERKS0_
+ 2100              	.LVL216:
+ 2101              	.LEHE34:
+ 2102 00f0 040000EA 		b	.L192
+ 2103              	.LVL217:
+ 2104              	.L191:
+ 2105              	.LBE1192:
+ 2106              	.LBE1191:
+ 2107              	.LBE1190:
+ 2108              	.LBE1189:
+ 2109              	.LBE1188:
+ 2110              	.LBE1187:
+ 2111              	.LBB1198:
+ 2112              	.LBB1182:
+ 2113              	.LBB1180:
+ 2114              	.LBB1181:
+ 119:../src/zxing_lib/bigint/BigUnsigned.hh **** 	}
+ 2115              		.loc 4 119 0
+ 2116 00f4 6C108DE2 		add	r1, sp, #108
+ 2117              	.LVL218:
+ 2118 00f8 3C008DE2 		add	r0, sp, #60
+ 2119              	.LVL219:
+ 2120 00fc FEFFFFEB 		bl	_ZNK15NumberlikeArrayImEeqERKS0_
+ 2121              	.LVL220:
+ 2122 0100 0060A0E1 		mov	r6, r0
+ 2123              	.LVL221:
+ 2124 0104 F0FFFFEA 		b	.L153
+ 2125              	.LVL222:
+ 2126              	.L192:
+ 2127              	.LBE1181:
+ 2128              	.LBE1180:
+ 2129              	.LBE1182:
+ 2130              	.LBE1198:
+ 2131              	.LBB1199:
+ 2132              	.LBB1197:
+ 2133              	.LBB1196:
+ 2134              	.LBB1193:
+ 2135              	.LBB1194:
+ 2136              	.LBB1195:
+  75:../src/zxing_lib/bigint/NumberlikeArray.hh **** 
+ 2137              		.loc 3 75 0
+ 2138 0108 90309DE5 		ldr	r3, [sp, #144]
+ 2139              	.LVL223:
+ 2140              	.LBE1195:
+ 2141              	.LBE1194:
+ 2142              	.LBE1193:
+  53:../src/zxing_lib/bigint/BigInteger.hh **** 	}
+ 2143              		.loc 2 53 0
+ 2144 010c 000053E3 		cmp	r3, #0
+ 2145 0110 0130A013 		movne	r3, #1
+ 2146              	.L156:
+ 2147 0114 8830CDE5 		strb	r3, [sp, #136]
+ 2148              	.LVL224:
+ 2149              	.LBE1196:
+ 2150              	.LBE1197:
+ 2151              	.LBE1199:
+ 2152              	.LBB1200:
+ 2153              	.LBB1201:
+ 167:../src/zxing_lib/bigint/BigInteger.hh **** 	BigInteger q, r;
+ 2154              		.loc 2 167 0
+ 2155 0118 000053E3 		cmp	r3, #0
+ 2156 011c 0C00000A 		beq	.L193
+ 2157              	.LVL225:
+ 2158              	.LBB1202:
+ 2159              	.LBB1203:
+ 2160              	.LBB1204:
+  32:../src/zxing_lib/bigint/BigInteger.hh **** 
+ 2161              		.loc 2 32 0
+ 2162 0120 0030A0E3 		mov	r3, #0
+ 2163 0124 0830CDE5 		strb	r3, [sp, #8]
+ 2164              	.LVL226:
+ 2165              	.LBB1205:
+ 2166              	.LBB1206:
+ 2167              	.LBB1207:
+ 2168              	.LBB1208:
+  45:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		blk = NULL;
+ 2169              		.loc 3 45 0
+ 2170 0128 0C308DE5 		str	r3, [sp, #12]
+ 2171 012c 10308DE5 		str	r3, [sp, #16]
+  46:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+ 2172              		.loc 3 46 0
+ 2173 0130 14308DE5 		str	r3, [sp, #20]
+ 2174              	.LVL227:
+ 2175              	.LBE1208:
+ 2176              	.LBE1207:
+ 2177              	.LBE1206:
+ 2178              	.LBE1205:
+ 2179              	.LBE1204:
+ 2180              	.LBE1203:
+ 2181              	.LBE1202:
+ 2182              	.LBB1209:
+ 2183              	.LBB1210:
+  32:../src/zxing_lib/bigint/BigInteger.hh **** 
+ 2184              		.loc 2 32 0
+ 2185 0134 7830CDE5 		strb	r3, [sp, #120]
+ 2186              	.LVL228:
+ 2187              	.LBB1211:
+ 2188              	.LBB1212:
+ 2189              	.LBB1213:
+  45:../src/zxing_lib/bigint/NumberlikeArray.hh **** 		blk = NULL;
+ 2190              		.loc 3 45 0
+ 2191 0138 7C308DE5 		str	r3, [sp, #124]
+ 2192 013c 80308DE5 		str	r3, [sp, #128]
+  46:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+ 2193              		.loc 3 46 0
+ 2194 0140 84308DE5 		str	r3, [sp, #132]
+ 2195              	.LVL229:
+ 2196              	.LBE1213:
+ 2197              	.LBE1212:
+ 2198              	.LBE1211:
+ 2199              	.LBE1210:
+ 2200              	.LBE1209:
+ 169:../src/zxing_lib/bigint/BigInteger.hh **** 	r.divideWithRemainder(x, q);
+ 2201              		.loc 2 169 0
+ 2202 0144 28108DE2 		add	r1, sp, #40
+ 2203              	.LVL230:
+ 2204 0148 78008DE2 		add	r0, sp, #120
+ 2205              	.LEHB35:
+ 2206 014c FEFFFFEB 		bl	_ZN10BigIntegeraSERKS_
+ 2207              	.LVL231:
+ 2208              	.LEHE35:
+ 2209 0150 090000EA 		b	.L194
+ 2210              	.L193:
+ 167:../src/zxing_lib/bigint/BigInteger.hh **** 	BigInteger q, r;
+ 2211              		.loc 2 167 0
+ 2212 0154 0400A0E3 		mov	r0, #4
+ 2213 0158 FEFFFFEB 		bl	__cxa_allocate_exception
+ 2214              	.LVL232:
+ 2215 015c 003000E3 		movw	r3, #:lower16:.LC1
+ 2216 0160 003040E3 		movt	r3, #:upper16:.LC1
+ 2217 0164 003080E5 		str	r3, [r0]
+ 2218 0168 0020A0E3 		mov	r2, #0
+ 2219 016c 001000E3 		movw	r1, #:lower16:_ZTIPKc
+ 2220 0170 001040E3 		movt	r1, #:upper16:_ZTIPKc
+ 2221              	.LEHB36:
+ 2222 0174 FEFFFFEB 		bl	__cxa_throw
+ 2223              	.LVL233:
+ 2224              	.LEHE36:
+ 2225              	.L186:
+ 2226 0178 130000EA 		b	.L163
+ 2227              	.L194:
+ 170:../src/zxing_lib/bigint/BigInteger.hh **** 	return r;
+ 2228              		.loc 2 170 0
+ 2229 017c 08208DE2 		add	r2, sp, #8
+ 2230 0180 88108DE2 		add	r1, sp, #136
+ 2231              	.LVL234:
+ 2232 0184 78008DE2 		add	r0, sp, #120
+ 2233              	.LEHB37:
+ 2234 0188 FEFFFFEB 		bl	_ZN10BigInteger19divideWithRemainderERKS_RS_
+ 2235              	.LVL235:
+ 2236              	.LEHE37:
+ 2237              	.LBB1214:
+ 2238              	.LBB1215:
+ 2239              	.LBB1216:
+ 2240              	.LBB1217:
+  51:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+ 2241              		.loc 3 51 0
+ 2242 018c 14009DE5 		ldr	r0, [sp, #20]
+ 2243 0190 000050E3 		cmp	r0, #0
+ 2244 0194 0000000A 		beq	.L158
+ 2245 0198 FEFFFFEB 		bl	_ZdaPv
+ 2246              	.LVL236:
+ 2247              	.L158:
+ 2248              	.LBE1217:
+ 2249              	.LBE1216:
+ 2250              	.LBE1215:
+ 2251              	.LBE1214:
+ 2252              	.LBE1201:
+ 2253              	.LBE1200:
+ 2254              	.LBB1227:
+ 2255              	.LBB1228:
+  40:../src/zxing_lib/bigint/BigUnsigned.hh **** 
+ 2256              		.loc 4 40 0
+ 2257 019c 7C108DE2 		add	r1, sp, #124
+ 2258 01a0 0500A0E1 		mov	r0, r5
+ 2259              	.LEHB38:
+ 2260 01a4 FEFFFFEB 		bl	_ZN15NumberlikeArrayImEC2ERKS0_
+ 2261              	.LVL237:
+ 2262              	.LEHE38:
+ 2263 01a8 0C0000EA 		b	.L195
+ 2264              	.LVL238:
+ 2265              	.L188:
+ 2266              	.LBE1228:
+ 2267              	.LBE1227:
+ 2268              	.LBB1229:
+ 2269              	.LBB1226:
+ 2270              	.LBB1218:
+ 2271              	.LBB1219:
+ 2272              	.LBB1220:
+ 2273              	.LBB1221:
+  51:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+ 2274              		.loc 3 51 0
+ 2275 01ac 84009DE5 		ldr	r0, [sp, #132]
+ 2276 01b0 000050E3 		cmp	r0, #0
+ 2277 01b4 0000000A 		beq	.L161
+ 2278 01b8 FEFFFFEB 		bl	_ZdaPv
+ 2279              	.LVL239:
+ 2280              	.L161:
+ 2281              	.LBE1221:
+ 2282              	.LBE1220:
+ 2283              	.LBE1219:
+ 2284              	.LBE1218:
+ 2285              	.LBB1222:
+ 2286              	.LBB1223:
+ 2287              	.LBB1224:
+ 2288              	.LBB1225:
+ 2289 01bc 14009DE5 		ldr	r0, [sp, #20]
+ 2290 01c0 000050E3 		cmp	r0, #0
+ 2291 01c4 0000000A 		beq	.L163
+ 2292 01c8 FEFFFFEB 		bl	_ZdaPv
+ 2293              	.LVL240:
+ 2294              	.L163:
+ 2295              	.LBE1225:
+ 2296              	.LBE1224:
+ 2297              	.LBE1223:
+ 2298              	.LBE1222:
+ 2299              	.LBE1226:
+ 2300              	.LBE1229:
+ 2301              	.LBB1230:
+ 2302              	.LBB1231:
+ 2303              	.LBB1232:
+ 2304              	.LBB1233:
+  51:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+ 2305              		.loc 3 51 0 is_stmt 0 discriminator 2
+ 2306 01cc 94009DE5 		ldr	r0, [sp, #148]
+ 2307 01d0 000050E3 		cmp	r0, #0
+ 2308 01d4 2A00000A 		beq	.L173
+  51:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+ 2309              		.loc 3 51 0
+ 2310 01d8 FEFFFFEB 		bl	_ZdaPv
+ 2311              	.LVL241:
+ 2312 01dc 280000EA 		b	.L173
+ 2313              	.LVL242:
+ 2314              	.L195:
+ 2315              	.LBE1233:
+ 2316              	.LBE1232:
+ 2317              	.LBE1231:
+ 2318              	.LBE1230:
+ 2319              	.LBB1234:
+ 2320              	.LBB1235:
+ 2321              	.LBB1236:
+ 2322              	.LBB1237:
+ 2323 01e0 84009DE5 		ldr	r0, [sp, #132]
+ 2324 01e4 000050E3 		cmp	r0, #0
+ 2325 01e8 0000000A 		beq	.L164
+ 2326 01ec FEFFFFEB 		bl	_ZdaPv
+ 2327              	.LVL243:
+ 2328              	.L164:
+ 2329              	.LBE1237:
+ 2330              	.LBE1236:
+ 2331              	.LBE1235:
+ 2332              	.LBE1234:
+ 2333              	.LBB1238:
+ 2334              	.LBB1239:
+ 2335              	.LBB1240:
+ 2336              	.LBB1241:
+ 2337 01f0 94009DE5 		ldr	r0, [sp, #148]
+ 2338 01f4 000050E3 		cmp	r0, #0
+ 2339 01f8 0000000A 		beq	.L165
+ 2340 01fc FEFFFFEB 		bl	_ZdaPv
+ 2341              	.LVL244:
+ 2342              	.L165:
+ 2343              	.LBE1241:
+ 2344              	.LBE1240:
+ 2345              	.LBE1239:
+ 2346              	.LBE1238:
+ 2347              	.LBB1242:
+ 2348              	.LBB1243:
+ 2349              	.LBB1244:
+ 2350              	.LBB1245:
+ 2351              	.LBB1246:
+ 2352 0200 24009DE5 		ldr	r0, [sp, #36]
+ 2353 0204 000050E3 		cmp	r0, #0
+ 2354 0208 0000000A 		beq	.L166
+ 2355 020c FEFFFFEB 		bl	_ZdaPv
+ 2356              	.LVL245:
+ 2357              	.L166:
+ 2358              	.LBE1246:
+ 2359              	.LBE1245:
+ 2360              	.LBE1244:
+ 2361              	.LBE1243:
+ 2362              	.LBE1242:
+ 2363              	.LBB1247:
+ 2364              	.LBB1248:
+ 2365              	.LBB1249:
+ 2366              	.LBB1250:
+ 2367              	.LBB1251:
+ 2368 0210 34009DE5 		ldr	r0, [sp, #52]
+ 2369 0214 000050E3 		cmp	r0, #0
+ 2370 0218 0000000A 		beq	.L167
+ 2371 021c FEFFFFEB 		bl	_ZdaPv
+ 2372              	.LVL246:
+ 2373              	.L167:
+ 2374              	.LBE1251:
+ 2375              	.LBE1250:
+ 2376              	.LBE1249:
+ 2377              	.LBE1248:
+ 2378              	.LBE1247:
+ 2379              	.LBB1252:
+ 2380              	.LBB1253:
+ 2381              	.LBB1254:
+ 2382              	.LBB1255:
+ 2383 0220 44009DE5 		ldr	r0, [sp, #68]
+ 2384 0224 000050E3 		cmp	r0, #0
+ 2385 0228 0000000A 		beq	.L149
+ 2386 022c FEFFFFEB 		bl	_ZdaPv
+ 2387              	.LVL247:
+ 2388              	.L149:
+ 2389              	.LBE1255:
+ 2390              	.LBE1254:
+ 2391              	.LBE1253:
+ 2392              	.LBE1252:
+  51:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** 
+ 2393              		.loc 1 51 0 is_stmt 1
+ 2394 0230 0500A0E1 		mov	r0, r5
+ 2395 0234 98D08DE2 		add	sp, sp, #152
+ 2396              		.cfi_remember_state
+ 2397              		.cfi_def_cfa_offset 16
+ 2398              		@ sp needed
+ 2399 0238 7080BDE8 		pop	{r4, r5, r6, pc}
+ 2400              	.LVL248:
+ 2401              	.L155:
+ 2402              		.cfi_restore_state
+  50:../src/zxing_lib/bigint/BigIntegerAlgorithms.cpp **** }
+ 2403              		.loc 1 50 0
+ 2404 023c 0400A0E3 		mov	r0, #4
+ 2405 0240 FEFFFFEB 		bl	__cxa_allocate_exception
+ 2406              	.LVL249:
+ 2407 0244 003000E3 		movw	r3, #:lower16:.LC3
+ 2408 0248 003040E3 		movt	r3, #:upper16:.LC3
+ 2409 024c 003080E5 		str	r3, [r0]
+ 2410 0250 0020A0E3 		mov	r2, #0
+ 2411 0254 001000E3 		movw	r1, #:lower16:_ZTIPKc
+ 2412 0258 001040E3 		movt	r1, #:upper16:_ZTIPKc
+ 2413              	.LEHB39:
+ 2414 025c FEFFFFEB 		bl	__cxa_throw
+ 2415              	.LVL250:
+ 2416              	.LEHE39:
+ 2417              	.L183:
+ 2418 0260 070000EA 		b	.L173
+ 2419              	.L185:
+ 2420              	.LVL251:
+ 2421              	.LBB1256:
+ 2422              	.LBB1257:
+ 2423              	.LBB1258:
+ 2424              	.LBB1259:
+  51:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+ 2425              		.loc 3 51 0
+ 2426 0264 64009DE5 		ldr	r0, [sp, #100]
+ 2427 0268 000050E3 		cmp	r0, #0
+ 2428 026c 0000000A 		beq	.L171
+ 2429 0270 FEFFFFEB 		bl	_ZdaPv
+ 2430              	.LVL252:
+ 2431              	.L171:
+ 2432              	.LBE1259:
+ 2433              	.LBE1258:
+ 2434              	.LBE1257:
+ 2435              	.LBE1256:
+ 2436              	.LBB1260:
+ 2437              	.LBB1261:
+ 2438              	.LBB1262:
+ 2439              	.LBB1263:
+  51:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+ 2440              		.loc 3 51 0 is_stmt 0 discriminator 2
+ 2441 0274 54009DE5 		ldr	r0, [sp, #84]
+ 2442 0278 000050E3 		cmp	r0, #0
+ 2443 027c 0000000A 		beq	.L173
+  51:../src/zxing_lib/bigint/NumberlikeArray.hh **** 	}
+ 2444              		.loc 3 51 0
+ 2445 0280 FEFFFFEB 		bl	_ZdaPv
+ 2446              	.LVL253:
+ 2447              	.L173:
+ 2448              	.LBE1263:
+ 2449              	.LBE1262:
+ 2450              	.LBE1261:
+ 2451              	.LBE1260:
+ 2452              	.LBB1264:
+ 2453              	.LBB1265:
+ 2454              	.LBB1266:
+ 2455              	.LBB1267:
+ 2456              	.LBB1268:
+ 2457 0284 24009DE5 		ldr	r0, [sp, #36]
+ 2458 0288 000050E3 		cmp	r0, #0
+ 2459 028c 0000000A 		beq	.L177
+ 2460 0290 FEFFFFEB 		bl	_ZdaPv
+ 2461              	.LVL254:
+ 2462              	.L177:
+ 2463              	.LBE1268:
+ 2464              	.LBE1267:
+ 2465              	.LBE1266:
+ 2466              	.LBE1265:
+ 2467              	.LBE1264:
+ 2468              	.LBB1269:
+ 2469              	.LBB1270:
+ 2470              	.LBB1271:
+ 2471              	.LBB1272:
+ 2472              	.LBB1273:
+ 2473 0294 34009DE5 		ldr	r0, [sp, #52]
+ 2474 0298 000050E3 		cmp	r0, #0
+ 2475 029c 0000000A 		beq	.L178
+ 2476 02a0 FEFFFFEB 		bl	_ZdaPv
+ 2477              	.LVL255:
+ 2478              	.L178:
+ 2479              	.LBE1273:
+ 2480              	.LBE1272:
+ 2481              	.LBE1271:
+ 2482              	.LBE1270:
+ 2483              	.LBE1269:
+ 2484              	.LBB1274:
+ 2485              	.LBB1275:
+ 2486              	.LBB1276:
+ 2487              	.LBB1277:
+ 2488 02a4 44009DE5 		ldr	r0, [sp, #68]
+ 2489 02a8 000050E3 		cmp	r0, #0
+ 2490 02ac 0000000A 		beq	.L179
+ 2491 02b0 FEFFFFEB 		bl	_ZdaPv
+ 2492              	.LVL256:
+ 2493              	.L179:
+ 2494              	.LEHB40:
+ 2495 02b4 FEFFFFEB 		bl	__cxa_end_cleanup
+ 2496              	.LVL257:
+ 2497              	.LEHE40:
+ 2498              	.L184:
+ 2499 02b8 EDFFFFEA 		b	.L171
+ 2500              	.LVL258:
+ 2501              	.L187:
+ 2502              	.LBE1277:
+ 2503              	.LBE1276:
+ 2504              	.LBE1275:
+ 2505              	.LBE1274:
+ 2506              	.LBB1278:
+ 2507              	.LBB1279:
+ 2508              	.LBB1280:
+ 2509              	.LBB1281:
+ 2510 02bc 84009DE5 		ldr	r0, [sp, #132]
+ 2511 02c0 000050E3 		cmp	r0, #0
+ 2512 02c4 C0FFFF0A 		beq	.L163
+ 2513 02c8 FEFFFFEB 		bl	_ZdaPv
+ 2514              	.LVL259:
+ 2515 02cc BEFFFFEA 		b	.L163
+ 2516              	.LBE1281:
+ 2517              	.LBE1280:
+ 2518              	.LBE1279:
+ 2519              	.LBE1278:
+ 2520              		.cfi_endproc
+ 2521              	.LFE105:
+ 2522              		.personality	__gxx_personality_v0
+ 2523              		.handlerdata
+ 2524              	.LLSDA105:
+ 2525 0008 FF       		.byte	0xff
+ 2526 0009 FF       		.byte	0xff
+ 2527 000a 01       		.byte	0x1
+ 2528 000b 39       		.uleb128 .LLSDACSE105-.LLSDACSB105
+ 2529              	.LLSDACSB105:
+ 2530 000c 50       		.uleb128 .LEHB31-.LFB105
+ 2531 000d 04       		.uleb128 .LEHE31-.LEHB31
+ 2532 000e E004     		.uleb128 .L183-.LFB105
+ 2533 0010 00       		.uleb128 0
+ 2534 0011 5C       		.uleb128 .LEHB32-.LFB105
+ 2535 0012 04       		.uleb128 .LEHE32-.LEHB32
+ 2536 0013 B805     		.uleb128 .L184-.LFB105
+ 2537 0015 00       		.uleb128 0
+ 2538 0016 8801     		.uleb128 .LEHB33-.LFB105
+ 2539 0018 04       		.uleb128 .LEHE33-.LEHB33
+ 2540 0019 E404     		.uleb128 .L185-.LFB105
+ 2541 001b 00       		.uleb128 0
+ 2542 001c B401     		.uleb128 .LEHB34-.LFB105
+ 2543 001e 3C       		.uleb128 .LEHE34-.LEHB34
+ 2544 001f E004     		.uleb128 .L183-.LFB105
+ 2545 0021 00       		.uleb128 0
+ 2546 0022 CC02     		.uleb128 .LEHB35-.LFB105
+ 2547 0024 04       		.uleb128 .LEHE35-.LEHB35
+ 2548 0025 AC03     		.uleb128 .L188-.LFB105
+ 2549 0027 00       		.uleb128 0
+ 2550 0028 F402     		.uleb128 .LEHB36-.LFB105
+ 2551 002a 04       		.uleb128 .LEHE36-.LEHB36
+ 2552 002b F802     		.uleb128 .L186-.LFB105
+ 2553 002d 00       		.uleb128 0
+ 2554 002e 8803     		.uleb128 .LEHB37-.LFB105
+ 2555 0030 04       		.uleb128 .LEHE37-.LEHB37
+ 2556 0031 AC03     		.uleb128 .L188-.LFB105
+ 2557 0033 00       		.uleb128 0
+ 2558 0034 A403     		.uleb128 .LEHB38-.LFB105
+ 2559 0036 04       		.uleb128 .LEHE38-.LEHB38
+ 2560 0037 BC05     		.uleb128 .L187-.LFB105
+ 2561 0039 00       		.uleb128 0
+ 2562 003a DC04     		.uleb128 .LEHB39-.LFB105
+ 2563 003c 04       		.uleb128 .LEHE39-.LEHB39
+ 2564 003d E004     		.uleb128 .L183-.LFB105
+ 2565 003f 00       		.uleb128 0
+ 2566 0040 B405     		.uleb128 .LEHB40-.LFB105
+ 2567 0042 04       		.uleb128 .LEHE40-.LEHB40
+ 2568 0043 00       		.uleb128 0
+ 2569 0044 00       		.uleb128 0
+ 2570              	.LLSDACSE105:
+ 2571              		.section	.text._Z6modinvRK10BigIntegerRK11BigUnsigned
+ 2572              		.fnend
+ 2574              		.section	.rodata._Z17extendedEuclidean10BigIntegerS_RS_S0_S0_.str1.4,"aMS",%progbits,1
+ 2575              		.align	2
+ 2576              	.LC0:
+ 2577 0000 42696749 		.ascii	"BigInteger extendedEuclidean: Outputs are aliased\000"
+ 2577      6E746567 
+ 2577      65722065 
+ 2577      7874656E 
+ 2577      64656445 
+ 2578              		.section	.rodata._Z6modexpRK10BigIntegerRK11BigUnsignedS4_.str1.4,"aMS",%progbits,1
+ 2579              		.align	2
+ 2580              	.LC1:
+ 2581 0000 42696749 		.ascii	"BigInteger::operator %: division by zero\000"
+ 2581      6E746567 
+ 2581      65723A3A 
+ 2581      6F706572 
+ 2581      61746F72 
+ 2582 0029 000000   		.space	3
+ 2583              	.LC2:
+ 2584 002c 42696755 		.ascii	"BigUnsigned::operator %=: division by zero\000"
+ 2584      6E736967 
+ 2584      6E65643A 
+ 2584      3A6F7065 
+ 2584      7261746F 
+ 2585              		.section	.rodata._Z6modinvRK10BigIntegerRK11BigUnsigned.str1.4,"aMS",%progbits,1
+ 2586              		.align	2
+ 2587              	.LC3:
+ 2588 0000 42696749 		.ascii	"BigInteger modinv: x and n have a common factor\000"
+ 2588      6E746567 
+ 2588      6572206D 
+ 2588      6F64696E 
+ 2588      763A2078 
+ 2589              		.text
+ 2590              	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 BigIntegerAlgorithms.cpp
+     /tmp/cc8SikGj.s:17     .text._Z17extendedEuclidean10BigIntegerS_RS_S0_S0_:0000000000000000 $a
+     /tmp/cc8SikGj.s:23     .text._Z17extendedEuclidean10BigIntegerS_RS_S0_S0_:0000000000000000 _Z17extendedEuclidean10BigIntegerS_RS_S0_S0_
+     /tmp/cc8SikGj.s:2576   .rodata._Z17extendedEuclidean10BigIntegerS_RS_S0_S0_.str1.4:0000000000000000 .LC0
+.ARM.extab.text._Z17extendedEuclidean10BigIntegerS_RS_S0_S0_:0000000000000000 $d
+.ARM.exidx.text._Z17extendedEuclidean10BigIntegerS_RS_S0_S0_:0000000000000000 $d
+     /tmp/cc8SikGj.s:874    .text._ZN15NumberlikeArrayImEC2ERKS0_:0000000000000000 $a
+     /tmp/cc8SikGj.s:880    .text._ZN15NumberlikeArrayImEC2ERKS0_:0000000000000000 _ZN15NumberlikeArrayImEC2ERKS0_
+.ARM.exidx.text._ZN15NumberlikeArrayImEC2ERKS0_:0000000000000000 $d
+     /tmp/cc8SikGj.s:880    .text._ZN15NumberlikeArrayImEC2ERKS0_:0000000000000000 _ZN15NumberlikeArrayImEC1ERKS0_
+     /tmp/cc8SikGj.s:949    .text._Z3gcd11BigUnsignedS_:0000000000000000 $a
+     /tmp/cc8SikGj.s:955    .text._Z3gcd11BigUnsignedS_:0000000000000000 _Z3gcd11BigUnsignedS_
+.ARM.extab.text._Z3gcd11BigUnsignedS_:0000000000000000 $d
+.ARM.exidx.text._Z3gcd11BigUnsignedS_:0000000000000000 $d
+     /tmp/cc8SikGj.s:1127   .text._Z6modexpRK10BigIntegerRK11BigUnsignedS4_:0000000000000000 $a
+     /tmp/cc8SikGj.s:1133   .text._Z6modexpRK10BigIntegerRK11BigUnsignedS4_:0000000000000000 _Z6modexpRK10BigIntegerRK11BigUnsignedS4_
+     /tmp/cc8SikGj.s:2580   .rodata._Z6modexpRK10BigIntegerRK11BigUnsignedS4_.str1.4:0000000000000000 .LC1
+     /tmp/cc8SikGj.s:2583   .rodata._Z6modexpRK10BigIntegerRK11BigUnsignedS4_.str1.4:000000000000002c .LC2
+.ARM.extab.text._Z6modexpRK10BigIntegerRK11BigUnsignedS4_:0000000000000000 $d
+.ARM.exidx.text._Z6modexpRK10BigIntegerRK11BigUnsignedS4_:0000000000000000 $d
+     /tmp/cc8SikGj.s:1788   .text._ZNK15NumberlikeArrayImEeqERKS0_:0000000000000000 $a
+     /tmp/cc8SikGj.s:1794   .text._ZNK15NumberlikeArrayImEeqERKS0_:0000000000000000 _ZNK15NumberlikeArrayImEeqERKS0_
+.ARM.exidx.text._ZNK15NumberlikeArrayImEeqERKS0_:0000000000000000 $d
+     /tmp/cc8SikGj.s:1855   .text._Z6modinvRK10BigIntegerRK11BigUnsigned:0000000000000000 $a
+     /tmp/cc8SikGj.s:1861   .text._Z6modinvRK10BigIntegerRK11BigUnsigned:0000000000000000 _Z6modinvRK10BigIntegerRK11BigUnsigned
+     /tmp/cc8SikGj.s:2587   .rodata._Z6modinvRK10BigIntegerRK11BigUnsigned.str1.4:0000000000000000 .LC3
+.ARM.extab.text._Z6modinvRK10BigIntegerRK11BigUnsigned:0000000000000000 $d
+.ARM.exidx.text._Z6modinvRK10BigIntegerRK11BigUnsigned:0000000000000000 $d
+     /tmp/cc8SikGj.s:2575   .rodata._Z17extendedEuclidean10BigIntegerS_RS_S0_S0_.str1.4:0000000000000000 $d
+     /tmp/cc8SikGj.s:2579   .rodata._Z6modexpRK10BigIntegerRK11BigUnsignedS4_.str1.4:0000000000000000 $d
+     /tmp/cc8SikGj.s:2586   .rodata._Z6modinvRK10BigIntegerRK11BigUnsigned.str1.4:0000000000000000 $d
+                     .debug_frame:0000000000000010 $d
+                           .group:0000000000000000 _ZN15NumberlikeArrayImEC5ERKS0_
+                           .group:0000000000000000 wm4.0.cd1e96de8a8c4f34e746a820772853ad
+                           .group:0000000000000000 wm4.NumberlikeArray.hh.2.7b7601590c187b821715f11913579205
+
+UNDEFINED SYMBOLS
+__gxx_personality_v0
+_ZN10BigIntegerC1Ei
+__cxa_allocate_exception
+_ZTIPKc
+__cxa_throw
+_ZN10BigIntegeraSERKS_
+_ZN10BigInteger8multiplyERKS_S1_
+_ZdaPv
+__cxa_end_cleanup
+_ZN10BigInteger8subtractERKS_S1_
+_ZN10BigInteger19divideWithRemainderERKS_RS_
+_Znaj
+__cxa_throw_bad_array_new_length
+__aeabi_unwind_cpp_pr0
+_ZN11BigUnsigned19divideWithRemainderERKS_RS_
+_ZN11BigUnsignedC1Ei
+_ZNK11BigUnsigned9bitLengthEv
+_ZN11BigUnsigned8multiplyERKS_S1_

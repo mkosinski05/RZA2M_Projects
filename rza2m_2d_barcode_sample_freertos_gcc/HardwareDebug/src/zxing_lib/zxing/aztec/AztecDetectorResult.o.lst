@@ -1,0 +1,2083 @@
+   1              		.cpu cortex-a9
+   2              		.eabi_attribute 28, 1
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.file	"AztecDetectorResult.cpp"
+  13              		.text
+  14              	.Ltext0:
+  15              		.cfi_sections	.debug_frame
+  16              		.section	.text._ZN5zxing14DetectorResultD2Ev,"axG",%progbits,_ZN5zxing14DetectorResultD5Ev,comdat
+  17              		.align	2
+  18              		.weak	_ZN5zxing14DetectorResultD2Ev
+  19              		.syntax unified
+  20              		.arm
+  21              		.fpu neon
+  23              	_ZN5zxing14DetectorResultD2Ev:
+  24              		.fnstart
+  25              	.LFB2241:
+  26              		.file 1 "/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/com
+   1:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/DetectorResult.h **** #ifndef __DETECTOR_RESULT_H__
+   2:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/DetectorResult.h **** #define __DETECTOR_RESULT_H__
+   3:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/DetectorResult.h **** 
+   4:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/DetectorResult.h **** /*
+   5:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/DetectorResult.h ****  *  DetectorResult.h
+   6:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/DetectorResult.h ****  *  zxing
+   7:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/DetectorResult.h ****  *
+   8:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/DetectorResult.h ****  *  Copyright 2010 ZXing authors All rights reserved.
+   9:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/DetectorResult.h ****  *
+  10:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/DetectorResult.h ****  * Licensed under the Apache License, Version 2.0 (the "License");
+  11:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/DetectorResult.h ****  * you may not use this file except in compliance with the License.
+  12:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/DetectorResult.h ****  * You may obtain a copy of the License at
+  13:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/DetectorResult.h ****  *
+  14:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/DetectorResult.h ****  *      http://www.apache.org/licenses/LICENSE-2.0
+  15:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/DetectorResult.h ****  *
+  16:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/DetectorResult.h ****  * Unless required by applicable law or agreed to in writing, software
+  17:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/DetectorResult.h ****  * distributed under the License is distributed on an "AS IS" BASIS,
+  18:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/DetectorResult.h ****  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  19:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/DetectorResult.h ****  * See the License for the specific language governing permissions and
+  20:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/DetectorResult.h ****  * limitations under the License.
+  21:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/DetectorResult.h ****  */
+  22:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/DetectorResult.h **** 
+  23:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/DetectorResult.h **** #include <zxing/common/Counted.h>
+  24:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/DetectorResult.h **** #include <zxing/common/Array.h>
+  25:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/DetectorResult.h **** #include <zxing/common/BitMatrix.h>
+  26:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/DetectorResult.h **** #include <zxing/ResultPoint.h>
+  27:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/DetectorResult.h **** 
+  28:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/DetectorResult.h **** namespace zxing {
+  29:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/DetectorResult.h **** 
+  30:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/DetectorResult.h **** class DetectorResult : public Counted {
+  27              		.loc 1 30 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              	.LVL0:
+  32 0000 10402DE9 		push	{r4, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 4, -8
+  35              		.cfi_offset 14, -4
+  36 0004 0040A0E1 		mov	r4, r0
+  37              	.LBB93:
+  38              		.loc 1 30 0
+  39 0008 88309FE5 		ldr	r3, .L7
+  40 000c 003080E5 		str	r3, [r0]
+  41              	.LVL1:
+  42              	.LBB94:
+  43              	.LBB95:
+  44              		.file 2 "/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/com
+   1:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h **** // -*- mode:c++; tab-width:2; indent-tabs-mode:nil; c-basic-offset:2 -*-
+   2:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h **** #ifndef __ARRAY_H__
+   3:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h **** #define __ARRAY_H__
+   4:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h **** 
+   5:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h **** /*
+   6:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****  *  Array.h
+   7:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****  *  zxing
+   8:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****  *
+   9:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****  *  Copyright 2010 ZXing authors All rights reserved.
+  10:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****  *
+  11:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****  * Licensed under the Apache License, Version 2.0 (the "License");
+  12:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****  * you may not use this file except in compliance with the License.
+  13:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****  * You may obtain a copy of the License at
+  14:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****  *
+  15:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****  *      http://www.apache.org/licenses/LICENSE-2.0
+  16:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****  *
+  17:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****  * Unless required by applicable law or agreed to in writing, software
+  18:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****  * distributed under the License is distributed on an "AS IS" BASIS,
+  19:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  20:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****  * See the License for the specific language governing permissions and
+  21:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****  * limitations under the License.
+  22:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****  */
+  23:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h **** 
+  24:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h **** #include <vector>
+  25:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h **** 
+  26:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h **** #include <zxing/common/Counted.h>
+  27:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h **** 
+  28:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h **** namespace zxing {
+  29:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h **** 
+  30:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h **** template<typename T> class Array : public Counted {
+  31:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h **** protected:
+  32:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h **** public:
+  33:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   std::vector<T> values_;
+  34:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   Array() {}
+  35:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   Array(int n) :
+  36:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****       Counted(), values_(n, T()) {
+  37:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   }
+  38:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   Array(T const* ts, int n) :
+  39:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****       Counted(), values_(ts, ts+n) {
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   }
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   Array(T const* ts, T const* te) :
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****       Counted(), values_(ts, te) {
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   }
+  44:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   Array(T v, int n) :
+  45:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****       Counted(), values_(n, v) {
+  46:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   }
+  47:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   Array(std::vector<T> &v) :
+  48:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****       Counted(), values_(v) {
+  49:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   }
+  50:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   Array(Array<T> &other) :
+  51:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****       Counted(), values_(other.values_) {
+  52:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   }
+  53:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   Array(Array<T> *other) :
+  54:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****       Counted(), values_(other->values_) {
+  55:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   }
+  56:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   virtual ~Array() {
+  57:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   }
+  58:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   Array<T>& operator=(const Array<T> &other) {
+  59:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****     values_ = other.values_;
+  60:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****     return *this;
+  61:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   }
+  62:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   Array<T>& operator=(const std::vector<T> &array) {
+  63:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****     values_ = array;
+  64:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****     return *this;
+  65:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   }
+  66:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   T const& operator[](int i) const {
+  67:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****     return values_[i];
+  68:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   }
+  69:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   T& operator[](int i) {
+  70:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****     return values_[i];
+  71:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   }
+  72:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   int size() const {
+  73:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****     return values_.size();
+  74:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   }
+  75:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   bool empty() const {
+  76:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****     return values_.size() == 0;
+  77:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   }
+  78:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   std::vector<T> const& values() const {
+  79:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****     return values_;
+  80:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   }
+  81:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   std::vector<T>& values() {
+  82:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****     return values_;
+  83:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   }
+  84:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h **** };
+  85:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h **** 
+  86:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h **** template<typename T> class ArrayRef : public Counted {
+  87:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h **** private:
+  88:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h **** public:
+  89:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   Array<T> *array_;
+  90:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   ArrayRef() :
+  91:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****       array_(0) {
+  92:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   }
+  93:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   explicit ArrayRef(int n) :
+  94:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****       array_(0) {
+  95:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****     reset(new Array<T> (n));
+  96:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   }
+  97:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   ArrayRef(T *ts, int n) :
+  98:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****       array_(0) {
+  99:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****     reset(new Array<T> (ts, n));
+ 100:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   }
+ 101:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   ArrayRef(Array<T> *a) :
+ 102:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****       array_(0) {
+ 103:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****     reset(a);
+ 104:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   }
+ 105:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   ArrayRef(const ArrayRef &other) :
+ 106:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****       Counted(), array_(0) {
+ 107:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****     reset(other.array_);
+ 108:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   }
+ 109:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h **** 
+ 110:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   template<class Y>
+ 111:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   ArrayRef(const ArrayRef<Y> &other) :
+ 112:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****       array_(0) {
+ 113:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****     reset(static_cast<const Array<T> *>(other.array_));
+ 114:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   }
+ 115:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h **** 
+ 116:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   ~ArrayRef() {
+ 117:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****     if (array_) {
+ 118:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****       array_->release();
+ 119:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****     }
+ 120:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****     array_ = 0;
+ 121:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   }
+  45              		.loc 2 121 0
+  46 0010 84309FE5 		ldr	r3, .L7+4
+  47 0014 0C3080E5 		str	r3, [r0, #12]
+ 117:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****       array_->release();
+  48              		.loc 2 117 0
+  49 0018 140090E5 		ldr	r0, [r0, #20]
+  50              	.LVL2:
+  51 001c 000050E3 		cmp	r0, #0
+  52 0020 0400000A 		beq	.L2
+  53              	.LVL3:
+  54              	.LBB96:
+  55              	.LBB97:
+  56              		.file 3 "/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/com
+   1:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** // -*- mode:c++; tab-width:2; indent-tabs-mode:nil; c-basic-offset:2 -*-
+   2:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** #ifndef __COUNTED_H__
+   3:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** #define __COUNTED_H__
+   4:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** 
+   5:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** /*
+   6:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  *  Copyright 2010 ZXing authors All rights reserved.
+   7:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  *
+   8:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  * Licensed under the Apache License, Version 2.0 (the "License");
+   9:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  * you may not use this file except in compliance with the License.
+  10:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  * You may obtain a copy of the License at
+  11:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  *
+  12:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  *      http://www.apache.org/licenses/LICENSE-2.0
+  13:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  *
+  14:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  * Unless required by applicable law or agreed to in writing, software
+  15:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  * distributed under the License is distributed on an "AS IS" BASIS,
+  16:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  17:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  * See the License for the specific language governing permissions and
+  18:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  * limitations under the License.
+  19:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  */
+  20:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** 
+  21:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** #include <iostream>
+  22:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** 
+  23:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** namespace zxing {
+  24:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** 
+  25:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** /* base class for reference-counted objects */
+  26:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** class Counted {
+  27:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** private:
+  28:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   unsigned int count_;
+  29:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** public:
+  30:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   Counted() :
+  31:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_(0) {
+  32:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+  33:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   virtual ~Counted() {
+  34:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+  35:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   Counted *retain() {
+  36:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     count_++;
+  37:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     return this;
+  38:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+  39:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   void release() {
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     count_--;
+  57              		.loc 3 40 0
+  58 0024 043090E5 		ldr	r3, [r0, #4]
+  59 0028 013043E2 		sub	r3, r3, #1
+  60 002c 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+  61              		.loc 3 41 0
+  62 0030 000053E3 		cmp	r3, #0
+  63 0034 0900000A 		beq	.L5
+  64              	.LVL4:
+  65              	.L2:
+  66              	.LBE97:
+  67              	.LBE96:
+  68              	.LBE95:
+  69              	.LBE94:
+  70              	.LBB101:
+  71              	.LBB102:
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+  44:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+  45:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+  46:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** 
+  47:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** 
+  48:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   /* return the current count for denugging purposes or similar */
+  49:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   int count() const {
+  50:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     return count_;
+  51:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+  52:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** };
+  53:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** 
+  54:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** /* counting reference to reference-counted objects */
+  55:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** template<typename T> class Ref {
+  56:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** private:
+  57:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** public:
+  58:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   T *object_;
+  59:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   explicit Ref(T *o = 0) :
+  60:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_(0) {
+  61:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     reset(o);
+  62:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+  63:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   Ref(const Ref &other) :
+  64:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_(0) {
+  65:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     reset(other.object_);
+  66:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+  67:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** 
+  68:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   template<class Y>
+  69:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   Ref(const Ref<Y> &other) :
+  70:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_(0) {
+  71:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     reset(other.object_);
+  72:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+  73:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** 
+  74:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   ~Ref() {
+  75:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (object_) {
+  72              		.loc 3 75 0
+  73 0038 080094E5 		ldr	r0, [r4, #8]
+  74 003c 000050E3 		cmp	r0, #0
+  75 0040 0400000A 		beq	.L3
+  76              	.LVL5:
+  77              	.LBB103:
+  78              	.LBB104:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+  79              		.loc 3 40 0
+  80 0044 043090E5 		ldr	r3, [r0, #4]
+  81 0048 013043E2 		sub	r3, r3, #1
+  82 004c 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+  83              		.loc 3 41 0
+  84 0050 000053E3 		cmp	r3, #0
+  85 0054 0800000A 		beq	.L6
+  86              	.LVL6:
+  87              	.L3:
+  88              	.LBE104:
+  89              	.LBE103:
+  90              	.LBE102:
+  91              	.LBE101:
+  92              	.LBE93:
+  93              		.loc 1 30 0
+  94 0058 0400A0E1 		mov	r0, r4
+  95 005c 1080BDE8 		pop	{r4, pc}
+  96              	.LVL7:
+  97              	.L5:
+  98              	.LBB110:
+  99              	.LBB108:
+ 100              	.LBB100:
+ 101              	.LBB99:
+ 102              	.LBB98:
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 103              		.loc 3 42 0
+ 104 0060 01300FE3 		movw	r3, #61441
+ 105 0064 AD3E4DE3 		movt	r3, 57005
+ 106 0068 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 107              		.loc 3 43 0
+ 108 006c 003090E5 		ldr	r3, [r0]
+ 109 0070 043093E5 		ldr	r3, [r3, #4]
+ 110 0074 33FF2FE1 		blx	r3
+ 111              	.LVL8:
+ 112 0078 EEFFFFEA 		b	.L2
+ 113              	.LVL9:
+ 114              	.L6:
+ 115              	.LBE98:
+ 116              	.LBE99:
+ 117              	.LBE100:
+ 118              	.LBE108:
+ 119              	.LBB109:
+ 120              	.LBB107:
+ 121              	.LBB106:
+ 122              	.LBB105:
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 123              		.loc 3 42 0
+ 124 007c 01300FE3 		movw	r3, #61441
+ 125 0080 AD3E4DE3 		movt	r3, 57005
+ 126 0084 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 127              		.loc 3 43 0
+ 128 0088 003090E5 		ldr	r3, [r0]
+ 129 008c 043093E5 		ldr	r3, [r3, #4]
+ 130 0090 33FF2FE1 		blx	r3
+ 131              	.LVL10:
+ 132 0094 EFFFFFEA 		b	.L3
+ 133              	.L8:
+ 134              		.align	2
+ 135              	.L7:
+ 136 0098 08000000 		.word	_ZTVN5zxing14DetectorResultE+8
+ 137 009c 08000000 		.word	_ZTVN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE+8
+ 138              	.LBE105:
+ 139              	.LBE106:
+ 140              	.LBE107:
+ 141              	.LBE109:
+ 142              	.LBE110:
+ 143              		.cfi_endproc
+ 144              	.LFE2241:
+ 145              		.cantunwind
+ 146              		.fnend
+ 148              		.weak	_ZN5zxing14DetectorResultD1Ev
+ 149              		.set	_ZN5zxing14DetectorResultD1Ev,_ZN5zxing14DetectorResultD2Ev
+ 150              		.section	.text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED2Ev,"axG",%progbits,_ZN5zxing8Array
+ 151              		.align	2
+ 152              		.weak	_ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED2Ev
+ 153              		.syntax unified
+ 154              		.arm
+ 155              		.fpu neon
+ 157              	_ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED2Ev:
+ 158              		.fnstart
+ 159              	.LFB2470:
+ 116:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****     if (array_) {
+ 160              		.loc 2 116 0
+ 161              		.cfi_startproc
+ 162              		@ args = 0, pretend = 0, frame = 0
+ 163              		@ frame_needed = 0, uses_anonymous_args = 0
+ 164              	.LVL11:
+ 165 0000 10402DE9 		push	{r4, lr}
+ 166              		.cfi_def_cfa_offset 8
+ 167              		.cfi_offset 4, -8
+ 168              		.cfi_offset 14, -4
+ 169 0004 0040A0E1 		mov	r4, r0
+ 170              	.LBB111:
+ 171              		.loc 2 121 0
+ 172 0008 44309FE5 		ldr	r3, .L13
+ 173 000c 003080E5 		str	r3, [r0]
+ 117:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****       array_->release();
+ 174              		.loc 2 117 0
+ 175 0010 080090E5 		ldr	r0, [r0, #8]
+ 176              	.LVL12:
+ 177 0014 000050E3 		cmp	r0, #0
+ 178 0018 0400000A 		beq	.L10
+ 179              	.LVL13:
+ 180              	.LBB112:
+ 181              	.LBB113:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 182              		.loc 3 40 0
+ 183 001c 043090E5 		ldr	r3, [r0, #4]
+ 184 0020 013043E2 		sub	r3, r3, #1
+ 185 0024 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 186              		.loc 3 41 0
+ 187 0028 000053E3 		cmp	r3, #0
+ 188 002c 0100000A 		beq	.L12
+ 189              	.LVL14:
+ 190              	.L10:
+ 191              	.LBE113:
+ 192              	.LBE112:
+ 193              	.LBE111:
+ 194              		.loc 2 121 0
+ 195 0030 0400A0E1 		mov	r0, r4
+ 196 0034 1080BDE8 		pop	{r4, pc}
+ 197              	.LVL15:
+ 198              	.L12:
+ 199              	.LBB116:
+ 200              	.LBB115:
+ 201              	.LBB114:
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 202              		.loc 3 42 0
+ 203 0038 01300FE3 		movw	r3, #61441
+ 204 003c AD3E4DE3 		movt	r3, 57005
+ 205 0040 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 206              		.loc 3 43 0
+ 207 0044 003090E5 		ldr	r3, [r0]
+ 208 0048 043093E5 		ldr	r3, [r3, #4]
+ 209 004c 33FF2FE1 		blx	r3
+ 210              	.LVL16:
+ 211 0050 F6FFFFEA 		b	.L10
+ 212              	.L14:
+ 213              		.align	2
+ 214              	.L13:
+ 215 0054 08000000 		.word	_ZTVN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE+8
+ 216              	.LBE114:
+ 217              	.LBE115:
+ 218              	.LBE116:
+ 219              		.cfi_endproc
+ 220              	.LFE2470:
+ 221              		.cantunwind
+ 222              		.fnend
+ 224              		.weak	_ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED1Ev
+ 225              		.set	_ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED1Ev,_ZN5zxing8ArrayRefINS_3RefINS_11ResultPoi
+ 226              		.section	.text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED0Ev,"axG",%progbits,_ZN5zxing8Array
+ 227              		.align	2
+ 228              		.weak	_ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED0Ev
+ 229              		.syntax unified
+ 230              		.arm
+ 231              		.fpu neon
+ 233              	_ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED0Ev:
+ 234              		.fnstart
+ 235              	.LFB2472:
+ 116:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****     if (array_) {
+ 236              		.loc 2 116 0
+ 237              		.cfi_startproc
+ 238              		@ args = 0, pretend = 0, frame = 0
+ 239              		@ frame_needed = 0, uses_anonymous_args = 0
+ 240              	.LVL17:
+ 241 0000 10402DE9 		push	{r4, lr}
+ 242              		.cfi_def_cfa_offset 8
+ 243              		.cfi_offset 4, -8
+ 244              		.cfi_offset 14, -4
+ 245 0004 0040A0E1 		mov	r4, r0
+ 246              	.LVL18:
+ 247              	.LBB117:
+ 248              	.LBB118:
+ 249              		.loc 2 121 0
+ 250 0008 50309FE5 		ldr	r3, .L19
+ 251 000c 003080E5 		str	r3, [r0]
+ 117:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****       array_->release();
+ 252              		.loc 2 117 0
+ 253 0010 080090E5 		ldr	r0, [r0, #8]
+ 254              	.LVL19:
+ 255 0014 000050E3 		cmp	r0, #0
+ 256 0018 0400000A 		beq	.L16
+ 257              	.LVL20:
+ 258              	.LBB119:
+ 259              	.LBB120:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 260              		.loc 3 40 0
+ 261 001c 043090E5 		ldr	r3, [r0, #4]
+ 262 0020 013043E2 		sub	r3, r3, #1
+ 263 0024 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 264              		.loc 3 41 0
+ 265 0028 000053E3 		cmp	r3, #0
+ 266 002c 0400000A 		beq	.L18
+ 267              	.LVL21:
+ 268              	.L16:
+ 269              	.LBE120:
+ 270              	.LBE119:
+ 271              	.LBE118:
+ 272              	.LBE117:
+ 273              		.loc 2 121 0
+ 274 0030 0C10A0E3 		mov	r1, #12
+ 275 0034 0400A0E1 		mov	r0, r4
+ 276 0038 FEFFFFEB 		bl	_ZdlPvj
+ 277              	.LVL22:
+ 278 003c 0400A0E1 		mov	r0, r4
+ 279 0040 1080BDE8 		pop	{r4, pc}
+ 280              	.LVL23:
+ 281              	.L18:
+ 282              	.LBB124:
+ 283              	.LBB123:
+ 284              	.LBB122:
+ 285              	.LBB121:
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 286              		.loc 3 42 0
+ 287 0044 01300FE3 		movw	r3, #61441
+ 288 0048 AD3E4DE3 		movt	r3, 57005
+ 289 004c 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 290              		.loc 3 43 0
+ 291 0050 003090E5 		ldr	r3, [r0]
+ 292 0054 043093E5 		ldr	r3, [r3, #4]
+ 293 0058 33FF2FE1 		blx	r3
+ 294              	.LVL24:
+ 295 005c F3FFFFEA 		b	.L16
+ 296              	.L20:
+ 297              		.align	2
+ 298              	.L19:
+ 299 0060 08000000 		.word	_ZTVN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE+8
+ 300              	.LBE121:
+ 301              	.LBE122:
+ 302              	.LBE123:
+ 303              	.LBE124:
+ 304              		.cfi_endproc
+ 305              	.LFE2472:
+ 306              		.cantunwind
+ 307              		.fnend
+ 309              		.section	.text._Z41__static_initialization_and_destruction_0ii,"ax",%progbits
+ 310              		.align	2
+ 311              		.syntax unified
+ 312              		.arm
+ 313              		.fpu neon
+ 315              	_Z41__static_initialization_and_destruction_0ii:
+ 316              		.fnstart
+ 317              	.LFB2710:
+ 318              		.file 4 "../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp"
+   1:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp **** // -*- mode:c++; tab-width:2; indent-tabs-mode:nil; c-basic-offset:2 -*-
+   2:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp **** /*
+   3:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****  *  AtztecDetecorResult.cpp
+   4:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****  *  zxing
+   5:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****  *
+   6:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****  *  Created by Lukas Stabe on 08/02/2012.
+   7:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****  *  Copyright 2012 ZXing authors All rights reserved.
+   8:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****  *
+   9:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****  * Licensed under the Apache License, Version 2.0 (the "License");
+  10:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****  * you may not use this file except in compliance with the License.
+  11:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****  * You may obtain a copy of the License at
+  12:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****  *
+  13:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****  *      http://www.apache.org/licenses/LICENSE-2.0
+  14:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****  *
+  15:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****  * Unless required by applicable law or agreed to in writing, software
+  16:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****  * distributed under the License is distributed on an "AS IS" BASIS,
+  17:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  18:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****  * See the License for the specific language governing permissions and
+  19:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****  * limitations under the License.
+  20:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****  */
+  21:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp **** 
+  22:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp **** #include <zxing/aztec/AztecDetectorResult.h>
+  23:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp **** 
+  24:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp **** using zxing::aztec::AztecDetectorResult;
+  25:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp **** 
+  26:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp **** // VC++
+  27:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp **** using zxing::Ref;
+  28:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp **** using zxing::ArrayRef;
+  29:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp **** using zxing::BitMatrix;
+  30:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp **** using zxing::ResultPoint;
+  31:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp **** 
+  32:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp **** 
+  33:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp **** AztecDetectorResult::AztecDetectorResult(Ref<BitMatrix> bits,
+  34:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****                                          ArrayRef< Ref<ResultPoint> > points,
+  35:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****                                          bool compact,
+  36:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****                                          int nbDatablocks,
+  37:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****                                          int nbLayers)
+  38:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****   : DetectorResult(bits, points),
+  39:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****     compact_(compact),
+  40:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****     nbDatablocks_(nbDatablocks),
+  41:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****     nbLayers_(nbLayers) {
+  42:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****     }
+  43:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****         
+  44:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp **** bool AztecDetectorResult::isCompact() {
+  45:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****   return compact_;
+  46:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp **** }
+  47:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****         
+  48:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp **** int AztecDetectorResult::getNBDatablocks() {
+  49:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****   return nbDatablocks_;
+  50:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp **** }
+  51:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****         
+  52:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp **** int AztecDetectorResult::getNBLayers() {
+  53:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****   return nbLayers_;
+  54:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp **** }
+ 319              		.loc 4 54 0
+ 320              		.cfi_startproc
+ 321              		@ args = 0, pretend = 0, frame = 0
+ 322              		@ frame_needed = 0, uses_anonymous_args = 0
+ 323              	.LVL25:
+ 324 0000 010050E3 		cmp	r0, #1
+ 325 0004 1EFF2F11 		bxne	lr
+ 326              		.loc 4 54 0 is_stmt 0 discriminator 1
+ 327 0008 FF3F0FE3 		movw	r3, #65535
+ 328 000c 030051E1 		cmp	r1, r3
+ 329 0010 1EFF2F11 		bxne	lr
+ 330              		.loc 4 54 0
+ 331 0014 10402DE9 		push	{r4, lr}
+ 332              		.cfi_def_cfa_offset 8
+ 333              		.cfi_offset 4, -8
+ 334              		.cfi_offset 14, -4
+ 335              		.file 5 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+   1:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // Standard iostream objects -*- C++ -*-
+   2:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+   3:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // Copyright (C) 1997-2016 Free Software Foundation, Inc.
+   4:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** //
+   5:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // This file is part of the GNU ISO C++ Library.  This library is free
+   6:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // software; you can redistribute it and/or modify it under the
+   7:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // terms of the GNU General Public License as published by the
+   8:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // Free Software Foundation; either version 3, or (at your option)
+   9:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // any later version.
+  10:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  11:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // This library is distributed in the hope that it will be useful,
+  12:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // but WITHOUT ANY WARRANTY; without even the implied warranty of
+  13:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  14:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // GNU General Public License for more details.
+  15:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  16:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // Under Section 7 of GPL version 3, you are granted additional
+  17:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // permissions described in the GCC Runtime Library Exception, version
+  18:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // 3.1, as published by the Free Software Foundation.
+  19:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  20:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // You should have received a copy of the GNU General Public License and
+  21:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // a copy of the GCC Runtime Library Exception along with this program;
+  22:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+  23:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // <http://www.gnu.org/licenses/>.
+  24:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  25:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** /** @file include/iostream
+  26:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****  *  This is a Standard C++ Library header.
+  27:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****  */
+  28:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  29:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** //
+  30:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // ISO C++ 14882: 27.3  Standard iostream objects
+  31:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** //
+  32:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  33:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** #ifndef _GLIBCXX_IOSTREAM
+  34:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** #define _GLIBCXX_IOSTREAM 1
+  35:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  36:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** #pragma GCC system_header
+  37:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  38:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** #include <bits/c++config.h>
+  39:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** #include <ostream>
+  40:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** #include <istream>
+  41:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  42:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** namespace std _GLIBCXX_VISIBILITY(default)
+  43:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** {
+  44:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** _GLIBCXX_BEGIN_NAMESPACE_VERSION
+  45:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  46:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   /**
+  47:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  @name Standard Stream Objects
+  48:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *
+  49:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  The &lt;iostream&gt; header declares the eight <em>standard stream
+  50:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  objects</em>.  For other declarations, see
+  51:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  http://gcc.gnu.org/onlinedocs/libstdc++/manual/io.html
+  52:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  and the @link iosfwd I/O forward declarations @endlink
+  53:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *
+  54:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  They are required by default to cooperate with the global C
+  55:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  library's @c FILE streams, and to be available during program
+  56:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  startup and termination. For more information, see the section of the
+  57:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  manual linked to above.
+  58:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   */
+  59:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   //@{
+  60:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   extern istream cin;		/// Linked to standard input
+  61:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   extern ostream cout;		/// Linked to standard output
+  62:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   extern ostream cerr;		/// Linked to standard error (unbuffered)
+  63:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   extern ostream clog;		/// Linked to standard error (buffered)
+  64:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  65:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** #ifdef _GLIBCXX_USE_WCHAR_T
+  66:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   extern wistream wcin;		/// Linked to standard input
+  67:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   extern wostream wcout;	/// Linked to standard output
+  68:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   extern wostream wcerr;	/// Linked to standard error (unbuffered)
+  69:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   extern wostream wclog;	/// Linked to standard error (buffered)
+  70:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** #endif
+  71:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   //@}
+  72:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  73:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   // For construction of filebuffers for cout, cin, cerr, clog et. al.
+  74:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   static ios_base::Init __ioinit;
+ 336              		.loc 5 74 0 is_stmt 1
+ 337 0018 004000E3 		movw	r4, #:lower16:.LANCHOR0
+ 338 001c 004040E3 		movt	r4, #:upper16:.LANCHOR0
+ 339 0020 0400A0E1 		mov	r0, r4
+ 340              	.LVL26:
+ 341 0024 FEFFFFEB 		bl	_ZNSt8ios_base4InitC1Ev
+ 342              	.LVL27:
+ 343 0028 002000E3 		movw	r2, #:lower16:__dso_handle
+ 344 002c 002040E3 		movt	r2, #:upper16:__dso_handle
+ 345 0030 001000E3 		movw	r1, #:lower16:_ZNSt8ios_base4InitD1Ev
+ 346 0034 001040E3 		movt	r1, #:upper16:_ZNSt8ios_base4InitD1Ev
+ 347 0038 0400A0E1 		mov	r0, r4
+ 348 003c FEFFFFEB 		bl	__aeabi_atexit
+ 349              	.LVL28:
+ 350 0040 1080BDE8 		pop	{r4, pc}
+ 351              		.cfi_endproc
+ 352              	.LFE2710:
+ 353              		.cantunwind
+ 354              		.fnend
+ 356              		.section	.text._ZN5zxing5aztec19AztecDetectorResultD2Ev,"axG",%progbits,_ZN5zxing5aztec19AztecDete
+ 357              		.align	2
+ 358              		.weak	_ZN5zxing5aztec19AztecDetectorResultD2Ev
+ 359              		.syntax unified
+ 360              		.arm
+ 361              		.fpu neon
+ 363              	_ZN5zxing5aztec19AztecDetectorResultD2Ev:
+ 364              		.fnstart
+ 365              	.LFB2707:
+ 366              		.file 6 "/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/azt
+   1:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/aztec/AztecDetectorResult.h **** // -*- mode:c++; tab-width:2; indent-tabs-mode:nil; c-basic-offset:2 -*-
+   2:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/aztec/AztecDetectorResult.h **** /*
+   3:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/aztec/AztecDetectorResult.h ****  *  AtztecDetecorResult.h
+   4:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/aztec/AztecDetectorResult.h ****  *  zxing
+   5:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/aztec/AztecDetectorResult.h ****  *
+   6:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/aztec/AztecDetectorResult.h ****  *  Created by Lukas Stabe on 08/02/2012.
+   7:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/aztec/AztecDetectorResult.h ****  *  Copyright 2012 ZXing authors All rights reserved.
+   8:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/aztec/AztecDetectorResult.h ****  *
+   9:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/aztec/AztecDetectorResult.h ****  * Licensed under the Apache License, Version 2.0 (the "License");
+  10:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/aztec/AztecDetectorResult.h ****  * you may not use this file except in compliance with the License.
+  11:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/aztec/AztecDetectorResult.h ****  * You may obtain a copy of the License at
+  12:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/aztec/AztecDetectorResult.h ****  *
+  13:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/aztec/AztecDetectorResult.h ****  *      http://www.apache.org/licenses/LICENSE-2.0
+  14:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/aztec/AztecDetectorResult.h ****  *
+  15:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/aztec/AztecDetectorResult.h ****  * Unless required by applicable law or agreed to in writing, software
+  16:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/aztec/AztecDetectorResult.h ****  * distributed under the License is distributed on an "AS IS" BASIS,
+  17:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/aztec/AztecDetectorResult.h ****  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  18:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/aztec/AztecDetectorResult.h ****  * See the License for the specific language governing permissions and
+  19:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/aztec/AztecDetectorResult.h ****  * limitations under the License.
+  20:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/aztec/AztecDetectorResult.h ****  */
+  21:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/aztec/AztecDetectorResult.h **** 
+  22:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/aztec/AztecDetectorResult.h **** #include <zxing/common/DetectorResult.h>
+  23:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/aztec/AztecDetectorResult.h **** 
+  24:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/aztec/AztecDetectorResult.h **** #ifndef ZXingWidget_AtztecDetecorResult_h
+  25:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/aztec/AztecDetectorResult.h **** #define ZXingWidget_AtztecDetecorResult_h
+  26:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/aztec/AztecDetectorResult.h **** 
+  27:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/aztec/AztecDetectorResult.h **** namespace zxing {
+  28:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/aztec/AztecDetectorResult.h **** namespace aztec {
+  29:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/aztec/AztecDetectorResult.h **** 
+  30:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/aztec/AztecDetectorResult.h **** class AztecDetectorResult : public DetectorResult {
+ 367              		.loc 6 30 0
+ 368              		.cfi_startproc
+ 369              		@ args = 0, pretend = 0, frame = 0
+ 370              		@ frame_needed = 0, uses_anonymous_args = 0
+ 371              	.LVL29:
+ 372 0000 10402DE9 		push	{r4, lr}
+ 373              		.cfi_def_cfa_offset 8
+ 374              		.cfi_offset 4, -8
+ 375              		.cfi_offset 14, -4
+ 376 0004 0040A0E1 		mov	r4, r0
+ 377              	.LVL30:
+ 378              	.LBB139:
+ 379              	.LBB140:
+ 380              	.LBB141:
+ 381              		.loc 1 30 0
+ 382 0008 88309FE5 		ldr	r3, .L33
+ 383 000c 003080E5 		str	r3, [r0]
+ 384              	.LVL31:
+ 385              	.LBB142:
+ 386              	.LBB143:
+ 387              		.loc 2 121 0
+ 388 0010 84309FE5 		ldr	r3, .L33+4
+ 389 0014 0C3080E5 		str	r3, [r0, #12]
+ 117:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****       array_->release();
+ 390              		.loc 2 117 0
+ 391 0018 140090E5 		ldr	r0, [r0, #20]
+ 392              	.LVL32:
+ 393 001c 000050E3 		cmp	r0, #0
+ 394 0020 0400000A 		beq	.L28
+ 395              	.LVL33:
+ 396              	.LBB144:
+ 397              	.LBB145:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 398              		.loc 3 40 0
+ 399 0024 043090E5 		ldr	r3, [r0, #4]
+ 400 0028 013043E2 		sub	r3, r3, #1
+ 401 002c 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 402              		.loc 3 41 0
+ 403 0030 000053E3 		cmp	r3, #0
+ 404 0034 0900000A 		beq	.L31
+ 405              	.LVL34:
+ 406              	.L28:
+ 407              	.LBE145:
+ 408              	.LBE144:
+ 409              	.LBE143:
+ 410              	.LBE142:
+ 411              	.LBB149:
+ 412              	.LBB150:
+ 413              		.loc 3 75 0
+ 414 0038 080094E5 		ldr	r0, [r4, #8]
+ 415 003c 000050E3 		cmp	r0, #0
+ 416 0040 0400000A 		beq	.L29
+ 417              	.LVL35:
+ 418              	.LBB151:
+ 419              	.LBB152:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 420              		.loc 3 40 0
+ 421 0044 043090E5 		ldr	r3, [r0, #4]
+ 422 0048 013043E2 		sub	r3, r3, #1
+ 423 004c 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 424              		.loc 3 41 0
+ 425 0050 000053E3 		cmp	r3, #0
+ 426 0054 0800000A 		beq	.L32
+ 427              	.LVL36:
+ 428              	.L29:
+ 429              	.LBE152:
+ 430              	.LBE151:
+ 431              	.LBE150:
+ 432              	.LBE149:
+ 433              	.LBE141:
+ 434              	.LBE140:
+ 435              	.LBE139:
+ 436              		.loc 6 30 0
+ 437 0058 0400A0E1 		mov	r0, r4
+ 438 005c 1080BDE8 		pop	{r4, pc}
+ 439              	.LVL37:
+ 440              	.L31:
+ 441              	.LBB160:
+ 442              	.LBB159:
+ 443              	.LBB158:
+ 444              	.LBB156:
+ 445              	.LBB148:
+ 446              	.LBB147:
+ 447              	.LBB146:
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 448              		.loc 3 42 0
+ 449 0060 01300FE3 		movw	r3, #61441
+ 450 0064 AD3E4DE3 		movt	r3, 57005
+ 451 0068 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 452              		.loc 3 43 0
+ 453 006c 003090E5 		ldr	r3, [r0]
+ 454 0070 043093E5 		ldr	r3, [r3, #4]
+ 455 0074 33FF2FE1 		blx	r3
+ 456              	.LVL38:
+ 457 0078 EEFFFFEA 		b	.L28
+ 458              	.LVL39:
+ 459              	.L32:
+ 460              	.LBE146:
+ 461              	.LBE147:
+ 462              	.LBE148:
+ 463              	.LBE156:
+ 464              	.LBB157:
+ 465              	.LBB155:
+ 466              	.LBB154:
+ 467              	.LBB153:
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 468              		.loc 3 42 0
+ 469 007c 01300FE3 		movw	r3, #61441
+ 470 0080 AD3E4DE3 		movt	r3, 57005
+ 471 0084 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 472              		.loc 3 43 0
+ 473 0088 003090E5 		ldr	r3, [r0]
+ 474 008c 043093E5 		ldr	r3, [r3, #4]
+ 475 0090 33FF2FE1 		blx	r3
+ 476              	.LVL40:
+ 477 0094 EFFFFFEA 		b	.L29
+ 478              	.L34:
+ 479              		.align	2
+ 480              	.L33:
+ 481 0098 08000000 		.word	_ZTVN5zxing14DetectorResultE+8
+ 482 009c 08000000 		.word	_ZTVN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE+8
+ 483              	.LBE153:
+ 484              	.LBE154:
+ 485              	.LBE155:
+ 486              	.LBE157:
+ 487              	.LBE158:
+ 488              	.LBE159:
+ 489              	.LBE160:
+ 490              		.cfi_endproc
+ 491              	.LFE2707:
+ 492              		.cantunwind
+ 493              		.fnend
+ 495              		.weak	_ZN5zxing5aztec19AztecDetectorResultD1Ev
+ 496              		.set	_ZN5zxing5aztec19AztecDetectorResultD1Ev,_ZN5zxing5aztec19AztecDetectorResultD2Ev
+ 497              		.section	.text._ZN5zxing14DetectorResultD0Ev,"axG",%progbits,_ZN5zxing14DetectorResultD5Ev,comdat
+ 498              		.align	2
+ 499              		.weak	_ZN5zxing14DetectorResultD0Ev
+ 500              		.syntax unified
+ 501              		.arm
+ 502              		.fpu neon
+ 504              	_ZN5zxing14DetectorResultD0Ev:
+ 505              		.fnstart
+ 506              	.LFB2243:
+ 507              		.loc 1 30 0
+ 508              		.cfi_startproc
+ 509              		@ args = 0, pretend = 0, frame = 0
+ 510              		@ frame_needed = 0, uses_anonymous_args = 0
+ 511              	.LVL41:
+ 512 0000 10402DE9 		push	{r4, lr}
+ 513              		.cfi_def_cfa_offset 8
+ 514              		.cfi_offset 4, -8
+ 515              		.cfi_offset 14, -4
+ 516 0004 0040A0E1 		mov	r4, r0
+ 517              	.LVL42:
+ 518              	.LBB174:
+ 519              	.LBB175:
+ 520              		.loc 1 30 0
+ 521 0008 94309FE5 		ldr	r3, .L41
+ 522 000c 003080E5 		str	r3, [r0]
+ 523              	.LVL43:
+ 524              	.LBB176:
+ 525              	.LBB177:
+ 526              		.loc 2 121 0
+ 527 0010 90309FE5 		ldr	r3, .L41+4
+ 528 0014 0C3080E5 		str	r3, [r0, #12]
+ 117:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****       array_->release();
+ 529              		.loc 2 117 0
+ 530 0018 140090E5 		ldr	r0, [r0, #20]
+ 531              	.LVL44:
+ 532 001c 000050E3 		cmp	r0, #0
+ 533 0020 0400000A 		beq	.L36
+ 534              	.LVL45:
+ 535              	.LBB178:
+ 536              	.LBB179:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 537              		.loc 3 40 0
+ 538 0024 043090E5 		ldr	r3, [r0, #4]
+ 539 0028 013043E2 		sub	r3, r3, #1
+ 540 002c 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 541              		.loc 3 41 0
+ 542 0030 000053E3 		cmp	r3, #0
+ 543 0034 0C00000A 		beq	.L39
+ 544              	.LVL46:
+ 545              	.L36:
+ 546              	.LBE179:
+ 547              	.LBE178:
+ 548              	.LBE177:
+ 549              	.LBE176:
+ 550              	.LBB183:
+ 551              	.LBB184:
+ 552              		.loc 3 75 0
+ 553 0038 080094E5 		ldr	r0, [r4, #8]
+ 554 003c 000050E3 		cmp	r0, #0
+ 555 0040 0400000A 		beq	.L37
+ 556              	.LVL47:
+ 557              	.LBB185:
+ 558              	.LBB186:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 559              		.loc 3 40 0
+ 560 0044 043090E5 		ldr	r3, [r0, #4]
+ 561 0048 013043E2 		sub	r3, r3, #1
+ 562 004c 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 563              		.loc 3 41 0
+ 564 0050 000053E3 		cmp	r3, #0
+ 565 0054 0B00000A 		beq	.L40
+ 566              	.LVL48:
+ 567              	.L37:
+ 568              	.LBE186:
+ 569              	.LBE185:
+ 570              	.LBE184:
+ 571              	.LBE183:
+ 572              	.LBE175:
+ 573              	.LBE174:
+ 574              		.loc 1 30 0
+ 575 0058 1810A0E3 		mov	r1, #24
+ 576 005c 0400A0E1 		mov	r0, r4
+ 577 0060 FEFFFFEB 		bl	_ZdlPvj
+ 578              	.LVL49:
+ 579 0064 0400A0E1 		mov	r0, r4
+ 580 0068 1080BDE8 		pop	{r4, pc}
+ 581              	.LVL50:
+ 582              	.L39:
+ 583              	.LBB193:
+ 584              	.LBB192:
+ 585              	.LBB190:
+ 586              	.LBB182:
+ 587              	.LBB181:
+ 588              	.LBB180:
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 589              		.loc 3 42 0
+ 590 006c 01300FE3 		movw	r3, #61441
+ 591 0070 AD3E4DE3 		movt	r3, 57005
+ 592 0074 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 593              		.loc 3 43 0
+ 594 0078 003090E5 		ldr	r3, [r0]
+ 595 007c 043093E5 		ldr	r3, [r3, #4]
+ 596 0080 33FF2FE1 		blx	r3
+ 597              	.LVL51:
+ 598 0084 EBFFFFEA 		b	.L36
+ 599              	.LVL52:
+ 600              	.L40:
+ 601              	.LBE180:
+ 602              	.LBE181:
+ 603              	.LBE182:
+ 604              	.LBE190:
+ 605              	.LBB191:
+ 606              	.LBB189:
+ 607              	.LBB188:
+ 608              	.LBB187:
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 609              		.loc 3 42 0
+ 610 0088 01300FE3 		movw	r3, #61441
+ 611 008c AD3E4DE3 		movt	r3, 57005
+ 612 0090 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 613              		.loc 3 43 0
+ 614 0094 003090E5 		ldr	r3, [r0]
+ 615 0098 043093E5 		ldr	r3, [r3, #4]
+ 616 009c 33FF2FE1 		blx	r3
+ 617              	.LVL53:
+ 618 00a0 ECFFFFEA 		b	.L37
+ 619              	.L42:
+ 620              		.align	2
+ 621              	.L41:
+ 622 00a4 08000000 		.word	_ZTVN5zxing14DetectorResultE+8
+ 623 00a8 08000000 		.word	_ZTVN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE+8
+ 624              	.LBE187:
+ 625              	.LBE188:
+ 626              	.LBE189:
+ 627              	.LBE191:
+ 628              	.LBE192:
+ 629              	.LBE193:
+ 630              		.cfi_endproc
+ 631              	.LFE2243:
+ 632              		.cantunwind
+ 633              		.fnend
+ 635              		.section	.text._ZN5zxing5aztec19AztecDetectorResultD0Ev,"axG",%progbits,_ZN5zxing5aztec19AztecDete
+ 636              		.align	2
+ 637              		.weak	_ZN5zxing5aztec19AztecDetectorResultD0Ev
+ 638              		.syntax unified
+ 639              		.arm
+ 640              		.fpu neon
+ 642              	_ZN5zxing5aztec19AztecDetectorResultD0Ev:
+ 643              		.fnstart
+ 644              	.LFB2709:
+ 645              		.loc 6 30 0
+ 646              		.cfi_startproc
+ 647              		@ args = 0, pretend = 0, frame = 0
+ 648              		@ frame_needed = 0, uses_anonymous_args = 0
+ 649              	.LVL54:
+ 650 0000 10402DE9 		push	{r4, lr}
+ 651              		.cfi_def_cfa_offset 8
+ 652              		.cfi_offset 4, -8
+ 653              		.cfi_offset 14, -4
+ 654 0004 0040A0E1 		mov	r4, r0
+ 655              	.LVL55:
+ 656              	.LBB209:
+ 657              	.LBB210:
+ 658              	.LBB211:
+ 659              	.LBB212:
+ 660              		.loc 1 30 0
+ 661 0008 94309FE5 		ldr	r3, .L49
+ 662 000c 003080E5 		str	r3, [r0]
+ 663              	.LVL56:
+ 664              	.LBB213:
+ 665              	.LBB214:
+ 666              		.loc 2 121 0
+ 667 0010 90309FE5 		ldr	r3, .L49+4
+ 668 0014 0C3080E5 		str	r3, [r0, #12]
+ 117:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****       array_->release();
+ 669              		.loc 2 117 0
+ 670 0018 140090E5 		ldr	r0, [r0, #20]
+ 671              	.LVL57:
+ 672 001c 000050E3 		cmp	r0, #0
+ 673 0020 0400000A 		beq	.L44
+ 674              	.LVL58:
+ 675              	.LBB215:
+ 676              	.LBB216:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 677              		.loc 3 40 0
+ 678 0024 043090E5 		ldr	r3, [r0, #4]
+ 679 0028 013043E2 		sub	r3, r3, #1
+ 680 002c 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 681              		.loc 3 41 0
+ 682 0030 000053E3 		cmp	r3, #0
+ 683 0034 0C00000A 		beq	.L47
+ 684              	.LVL59:
+ 685              	.L44:
+ 686              	.LBE216:
+ 687              	.LBE215:
+ 688              	.LBE214:
+ 689              	.LBE213:
+ 690              	.LBB220:
+ 691              	.LBB221:
+ 692              		.loc 3 75 0
+ 693 0038 080094E5 		ldr	r0, [r4, #8]
+ 694 003c 000050E3 		cmp	r0, #0
+ 695 0040 0400000A 		beq	.L45
+ 696              	.LVL60:
+ 697              	.LBB222:
+ 698              	.LBB223:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 699              		.loc 3 40 0
+ 700 0044 043090E5 		ldr	r3, [r0, #4]
+ 701 0048 013043E2 		sub	r3, r3, #1
+ 702 004c 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 703              		.loc 3 41 0
+ 704 0050 000053E3 		cmp	r3, #0
+ 705 0054 0B00000A 		beq	.L48
+ 706              	.LVL61:
+ 707              	.L45:
+ 708              	.LBE223:
+ 709              	.LBE222:
+ 710              	.LBE221:
+ 711              	.LBE220:
+ 712              	.LBE212:
+ 713              	.LBE211:
+ 714              	.LBE210:
+ 715              	.LBE209:
+ 716              		.loc 6 30 0
+ 717 0058 2410A0E3 		mov	r1, #36
+ 718 005c 0400A0E1 		mov	r0, r4
+ 719 0060 FEFFFFEB 		bl	_ZdlPvj
+ 720              	.LVL62:
+ 721 0064 0400A0E1 		mov	r0, r4
+ 722 0068 1080BDE8 		pop	{r4, pc}
+ 723              	.LVL63:
+ 724              	.L47:
+ 725              	.LBB232:
+ 726              	.LBB231:
+ 727              	.LBB230:
+ 728              	.LBB229:
+ 729              	.LBB227:
+ 730              	.LBB219:
+ 731              	.LBB218:
+ 732              	.LBB217:
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 733              		.loc 3 42 0
+ 734 006c 01300FE3 		movw	r3, #61441
+ 735 0070 AD3E4DE3 		movt	r3, 57005
+ 736 0074 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 737              		.loc 3 43 0
+ 738 0078 003090E5 		ldr	r3, [r0]
+ 739 007c 043093E5 		ldr	r3, [r3, #4]
+ 740 0080 33FF2FE1 		blx	r3
+ 741              	.LVL64:
+ 742 0084 EBFFFFEA 		b	.L44
+ 743              	.LVL65:
+ 744              	.L48:
+ 745              	.LBE217:
+ 746              	.LBE218:
+ 747              	.LBE219:
+ 748              	.LBE227:
+ 749              	.LBB228:
+ 750              	.LBB226:
+ 751              	.LBB225:
+ 752              	.LBB224:
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 753              		.loc 3 42 0
+ 754 0088 01300FE3 		movw	r3, #61441
+ 755 008c AD3E4DE3 		movt	r3, 57005
+ 756 0090 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 757              		.loc 3 43 0
+ 758 0094 003090E5 		ldr	r3, [r0]
+ 759 0098 043093E5 		ldr	r3, [r3, #4]
+ 760 009c 33FF2FE1 		blx	r3
+ 761              	.LVL66:
+ 762 00a0 ECFFFFEA 		b	.L45
+ 763              	.L50:
+ 764              		.align	2
+ 765              	.L49:
+ 766 00a4 08000000 		.word	_ZTVN5zxing14DetectorResultE+8
+ 767 00a8 08000000 		.word	_ZTVN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE+8
+ 768              	.LBE224:
+ 769              	.LBE225:
+ 770              	.LBE226:
+ 771              	.LBE228:
+ 772              	.LBE229:
+ 773              	.LBE230:
+ 774              	.LBE231:
+ 775              	.LBE232:
+ 776              		.cfi_endproc
+ 777              	.LFE2709:
+ 778              		.cantunwind
+ 779              		.fnend
+ 781              		.section	.text._ZN5zxing5aztec19AztecDetectorResultC2ENS_3RefINS_9BitMatrixEEENS_8ArrayRefINS2_INS
+ 782              		.align	2
+ 783              		.global	_ZN5zxing5aztec19AztecDetectorResultC2ENS_3RefINS_9BitMatrixEEENS_8ArrayRefINS2_INS_11Resu
+ 784              		.syntax unified
+ 785              		.arm
+ 786              		.fpu neon
+ 788              	_ZN5zxing5aztec19AztecDetectorResultC2ENS_3RefINS_9BitMatrixEEENS_8ArrayRefINS2_INS_11ResultPointEE
+ 789              		.fnstart
+ 790              	.LFB2244:
+  33:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****                                          ArrayRef< Ref<ResultPoint> > points,
+ 791              		.loc 4 33 0
+ 792              		.cfi_startproc
+ 793              		.cfi_personality 0,__gxx_personality_v0
+ 794              		.cfi_lsda 0,.LLSDA2244
+ 795              		@ args = 8, pretend = 0, frame = 16
+ 796              		@ frame_needed = 0, uses_anonymous_args = 0
+ 797              	.LVL67:
+ 798 0000 F0402DE9 		push	{r4, r5, r6, r7, lr}
+ 799              		.save {r4, r5, r6, r7, lr}
+ 800              		.cfi_def_cfa_offset 20
+ 801              		.cfi_offset 4, -20
+ 802              		.cfi_offset 5, -16
+ 803              		.cfi_offset 6, -12
+ 804              		.cfi_offset 7, -8
+ 805              		.cfi_offset 14, -4
+ 806              		.pad #20
+ 807 0004 14D04DE2 		sub	sp, sp, #20
+ 808              		.cfi_def_cfa_offset 40
+ 809 0008 0040A0E1 		mov	r4, r0
+ 810 000c 0270A0E1 		mov	r7, r2
+ 811 0010 0360A0E1 		mov	r6, r3
+ 812              	.LVL68:
+ 813              	.LBB273:
+ 814              	.LBB274:
+ 815              	.LBB275:
+ 816              	.LBB276:
+  64:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     reset(other.object_);
+ 817              		.loc 3 64 0
+ 818 0014 0030A0E3 		mov	r3, #0
+ 819              	.LVL69:
+ 820 0018 00308DE5 		str	r3, [sp]
+  65:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+ 821              		.loc 3 65 0
+ 822 001c 005091E5 		ldr	r5, [r1]
+ 823              	.LVL70:
+ 824              	.LBB277:
+ 825              	.LBB278:
+  76:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_->release();
+  77:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+  78:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+  79:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** 
+  80:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   void reset(T *o) {
+  81:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (o) {
+ 826              		.loc 3 81 0
+ 827 0020 030055E1 		cmp	r5, r3
+ 828              	.LVL71:
+ 829              	.LBB279:
+ 830              	.LBB280:
+  36:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     return this;
+ 831              		.loc 3 36 0
+ 832 0024 04309515 		ldrne	r3, [r5, #4]
+ 833 0028 01308312 		addne	r3, r3, #1
+ 834 002c 04308515 		strne	r3, [r5, #4]
+ 835              	.LVL72:
+ 836              	.L52:
+ 837              	.LBE280:
+ 838              	.LBE279:
+  82:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       o->retain();
+  83:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+  84:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (object_ != 0) {
+ 839              		.loc 3 84 0
+ 840 0030 00009DE5 		ldr	r0, [sp]
+ 841              	.LVL73:
+ 842 0034 000050E3 		cmp	r0, #0
+ 843 0038 0400000A 		beq	.L53
+ 844              	.LVL74:
+ 845              	.LBB281:
+ 846              	.LBB282:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 847              		.loc 3 40 0
+ 848 003c 043090E5 		ldr	r3, [r0, #4]
+ 849 0040 013043E2 		sub	r3, r3, #1
+ 850 0044 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 851              		.loc 3 41 0
+ 852 0048 000053E3 		cmp	r3, #0
+ 853 004c 1800000A 		beq	.L64
+ 854              	.LVL75:
+ 855              	.L53:
+ 856              	.LBE282:
+ 857              	.LBE281:
+  85:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_->release();
+  86:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+  87:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     object_ = o;
+ 858              		.loc 3 87 0
+ 859 0050 00508DE5 		str	r5, [sp]
+ 860              	.LVL76:
+ 861              	.LBE278:
+ 862              	.LBE277:
+ 863              	.LBE276:
+ 864              	.LBE275:
+ 865              	.LBE274:
+ 866              	.LBB289:
+ 867              	.LBB290:
+ 868              	.LBB291:
+ 869              	.LBB292:
+ 870              	.LBB293:
+ 871              	.LBB294:
+  31:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+ 872              		.loc 3 31 0
+ 873 0054 0030A0E3 		mov	r3, #0
+ 874 0058 08308DE5 		str	r3, [sp, #8]
+ 875              	.LVL77:
+ 876              	.LBE294:
+ 877              	.LBE293:
+ 878              	.LBE292:
+ 106:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****     reset(other.array_);
+ 879              		.loc 2 106 0
+ 880 005c AC219FE5 		ldr	r2, .L69
+ 881 0060 04208DE5 		str	r2, [sp, #4]
+ 882 0064 0C308DE5 		str	r3, [sp, #12]
+ 107:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   }
+ 883              		.loc 2 107 0
+ 884 0068 085097E5 		ldr	r5, [r7, #8]
+ 885              	.LVL78:
+ 886              	.LBB295:
+ 887              	.LBB296:
+ 122:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h **** 
+ 123:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   T const& operator[](int i) const {
+ 124:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****     return (*array_)[i];
+ 125:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   }
+ 126:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h **** 
+ 127:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   T& operator[](int i) {
+ 128:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****     return (*array_)[i];
+ 129:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   }
+ 130:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h **** 
+ 131:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****   void reset(Array<T> *a) {
+ 132:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****     if (a) {
+ 888              		.loc 2 132 0
+ 889 006c 030055E1 		cmp	r5, r3
+ 890              	.LVL79:
+ 891              	.LBB297:
+ 892              	.LBB298:
+  36:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     return this;
+ 893              		.loc 3 36 0
+ 894 0070 04309515 		ldrne	r3, [r5, #4]
+ 895 0074 01308312 		addne	r3, r3, #1
+ 896 0078 04308515 		strne	r3, [r5, #4]
+ 897              	.LVL80:
+ 898              	.L54:
+ 899              	.LBE298:
+ 900              	.LBE297:
+ 133:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****       a->retain();
+ 134:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****     }
+ 135:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****     if (array_) {
+ 901              		.loc 2 135 0
+ 902 007c 0C009DE5 		ldr	r0, [sp, #12]
+ 903 0080 000050E3 		cmp	r0, #0
+ 904 0084 0400000A 		beq	.L55
+ 905              	.LVL81:
+ 906              	.LBB299:
+ 907              	.LBB300:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 908              		.loc 3 40 0
+ 909 0088 043090E5 		ldr	r3, [r0, #4]
+ 910 008c 013043E2 		sub	r3, r3, #1
+ 911 0090 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 912              		.loc 3 41 0
+ 913 0094 000053E3 		cmp	r3, #0
+ 914 0098 0C00000A 		beq	.L65
+ 915              	.LVL82:
+ 916              	.L55:
+ 917              	.LBE300:
+ 918              	.LBE299:
+ 136:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****       array_->release();
+ 137:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****     }
+ 138:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****     array_ = a;
+ 919              		.loc 2 138 0
+ 920 009c 0C508DE5 		str	r5, [sp, #12]
+ 921              	.LVL83:
+ 922              	.LBE296:
+ 923              	.LBE295:
+ 924              	.LBE291:
+ 925              	.LBE290:
+ 926              	.LBE289:
+  41:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****     }
+ 927              		.loc 4 41 0
+ 928 00a0 04208DE2 		add	r2, sp, #4
+ 929 00a4 0D10A0E1 		mov	r1, sp
+ 930 00a8 0400A0E1 		mov	r0, r4
+ 931              	.LEHB0:
+ 932 00ac FEFFFFEB 		bl	_ZN5zxing14DetectorResultC2ENS_3RefINS_9BitMatrixEEENS_8ArrayRefINS1_INS_11ResultPointEEEEE
+ 933              	.LVL84:
+ 934              	.LEHE0:
+ 935 00b0 0D0000EA 		b	.L66
+ 936              	.LVL85:
+ 937              	.L64:
+ 938              	.LBB307:
+ 939              	.LBB288:
+ 940              	.LBB287:
+ 941              	.LBB286:
+ 942              	.LBB285:
+ 943              	.LBB284:
+ 944              	.LBB283:
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 945              		.loc 3 42 0
+ 946 00b4 01300FE3 		movw	r3, #61441
+ 947 00b8 AD3E4DE3 		movt	r3, 57005
+ 948 00bc 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 949              		.loc 3 43 0
+ 950 00c0 003090E5 		ldr	r3, [r0]
+ 951 00c4 043093E5 		ldr	r3, [r3, #4]
+ 952 00c8 33FF2FE1 		blx	r3
+ 953              	.LVL86:
+ 954 00cc DFFFFFEA 		b	.L53
+ 955              	.LVL87:
+ 956              	.L65:
+ 957              	.LBE283:
+ 958              	.LBE284:
+ 959              	.LBE285:
+ 960              	.LBE286:
+ 961              	.LBE287:
+ 962              	.LBE288:
+ 963              	.LBE307:
+ 964              	.LBB308:
+ 965              	.LBB306:
+ 966              	.LBB305:
+ 967              	.LBB304:
+ 968              	.LBB303:
+ 969              	.LBB302:
+ 970              	.LBB301:
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 971              		.loc 3 42 0
+ 972 00d0 01300FE3 		movw	r3, #61441
+ 973 00d4 AD3E4DE3 		movt	r3, 57005
+ 974 00d8 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 975              		.loc 3 43 0
+ 976 00dc 003090E5 		ldr	r3, [r0]
+ 977 00e0 043093E5 		ldr	r3, [r3, #4]
+ 978 00e4 33FF2FE1 		blx	r3
+ 979              	.LVL88:
+ 980 00e8 EBFFFFEA 		b	.L55
+ 981              	.LVL89:
+ 982              	.L66:
+ 983              	.LBE301:
+ 984              	.LBE302:
+ 985              	.LBE303:
+ 986              	.LBE304:
+ 987              	.LBE305:
+ 988              	.LBE306:
+ 989              	.LBE308:
+ 990              	.LBB309:
+ 991              	.LBB310:
+ 121:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h **** 
+ 992              		.loc 2 121 0
+ 993 00ec 1C319FE5 		ldr	r3, .L69
+ 994 00f0 04308DE5 		str	r3, [sp, #4]
+ 117:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****       array_->release();
+ 995              		.loc 2 117 0
+ 996 00f4 0C009DE5 		ldr	r0, [sp, #12]
+ 997 00f8 000050E3 		cmp	r0, #0
+ 998 00fc 0400000A 		beq	.L56
+ 999              	.LVL90:
+ 1000              	.LBB311:
+ 1001              	.LBB312:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 1002              		.loc 3 40 0
+ 1003 0100 043090E5 		ldr	r3, [r0, #4]
+ 1004 0104 013043E2 		sub	r3, r3, #1
+ 1005 0108 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 1006              		.loc 3 41 0
+ 1007 010c 000053E3 		cmp	r3, #0
+ 1008 0110 1100000A 		beq	.L67
+ 1009              	.LVL91:
+ 1010              	.L56:
+ 1011              	.LBE312:
+ 1012              	.LBE311:
+ 1013              	.LBE310:
+ 1014              	.LBE309:
+ 1015              	.LBB316:
+ 1016              	.LBB317:
+  75:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_->release();
+ 1017              		.loc 3 75 0
+ 1018 0114 00009DE5 		ldr	r0, [sp]
+ 1019 0118 000050E3 		cmp	r0, #0
+ 1020 011c 0400000A 		beq	.L57
+ 1021              	.LVL92:
+ 1022              	.LBB318:
+ 1023              	.LBB319:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 1024              		.loc 3 40 0
+ 1025 0120 043090E5 		ldr	r3, [r0, #4]
+ 1026 0124 013043E2 		sub	r3, r3, #1
+ 1027 0128 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 1028              		.loc 3 41 0
+ 1029 012c 000053E3 		cmp	r3, #0
+ 1030 0130 1000000A 		beq	.L68
+ 1031              	.LVL93:
+ 1032              	.L57:
+ 1033              	.LBE319:
+ 1034              	.LBE318:
+ 1035              	.LBE317:
+ 1036              	.LBE316:
+  41:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****     }
+ 1037              		.loc 4 41 0
+ 1038 0134 D8309FE5 		ldr	r3, .L69+4
+ 1039 0138 003084E5 		str	r3, [r4]
+ 1040 013c 1860C4E5 		strb	r6, [r4, #24]
+ 1041 0140 28309DE5 		ldr	r3, [sp, #40]
+ 1042 0144 1C3084E5 		str	r3, [r4, #28]
+ 1043 0148 2C309DE5 		ldr	r3, [sp, #44]
+ 1044 014c 203084E5 		str	r3, [r4, #32]
+ 1045              	.LBE273:
+  42:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****         
+ 1046              		.loc 4 42 0
+ 1047 0150 0400A0E1 		mov	r0, r4
+ 1048 0154 14D08DE2 		add	sp, sp, #20
+ 1049              		.cfi_remember_state
+ 1050              		.cfi_def_cfa_offset 20
+ 1051              		@ sp needed
+ 1052 0158 F080BDE8 		pop	{r4, r5, r6, r7, pc}
+ 1053              	.LVL94:
+ 1054              	.L67:
+ 1055              		.cfi_restore_state
+ 1056              	.LBB333:
+ 1057              	.LBB323:
+ 1058              	.LBB315:
+ 1059              	.LBB314:
+ 1060              	.LBB313:
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 1061              		.loc 3 42 0
+ 1062 015c 01300FE3 		movw	r3, #61441
+ 1063 0160 AD3E4DE3 		movt	r3, 57005
+ 1064 0164 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 1065              		.loc 3 43 0
+ 1066 0168 003090E5 		ldr	r3, [r0]
+ 1067 016c 043093E5 		ldr	r3, [r3, #4]
+ 1068 0170 33FF2FE1 		blx	r3
+ 1069              	.LVL95:
+ 1070 0174 E6FFFFEA 		b	.L56
+ 1071              	.LVL96:
+ 1072              	.L68:
+ 1073              	.LBE313:
+ 1074              	.LBE314:
+ 1075              	.LBE315:
+ 1076              	.LBE323:
+ 1077              	.LBB324:
+ 1078              	.LBB322:
+ 1079              	.LBB321:
+ 1080              	.LBB320:
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 1081              		.loc 3 42 0
+ 1082 0178 01300FE3 		movw	r3, #61441
+ 1083 017c AD3E4DE3 		movt	r3, 57005
+ 1084 0180 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 1085              		.loc 3 43 0
+ 1086 0184 003090E5 		ldr	r3, [r0]
+ 1087 0188 043093E5 		ldr	r3, [r3, #4]
+ 1088 018c 33FF2FE1 		blx	r3
+ 1089              	.LVL97:
+ 1090 0190 E7FFFFEA 		b	.L57
+ 1091              	.LVL98:
+ 1092              	.L61:
+ 1093              	.LBE320:
+ 1094              	.LBE321:
+ 1095              	.LBE322:
+ 1096              	.LBE324:
+ 1097              	.LBB325:
+ 1098              	.LBB326:
+ 121:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h **** 
+ 1099              		.loc 2 121 0
+ 1100 0194 74309FE5 		ldr	r3, .L69
+ 1101 0198 04308DE5 		str	r3, [sp, #4]
+ 117:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Array.h ****       array_->release();
+ 1102              		.loc 2 117 0
+ 1103 019c 0C009DE5 		ldr	r0, [sp, #12]
+ 1104 01a0 000050E3 		cmp	r0, #0
+ 1105 01a4 0A00000A 		beq	.L59
+ 1106              	.LVL99:
+ 1107              	.LBB327:
+ 1108              	.LBB328:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 1109              		.loc 3 40 0
+ 1110 01a8 043090E5 		ldr	r3, [r0, #4]
+ 1111 01ac 013043E2 		sub	r3, r3, #1
+ 1112 01b0 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 1113              		.loc 3 41 0
+ 1114 01b4 000053E3 		cmp	r3, #0
+ 1115 01b8 0500001A 		bne	.L59
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 1116              		.loc 3 42 0
+ 1117 01bc 01300FE3 		movw	r3, #61441
+ 1118 01c0 AD3E4DE3 		movt	r3, 57005
+ 1119 01c4 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 1120              		.loc 3 43 0
+ 1121 01c8 003090E5 		ldr	r3, [r0]
+ 1122 01cc 043093E5 		ldr	r3, [r3, #4]
+ 1123 01d0 33FF2FE1 		blx	r3
+ 1124              	.LVL100:
+ 1125              	.L59:
+ 1126              	.LBE328:
+ 1127              	.LBE327:
+ 1128              	.LBE326:
+ 1129              	.LBE325:
+ 1130              	.LBB329:
+ 1131              	.LBB330:
+  75:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_->release();
+ 1132              		.loc 3 75 0
+ 1133 01d4 00009DE5 		ldr	r0, [sp]
+ 1134 01d8 000050E3 		cmp	r0, #0
+ 1135 01dc 0A00000A 		beq	.L60
+ 1136              	.LVL101:
+ 1137              	.LBB331:
+ 1138              	.LBB332:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 1139              		.loc 3 40 0
+ 1140 01e0 043090E5 		ldr	r3, [r0, #4]
+ 1141 01e4 013043E2 		sub	r3, r3, #1
+ 1142 01e8 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 1143              		.loc 3 41 0
+ 1144 01ec 000053E3 		cmp	r3, #0
+ 1145 01f0 0500001A 		bne	.L60
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 1146              		.loc 3 42 0
+ 1147 01f4 01300FE3 		movw	r3, #61441
+ 1148 01f8 AD3E4DE3 		movt	r3, 57005
+ 1149 01fc 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 1150              		.loc 3 43 0
+ 1151 0200 003090E5 		ldr	r3, [r0]
+ 1152 0204 043093E5 		ldr	r3, [r3, #4]
+ 1153 0208 33FF2FE1 		blx	r3
+ 1154              	.LVL102:
+ 1155              	.L60:
+ 1156              	.LEHB1:
+ 1157 020c FEFFFFEB 		bl	__cxa_end_cleanup
+ 1158              	.LVL103:
+ 1159              	.LEHE1:
+ 1160              	.L70:
+ 1161              		.align	2
+ 1162              	.L69:
+ 1163 0210 08000000 		.word	_ZTVN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE+8
+ 1164 0214 08000000 		.word	_ZTVN5zxing5aztec19AztecDetectorResultE+8
+ 1165              	.LBE332:
+ 1166              	.LBE331:
+ 1167              	.LBE330:
+ 1168              	.LBE329:
+ 1169              	.LBE333:
+ 1170              		.cfi_endproc
+ 1171              	.LFE2244:
+ 1172              		.global	__gxx_personality_v0
+ 1173              		.personality	__gxx_personality_v0
+ 1174              		.handlerdata
+ 1175              	.LLSDA2244:
+ 1176 0008 FF       		.byte	0xff
+ 1177 0009 FF       		.byte	0xff
+ 1178 000a 01       		.byte	0x1
+ 1179 000b 0B       		.uleb128 .LLSDACSE2244-.LLSDACSB2244
+ 1180              	.LLSDACSB2244:
+ 1181 000c AC01     		.uleb128 .LEHB0-.LFB2244
+ 1182 000e 04       		.uleb128 .LEHE0-.LEHB0
+ 1183 000f 9403     		.uleb128 .L61-.LFB2244
+ 1184 0011 00       		.uleb128 0
+ 1185 0012 8C04     		.uleb128 .LEHB1-.LFB2244
+ 1186 0014 04       		.uleb128 .LEHE1-.LEHB1
+ 1187 0015 00       		.uleb128 0
+ 1188 0016 00       		.uleb128 0
+ 1189              	.LLSDACSE2244:
+ 1190              		.section	.text._ZN5zxing5aztec19AztecDetectorResultC2ENS_3RefINS_9BitMatrixEEENS_8ArrayRefINS2_INS
+ 1191              		.fnend
+ 1193              		.global	_ZN5zxing5aztec19AztecDetectorResultC1ENS_3RefINS_9BitMatrixEEENS_8ArrayRefINS2_INS_11Resu
+ 1194              		.set	_ZN5zxing5aztec19AztecDetectorResultC1ENS_3RefINS_9BitMatrixEEENS_8ArrayRefINS2_INS_11ResultP
+ 1195              		.section	.text._ZN5zxing5aztec19AztecDetectorResult9isCompactEv,"ax",%progbits
+ 1196              		.align	2
+ 1197              		.global	_ZN5zxing5aztec19AztecDetectorResult9isCompactEv
+ 1198              		.syntax unified
+ 1199              		.arm
+ 1200              		.fpu neon
+ 1202              	_ZN5zxing5aztec19AztecDetectorResult9isCompactEv:
+ 1203              		.fnstart
+ 1204              	.LFB2246:
+  44:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****   return compact_;
+ 1205              		.loc 4 44 0
+ 1206              		.cfi_startproc
+ 1207              		@ args = 0, pretend = 0, frame = 0
+ 1208              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1209              		@ link register save eliminated.
+ 1210              	.LVL104:
+  46:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****         
+ 1211              		.loc 4 46 0
+ 1212 0000 1800D0E5 		ldrb	r0, [r0, #24]	@ zero_extendqisi2
+ 1213              	.LVL105:
+ 1214 0004 1EFF2FE1 		bx	lr
+ 1215              		.cfi_endproc
+ 1216              	.LFE2246:
+ 1217              		.cantunwind
+ 1218              		.fnend
+ 1220              		.section	.text._ZN5zxing5aztec19AztecDetectorResult15getNBDatablocksEv,"ax",%progbits
+ 1221              		.align	2
+ 1222              		.global	_ZN5zxing5aztec19AztecDetectorResult15getNBDatablocksEv
+ 1223              		.syntax unified
+ 1224              		.arm
+ 1225              		.fpu neon
+ 1227              	_ZN5zxing5aztec19AztecDetectorResult15getNBDatablocksEv:
+ 1228              		.fnstart
+ 1229              	.LFB2247:
+  48:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****   return nbDatablocks_;
+ 1230              		.loc 4 48 0
+ 1231              		.cfi_startproc
+ 1232              		@ args = 0, pretend = 0, frame = 0
+ 1233              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1234              		@ link register save eliminated.
+ 1235              	.LVL106:
+  50:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****         
+ 1236              		.loc 4 50 0
+ 1237 0000 1C0090E5 		ldr	r0, [r0, #28]
+ 1238              	.LVL107:
+ 1239 0004 1EFF2FE1 		bx	lr
+ 1240              		.cfi_endproc
+ 1241              	.LFE2247:
+ 1242              		.cantunwind
+ 1243              		.fnend
+ 1245              		.section	.text._ZN5zxing5aztec19AztecDetectorResult11getNBLayersEv,"ax",%progbits
+ 1246              		.align	2
+ 1247              		.global	_ZN5zxing5aztec19AztecDetectorResult11getNBLayersEv
+ 1248              		.syntax unified
+ 1249              		.arm
+ 1250              		.fpu neon
+ 1252              	_ZN5zxing5aztec19AztecDetectorResult11getNBLayersEv:
+ 1253              		.fnstart
+ 1254              	.LFB2248:
+  52:../src/zxing_lib/zxing/aztec/AztecDetectorResult.cpp ****   return nbLayers_;
+ 1255              		.loc 4 52 0
+ 1256              		.cfi_startproc
+ 1257              		@ args = 0, pretend = 0, frame = 0
+ 1258              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1259              		@ link register save eliminated.
+ 1260              	.LVL108:
+ 1261              		.loc 4 54 0
+ 1262 0000 200090E5 		ldr	r0, [r0, #32]
+ 1263              	.LVL109:
+ 1264 0004 1EFF2FE1 		bx	lr
+ 1265              		.cfi_endproc
+ 1266              	.LFE2248:
+ 1267              		.cantunwind
+ 1268              		.fnend
+ 1270              		.section	.text._GLOBAL__sub_I__ZN5zxing5aztec19AztecDetectorResultC2ENS_3RefINS_9BitMatrixEEENS_8A
+ 1271              		.align	2
+ 1272              		.syntax unified
+ 1273              		.arm
+ 1274              		.fpu neon
+ 1276              	_GLOBAL__sub_I__ZN5zxing5aztec19AztecDetectorResultC2ENS_3RefINS_9BitMatrixEEENS_8ArrayRefINS2_INS_
+ 1277              		.fnstart
+ 1278              	.LFB2711:
+ 1279              		.loc 4 54 0
+ 1280              		.cfi_startproc
+ 1281              		@ args = 0, pretend = 0, frame = 0
+ 1282              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1283 0000 10402DE9 		push	{r4, lr}
+ 1284              		.cfi_def_cfa_offset 8
+ 1285              		.cfi_offset 4, -8
+ 1286              		.cfi_offset 14, -4
+ 1287              		.loc 4 54 0
+ 1288 0004 FF1F0FE3 		movw	r1, #65535
+ 1289 0008 0100A0E3 		mov	r0, #1
+ 1290 000c FEFFFFEB 		bl	_Z41__static_initialization_and_destruction_0ii
+ 1291              	.LVL110:
+ 1292 0010 1080BDE8 		pop	{r4, pc}
+ 1293              		.cfi_endproc
+ 1294              	.LFE2711:
+ 1295              		.cantunwind
+ 1296              		.fnend
+ 1298              		.section	.init_array,"aw",%init_array
+ 1299              		.align	2
+ 1300 0000 00000000 		.word	_GLOBAL__sub_I__ZN5zxing5aztec19AztecDetectorResultC2ENS_3RefINS_9BitMatrixEEENS_8ArrayRefIN
+ 1301              		.weak	_ZTSN5zxing7CountedE
+ 1302              		.section	.rodata._ZTSN5zxing7CountedE,"aG",%progbits,_ZTSN5zxing7CountedE,comdat
+ 1303              		.align	2
+ 1306              	_ZTSN5zxing7CountedE:
+ 1307 0000 4E357A78 		.ascii	"N5zxing7CountedE\000"
+ 1307      696E6737 
+ 1307      436F756E 
+ 1307      74656445 
+ 1307      00
+ 1308              		.weak	_ZTIN5zxing7CountedE
+ 1309              		.section	.rodata._ZTIN5zxing7CountedE,"aG",%progbits,_ZTIN5zxing7CountedE,comdat
+ 1310              		.align	2
+ 1313              	_ZTIN5zxing7CountedE:
+ 1314 0000 08000000 		.word	_ZTVN10__cxxabiv117__class_type_infoE+8
+ 1315 0004 00000000 		.word	_ZTSN5zxing7CountedE
+ 1316              		.weak	_ZTSN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE
+ 1317              		.section	.rodata._ZTSN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE,"aG",%progbits,_ZTSN5zxing8Arr
+ 1318              		.align	2
+ 1321              	_ZTSN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE:
+ 1322 0000 4E357A78 		.ascii	"N5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE\000"
+ 1322      696E6738 
+ 1322      41727261 
+ 1322      79526566 
+ 1322      494E535F 
+ 1323              		.weak	_ZTIN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE
+ 1324              		.section	.rodata._ZTIN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE,"aG",%progbits,_ZTIN5zxing8Arr
+ 1325              		.align	2
+ 1328              	_ZTIN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE:
+ 1329 0000 08000000 		.word	_ZTVN10__cxxabiv120__si_class_type_infoE+8
+ 1330 0004 00000000 		.word	_ZTSN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE
+ 1331 0008 00000000 		.word	_ZTIN5zxing7CountedE
+ 1332              		.weak	_ZTSN5zxing14DetectorResultE
+ 1333              		.section	.rodata._ZTSN5zxing14DetectorResultE,"aG",%progbits,_ZTSN5zxing14DetectorResultE,comdat
+ 1334              		.align	2
+ 1337              	_ZTSN5zxing14DetectorResultE:
+ 1338 0000 4E357A78 		.ascii	"N5zxing14DetectorResultE\000"
+ 1338      696E6731 
+ 1338      34446574 
+ 1338      6563746F 
+ 1338      72526573 
+ 1339              		.weak	_ZTIN5zxing14DetectorResultE
+ 1340              		.section	.rodata._ZTIN5zxing14DetectorResultE,"aG",%progbits,_ZTIN5zxing14DetectorResultE,comdat
+ 1341              		.align	2
+ 1344              	_ZTIN5zxing14DetectorResultE:
+ 1345 0000 08000000 		.word	_ZTVN10__cxxabiv120__si_class_type_infoE+8
+ 1346 0004 00000000 		.word	_ZTSN5zxing14DetectorResultE
+ 1347 0008 00000000 		.word	_ZTIN5zxing7CountedE
+ 1348              		.weak	_ZTSN5zxing5aztec19AztecDetectorResultE
+ 1349              		.section	.rodata._ZTSN5zxing5aztec19AztecDetectorResultE,"aG",%progbits,_ZTSN5zxing5aztec19AztecDe
+ 1350              		.align	2
+ 1353              	_ZTSN5zxing5aztec19AztecDetectorResultE:
+ 1354 0000 4E357A78 		.ascii	"N5zxing5aztec19AztecDetectorResultE\000"
+ 1354      696E6735 
+ 1354      617A7465 
+ 1354      63313941 
+ 1354      7A746563 
+ 1355              		.weak	_ZTIN5zxing5aztec19AztecDetectorResultE
+ 1356              		.section	.rodata._ZTIN5zxing5aztec19AztecDetectorResultE,"aG",%progbits,_ZTIN5zxing5aztec19AztecDe
+ 1357              		.align	2
+ 1360              	_ZTIN5zxing5aztec19AztecDetectorResultE:
+ 1361 0000 08000000 		.word	_ZTVN10__cxxabiv120__si_class_type_infoE+8
+ 1362 0004 00000000 		.word	_ZTSN5zxing5aztec19AztecDetectorResultE
+ 1363 0008 00000000 		.word	_ZTIN5zxing14DetectorResultE
+ 1364              		.weak	_ZTVN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE
+ 1365              		.section	.rodata._ZTVN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE,"aG",%progbits,_ZTVN5zxing8Arr
+ 1366              		.align	2
+ 1369              	_ZTVN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE:
+ 1370 0000 00000000 		.word	0
+ 1371 0004 00000000 		.word	_ZTIN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE
+ 1372 0008 00000000 		.word	_ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED1Ev
+ 1373 000c 00000000 		.word	_ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED0Ev
+ 1374              		.weak	_ZTVN5zxing14DetectorResultE
+ 1375              		.section	.rodata._ZTVN5zxing14DetectorResultE,"aG",%progbits,_ZTVN5zxing14DetectorResultE,comdat
+ 1376              		.align	2
+ 1379              	_ZTVN5zxing14DetectorResultE:
+ 1380 0000 00000000 		.word	0
+ 1381 0004 00000000 		.word	_ZTIN5zxing14DetectorResultE
+ 1382 0008 00000000 		.word	_ZN5zxing14DetectorResultD1Ev
+ 1383 000c 00000000 		.word	_ZN5zxing14DetectorResultD0Ev
+ 1384              		.weak	_ZTVN5zxing5aztec19AztecDetectorResultE
+ 1385              		.section	.rodata._ZTVN5zxing5aztec19AztecDetectorResultE,"aG",%progbits,_ZTVN5zxing5aztec19AztecDe
+ 1386              		.align	2
+ 1389              	_ZTVN5zxing5aztec19AztecDetectorResultE:
+ 1390 0000 00000000 		.word	0
+ 1391 0004 00000000 		.word	_ZTIN5zxing5aztec19AztecDetectorResultE
+ 1392 0008 00000000 		.word	_ZN5zxing5aztec19AztecDetectorResultD1Ev
+ 1393 000c 00000000 		.word	_ZN5zxing5aztec19AztecDetectorResultD0Ev
+ 1394              		.section	.bss._ZStL8__ioinit,"aw",%nobits
+ 1395              		.align	2
+ 1396              		.set	.LANCHOR0,. + 0
+ 1399              	_ZStL8__ioinit:
+ 1400 0000 00       		.space	1
+ 1401              		.text
+ 1402              	.Letext0:
+ 1403              		.file 7 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+ 1404              		.file 8 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+ 1405              		.file 9 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+ 1406              		.file 10 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 1407              		.file 11 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 1408              		.file 12 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 1409              		.file 13 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 1410              		.file 14 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 1411              		.file 15 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 1412              		.file 16 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 1413              		.file 17 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 1414              		.file 18 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 1415              		.file 19 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 1416              		.file 20 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 1417              		.file 21 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 1418              		.file 22 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 1419              		.file 23 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 1420              		.file 24 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 1421              		.file 25 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 1422              		.file 26 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 1423              		.file 27 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 1424              		.file 28 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 1425              		.file 29 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 1426              		.file 30 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 1427              		.file 31 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 1428              		.file 32 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 1429              		.file 33 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 1430              		.file 34 "<built-in>"
+ 1431              		.file 35 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 1432              		.file 36 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 1433              		.file 37 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 1434              		.file 38 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 1435              		.file 39 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 1436              		.file 40 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 1437              		.file 41 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 1438              		.file 42 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 1439              		.file 43 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 1440              		.file 44 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 1441              		.file 45 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 AztecDetectorResult.cpp
+     /tmp/ccsZVxKt.s:17     .text._ZN5zxing14DetectorResultD2Ev:0000000000000000 $a
+     /tmp/ccsZVxKt.s:23     .text._ZN5zxing14DetectorResultD2Ev:0000000000000000 _ZN5zxing14DetectorResultD2Ev
+     /tmp/ccsZVxKt.s:136    .text._ZN5zxing14DetectorResultD2Ev:0000000000000098 $d
+     /tmp/ccsZVxKt.s:1379   .rodata._ZTVN5zxing14DetectorResultE:0000000000000000 _ZTVN5zxing14DetectorResultE
+     /tmp/ccsZVxKt.s:1369   .rodata._ZTVN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE:0000000000000000 _ZTVN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE
+.ARM.exidx.text._ZN5zxing14DetectorResultD2Ev:0000000000000000 $d
+     /tmp/ccsZVxKt.s:23     .text._ZN5zxing14DetectorResultD2Ev:0000000000000000 _ZN5zxing14DetectorResultD1Ev
+     /tmp/ccsZVxKt.s:151    .text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED2Ev:0000000000000000 $a
+     /tmp/ccsZVxKt.s:157    .text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED2Ev:0000000000000000 _ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED2Ev
+     /tmp/ccsZVxKt.s:215    .text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED2Ev:0000000000000054 $d
+.ARM.exidx.text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED2Ev:0000000000000000 $d
+     /tmp/ccsZVxKt.s:157    .text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED2Ev:0000000000000000 _ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED1Ev
+     /tmp/ccsZVxKt.s:227    .text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED0Ev:0000000000000000 $a
+     /tmp/ccsZVxKt.s:233    .text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED0Ev:0000000000000000 _ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED0Ev
+     /tmp/ccsZVxKt.s:299    .text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED0Ev:0000000000000060 $d
+.ARM.exidx.text._ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED0Ev:0000000000000000 $d
+     /tmp/ccsZVxKt.s:310    .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $a
+     /tmp/ccsZVxKt.s:315    .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 _Z41__static_initialization_and_destruction_0ii
+     /tmp/ccsZVxKt.s:1396   .bss._ZStL8__ioinit:0000000000000000 .LANCHOR0
+.ARM.exidx.text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $d
+     /tmp/ccsZVxKt.s:357    .text._ZN5zxing5aztec19AztecDetectorResultD2Ev:0000000000000000 $a
+     /tmp/ccsZVxKt.s:363    .text._ZN5zxing5aztec19AztecDetectorResultD2Ev:0000000000000000 _ZN5zxing5aztec19AztecDetectorResultD2Ev
+     /tmp/ccsZVxKt.s:481    .text._ZN5zxing5aztec19AztecDetectorResultD2Ev:0000000000000098 $d
+.ARM.exidx.text._ZN5zxing5aztec19AztecDetectorResultD2Ev:0000000000000000 $d
+     /tmp/ccsZVxKt.s:363    .text._ZN5zxing5aztec19AztecDetectorResultD2Ev:0000000000000000 _ZN5zxing5aztec19AztecDetectorResultD1Ev
+     /tmp/ccsZVxKt.s:498    .text._ZN5zxing14DetectorResultD0Ev:0000000000000000 $a
+     /tmp/ccsZVxKt.s:504    .text._ZN5zxing14DetectorResultD0Ev:0000000000000000 _ZN5zxing14DetectorResultD0Ev
+     /tmp/ccsZVxKt.s:622    .text._ZN5zxing14DetectorResultD0Ev:00000000000000a4 $d
+.ARM.exidx.text._ZN5zxing14DetectorResultD0Ev:0000000000000000 $d
+     /tmp/ccsZVxKt.s:636    .text._ZN5zxing5aztec19AztecDetectorResultD0Ev:0000000000000000 $a
+     /tmp/ccsZVxKt.s:642    .text._ZN5zxing5aztec19AztecDetectorResultD0Ev:0000000000000000 _ZN5zxing5aztec19AztecDetectorResultD0Ev
+     /tmp/ccsZVxKt.s:766    .text._ZN5zxing5aztec19AztecDetectorResultD0Ev:00000000000000a4 $d
+.ARM.exidx.text._ZN5zxing5aztec19AztecDetectorResultD0Ev:0000000000000000 $d
+     /tmp/ccsZVxKt.s:782    .text._ZN5zxing5aztec19AztecDetectorResultC2ENS_3RefINS_9BitMatrixEEENS_8ArrayRefINS2_INS_11ResultPointEEEEEbii:0000000000000000 $a
+     /tmp/ccsZVxKt.s:788    .text._ZN5zxing5aztec19AztecDetectorResultC2ENS_3RefINS_9BitMatrixEEENS_8ArrayRefINS2_INS_11ResultPointEEEEEbii:0000000000000000 _ZN5zxing5aztec19AztecDetectorResultC2ENS_3RefINS_9BitMatrixEEENS_8ArrayRefINS2_INS_11ResultPointEEEEEbii
+     /tmp/ccsZVxKt.s:1163   .text._ZN5zxing5aztec19AztecDetectorResultC2ENS_3RefINS_9BitMatrixEEENS_8ArrayRefINS2_INS_11ResultPointEEEEEbii:0000000000000210 $d
+     /tmp/ccsZVxKt.s:1389   .rodata._ZTVN5zxing5aztec19AztecDetectorResultE:0000000000000000 _ZTVN5zxing5aztec19AztecDetectorResultE
+.ARM.extab.text._ZN5zxing5aztec19AztecDetectorResultC2ENS_3RefINS_9BitMatrixEEENS_8ArrayRefINS2_INS_11ResultPointEEEEEbii:0000000000000000 $d
+.ARM.exidx.text._ZN5zxing5aztec19AztecDetectorResultC2ENS_3RefINS_9BitMatrixEEENS_8ArrayRefINS2_INS_11ResultPointEEEEEbii:0000000000000000 $d
+     /tmp/ccsZVxKt.s:788    .text._ZN5zxing5aztec19AztecDetectorResultC2ENS_3RefINS_9BitMatrixEEENS_8ArrayRefINS2_INS_11ResultPointEEEEEbii:0000000000000000 _ZN5zxing5aztec19AztecDetectorResultC1ENS_3RefINS_9BitMatrixEEENS_8ArrayRefINS2_INS_11ResultPointEEEEEbii
+     /tmp/ccsZVxKt.s:1196   .text._ZN5zxing5aztec19AztecDetectorResult9isCompactEv:0000000000000000 $a
+     /tmp/ccsZVxKt.s:1202   .text._ZN5zxing5aztec19AztecDetectorResult9isCompactEv:0000000000000000 _ZN5zxing5aztec19AztecDetectorResult9isCompactEv
+.ARM.exidx.text._ZN5zxing5aztec19AztecDetectorResult9isCompactEv:0000000000000000 $d
+     /tmp/ccsZVxKt.s:1221   .text._ZN5zxing5aztec19AztecDetectorResult15getNBDatablocksEv:0000000000000000 $a
+     /tmp/ccsZVxKt.s:1227   .text._ZN5zxing5aztec19AztecDetectorResult15getNBDatablocksEv:0000000000000000 _ZN5zxing5aztec19AztecDetectorResult15getNBDatablocksEv
+.ARM.exidx.text._ZN5zxing5aztec19AztecDetectorResult15getNBDatablocksEv:0000000000000000 $d
+     /tmp/ccsZVxKt.s:1246   .text._ZN5zxing5aztec19AztecDetectorResult11getNBLayersEv:0000000000000000 $a
+     /tmp/ccsZVxKt.s:1252   .text._ZN5zxing5aztec19AztecDetectorResult11getNBLayersEv:0000000000000000 _ZN5zxing5aztec19AztecDetectorResult11getNBLayersEv
+.ARM.exidx.text._ZN5zxing5aztec19AztecDetectorResult11getNBLayersEv:0000000000000000 $d
+     /tmp/ccsZVxKt.s:1271   .text._GLOBAL__sub_I__ZN5zxing5aztec19AztecDetectorResultC2ENS_3RefINS_9BitMatrixEEENS_8ArrayRefINS2_INS_11ResultPointEEEEEbii:0000000000000000 $a
+     /tmp/ccsZVxKt.s:1276   .text._GLOBAL__sub_I__ZN5zxing5aztec19AztecDetectorResultC2ENS_3RefINS_9BitMatrixEEENS_8ArrayRefINS2_INS_11ResultPointEEEEEbii:0000000000000000 _GLOBAL__sub_I__ZN5zxing5aztec19AztecDetectorResultC2ENS_3RefINS_9BitMatrixEEENS_8ArrayRefINS2_INS_11ResultPointEEEEEbii
+.ARM.exidx.text._GLOBAL__sub_I__ZN5zxing5aztec19AztecDetectorResultC2ENS_3RefINS_9BitMatrixEEENS_8ArrayRefINS2_INS_11ResultPointEEEEEbii:0000000000000000 $d
+     /tmp/ccsZVxKt.s:1299   .init_array:0000000000000000 $d
+     /tmp/ccsZVxKt.s:1306   .rodata._ZTSN5zxing7CountedE:0000000000000000 _ZTSN5zxing7CountedE
+     /tmp/ccsZVxKt.s:1303   .rodata._ZTSN5zxing7CountedE:0000000000000000 $d
+     /tmp/ccsZVxKt.s:1313   .rodata._ZTIN5zxing7CountedE:0000000000000000 _ZTIN5zxing7CountedE
+     /tmp/ccsZVxKt.s:1310   .rodata._ZTIN5zxing7CountedE:0000000000000000 $d
+     /tmp/ccsZVxKt.s:1321   .rodata._ZTSN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE:0000000000000000 _ZTSN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE
+     /tmp/ccsZVxKt.s:1318   .rodata._ZTSN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE:0000000000000000 $d
+     /tmp/ccsZVxKt.s:1328   .rodata._ZTIN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE:0000000000000000 _ZTIN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE
+     /tmp/ccsZVxKt.s:1325   .rodata._ZTIN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE:0000000000000000 $d
+     /tmp/ccsZVxKt.s:1337   .rodata._ZTSN5zxing14DetectorResultE:0000000000000000 _ZTSN5zxing14DetectorResultE
+     /tmp/ccsZVxKt.s:1334   .rodata._ZTSN5zxing14DetectorResultE:0000000000000000 $d
+     /tmp/ccsZVxKt.s:1344   .rodata._ZTIN5zxing14DetectorResultE:0000000000000000 _ZTIN5zxing14DetectorResultE
+     /tmp/ccsZVxKt.s:1341   .rodata._ZTIN5zxing14DetectorResultE:0000000000000000 $d
+     /tmp/ccsZVxKt.s:1353   .rodata._ZTSN5zxing5aztec19AztecDetectorResultE:0000000000000000 _ZTSN5zxing5aztec19AztecDetectorResultE
+     /tmp/ccsZVxKt.s:1350   .rodata._ZTSN5zxing5aztec19AztecDetectorResultE:0000000000000000 $d
+     /tmp/ccsZVxKt.s:1360   .rodata._ZTIN5zxing5aztec19AztecDetectorResultE:0000000000000000 _ZTIN5zxing5aztec19AztecDetectorResultE
+     /tmp/ccsZVxKt.s:1357   .rodata._ZTIN5zxing5aztec19AztecDetectorResultE:0000000000000000 $d
+     /tmp/ccsZVxKt.s:1366   .rodata._ZTVN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEEE:0000000000000000 $d
+     /tmp/ccsZVxKt.s:1376   .rodata._ZTVN5zxing14DetectorResultE:0000000000000000 $d
+     /tmp/ccsZVxKt.s:1386   .rodata._ZTVN5zxing5aztec19AztecDetectorResultE:0000000000000000 $d
+     /tmp/ccsZVxKt.s:1395   .bss._ZStL8__ioinit:0000000000000000 $d
+     /tmp/ccsZVxKt.s:1399   .bss._ZStL8__ioinit:0000000000000000 _ZStL8__ioinit
+                     .debug_frame:0000000000000010 $d
+                           .group:0000000000000000 _ZN5zxing14DetectorResultD5Ev
+                           .group:0000000000000000 _ZN5zxing8ArrayRefINS_3RefINS_11ResultPointEEEED5Ev
+                           .group:0000000000000000 _ZN5zxing5aztec19AztecDetectorResultD5Ev
+                           .group:0000000000000000 wm4.0.cd1e96de8a8c4f34e746a820772853ad
+                           .group:0000000000000000 wm4.cconfig.h.31.21483d26c3710eb58c7a44c20d82c775
+                           .group:0000000000000000 wm4.cpu_defines.h.31.54d44f9d3e7c42875c5a7fd49795eb93
+                           .group:0000000000000000 wm4.cconfig.h.515.5e729db314ae74226e291b4ae081e353
+                           .group:0000000000000000 wm4._newlib_version.h.4.3572908597b70d672d181fc7fc501c19
+                           .group:0000000000000000 wm4.newlib.h.21.59901f4bf241ab46c63694665baa7297
+                           .group:0000000000000000 wm4.features.h.22.5cdadbb3efe495d1c9e38350b8c376c7
+                           .group:0000000000000000 wm4.config.h.219.65a553ab5bef5482f0d7880b0d33015e
+                           .group:0000000000000000 wm4._ansi.h.23.1ee1144430bedaab1a14c7b57a6c8384
+                           .group:0000000000000000 wm4.stddef.h.39.fa2e86d241f4df50b9327c72832885e1
+                           .group:0000000000000000 wm4._default_types.h.6.959254cf5f09734ea7516c89e8bb21bd
+                           .group:0000000000000000 wm4.lock.h.2.1461d1fff82dffe8bfddc23307f6484f
+                           .group:0000000000000000 wm4._types.h.125.5cf8a495f1f7ef36777ad868a1e32068
+                           .group:0000000000000000 wm4.stddef.h.161.7e98c9c86da0ed2d27af2ef92af7d013
+                           .group:0000000000000000 wm4._types.h.183.c226d164ceca1f2ecb9ae9360c54a098
+                           .group:0000000000000000 wm4.reent.h.17.23b059516345f8f5abfa01ddc379570f
+                           .group:0000000000000000 wm4.wchar.h.8.acdef4366e64def8c588421024712d23
+                           .group:0000000000000000 wm4.stddef.h.161.9f48187563b2a85291a91832aa425498
+                           .group:0000000000000000 wm4.cdefs.h.47.9bc8274c84fddbf05edd550eb0bf48cd
+                           .group:0000000000000000 wm4.stdarg.h.34.3a23a216c0c293b3d2ea2e89281481e6
+                           .group:0000000000000000 wm4.wchar.h.29.7ec19a1c094c7903732828676a0a91b2
+                           .group:0000000000000000 wm4.wchar.h.76.90478bd2c784f576b769c4535c98839d
+                           .group:0000000000000000 wm4.cwchar.48.c4e882638bf84f6da89479dda6fe8e17
+                           .group:0000000000000000 wm4.atomic_lockfree_defines.h.31.d5c6334fb1e95c9462b052951f1411df
+                           .group:0000000000000000 wm4.exception_defines.h.31.ca6841b9be3287386aafc5c717935b2e
+                           .group:0000000000000000 wm4.concept_check.h.31.f19605d278e56917c68a56d378be308c
+                           .group:0000000000000000 wm4.type_traits.30.967137c3695c72a3f7c65b682f1a104e
+                           .group:0000000000000000 wm4.move.h.152.41d7b9e6779674d169b7813982cfa003
+                           .group:0000000000000000 wm4.cpp_type_traits.h.33.9f2bfd8c4471a9a299f6da3ec24c745c
+                           .group:0000000000000000 wm4.numeric_traits.h.30.aa01a98564b7e55086aad9e53c7e5c53
+                           .group:0000000000000000 wm4.assertions.h.30.51d443923f0d242550e04246a7819b39
+                           .group:0000000000000000 wm4.stl_iterator.h.406.6718c794fa6a1331f8340656b5c8c55c
+                           .group:0000000000000000 wm4.debug.h.30.5c1f223b12199e851d4d42805b788ccf
+                           .group:0000000000000000 wm4.stl_algobase.h.491.ec4060988bfff82dc579decdb75c72d6
+                           .group:0000000000000000 wm4.stdint.h.4.659be5aa44c4ab4eb7c7cc2b24d8ceee
+                           .group:0000000000000000 wm4._intsup.h.10.cce27fed8484c08a33f522034c30d2b5
+                           .group:0000000000000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:0000000000000000 wm4.stdint.h.23.4c107c5a20920bfc6e94fb2672bbd9ee
+                           .group:0000000000000000 wm4.stddef.h.161.38688f2eb958a8ed58fdb61ffe554c94
+                           .group:0000000000000000 wm4.locale.h.16.90d16f662e7119f5b192650a45179c6c
+                           .group:0000000000000000 wm4.clocale.45.c36d2d5b631a875aa5273176b54fdf0f
+                           .group:0000000000000000 wm4.ctype.h.2.cf64fe4c5e8c0ac0f52f1143312d4909
+                           .group:0000000000000000 wm4.cctype.45.0da5714876b0be7f2d816b53d9670403
+                           .group:0000000000000000 wm4.gthr.h.27.ceb1c66b926f052afcba57e8784df0d4
+                           .group:0000000000000000 wm4.gthrdefault.h.27.edc94d4398c0534988962be77dc3c2e1
+                           .group:0000000000000000 wm4.atomic_word.h.30.9e0ac69fd462d5e650933e05133b4afa
+                           .group:0000000000000000 wm4.allocator.h.52.0ceafb36dc1b82dbfa6b05003082e3f5
+                           .group:0000000000000000 wm4.stl_function.h.57.472a8ffdc5144ddcd047558cd884dda0
+                           .group:0000000000000000 wm4.alloc_traits.h.31.c41c7c4789404962122a4e991dfa3abf
+                           .group:0000000000000000 wm4.cstdlib.44.52c5efdfb0f3c176bd11e611a0b94959
+                           .group:0000000000000000 wm4.stdlib.h.13.4ed386f5c1a80d71e72172885d946ef2
+                           .group:0000000000000000 wm4.alloca.h.8.dfc0c703c47ec3e69746825b17d9e66d
+                           .group:0000000000000000 wm4.stdlib.h.56.d4493cd3736e51e9d56335045f26df45
+                           .group:0000000000000000 wm4.cstdlib.76.ae666499c8f9b0ace1b4b23fe143da2c
+                           .group:0000000000000000 wm4.stdio.h.27.3fc80220048df77954e38daec3bb9670
+                           .group:0000000000000000 wm4.types.h.40.e8c16e7ec36ba55f133d0616070e25fc
+                           .group:0000000000000000 wm4._endian.h.31.65a10590763c3dde1ac4a7f66d7d4891
+                           .group:0000000000000000 wm4.endian.h.9.49f3a4695c1b61e8a0808de3c4a106cb
+                           .group:0000000000000000 wm4._timeval.h.30.0e8bfd94e85db17dda3286ee81496fe6
+                           .group:0000000000000000 wm4.timespec.h.41.d855182eb0e690443ab8651bcedca6e1
+                           .group:0000000000000000 wm4.select.h.30.bbece7fa40993a78092dcc5805132560
+                           .group:0000000000000000 wm4.types.h.69.ed3eae3cf73030a737515151ebcab7a1
+                           .group:0000000000000000 wm4.stdio.h.2.4aa87247282eca6c8f36f9de33d8df1a
+                           .group:0000000000000000 wm4.stdio.h.81.edc2fd66146f9635463a729e8fe0add3
+                           .group:0000000000000000 wm4.cstdio.45.1ffaea3e7c26dce1e03f5847a7439edb
+                           .group:0000000000000000 wm4.errno.h.2.ba016d646105af6cad23be83630b6a3f
+                           .group:0000000000000000 wm4.errno.h.9.1ecd7b1049497a0ab61da0f6cbd4b0c6
+                           .group:0000000000000000 wm4.functional_hash.h.98.3bf7680ffcc8d24d09fa83ac1339c79d
+                           .group:0000000000000000 wm4.wctype.h.2.898a9b94aa35d125e245195b099726a8
+                           .group:0000000000000000 wm4.wctype.h.21.aec4d35c940c33b3f9c6f879c49edcd8
+                           .group:0000000000000000 wm4.cwctype.54.6582aca101688c1c3785d03bc15e2af6
+                           .group:0000000000000000 wm4.locale_facets.h.56.0d4bb655ce5e76ea564363ed7c5a34fc
+                           .group:0000000000000000 wm4.ZXing.h.18.e57217e2bd13bffdbef9ea3dcbec75d3
+                           .group:0000000000000000 wm4.limits.38.40c6c565f51037fae3aa9b94f36ded7a
+                           .group:0000000000000000 wm4.math.h.13.4f1ab8d1725735081bbdb9ebcf6dba66
+                           .group:0000000000000000 wm4.cmath.46.d6e5b776115d39075860ed881d18f087
+                           .group:0000000000000000 wm4.ZXing.h.127.586c16e6a699510970dac3542705a0b6
+
+UNDEFINED SYMBOLS
+_ZdlPvj
+_ZNSt8ios_base4InitC1Ev
+__dso_handle
+_ZNSt8ios_base4InitD1Ev
+__aeabi_atexit
+__gxx_personality_v0
+_ZN5zxing14DetectorResultC2ENS_3RefINS_9BitMatrixEEENS_8ArrayRefINS1_INS_11ResultPointEEEEE
+__cxa_end_cleanup
+_ZTVN10__cxxabiv117__class_type_infoE
+_ZTVN10__cxxabiv120__si_class_type_infoE

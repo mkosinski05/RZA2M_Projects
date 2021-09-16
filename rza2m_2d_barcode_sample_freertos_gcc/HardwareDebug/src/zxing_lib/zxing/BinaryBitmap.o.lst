@@ -1,0 +1,2722 @@
+   1              		.cpu cortex-a9
+   2              		.eabi_attribute 28, 1
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.file	"BinaryBitmap.cpp"
+  13              		.text
+  14              	.Ltext0:
+  15              		.cfi_sections	.debug_frame
+  16              		.section	.text._ZN5zxing12BinaryBitmapD2Ev,"ax",%progbits
+  17              		.align	2
+  18              		.global	_ZN5zxing12BinaryBitmapD2Ev
+  19              		.syntax unified
+  20              		.arm
+  21              		.fpu neon
+  23              	_ZN5zxing12BinaryBitmapD2Ev:
+  24              		.fnstart
+  25              	.LFB2245:
+  26              		.file 1 "../src/zxing_lib/zxing/BinaryBitmap.cpp"
+   1:../src/zxing_lib/zxing/BinaryBitmap.cpp **** // -*- mode:c++; tab-width:2; indent-tabs-mode:nil; c-basic-offset:2 -*-
+   2:../src/zxing_lib/zxing/BinaryBitmap.cpp **** /*
+   3:../src/zxing_lib/zxing/BinaryBitmap.cpp ****  *  Copyright 2010 ZXing authors All rights reserved.
+   4:../src/zxing_lib/zxing/BinaryBitmap.cpp ****  *
+   5:../src/zxing_lib/zxing/BinaryBitmap.cpp ****  * Licensed under the Apache License, Version 2.0 (the "License");
+   6:../src/zxing_lib/zxing/BinaryBitmap.cpp ****  * you may not use this file except in compliance with the License.
+   7:../src/zxing_lib/zxing/BinaryBitmap.cpp ****  * You may obtain a copy of the License at
+   8:../src/zxing_lib/zxing/BinaryBitmap.cpp ****  *
+   9:../src/zxing_lib/zxing/BinaryBitmap.cpp ****  *      http://www.apache.org/licenses/LICENSE-2.0
+  10:../src/zxing_lib/zxing/BinaryBitmap.cpp ****  *
+  11:../src/zxing_lib/zxing/BinaryBitmap.cpp ****  * Unless required by applicable law or agreed to in writing, software
+  12:../src/zxing_lib/zxing/BinaryBitmap.cpp ****  * distributed under the License is distributed on an "AS IS" BASIS,
+  13:../src/zxing_lib/zxing/BinaryBitmap.cpp ****  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  14:../src/zxing_lib/zxing/BinaryBitmap.cpp ****  * See the License for the specific language governing permissions and
+  15:../src/zxing_lib/zxing/BinaryBitmap.cpp ****  * limitations under the License.
+  16:../src/zxing_lib/zxing/BinaryBitmap.cpp ****  */
+  17:../src/zxing_lib/zxing/BinaryBitmap.cpp **** 
+  18:../src/zxing_lib/zxing/BinaryBitmap.cpp **** #include <zxing/BinaryBitmap.h>
+  19:../src/zxing_lib/zxing/BinaryBitmap.cpp **** 
+  20:../src/zxing_lib/zxing/BinaryBitmap.cpp **** using zxing::Ref;
+  21:../src/zxing_lib/zxing/BinaryBitmap.cpp **** using zxing::BitArray;
+  22:../src/zxing_lib/zxing/BinaryBitmap.cpp **** using zxing::BitMatrix;
+  23:../src/zxing_lib/zxing/BinaryBitmap.cpp **** using zxing::LuminanceSource;
+  24:../src/zxing_lib/zxing/BinaryBitmap.cpp **** using zxing::BinaryBitmap;
+  25:../src/zxing_lib/zxing/BinaryBitmap.cpp **** 	
+  26:../src/zxing_lib/zxing/BinaryBitmap.cpp **** // VC++
+  27:../src/zxing_lib/zxing/BinaryBitmap.cpp **** using zxing::Binarizer;
+  28:../src/zxing_lib/zxing/BinaryBitmap.cpp **** 
+  29:../src/zxing_lib/zxing/BinaryBitmap.cpp **** BinaryBitmap::BinaryBitmap(Ref<Binarizer> binarizer) : binarizer_(binarizer) {
+  30:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+  31:../src/zxing_lib/zxing/BinaryBitmap.cpp **** 	
+  32:../src/zxing_lib/zxing/BinaryBitmap.cpp **** BinaryBitmap::~BinaryBitmap() {
+  27              		.loc 1 32 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              	.LVL0:
+  32 0000 10402DE9 		push	{r4, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 4, -8
+  35              		.cfi_offset 14, -4
+  36 0004 0040A0E1 		mov	r4, r0
+  37              	.LBB177:
+  38              		.loc 1 32 0
+  39 0008 44309FE5 		ldr	r3, .L5
+  40 000c 003080E5 		str	r3, [r0]
+  41              	.LVL1:
+  42              	.LBB178:
+  43              	.LBB179:
+  44              		.file 2 "/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/com
+   1:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** // -*- mode:c++; tab-width:2; indent-tabs-mode:nil; c-basic-offset:2 -*-
+   2:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** #ifndef __COUNTED_H__
+   3:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** #define __COUNTED_H__
+   4:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** 
+   5:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** /*
+   6:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  *  Copyright 2010 ZXing authors All rights reserved.
+   7:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  *
+   8:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  * Licensed under the Apache License, Version 2.0 (the "License");
+   9:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  * you may not use this file except in compliance with the License.
+  10:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  * You may obtain a copy of the License at
+  11:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  *
+  12:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  *      http://www.apache.org/licenses/LICENSE-2.0
+  13:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  *
+  14:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  * Unless required by applicable law or agreed to in writing, software
+  15:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  * distributed under the License is distributed on an "AS IS" BASIS,
+  16:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  17:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  * See the License for the specific language governing permissions and
+  18:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  * limitations under the License.
+  19:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****  */
+  20:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** 
+  21:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** #include <iostream>
+  22:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** 
+  23:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** namespace zxing {
+  24:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** 
+  25:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** /* base class for reference-counted objects */
+  26:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** class Counted {
+  27:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** private:
+  28:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   unsigned int count_;
+  29:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** public:
+  30:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   Counted() :
+  31:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_(0) {
+  32:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+  33:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   virtual ~Counted() {
+  34:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+  35:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   Counted *retain() {
+  36:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     count_++;
+  37:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     return this;
+  38:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+  39:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   void release() {
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     count_--;
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+  44:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+  45:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+  46:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** 
+  47:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** 
+  48:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   /* return the current count for denugging purposes or similar */
+  49:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   int count() const {
+  50:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     return count_;
+  51:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+  52:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** };
+  53:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** 
+  54:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** /* counting reference to reference-counted objects */
+  55:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** template<typename T> class Ref {
+  56:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** private:
+  57:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** public:
+  58:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   T *object_;
+  59:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   explicit Ref(T *o = 0) :
+  60:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_(0) {
+  61:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     reset(o);
+  62:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+  63:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   Ref(const Ref &other) :
+  64:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_(0) {
+  65:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     reset(other.object_);
+  66:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+  67:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** 
+  68:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   template<class Y>
+  69:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   Ref(const Ref<Y> &other) :
+  70:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_(0) {
+  71:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     reset(other.object_);
+  72:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+  73:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** 
+  74:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   ~Ref() {
+  75:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (object_) {
+  45              		.loc 2 75 0
+  46 0010 080090E5 		ldr	r0, [r0, #8]
+  47              	.LVL2:
+  48 0014 000050E3 		cmp	r0, #0
+  49 0018 0400000A 		beq	.L2
+  50              	.LVL3:
+  51              	.LBB180:
+  52              	.LBB181:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+  53              		.loc 2 40 0
+  54 001c 043090E5 		ldr	r3, [r0, #4]
+  55 0020 013043E2 		sub	r3, r3, #1
+  56 0024 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+  57              		.loc 2 41 0
+  58 0028 000053E3 		cmp	r3, #0
+  59 002c 0100000A 		beq	.L4
+  60              	.LVL4:
+  61              	.L2:
+  62              	.LBE181:
+  63              	.LBE180:
+  64              	.LBE179:
+  65              	.LBE178:
+  66              	.LBE177:
+  33:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+  67              		.loc 1 33 0
+  68 0030 0400A0E1 		mov	r0, r4
+  69 0034 1080BDE8 		pop	{r4, pc}
+  70              	.LVL5:
+  71              	.L4:
+  72              	.LBB186:
+  73              	.LBB185:
+  74              	.LBB184:
+  75              	.LBB183:
+  76              	.LBB182:
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+  77              		.loc 2 42 0
+  78 0038 01300FE3 		movw	r3, #61441
+  79 003c AD3E4DE3 		movt	r3, 57005
+  80 0040 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+  81              		.loc 2 43 0
+  82 0044 003090E5 		ldr	r3, [r0]
+  83 0048 043093E5 		ldr	r3, [r3, #4]
+  84 004c 33FF2FE1 		blx	r3
+  85              	.LVL6:
+  86 0050 F6FFFFEA 		b	.L2
+  87              	.L6:
+  88              		.align	2
+  89              	.L5:
+  90 0054 08000000 		.word	.LANCHOR0+8
+  91              	.LBE182:
+  92              	.LBE183:
+  93              	.LBE184:
+  94              	.LBE185:
+  95              	.LBE186:
+  96              		.cfi_endproc
+  97              	.LFE2245:
+  98              		.cantunwind
+  99              		.fnend
+ 101              		.global	_ZN5zxing12BinaryBitmapD1Ev
+ 102              		.set	_ZN5zxing12BinaryBitmapD1Ev,_ZN5zxing12BinaryBitmapD2Ev
+ 103              		.section	.text._ZN5zxing12BinaryBitmapD0Ev,"ax",%progbits
+ 104              		.align	2
+ 105              		.global	_ZN5zxing12BinaryBitmapD0Ev
+ 106              		.syntax unified
+ 107              		.arm
+ 108              		.fpu neon
+ 110              	_ZN5zxing12BinaryBitmapD0Ev:
+ 111              		.fnstart
+ 112              	.LFB2247:
+  32:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+ 113              		.loc 1 32 0
+ 114              		.cfi_startproc
+ 115              		@ args = 0, pretend = 0, frame = 0
+ 116              		@ frame_needed = 0, uses_anonymous_args = 0
+ 117              	.LVL7:
+ 118 0000 10402DE9 		push	{r4, lr}
+ 119              		.cfi_def_cfa_offset 8
+ 120              		.cfi_offset 4, -8
+ 121              		.cfi_offset 14, -4
+ 122 0004 0040A0E1 		mov	r4, r0
+ 123              		.loc 1 33 0
+ 124 0008 FEFFFFEB 		bl	_ZN5zxing12BinaryBitmapD1Ev
+ 125              	.LVL8:
+ 126 000c 0C10A0E3 		mov	r1, #12
+ 127 0010 0400A0E1 		mov	r0, r4
+ 128 0014 FEFFFFEB 		bl	_ZdlPvj
+ 129              	.LVL9:
+ 130 0018 0400A0E1 		mov	r0, r4
+ 131 001c 1080BDE8 		pop	{r4, pc}
+ 132              		.cfi_endproc
+ 133              	.LFE2247:
+ 134              		.cantunwind
+ 135              		.fnend
+ 137              		.section	.text._Z41__static_initialization_and_destruction_0ii,"ax",%progbits
+ 138              		.align	2
+ 139              		.syntax unified
+ 140              		.arm
+ 141              		.fpu neon
+ 143              	_Z41__static_initialization_and_destruction_0ii:
+ 144              		.fnstart
+ 145              	.LFB2739:
+  34:../src/zxing_lib/zxing/BinaryBitmap.cpp **** 	
+  35:../src/zxing_lib/zxing/BinaryBitmap.cpp **** Ref<BitArray> BinaryBitmap::getBlackRow(int y, Ref<BitArray> row) {
+  36:../src/zxing_lib/zxing/BinaryBitmap.cpp ****   return binarizer_->getBlackRow(y, row);
+  37:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+  38:../src/zxing_lib/zxing/BinaryBitmap.cpp **** 	
+  39:../src/zxing_lib/zxing/BinaryBitmap.cpp **** Ref<BitMatrix> BinaryBitmap::getBlackMatrix() {
+  40:../src/zxing_lib/zxing/BinaryBitmap.cpp ****   return binarizer_->getBlackMatrix();
+  41:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+  42:../src/zxing_lib/zxing/BinaryBitmap.cpp **** 	
+  43:../src/zxing_lib/zxing/BinaryBitmap.cpp **** int BinaryBitmap::getWidth() const {
+  44:../src/zxing_lib/zxing/BinaryBitmap.cpp ****   return getLuminanceSource()->getWidth();
+  45:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+  46:../src/zxing_lib/zxing/BinaryBitmap.cpp **** 	
+  47:../src/zxing_lib/zxing/BinaryBitmap.cpp **** int BinaryBitmap::getHeight() const {
+  48:../src/zxing_lib/zxing/BinaryBitmap.cpp ****   return getLuminanceSource()->getHeight();
+  49:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+  50:../src/zxing_lib/zxing/BinaryBitmap.cpp **** 	
+  51:../src/zxing_lib/zxing/BinaryBitmap.cpp **** Ref<LuminanceSource> BinaryBitmap::getLuminanceSource() const {
+  52:../src/zxing_lib/zxing/BinaryBitmap.cpp ****   return binarizer_->getLuminanceSource();
+  53:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+  54:../src/zxing_lib/zxing/BinaryBitmap.cpp **** 	
+  55:../src/zxing_lib/zxing/BinaryBitmap.cpp **** 
+  56:../src/zxing_lib/zxing/BinaryBitmap.cpp **** bool BinaryBitmap::isCropSupported() const {
+  57:../src/zxing_lib/zxing/BinaryBitmap.cpp ****   return getLuminanceSource()->isCropSupported();
+  58:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+  59:../src/zxing_lib/zxing/BinaryBitmap.cpp **** 
+  60:../src/zxing_lib/zxing/BinaryBitmap.cpp **** Ref<BinaryBitmap> BinaryBitmap::crop(int left, int top, int width, int height) {
+  61:../src/zxing_lib/zxing/BinaryBitmap.cpp ****   return Ref<BinaryBitmap> (new BinaryBitmap(binarizer_->createBinarizer(getLuminanceSource()->crop
+  62:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+  63:../src/zxing_lib/zxing/BinaryBitmap.cpp **** 
+  64:../src/zxing_lib/zxing/BinaryBitmap.cpp **** bool BinaryBitmap::isRotateSupported() const {
+  65:../src/zxing_lib/zxing/BinaryBitmap.cpp ****   return getLuminanceSource()->isRotateSupported();
+  66:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+  67:../src/zxing_lib/zxing/BinaryBitmap.cpp **** 
+  68:../src/zxing_lib/zxing/BinaryBitmap.cpp **** Ref<BinaryBitmap> BinaryBitmap::rotateCounterClockwise() {
+  69:../src/zxing_lib/zxing/BinaryBitmap.cpp ****   return Ref<BinaryBitmap> (new BinaryBitmap(binarizer_->createBinarizer(getLuminanceSource()->rota
+  70:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+ 146              		.loc 1 70 0
+ 147              		.cfi_startproc
+ 148              		@ args = 0, pretend = 0, frame = 0
+ 149              		@ frame_needed = 0, uses_anonymous_args = 0
+ 150              	.LVL10:
+ 151 0000 010050E3 		cmp	r0, #1
+ 152 0004 1EFF2F11 		bxne	lr
+ 153              		.loc 1 70 0 is_stmt 0 discriminator 1
+ 154 0008 FF3F0FE3 		movw	r3, #65535
+ 155 000c 030051E1 		cmp	r1, r3
+ 156 0010 1EFF2F11 		bxne	lr
+ 157              		.loc 1 70 0
+ 158 0014 10402DE9 		push	{r4, lr}
+ 159              		.cfi_def_cfa_offset 8
+ 160              		.cfi_offset 4, -8
+ 161              		.cfi_offset 14, -4
+ 162              		.file 3 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+   1:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // Standard iostream objects -*- C++ -*-
+   2:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+   3:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // Copyright (C) 1997-2016 Free Software Foundation, Inc.
+   4:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** //
+   5:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // This file is part of the GNU ISO C++ Library.  This library is free
+   6:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // software; you can redistribute it and/or modify it under the
+   7:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // terms of the GNU General Public License as published by the
+   8:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // Free Software Foundation; either version 3, or (at your option)
+   9:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // any later version.
+  10:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  11:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // This library is distributed in the hope that it will be useful,
+  12:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // but WITHOUT ANY WARRANTY; without even the implied warranty of
+  13:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  14:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // GNU General Public License for more details.
+  15:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  16:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // Under Section 7 of GPL version 3, you are granted additional
+  17:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // permissions described in the GCC Runtime Library Exception, version
+  18:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // 3.1, as published by the Free Software Foundation.
+  19:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  20:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // You should have received a copy of the GNU General Public License and
+  21:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // a copy of the GCC Runtime Library Exception along with this program;
+  22:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+  23:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // <http://www.gnu.org/licenses/>.
+  24:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  25:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** /** @file include/iostream
+  26:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****  *  This is a Standard C++ Library header.
+  27:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****  */
+  28:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  29:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** //
+  30:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** // ISO C++ 14882: 27.3  Standard iostream objects
+  31:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** //
+  32:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  33:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** #ifndef _GLIBCXX_IOSTREAM
+  34:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** #define _GLIBCXX_IOSTREAM 1
+  35:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  36:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** #pragma GCC system_header
+  37:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  38:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** #include <bits/c++config.h>
+  39:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** #include <ostream>
+  40:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** #include <istream>
+  41:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  42:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** namespace std _GLIBCXX_VISIBILITY(default)
+  43:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** {
+  44:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** _GLIBCXX_BEGIN_NAMESPACE_VERSION
+  45:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  46:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   /**
+  47:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  @name Standard Stream Objects
+  48:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *
+  49:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  The &lt;iostream&gt; header declares the eight <em>standard stream
+  50:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  objects</em>.  For other declarations, see
+  51:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  http://gcc.gnu.org/onlinedocs/libstdc++/manual/io.html
+  52:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  and the @link iosfwd I/O forward declarations @endlink
+  53:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *
+  54:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  They are required by default to cooperate with the global C
+  55:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  library's @c FILE streams, and to be available during program
+  56:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  startup and termination. For more information, see the section of the
+  57:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****    *  manual linked to above.
+  58:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   */
+  59:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   //@{
+  60:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   extern istream cin;		/// Linked to standard input
+  61:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   extern ostream cout;		/// Linked to standard output
+  62:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   extern ostream cerr;		/// Linked to standard error (unbuffered)
+  63:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   extern ostream clog;		/// Linked to standard error (buffered)
+  64:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  65:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** #ifdef _GLIBCXX_USE_WCHAR_T
+  66:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   extern wistream wcin;		/// Linked to standard input
+  67:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   extern wostream wcout;	/// Linked to standard output
+  68:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   extern wostream wcerr;	/// Linked to standard error (unbuffered)
+  69:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   extern wostream wclog;	/// Linked to standard error (buffered)
+  70:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** #endif
+  71:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   //@}
+  72:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream **** 
+  73:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   // For construction of filebuffers for cout, cin, cerr, clog et. al.
+  74:/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/include/c++/6.3.1/iostream ****   static ios_base::Init __ioinit;
+ 163              		.loc 3 74 0 is_stmt 1
+ 164 0018 004000E3 		movw	r4, #:lower16:.LANCHOR1
+ 165 001c 004040E3 		movt	r4, #:upper16:.LANCHOR1
+ 166 0020 0400A0E1 		mov	r0, r4
+ 167              	.LVL11:
+ 168 0024 FEFFFFEB 		bl	_ZNSt8ios_base4InitC1Ev
+ 169              	.LVL12:
+ 170 0028 002000E3 		movw	r2, #:lower16:__dso_handle
+ 171 002c 002040E3 		movt	r2, #:upper16:__dso_handle
+ 172 0030 001000E3 		movw	r1, #:lower16:_ZNSt8ios_base4InitD1Ev
+ 173 0034 001040E3 		movt	r1, #:upper16:_ZNSt8ios_base4InitD1Ev
+ 174 0038 0400A0E1 		mov	r0, r4
+ 175 003c FEFFFFEB 		bl	__aeabi_atexit
+ 176              	.LVL13:
+ 177 0040 1080BDE8 		pop	{r4, pc}
+ 178              		.cfi_endproc
+ 179              	.LFE2739:
+ 180              		.cantunwind
+ 181              		.fnend
+ 183              		.section	.text._ZN5zxing12BinaryBitmapC2ENS_3RefINS_9BinarizerEEE,"ax",%progbits
+ 184              		.align	2
+ 185              		.global	_ZN5zxing12BinaryBitmapC2ENS_3RefINS_9BinarizerEEE
+ 186              		.syntax unified
+ 187              		.arm
+ 188              		.fpu neon
+ 190              	_ZN5zxing12BinaryBitmapC2ENS_3RefINS_9BinarizerEEE:
+ 191              		.fnstart
+ 192              	.LFB2242:
+  29:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+ 193              		.loc 1 29 0
+ 194              		.cfi_startproc
+ 195              		@ args = 0, pretend = 0, frame = 0
+ 196              		@ frame_needed = 0, uses_anonymous_args = 0
+ 197              	.LVL14:
+ 198 0000 70402DE9 		push	{r4, r5, r6, lr}
+ 199              		.cfi_def_cfa_offset 16
+ 200              		.cfi_offset 4, -16
+ 201              		.cfi_offset 5, -12
+ 202              		.cfi_offset 6, -8
+ 203              		.cfi_offset 14, -4
+ 204 0004 0040A0E1 		mov	r4, r0
+ 205              	.LVL15:
+ 206              	.LBB200:
+ 207              	.LBB201:
+ 208              	.LBB202:
+  31:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+ 209              		.loc 2 31 0
+ 210 0008 0030A0E3 		mov	r3, #0
+ 211 000c 043080E5 		str	r3, [r0, #4]
+ 212              	.LVL16:
+ 213              	.LBE202:
+ 214              	.LBE201:
+  29:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+ 215              		.loc 1 29 0
+ 216 0010 60209FE5 		ldr	r2, .L20
+ 217 0014 002080E5 		str	r2, [r0]
+ 218              	.LVL17:
+ 219              	.LBB203:
+ 220              	.LBB204:
+  64:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     reset(other.object_);
+ 221              		.loc 2 64 0
+ 222 0018 083080E5 		str	r3, [r0, #8]
+  65:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+ 223              		.loc 2 65 0
+ 224 001c 005091E5 		ldr	r5, [r1]
+ 225              	.LVL18:
+ 226              	.LBB205:
+ 227              	.LBB206:
+  76:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_->release();
+  77:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+  78:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+  79:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** 
+  80:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   void reset(T *o) {
+  81:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (o) {
+ 228              		.loc 2 81 0
+ 229 0020 030055E1 		cmp	r5, r3
+ 230              	.LVL19:
+ 231              	.LBB207:
+ 232              	.LBB208:
+  36:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     return this;
+ 233              		.loc 2 36 0
+ 234 0024 04309515 		ldrne	r3, [r5, #4]
+ 235 0028 01308312 		addne	r3, r3, #1
+ 236 002c 04308515 		strne	r3, [r5, #4]
+ 237              	.LVL20:
+ 238              	.L16:
+ 239              	.LBE208:
+ 240              	.LBE207:
+  82:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       o->retain();
+  83:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+  84:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (object_ != 0) {
+ 241              		.loc 2 84 0
+ 242 0030 080094E5 		ldr	r0, [r4, #8]
+ 243              	.LVL21:
+ 244 0034 000050E3 		cmp	r0, #0
+ 245 0038 0400000A 		beq	.L17
+ 246              	.LVL22:
+ 247              	.LBB209:
+ 248              	.LBB210:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 249              		.loc 2 40 0
+ 250 003c 043090E5 		ldr	r3, [r0, #4]
+ 251 0040 013043E2 		sub	r3, r3, #1
+ 252 0044 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 253              		.loc 2 41 0
+ 254 0048 000053E3 		cmp	r3, #0
+ 255 004c 0200000A 		beq	.L19
+ 256              	.LVL23:
+ 257              	.L17:
+ 258              	.LBE210:
+ 259              	.LBE209:
+  85:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_->release();
+  86:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+  87:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     object_ = o;
+ 260              		.loc 2 87 0
+ 261 0050 085084E5 		str	r5, [r4, #8]
+ 262              	.LVL24:
+ 263              	.LBE206:
+ 264              	.LBE205:
+ 265              	.LBE204:
+ 266              	.LBE203:
+ 267              	.LBE200:
+  30:../src/zxing_lib/zxing/BinaryBitmap.cpp **** 	
+ 268              		.loc 1 30 0
+ 269 0054 0400A0E1 		mov	r0, r4
+ 270 0058 7080BDE8 		pop	{r4, r5, r6, pc}
+ 271              	.LVL25:
+ 272              	.L19:
+ 273              	.LBB217:
+ 274              	.LBB216:
+ 275              	.LBB215:
+ 276              	.LBB214:
+ 277              	.LBB213:
+ 278              	.LBB212:
+ 279              	.LBB211:
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 280              		.loc 2 42 0
+ 281 005c 01300FE3 		movw	r3, #61441
+ 282 0060 AD3E4DE3 		movt	r3, 57005
+ 283 0064 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 284              		.loc 2 43 0
+ 285 0068 003090E5 		ldr	r3, [r0]
+ 286 006c 043093E5 		ldr	r3, [r3, #4]
+ 287 0070 33FF2FE1 		blx	r3
+ 288              	.LVL26:
+ 289 0074 F5FFFFEA 		b	.L17
+ 290              	.L21:
+ 291              		.align	2
+ 292              	.L20:
+ 293 0078 08000000 		.word	.LANCHOR0+8
+ 294              	.LBE211:
+ 295              	.LBE212:
+ 296              	.LBE213:
+ 297              	.LBE214:
+ 298              	.LBE215:
+ 299              	.LBE216:
+ 300              	.LBE217:
+ 301              		.cfi_endproc
+ 302              	.LFE2242:
+ 303              		.cantunwind
+ 304              		.fnend
+ 306              		.global	_ZN5zxing12BinaryBitmapC1ENS_3RefINS_9BinarizerEEE
+ 307              		.set	_ZN5zxing12BinaryBitmapC1ENS_3RefINS_9BinarizerEEE,_ZN5zxing12BinaryBitmapC2ENS_3RefINS_9Bina
+ 308              		.section	.text._ZN5zxing12BinaryBitmap11getBlackRowEiNS_3RefINS_8BitArrayEEE,"ax",%progbits
+ 309              		.align	2
+ 310              		.global	_ZN5zxing12BinaryBitmap11getBlackRowEiNS_3RefINS_8BitArrayEEE
+ 311              		.syntax unified
+ 312              		.arm
+ 313              		.fpu neon
+ 315              	_ZN5zxing12BinaryBitmap11getBlackRowEiNS_3RefINS_8BitArrayEEE:
+ 316              		.fnstart
+ 317              	.LFB2248:
+  35:../src/zxing_lib/zxing/BinaryBitmap.cpp ****   return binarizer_->getBlackRow(y, row);
+ 318              		.loc 1 35 0
+ 319              		.cfi_startproc
+ 320              		.cfi_personality 0,__gxx_personality_v0
+ 321              		.cfi_lsda 0,.LLSDA2248
+ 322              		@ args = 0, pretend = 0, frame = 8
+ 323              		@ frame_needed = 0, uses_anonymous_args = 0
+ 324              	.LVL27:
+ 325 0000 F0412DE9 		push	{r4, r5, r6, r7, r8, lr}
+ 326              		.save {r4, r5, r6, r7, r8, lr}
+ 327              		.cfi_def_cfa_offset 24
+ 328              		.cfi_offset 4, -24
+ 329              		.cfi_offset 5, -20
+ 330              		.cfi_offset 6, -16
+ 331              		.cfi_offset 7, -12
+ 332              		.cfi_offset 8, -8
+ 333              		.cfi_offset 14, -4
+ 334              		.pad #8
+ 335 0004 08D04DE2 		sub	sp, sp, #8
+ 336              		.cfi_def_cfa_offset 32
+ 337 0008 0050A0E1 		mov	r5, r0
+ 338 000c 0280A0E1 		mov	r8, r2
+ 339              	.LVL28:
+ 340              	.LBB237:
+ 341              	.LBB238:
+  88:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+  89:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   Ref& operator=(const Ref &other) {
+  90:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     reset(other.object_);
+  91:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     return *this;
+  92:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+  93:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   template<class Y>
+  94:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   Ref& operator=(const Ref<Y> &other) {
+  95:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     reset(other.object_);
+  96:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     return *this;
+  97:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+  98:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   Ref& operator=(T* o) {
+  99:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     reset(o);
+ 100:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     return *this;
+ 101:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+ 102:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   template<class Y>
+ 103:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   Ref& operator=(Y* o) {
+ 104:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     reset(o);
+ 105:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     return *this;
+ 106:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+ 107:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h **** 
+ 108:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   T& operator*() {
+ 109:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     return *object_;
+ 110:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+ 111:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   T* operator->() const {
+ 112:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     return object_;
+ 342              		.loc 2 112 0
+ 343 0010 086091E5 		ldr	r6, [r1, #8]
+ 344              	.LVL29:
+ 345              	.LBE238:
+ 346              	.LBE237:
+  36:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+ 347              		.loc 1 36 0
+ 348 0014 002096E5 		ldr	r2, [r6]
+ 349              	.LVL30:
+ 350 0018 087092E5 		ldr	r7, [r2, #8]
+ 351              	.LVL31:
+ 352              	.LBB239:
+ 353              	.LBB240:
+ 354              	.LBB241:
+  64:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     reset(other.object_);
+ 355              		.loc 2 64 0
+ 356 001c 0020A0E3 		mov	r2, #0
+ 357 0020 04208DE5 		str	r2, [sp, #4]
+  65:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+ 358              		.loc 2 65 0
+ 359 0024 004093E5 		ldr	r4, [r3]
+ 360              	.LVL32:
+ 361              	.LBB242:
+ 362              	.LBB243:
+  81:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       o->retain();
+ 363              		.loc 2 81 0
+ 364 0028 020054E1 		cmp	r4, r2
+ 365              	.LVL33:
+ 366              	.LBB244:
+ 367              	.LBB245:
+  36:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     return this;
+ 368              		.loc 2 36 0
+ 369 002c 04309415 		ldrne	r3, [r4, #4]
+ 370              	.LVL34:
+ 371 0030 01308312 		addne	r3, r3, #1
+ 372 0034 04308415 		strne	r3, [r4, #4]
+ 373              	.LVL35:
+ 374              	.L23:
+ 375              	.LBE245:
+ 376              	.LBE244:
+  84:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_->release();
+ 377              		.loc 2 84 0
+ 378 0038 04009DE5 		ldr	r0, [sp, #4]
+ 379              	.LVL36:
+ 380 003c 000050E3 		cmp	r0, #0
+ 381 0040 0400000A 		beq	.L24
+ 382              	.LVL37:
+ 383              	.LBB246:
+ 384              	.LBB247:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 385              		.loc 2 40 0
+ 386 0044 043090E5 		ldr	r3, [r0, #4]
+ 387 0048 013043E2 		sub	r3, r3, #1
+ 388 004c 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 389              		.loc 2 41 0
+ 390 0050 000053E3 		cmp	r3, #0
+ 391 0054 0600000A 		beq	.L30
+ 392              	.LVL38:
+ 393              	.L24:
+ 394              	.LBE247:
+ 395              	.LBE246:
+  87:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+ 396              		.loc 2 87 0
+ 397 0058 08308DE2 		add	r3, sp, #8
+ 398 005c 044023E5 		str	r4, [r3, #-4]!
+ 399              	.LVL39:
+ 400              	.LBE243:
+ 401              	.LBE242:
+ 402              	.LBE241:
+ 403              	.LBE240:
+ 404              	.LBE239:
+  36:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+ 405              		.loc 1 36 0
+ 406 0060 0820A0E1 		mov	r2, r8
+ 407 0064 0610A0E1 		mov	r1, r6
+ 408 0068 0500A0E1 		mov	r0, r5
+ 409              	.LEHB0:
+ 410 006c 37FF2FE1 		blx	r7
+ 411              	.LVL40:
+ 412              	.LEHE0:
+ 413 0070 060000EA 		b	.L31
+ 414              	.LVL41:
+ 415              	.L30:
+ 416              	.LBB254:
+ 417              	.LBB253:
+ 418              	.LBB252:
+ 419              	.LBB251:
+ 420              	.LBB250:
+ 421              	.LBB249:
+ 422              	.LBB248:
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 423              		.loc 2 42 0
+ 424 0074 01300FE3 		movw	r3, #61441
+ 425 0078 AD3E4DE3 		movt	r3, 57005
+ 426 007c 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 427              		.loc 2 43 0
+ 428 0080 003090E5 		ldr	r3, [r0]
+ 429 0084 043093E5 		ldr	r3, [r3, #4]
+ 430 0088 33FF2FE1 		blx	r3
+ 431              	.LVL42:
+ 432 008c F1FFFFEA 		b	.L24
+ 433              	.LVL43:
+ 434              	.L31:
+ 435              	.LBE248:
+ 436              	.LBE249:
+ 437              	.LBE250:
+ 438              	.LBE251:
+ 439              	.LBE252:
+ 440              	.LBE253:
+ 441              	.LBE254:
+ 442              	.LBB255:
+ 443              	.LBB256:
+  75:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_->release();
+ 444              		.loc 2 75 0
+ 445 0090 04009DE5 		ldr	r0, [sp, #4]
+ 446 0094 000050E3 		cmp	r0, #0
+ 447 0098 0400000A 		beq	.L22
+ 448              	.LVL44:
+ 449              	.LBB257:
+ 450              	.LBB258:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 451              		.loc 2 40 0
+ 452 009c 043090E5 		ldr	r3, [r0, #4]
+ 453 00a0 013043E2 		sub	r3, r3, #1
+ 454 00a4 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 455              		.loc 2 41 0
+ 456 00a8 000053E3 		cmp	r3, #0
+ 457 00ac 0200000A 		beq	.L32
+ 458              	.LVL45:
+ 459              	.L22:
+ 460              	.LBE258:
+ 461              	.LBE257:
+ 462              	.LBE256:
+ 463              	.LBE255:
+  37:../src/zxing_lib/zxing/BinaryBitmap.cpp **** 	
+ 464              		.loc 1 37 0
+ 465 00b0 0500A0E1 		mov	r0, r5
+ 466 00b4 08D08DE2 		add	sp, sp, #8
+ 467              		.cfi_remember_state
+ 468              		.cfi_def_cfa_offset 24
+ 469              		@ sp needed
+ 470 00b8 F081BDE8 		pop	{r4, r5, r6, r7, r8, pc}
+ 471              	.LVL46:
+ 472              	.L32:
+ 473              		.cfi_restore_state
+ 474              	.LBB262:
+ 475              	.LBB261:
+ 476              	.LBB260:
+ 477              	.LBB259:
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 478              		.loc 2 42 0
+ 479 00bc 01300FE3 		movw	r3, #61441
+ 480 00c0 AD3E4DE3 		movt	r3, 57005
+ 481 00c4 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 482              		.loc 2 43 0
+ 483 00c8 003090E5 		ldr	r3, [r0]
+ 484 00cc 043093E5 		ldr	r3, [r3, #4]
+ 485 00d0 33FF2FE1 		blx	r3
+ 486              	.LVL47:
+ 487              	.LBE259:
+ 488              	.LBE260:
+ 489              	.LBE261:
+ 490              	.LBE262:
+  36:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+ 491              		.loc 1 36 0
+ 492 00d4 F5FFFFEA 		b	.L22
+ 493              	.L28:
+ 494              	.LVL48:
+ 495              	.LBB263:
+ 496              	.LBB264:
+  75:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_->release();
+ 497              		.loc 2 75 0
+ 498 00d8 04009DE5 		ldr	r0, [sp, #4]
+ 499 00dc 000050E3 		cmp	r0, #0
+ 500 00e0 0A00000A 		beq	.L27
+ 501              	.LVL49:
+ 502              	.LBB265:
+ 503              	.LBB266:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 504              		.loc 2 40 0
+ 505 00e4 043090E5 		ldr	r3, [r0, #4]
+ 506 00e8 013043E2 		sub	r3, r3, #1
+ 507 00ec 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 508              		.loc 2 41 0
+ 509 00f0 000053E3 		cmp	r3, #0
+ 510 00f4 0500001A 		bne	.L27
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 511              		.loc 2 42 0
+ 512 00f8 01300FE3 		movw	r3, #61441
+ 513 00fc AD3E4DE3 		movt	r3, 57005
+ 514 0100 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 515              		.loc 2 43 0
+ 516 0104 003090E5 		ldr	r3, [r0]
+ 517 0108 043093E5 		ldr	r3, [r3, #4]
+ 518 010c 33FF2FE1 		blx	r3
+ 519              	.LVL50:
+ 520              	.L27:
+ 521              	.LEHB1:
+ 522 0110 FEFFFFEB 		bl	__cxa_end_cleanup
+ 523              	.LVL51:
+ 524              	.LEHE1:
+ 525              	.LBE266:
+ 526              	.LBE265:
+ 527              	.LBE264:
+ 528              	.LBE263:
+ 529              		.cfi_endproc
+ 530              	.LFE2248:
+ 531              		.global	__gxx_personality_v0
+ 532              		.personality	__gxx_personality_v0
+ 533              		.handlerdata
+ 534              	.LLSDA2248:
+ 535 0008 FF       		.byte	0xff
+ 536 0009 FF       		.byte	0xff
+ 537 000a 01       		.byte	0x1
+ 538 000b 0A       		.uleb128 .LLSDACSE2248-.LLSDACSB2248
+ 539              	.LLSDACSB2248:
+ 540 000c 6C       		.uleb128 .LEHB0-.LFB2248
+ 541 000d 04       		.uleb128 .LEHE0-.LEHB0
+ 542 000e D801     		.uleb128 .L28-.LFB2248
+ 543 0010 00       		.uleb128 0
+ 544 0011 9002     		.uleb128 .LEHB1-.LFB2248
+ 545 0013 04       		.uleb128 .LEHE1-.LEHB1
+ 546 0014 00       		.uleb128 0
+ 547 0015 00       		.uleb128 0
+ 548              	.LLSDACSE2248:
+ 549              		.section	.text._ZN5zxing12BinaryBitmap11getBlackRowEiNS_3RefINS_8BitArrayEEE
+ 550              		.fnend
+ 552              		.section	.text._ZN5zxing12BinaryBitmap14getBlackMatrixEv,"ax",%progbits
+ 553              		.align	2
+ 554              		.global	_ZN5zxing12BinaryBitmap14getBlackMatrixEv
+ 555              		.syntax unified
+ 556              		.arm
+ 557              		.fpu neon
+ 559              	_ZN5zxing12BinaryBitmap14getBlackMatrixEv:
+ 560              		.fnstart
+ 561              	.LFB2249:
+  39:../src/zxing_lib/zxing/BinaryBitmap.cpp ****   return binarizer_->getBlackMatrix();
+ 562              		.loc 1 39 0
+ 563              		.cfi_startproc
+ 564              		@ args = 0, pretend = 0, frame = 0
+ 565              		@ frame_needed = 0, uses_anonymous_args = 0
+ 566              	.LVL52:
+ 567 0000 10402DE9 		push	{r4, lr}
+ 568              		.save {r4, lr}
+ 569              		.cfi_def_cfa_offset 8
+ 570              		.cfi_offset 4, -8
+ 571              		.cfi_offset 14, -4
+ 572 0004 0040A0E1 		mov	r4, r0
+ 573              	.LVL53:
+ 574              	.LBB267:
+ 575              	.LBB268:
+ 576              		.loc 2 112 0
+ 577 0008 081091E5 		ldr	r1, [r1, #8]
+ 578              	.LVL54:
+ 579              	.LBE268:
+ 580              	.LBE267:
+  40:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+ 581              		.loc 1 40 0
+ 582 000c 003091E5 		ldr	r3, [r1]
+ 583 0010 0C3093E5 		ldr	r3, [r3, #12]
+ 584 0014 33FF2FE1 		blx	r3
+ 585              	.LVL55:
+  41:../src/zxing_lib/zxing/BinaryBitmap.cpp **** 	
+ 586              		.loc 1 41 0
+ 587 0018 0400A0E1 		mov	r0, r4
+ 588 001c 1080BDE8 		pop	{r4, pc}
+ 589              		.cfi_endproc
+ 590              	.LFE2249:
+ 591              		.fnend
+ 593              		.section	.text._ZNK5zxing12BinaryBitmap18getLuminanceSourceEv,"ax",%progbits
+ 594              		.align	2
+ 595              		.global	_ZNK5zxing12BinaryBitmap18getLuminanceSourceEv
+ 596              		.syntax unified
+ 597              		.arm
+ 598              		.fpu neon
+ 600              	_ZNK5zxing12BinaryBitmap18getLuminanceSourceEv:
+ 601              		.fnstart
+ 602              	.LFB2252:
+  51:../src/zxing_lib/zxing/BinaryBitmap.cpp ****   return binarizer_->getLuminanceSource();
+ 603              		.loc 1 51 0
+ 604              		.cfi_startproc
+ 605              		@ args = 0, pretend = 0, frame = 0
+ 606              		@ frame_needed = 0, uses_anonymous_args = 0
+ 607              	.LVL56:
+ 608 0000 10402DE9 		push	{r4, lr}
+ 609              		.save {r4, lr}
+ 610              		.cfi_def_cfa_offset 8
+ 611              		.cfi_offset 4, -8
+ 612              		.cfi_offset 14, -4
+ 613 0004 0040A0E1 		mov	r4, r0
+  52:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+ 614              		.loc 1 52 0
+ 615 0008 081091E5 		ldr	r1, [r1, #8]
+ 616              	.LVL57:
+ 617 000c FEFFFFEB 		bl	_ZNK5zxing9Binarizer18getLuminanceSourceEv
+ 618              	.LVL58:
+  53:../src/zxing_lib/zxing/BinaryBitmap.cpp **** 	
+ 619              		.loc 1 53 0
+ 620 0010 0400A0E1 		mov	r0, r4
+ 621 0014 1080BDE8 		pop	{r4, pc}
+ 622              		.cfi_endproc
+ 623              	.LFE2252:
+ 624              		.fnend
+ 626              		.section	.text._ZNK5zxing12BinaryBitmap8getWidthEv,"ax",%progbits
+ 627              		.align	2
+ 628              		.global	_ZNK5zxing12BinaryBitmap8getWidthEv
+ 629              		.syntax unified
+ 630              		.arm
+ 631              		.fpu neon
+ 633              	_ZNK5zxing12BinaryBitmap8getWidthEv:
+ 634              		.fnstart
+ 635              	.LFB2250:
+  43:../src/zxing_lib/zxing/BinaryBitmap.cpp ****   return getLuminanceSource()->getWidth();
+ 636              		.loc 1 43 0
+ 637              		.cfi_startproc
+ 638              		@ args = 0, pretend = 0, frame = 8
+ 639              		@ frame_needed = 0, uses_anonymous_args = 0
+ 640              	.LVL59:
+ 641 0000 10402DE9 		push	{r4, lr}
+ 642              		.save {r4, lr}
+ 643              		.cfi_def_cfa_offset 8
+ 644              		.cfi_offset 4, -8
+ 645              		.cfi_offset 14, -4
+ 646              		.pad #8
+ 647 0004 08D04DE2 		sub	sp, sp, #8
+ 648              		.cfi_def_cfa_offset 16
+  44:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+ 649              		.loc 1 44 0
+ 650 0008 0010A0E1 		mov	r1, r0
+ 651 000c 04008DE2 		add	r0, sp, #4
+ 652              	.LVL60:
+ 653 0010 FEFFFFEB 		bl	_ZNK5zxing12BinaryBitmap18getLuminanceSourceEv
+ 654              	.LVL61:
+ 655              	.LBB269:
+ 656              	.LBB270:
+ 657              		.loc 2 112 0
+ 658 0014 04009DE5 		ldr	r0, [sp, #4]
+ 659              	.LVL62:
+ 660              	.LBE270:
+ 661              	.LBE269:
+ 662              	.LBB271:
+ 663              	.LBB272:
+ 664              		.file 4 "/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Lum
+   1:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h **** // -*- mode:c++; tab-width:2; indent-tabs-mode:nil; c-basic-offset:2 -*-
+   2:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h **** #ifndef __LUMINANCESOURCE_H__
+   3:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h **** #define __LUMINANCESOURCE_H__
+   4:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h **** /*
+   5:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h ****  *  LuminanceSource.h
+   6:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h ****  *  zxing
+   7:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h ****  *
+   8:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h ****  *  Copyright 2010 ZXing authors All rights reserved.
+   9:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h ****  *
+  10:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h ****  * Licensed under the Apache License, Version 2.0 (the "License");
+  11:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h ****  * you may not use this file except in compliance with the License.
+  12:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h ****  * You may obtain a copy of the License at
+  13:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h ****  *
+  14:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h ****  *      http://www.apache.org/licenses/LICENSE-2.0
+  15:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h ****  *
+  16:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h ****  * Unless required by applicable law or agreed to in writing, software
+  17:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h ****  * distributed under the License is distributed on an "AS IS" BASIS,
+  18:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h ****  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  19:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h ****  * See the License for the specific language governing permissions and
+  20:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h ****  * limitations under the License.
+  21:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h ****  */
+  22:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h **** 
+  23:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h **** #include <zxing/common/Counted.h>
+  24:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h **** #include <zxing/common/Array.h>
+  25:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h **** #include <string.h>
+  26:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h **** 
+  27:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h **** namespace zxing {
+  28:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h **** 
+  29:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h **** class LuminanceSource : public Counted {
+  30:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h ****  private:
+  31:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h ****   const int width;
+  32:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h ****   const int height;
+  33:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h **** 
+  34:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h ****  public:
+  35:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h ****   LuminanceSource(int width, int height);
+  36:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h ****   virtual ~LuminanceSource();
+  37:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h **** 
+  38:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h ****   int getWidth() const { return width; }
+ 665              		.loc 4 38 0
+ 666 0018 084090E5 		ldr	r4, [r0, #8]
+ 667              	.LVL63:
+ 668              	.LBE272:
+ 669              	.LBE271:
+ 670              	.LBB273:
+ 671              	.LBB274:
+  75:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_->release();
+ 672              		.loc 2 75 0
+ 673 001c 000050E3 		cmp	r0, #0
+ 674 0020 0400000A 		beq	.L37
+ 675              	.LVL64:
+ 676              	.LBB275:
+ 677              	.LBB276:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 678              		.loc 2 40 0
+ 679 0024 043090E5 		ldr	r3, [r0, #4]
+ 680 0028 013043E2 		sub	r3, r3, #1
+ 681 002c 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 682              		.loc 2 41 0
+ 683 0030 000053E3 		cmp	r3, #0
+ 684 0034 0200000A 		beq	.L40
+ 685              	.LVL65:
+ 686              	.L37:
+ 687              	.LBE276:
+ 688              	.LBE275:
+ 689              	.LBE274:
+ 690              	.LBE273:
+  45:../src/zxing_lib/zxing/BinaryBitmap.cpp **** 	
+ 691              		.loc 1 45 0
+ 692 0038 0400A0E1 		mov	r0, r4
+ 693 003c 08D08DE2 		add	sp, sp, #8
+ 694              		.cfi_remember_state
+ 695              		.cfi_def_cfa_offset 8
+ 696              		@ sp needed
+ 697 0040 1080BDE8 		pop	{r4, pc}
+ 698              	.LVL66:
+ 699              	.L40:
+ 700              		.cfi_restore_state
+ 701              	.LBB280:
+ 702              	.LBB279:
+ 703              	.LBB278:
+ 704              	.LBB277:
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 705              		.loc 2 42 0
+ 706 0044 01300FE3 		movw	r3, #61441
+ 707 0048 AD3E4DE3 		movt	r3, 57005
+ 708 004c 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 709              		.loc 2 43 0
+ 710 0050 003090E5 		ldr	r3, [r0]
+ 711 0054 043093E5 		ldr	r3, [r3, #4]
+ 712 0058 33FF2FE1 		blx	r3
+ 713              	.LVL67:
+ 714              	.LBE277:
+ 715              	.LBE278:
+ 716              	.LBE279:
+ 717              	.LBE280:
+  44:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+ 718              		.loc 1 44 0
+ 719 005c F5FFFFEA 		b	.L37
+ 720              		.cfi_endproc
+ 721              	.LFE2250:
+ 722              		.fnend
+ 724              		.section	.text._ZNK5zxing12BinaryBitmap9getHeightEv,"ax",%progbits
+ 725              		.align	2
+ 726              		.global	_ZNK5zxing12BinaryBitmap9getHeightEv
+ 727              		.syntax unified
+ 728              		.arm
+ 729              		.fpu neon
+ 731              	_ZNK5zxing12BinaryBitmap9getHeightEv:
+ 732              		.fnstart
+ 733              	.LFB2251:
+  47:../src/zxing_lib/zxing/BinaryBitmap.cpp ****   return getLuminanceSource()->getHeight();
+ 734              		.loc 1 47 0
+ 735              		.cfi_startproc
+ 736              		@ args = 0, pretend = 0, frame = 8
+ 737              		@ frame_needed = 0, uses_anonymous_args = 0
+ 738              	.LVL68:
+ 739 0000 10402DE9 		push	{r4, lr}
+ 740              		.save {r4, lr}
+ 741              		.cfi_def_cfa_offset 8
+ 742              		.cfi_offset 4, -8
+ 743              		.cfi_offset 14, -4
+ 744              		.pad #8
+ 745 0004 08D04DE2 		sub	sp, sp, #8
+ 746              		.cfi_def_cfa_offset 16
+  48:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+ 747              		.loc 1 48 0
+ 748 0008 0010A0E1 		mov	r1, r0
+ 749 000c 04008DE2 		add	r0, sp, #4
+ 750              	.LVL69:
+ 751 0010 FEFFFFEB 		bl	_ZNK5zxing12BinaryBitmap18getLuminanceSourceEv
+ 752              	.LVL70:
+ 753              	.LBB281:
+ 754              	.LBB282:
+ 755              		.loc 2 112 0
+ 756 0014 04009DE5 		ldr	r0, [sp, #4]
+ 757              	.LVL71:
+ 758              	.LBE282:
+ 759              	.LBE281:
+ 760              	.LBB283:
+ 761              	.LBB284:
+  39:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/LuminanceSource.h ****   int getHeight() const { return height; }
+ 762              		.loc 4 39 0
+ 763 0018 0C4090E5 		ldr	r4, [r0, #12]
+ 764              	.LVL72:
+ 765              	.LBE284:
+ 766              	.LBE283:
+ 767              	.LBB285:
+ 768              	.LBB286:
+  75:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_->release();
+ 769              		.loc 2 75 0
+ 770 001c 000050E3 		cmp	r0, #0
+ 771 0020 0400000A 		beq	.L41
+ 772              	.LVL73:
+ 773              	.LBB287:
+ 774              	.LBB288:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 775              		.loc 2 40 0
+ 776 0024 043090E5 		ldr	r3, [r0, #4]
+ 777 0028 013043E2 		sub	r3, r3, #1
+ 778 002c 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 779              		.loc 2 41 0
+ 780 0030 000053E3 		cmp	r3, #0
+ 781 0034 0200000A 		beq	.L44
+ 782              	.LVL74:
+ 783              	.L41:
+ 784              	.LBE288:
+ 785              	.LBE287:
+ 786              	.LBE286:
+ 787              	.LBE285:
+  49:../src/zxing_lib/zxing/BinaryBitmap.cpp **** 	
+ 788              		.loc 1 49 0
+ 789 0038 0400A0E1 		mov	r0, r4
+ 790 003c 08D08DE2 		add	sp, sp, #8
+ 791              		.cfi_remember_state
+ 792              		.cfi_def_cfa_offset 8
+ 793              		@ sp needed
+ 794 0040 1080BDE8 		pop	{r4, pc}
+ 795              	.LVL75:
+ 796              	.L44:
+ 797              		.cfi_restore_state
+ 798              	.LBB292:
+ 799              	.LBB291:
+ 800              	.LBB290:
+ 801              	.LBB289:
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 802              		.loc 2 42 0
+ 803 0044 01300FE3 		movw	r3, #61441
+ 804 0048 AD3E4DE3 		movt	r3, 57005
+ 805 004c 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 806              		.loc 2 43 0
+ 807 0050 003090E5 		ldr	r3, [r0]
+ 808 0054 043093E5 		ldr	r3, [r3, #4]
+ 809 0058 33FF2FE1 		blx	r3
+ 810              	.LVL76:
+ 811              	.LBE289:
+ 812              	.LBE290:
+ 813              	.LBE291:
+ 814              	.LBE292:
+  48:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+ 815              		.loc 1 48 0
+ 816 005c F5FFFFEA 		b	.L41
+ 817              		.cfi_endproc
+ 818              	.LFE2251:
+ 819              		.fnend
+ 821              		.section	.text._ZNK5zxing12BinaryBitmap15isCropSupportedEv,"ax",%progbits
+ 822              		.align	2
+ 823              		.global	_ZNK5zxing12BinaryBitmap15isCropSupportedEv
+ 824              		.syntax unified
+ 825              		.arm
+ 826              		.fpu neon
+ 828              	_ZNK5zxing12BinaryBitmap15isCropSupportedEv:
+ 829              		.fnstart
+ 830              	.LFB2253:
+  56:../src/zxing_lib/zxing/BinaryBitmap.cpp ****   return getLuminanceSource()->isCropSupported();
+ 831              		.loc 1 56 0
+ 832              		.cfi_startproc
+ 833              		.cfi_personality 0,__gxx_personality_v0
+ 834              		.cfi_lsda 0,.LLSDA2253
+ 835              		@ args = 0, pretend = 0, frame = 8
+ 836              		@ frame_needed = 0, uses_anonymous_args = 0
+ 837              	.LVL77:
+ 838 0000 10402DE9 		push	{r4, lr}
+ 839              		.save {r4, lr}
+ 840              		.cfi_def_cfa_offset 8
+ 841              		.cfi_offset 4, -8
+ 842              		.cfi_offset 14, -4
+ 843              		.pad #8
+ 844 0004 08D04DE2 		sub	sp, sp, #8
+ 845              		.cfi_def_cfa_offset 16
+  57:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+ 846              		.loc 1 57 0
+ 847 0008 0010A0E1 		mov	r1, r0
+ 848 000c 04008DE2 		add	r0, sp, #4
+ 849              	.LVL78:
+ 850              	.LEHB2:
+ 851 0010 FEFFFFEB 		bl	_ZNK5zxing12BinaryBitmap18getLuminanceSourceEv
+ 852              	.LVL79:
+ 853              	.LEHE2:
+ 854              	.LBB293:
+ 855              	.LBB294:
+ 856              		.loc 2 112 0
+ 857 0014 04009DE5 		ldr	r0, [sp, #4]
+ 858              	.LVL80:
+ 859              	.LBE294:
+ 860              	.LBE293:
+  57:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+ 861              		.loc 1 57 0
+ 862 0018 003090E5 		ldr	r3, [r0]
+ 863 001c 103093E5 		ldr	r3, [r3, #16]
+ 864              	.LEHB3:
+ 865 0020 33FF2FE1 		blx	r3
+ 866              	.LVL81:
+ 867              	.LEHE3:
+ 868 0024 0040A0E1 		mov	r4, r0
+ 869              	.LVL82:
+ 870              	.LBB295:
+ 871              	.LBB296:
+  75:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_->release();
+ 872              		.loc 2 75 0
+ 873 0028 04009DE5 		ldr	r0, [sp, #4]
+ 874 002c 000050E3 		cmp	r0, #0
+ 875 0030 0400000A 		beq	.L50
+ 876              	.LVL83:
+ 877              	.LBB297:
+ 878              	.LBB298:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 879              		.loc 2 40 0
+ 880 0034 043090E5 		ldr	r3, [r0, #4]
+ 881 0038 013043E2 		sub	r3, r3, #1
+ 882 003c 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 883              		.loc 2 41 0
+ 884 0040 000053E3 		cmp	r3, #0
+ 885 0044 0200000A 		beq	.L52
+ 886              	.LVL84:
+ 887              	.L50:
+ 888              	.LBE298:
+ 889              	.LBE297:
+ 890              	.LBE296:
+ 891              	.LBE295:
+  58:../src/zxing_lib/zxing/BinaryBitmap.cpp **** 
+ 892              		.loc 1 58 0
+ 893 0048 0400A0E1 		mov	r0, r4
+ 894 004c 08D08DE2 		add	sp, sp, #8
+ 895              		.cfi_remember_state
+ 896              		.cfi_def_cfa_offset 8
+ 897              		@ sp needed
+ 898 0050 1080BDE8 		pop	{r4, pc}
+ 899              	.LVL85:
+ 900              	.L52:
+ 901              		.cfi_restore_state
+ 902              	.LBB302:
+ 903              	.LBB301:
+ 904              	.LBB300:
+ 905              	.LBB299:
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 906              		.loc 2 42 0
+ 907 0054 01300FE3 		movw	r3, #61441
+ 908 0058 AD3E4DE3 		movt	r3, 57005
+ 909 005c 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 910              		.loc 2 43 0
+ 911 0060 003090E5 		ldr	r3, [r0]
+ 912 0064 043093E5 		ldr	r3, [r3, #4]
+ 913 0068 33FF2FE1 		blx	r3
+ 914              	.LVL86:
+ 915              	.LBE299:
+ 916              	.LBE300:
+ 917              	.LBE301:
+ 918              	.LBE302:
+  57:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+ 919              		.loc 1 57 0
+ 920 006c F5FFFFEA 		b	.L50
+ 921              	.L49:
+ 922              	.LVL87:
+ 923              	.LBB303:
+ 924              	.LBB304:
+  75:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_->release();
+ 925              		.loc 2 75 0
+ 926 0070 04009DE5 		ldr	r0, [sp, #4]
+ 927 0074 000050E3 		cmp	r0, #0
+ 928 0078 0A00000A 		beq	.L48
+ 929              	.LVL88:
+ 930              	.LBB305:
+ 931              	.LBB306:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 932              		.loc 2 40 0
+ 933 007c 043090E5 		ldr	r3, [r0, #4]
+ 934 0080 013043E2 		sub	r3, r3, #1
+ 935 0084 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 936              		.loc 2 41 0
+ 937 0088 000053E3 		cmp	r3, #0
+ 938 008c 0500001A 		bne	.L48
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 939              		.loc 2 42 0
+ 940 0090 01300FE3 		movw	r3, #61441
+ 941 0094 AD3E4DE3 		movt	r3, 57005
+ 942 0098 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 943              		.loc 2 43 0
+ 944 009c 003090E5 		ldr	r3, [r0]
+ 945 00a0 043093E5 		ldr	r3, [r3, #4]
+ 946 00a4 33FF2FE1 		blx	r3
+ 947              	.LVL89:
+ 948              	.L48:
+ 949              	.LEHB4:
+ 950 00a8 FEFFFFEB 		bl	__cxa_end_cleanup
+ 951              	.LVL90:
+ 952              	.LEHE4:
+ 953              	.LBE306:
+ 954              	.LBE305:
+ 955              	.LBE304:
+ 956              	.LBE303:
+ 957              		.cfi_endproc
+ 958              	.LFE2253:
+ 959              		.personality	__gxx_personality_v0
+ 960              		.handlerdata
+ 961              	.LLSDA2253:
+ 962 0008 FF       		.byte	0xff
+ 963 0009 FF       		.byte	0xff
+ 964 000a 01       		.byte	0x1
+ 965 000b 0D       		.uleb128 .LLSDACSE2253-.LLSDACSB2253
+ 966              	.LLSDACSB2253:
+ 967 000c 10       		.uleb128 .LEHB2-.LFB2253
+ 968 000d 04       		.uleb128 .LEHE2-.LEHB2
+ 969 000e 00       		.uleb128 0
+ 970 000f 00       		.uleb128 0
+ 971 0010 20       		.uleb128 .LEHB3-.LFB2253
+ 972 0011 04       		.uleb128 .LEHE3-.LEHB3
+ 973 0012 70       		.uleb128 .L49-.LFB2253
+ 974 0013 00       		.uleb128 0
+ 975 0014 A801     		.uleb128 .LEHB4-.LFB2253
+ 976 0016 04       		.uleb128 .LEHE4-.LEHB4
+ 977 0017 00       		.uleb128 0
+ 978 0018 00       		.uleb128 0
+ 979              	.LLSDACSE2253:
+ 980              		.section	.text._ZNK5zxing12BinaryBitmap15isCropSupportedEv
+ 981              		.fnend
+ 983              		.section	.text._ZN5zxing12BinaryBitmap4cropEiiii,"ax",%progbits
+ 984              		.align	2
+ 985              		.global	_ZN5zxing12BinaryBitmap4cropEiiii
+ 986              		.syntax unified
+ 987              		.arm
+ 988              		.fpu neon
+ 990              	_ZN5zxing12BinaryBitmap4cropEiiii:
+ 991              		.fnstart
+ 992              	.LFB2254:
+  60:../src/zxing_lib/zxing/BinaryBitmap.cpp ****   return Ref<BinaryBitmap> (new BinaryBitmap(binarizer_->createBinarizer(getLuminanceSource()->crop
+ 993              		.loc 1 60 0
+ 994              		.cfi_startproc
+ 995              		.cfi_personality 0,__gxx_personality_v0
+ 996              		.cfi_lsda 0,.LLSDA2254
+ 997              		@ args = 8, pretend = 0, frame = 16
+ 998              		@ frame_needed = 0, uses_anonymous_args = 0
+ 999              	.LVL91:
+ 1000 0000 F0432DE9 		push	{r4, r5, r6, r7, r8, r9, lr}
+ 1001              		.save {r4, r5, r6, r7, r8, r9, lr}
+ 1002              		.cfi_def_cfa_offset 28
+ 1003              		.cfi_offset 4, -28
+ 1004              		.cfi_offset 5, -24
+ 1005              		.cfi_offset 6, -20
+ 1006              		.cfi_offset 7, -16
+ 1007              		.cfi_offset 8, -12
+ 1008              		.cfi_offset 9, -8
+ 1009              		.cfi_offset 14, -4
+ 1010              		.pad #28
+ 1011 0004 1CD04DE2 		sub	sp, sp, #28
+ 1012              		.cfi_def_cfa_offset 56
+ 1013 0008 0040A0E1 		mov	r4, r0
+ 1014 000c 0280A0E1 		mov	r8, r2
+ 1015 0010 0390A0E1 		mov	r9, r3
+ 1016              	.LVL92:
+ 1017              	.LBB343:
+ 1018              	.LBB344:
+ 1019              		.loc 2 112 0
+ 1020 0014 085091E5 		ldr	r5, [r1, #8]
+ 1021              	.LVL93:
+ 1022              	.LBE344:
+ 1023              	.LBE343:
+  61:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+ 1024              		.loc 1 61 0
+ 1025 0018 003095E5 		ldr	r3, [r5]
+ 1026              	.LVL94:
+ 1027 001c 106093E5 		ldr	r6, [r3, #16]
+ 1028 0020 14008DE2 		add	r0, sp, #20
+ 1029              	.LVL95:
+ 1030              	.LEHB5:
+ 1031 0024 FEFFFFEB 		bl	_ZNK5zxing12BinaryBitmap18getLuminanceSourceEv
+ 1032              	.LVL96:
+ 1033              	.LEHE5:
+ 1034              	.LBB345:
+ 1035              	.LBB346:
+ 1036              		.loc 2 112 0
+ 1037 0028 14109DE5 		ldr	r1, [sp, #20]
+ 1038              	.LVL97:
+ 1039              	.LBE346:
+ 1040              	.LBE345:
+  61:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+ 1041              		.loc 1 61 0
+ 1042 002c 003091E5 		ldr	r3, [r1]
+ 1043 0030 147093E5 		ldr	r7, [r3, #20]
+ 1044 0034 3C309DE5 		ldr	r3, [sp, #60]
+ 1045 0038 04308DE5 		str	r3, [sp, #4]
+ 1046 003c 38309DE5 		ldr	r3, [sp, #56]
+ 1047 0040 00308DE5 		str	r3, [sp]
+ 1048 0044 0930A0E1 		mov	r3, r9
+ 1049 0048 0820A0E1 		mov	r2, r8
+ 1050 004c 10008DE2 		add	r0, sp, #16
+ 1051              	.LEHB6:
+ 1052 0050 37FF2FE1 		blx	r7
+ 1053              	.LVL98:
+ 1054              	.LEHE6:
+  61:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+ 1055              		.loc 1 61 0 is_stmt 0 discriminator 2
+ 1056 0054 10208DE2 		add	r2, sp, #16
+ 1057 0058 0510A0E1 		mov	r1, r5
+ 1058 005c 0C008DE2 		add	r0, sp, #12
+ 1059              	.LEHB7:
+ 1060 0060 36FF2FE1 		blx	r6
+ 1061              	.LVL99:
+ 1062              	.LEHE7:
+  61:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+ 1063              		.loc 1 61 0 discriminator 4
+ 1064 0064 0C00A0E3 		mov	r0, #12
+ 1065              	.LEHB8:
+ 1066 0068 FEFFFFEB 		bl	_Znwj
+ 1067              	.LVL100:
+ 1068              	.LEHE8:
+ 1069 006c 0050A0E1 		mov	r5, r0
+ 1070 0070 0C108DE2 		add	r1, sp, #12
+ 1071 0074 FEFFFFEB 		bl	_ZN5zxing12BinaryBitmapC1ENS_3RefINS_9BinarizerEEE
+ 1072              	.LVL101:
+ 1073              	.LBB347:
+ 1074              	.LBB348:
+  60:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     reset(o);
+ 1075              		.loc 2 60 0 is_stmt 1 discriminator 4
+ 1076 0078 0030A0E3 		mov	r3, #0
+ 1077 007c 003084E5 		str	r3, [r4]
+ 1078              	.LVL102:
+ 1079              	.LBB349:
+ 1080              	.LBB350:
+  81:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       o->retain();
+ 1081              		.loc 2 81 0 discriminator 4
+ 1082 0080 030055E1 		cmp	r5, r3
+ 1083              	.LVL103:
+ 1084              	.LBB351:
+ 1085              	.LBB352:
+  36:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     return this;
+ 1086              		.loc 2 36 0
+ 1087 0084 04309515 		ldrne	r3, [r5, #4]
+ 1088 0088 01308312 		addne	r3, r3, #1
+ 1089 008c 04308515 		strne	r3, [r5, #4]
+ 1090              	.LVL104:
+ 1091              	.L54:
+ 1092              	.LBE352:
+ 1093              	.LBE351:
+  84:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_->release();
+ 1094              		.loc 2 84 0
+ 1095 0090 000094E5 		ldr	r0, [r4]
+ 1096 0094 000050E3 		cmp	r0, #0
+ 1097 0098 0400000A 		beq	.L55
+ 1098              	.LVL105:
+ 1099              	.LBB353:
+ 1100              	.LBB354:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 1101              		.loc 2 40 0
+ 1102 009c 043090E5 		ldr	r3, [r0, #4]
+ 1103 00a0 013043E2 		sub	r3, r3, #1
+ 1104 00a4 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 1105              		.loc 2 41 0
+ 1106 00a8 000053E3 		cmp	r3, #0
+ 1107 00ac 1B00000A 		beq	.L69
+ 1108              	.LVL106:
+ 1109              	.L55:
+ 1110              	.LBE354:
+ 1111              	.LBE353:
+  87:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+ 1112              		.loc 2 87 0
+ 1113 00b0 005084E5 		str	r5, [r4]
+ 1114              	.LVL107:
+ 1115              	.LBE350:
+ 1116              	.LBE349:
+ 1117              	.LBE348:
+ 1118              	.LBE347:
+ 1119              	.LBB360:
+ 1120              	.LBB361:
+  75:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_->release();
+ 1121              		.loc 2 75 0
+ 1122 00b4 0C009DE5 		ldr	r0, [sp, #12]
+ 1123 00b8 000050E3 		cmp	r0, #0
+ 1124 00bc 0400000A 		beq	.L56
+ 1125              	.LVL108:
+ 1126              	.LBB362:
+ 1127              	.LBB363:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 1128              		.loc 2 40 0
+ 1129 00c0 043090E5 		ldr	r3, [r0, #4]
+ 1130 00c4 013043E2 		sub	r3, r3, #1
+ 1131 00c8 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 1132              		.loc 2 41 0
+ 1133 00cc 000053E3 		cmp	r3, #0
+ 1134 00d0 1900000A 		beq	.L70
+ 1135              	.LVL109:
+ 1136              	.L56:
+ 1137              	.LBE363:
+ 1138              	.LBE362:
+ 1139              	.LBE361:
+ 1140              	.LBE360:
+ 1141              	.LBB367:
+ 1142              	.LBB368:
+  75:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_->release();
+ 1143              		.loc 2 75 0
+ 1144 00d4 10009DE5 		ldr	r0, [sp, #16]
+ 1145 00d8 000050E3 		cmp	r0, #0
+ 1146 00dc 0400000A 		beq	.L57
+ 1147              	.LVL110:
+ 1148              	.LBB369:
+ 1149              	.LBB370:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 1150              		.loc 2 40 0
+ 1151 00e0 043090E5 		ldr	r3, [r0, #4]
+ 1152 00e4 013043E2 		sub	r3, r3, #1
+ 1153 00e8 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 1154              		.loc 2 41 0
+ 1155 00ec 000053E3 		cmp	r3, #0
+ 1156 00f0 1800000A 		beq	.L71
+ 1157              	.LVL111:
+ 1158              	.L57:
+ 1159              	.LBE370:
+ 1160              	.LBE369:
+ 1161              	.LBE368:
+ 1162              	.LBE367:
+ 1163              	.LBB374:
+ 1164              	.LBB375:
+  75:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_->release();
+ 1165              		.loc 2 75 0
+ 1166 00f4 14009DE5 		ldr	r0, [sp, #20]
+ 1167 00f8 000050E3 		cmp	r0, #0
+ 1168 00fc 0400000A 		beq	.L53
+ 1169              	.LVL112:
+ 1170              	.LBB376:
+ 1171              	.LBB377:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 1172              		.loc 2 40 0
+ 1173 0100 043090E5 		ldr	r3, [r0, #4]
+ 1174 0104 013043E2 		sub	r3, r3, #1
+ 1175 0108 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 1176              		.loc 2 41 0
+ 1177 010c 000053E3 		cmp	r3, #0
+ 1178 0110 1700000A 		beq	.L72
+ 1179              	.LVL113:
+ 1180              	.L53:
+ 1181              	.LBE377:
+ 1182              	.LBE376:
+ 1183              	.LBE375:
+ 1184              	.LBE374:
+  62:../src/zxing_lib/zxing/BinaryBitmap.cpp **** 
+ 1185              		.loc 1 62 0
+ 1186 0114 0400A0E1 		mov	r0, r4
+ 1187 0118 1CD08DE2 		add	sp, sp, #28
+ 1188              		.cfi_remember_state
+ 1189              		.cfi_def_cfa_offset 28
+ 1190              		@ sp needed
+ 1191 011c F083BDE8 		pop	{r4, r5, r6, r7, r8, r9, pc}
+ 1192              	.LVL114:
+ 1193              	.L69:
+ 1194              		.cfi_restore_state
+ 1195              	.LBB381:
+ 1196              	.LBB359:
+ 1197              	.LBB358:
+ 1198              	.LBB357:
+ 1199              	.LBB356:
+ 1200              	.LBB355:
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 1201              		.loc 2 42 0
+ 1202 0120 01300FE3 		movw	r3, #61441
+ 1203 0124 AD3E4DE3 		movt	r3, 57005
+ 1204 0128 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 1205              		.loc 2 43 0
+ 1206 012c 003090E5 		ldr	r3, [r0]
+ 1207 0130 043093E5 		ldr	r3, [r3, #4]
+ 1208 0134 33FF2FE1 		blx	r3
+ 1209              	.LVL115:
+ 1210 0138 DCFFFFEA 		b	.L55
+ 1211              	.LVL116:
+ 1212              	.L70:
+ 1213              	.LBE355:
+ 1214              	.LBE356:
+ 1215              	.LBE357:
+ 1216              	.LBE358:
+ 1217              	.LBE359:
+ 1218              	.LBE381:
+ 1219              	.LBB382:
+ 1220              	.LBB366:
+ 1221              	.LBB365:
+ 1222              	.LBB364:
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 1223              		.loc 2 42 0
+ 1224 013c 01300FE3 		movw	r3, #61441
+ 1225 0140 AD3E4DE3 		movt	r3, 57005
+ 1226 0144 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 1227              		.loc 2 43 0
+ 1228 0148 003090E5 		ldr	r3, [r0]
+ 1229 014c 043093E5 		ldr	r3, [r3, #4]
+ 1230 0150 33FF2FE1 		blx	r3
+ 1231              	.LVL117:
+ 1232 0154 DEFFFFEA 		b	.L56
+ 1233              	.LVL118:
+ 1234              	.L71:
+ 1235              	.LBE364:
+ 1236              	.LBE365:
+ 1237              	.LBE366:
+ 1238              	.LBE382:
+ 1239              	.LBB383:
+ 1240              	.LBB373:
+ 1241              	.LBB372:
+ 1242              	.LBB371:
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 1243              		.loc 2 42 0
+ 1244 0158 01300FE3 		movw	r3, #61441
+ 1245 015c AD3E4DE3 		movt	r3, 57005
+ 1246 0160 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 1247              		.loc 2 43 0
+ 1248 0164 003090E5 		ldr	r3, [r0]
+ 1249 0168 043093E5 		ldr	r3, [r3, #4]
+ 1250 016c 33FF2FE1 		blx	r3
+ 1251              	.LVL119:
+ 1252 0170 DFFFFFEA 		b	.L57
+ 1253              	.LVL120:
+ 1254              	.L72:
+ 1255              	.LBE371:
+ 1256              	.LBE372:
+ 1257              	.LBE373:
+ 1258              	.LBE383:
+ 1259              	.LBB384:
+ 1260              	.LBB380:
+ 1261              	.LBB379:
+ 1262              	.LBB378:
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 1263              		.loc 2 42 0
+ 1264 0174 01300FE3 		movw	r3, #61441
+ 1265 0178 AD3E4DE3 		movt	r3, 57005
+ 1266 017c 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 1267              		.loc 2 43 0
+ 1268 0180 003090E5 		ldr	r3, [r0]
+ 1269 0184 043093E5 		ldr	r3, [r3, #4]
+ 1270 0188 33FF2FE1 		blx	r3
+ 1271              	.LVL121:
+ 1272              	.LBE378:
+ 1273              	.LBE379:
+ 1274              	.LBE380:
+ 1275              	.LBE384:
+  61:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+ 1276              		.loc 1 61 0
+ 1277 018c E0FFFFEA 		b	.L53
+ 1278              	.L67:
+ 1279              	.LVL122:
+ 1280              	.LBB385:
+ 1281              	.LBB386:
+  75:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_->release();
+ 1282              		.loc 2 75 0
+ 1283 0190 0C009DE5 		ldr	r0, [sp, #12]
+ 1284 0194 000050E3 		cmp	r0, #0
+ 1285 0198 0A00000A 		beq	.L61
+ 1286              	.LVL123:
+ 1287              	.LBB387:
+ 1288              	.LBB388:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 1289              		.loc 2 40 0
+ 1290 019c 043090E5 		ldr	r3, [r0, #4]
+ 1291 01a0 013043E2 		sub	r3, r3, #1
+ 1292 01a4 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 1293              		.loc 2 41 0
+ 1294 01a8 000053E3 		cmp	r3, #0
+ 1295 01ac 0500001A 		bne	.L61
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 1296              		.loc 2 42 0
+ 1297 01b0 01300FE3 		movw	r3, #61441
+ 1298 01b4 AD3E4DE3 		movt	r3, 57005
+ 1299 01b8 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 1300              		.loc 2 43 0
+ 1301 01bc 003090E5 		ldr	r3, [r0]
+ 1302 01c0 043093E5 		ldr	r3, [r3, #4]
+ 1303 01c4 33FF2FE1 		blx	r3
+ 1304              	.LVL124:
+ 1305              	.L61:
+ 1306              	.LBE388:
+ 1307              	.LBE387:
+ 1308              	.LBE386:
+ 1309              	.LBE385:
+ 1310              	.LBB389:
+ 1311              	.LBB390:
+  75:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_->release();
+ 1312              		.loc 2 75 0 discriminator 3
+ 1313 01c8 10009DE5 		ldr	r0, [sp, #16]
+ 1314 01cc 000050E3 		cmp	r0, #0
+ 1315 01d0 0A00000A 		beq	.L63
+ 1316              	.LVL125:
+ 1317              	.LBB391:
+ 1318              	.LBB392:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 1319              		.loc 2 40 0
+ 1320 01d4 043090E5 		ldr	r3, [r0, #4]
+ 1321 01d8 013043E2 		sub	r3, r3, #1
+ 1322 01dc 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 1323              		.loc 2 41 0
+ 1324 01e0 000053E3 		cmp	r3, #0
+ 1325 01e4 0500001A 		bne	.L63
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 1326              		.loc 2 42 0
+ 1327 01e8 01300FE3 		movw	r3, #61441
+ 1328 01ec AD3E4DE3 		movt	r3, 57005
+ 1329 01f0 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 1330              		.loc 2 43 0
+ 1331 01f4 003090E5 		ldr	r3, [r0]
+ 1332 01f8 043093E5 		ldr	r3, [r3, #4]
+ 1333 01fc 33FF2FE1 		blx	r3
+ 1334              	.LVL126:
+ 1335              	.L63:
+ 1336              	.LBE392:
+ 1337              	.LBE391:
+ 1338              	.LBE390:
+ 1339              	.LBE389:
+ 1340              	.LBB393:
+ 1341              	.LBB394:
+  75:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_->release();
+ 1342              		.loc 2 75 0 discriminator 1
+ 1343 0200 14009DE5 		ldr	r0, [sp, #20]
+ 1344 0204 000050E3 		cmp	r0, #0
+ 1345 0208 0A00000A 		beq	.L64
+ 1346              	.LVL127:
+ 1347              	.LBB395:
+ 1348              	.LBB396:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 1349              		.loc 2 40 0
+ 1350 020c 043090E5 		ldr	r3, [r0, #4]
+ 1351 0210 013043E2 		sub	r3, r3, #1
+ 1352 0214 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 1353              		.loc 2 41 0
+ 1354 0218 000053E3 		cmp	r3, #0
+ 1355 021c 0500001A 		bne	.L64
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 1356              		.loc 2 42 0
+ 1357 0220 01300FE3 		movw	r3, #61441
+ 1358 0224 AD3E4DE3 		movt	r3, 57005
+ 1359 0228 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 1360              		.loc 2 43 0
+ 1361 022c 003090E5 		ldr	r3, [r0]
+ 1362 0230 043093E5 		ldr	r3, [r3, #4]
+ 1363 0234 33FF2FE1 		blx	r3
+ 1364              	.LVL128:
+ 1365              	.L64:
+ 1366              	.LEHB9:
+ 1367 0238 FEFFFFEB 		bl	__cxa_end_cleanup
+ 1368              	.LVL129:
+ 1369              	.LEHE9:
+ 1370              	.L66:
+ 1371 023c E1FFFFEA 		b	.L61
+ 1372              	.L65:
+ 1373 0240 EEFFFFEA 		b	.L63
+ 1374              	.LBE396:
+ 1375              	.LBE395:
+ 1376              	.LBE394:
+ 1377              	.LBE393:
+ 1378              		.cfi_endproc
+ 1379              	.LFE2254:
+ 1380              		.personality	__gxx_personality_v0
+ 1381              		.handlerdata
+ 1382              	.LLSDA2254:
+ 1383 0008 FF       		.byte	0xff
+ 1384 0009 FF       		.byte	0xff
+ 1385 000a 01       		.byte	0x1
+ 1386 000b 18       		.uleb128 .LLSDACSE2254-.LLSDACSB2254
+ 1387              	.LLSDACSB2254:
+ 1388 000c 24       		.uleb128 .LEHB5-.LFB2254
+ 1389 000d 04       		.uleb128 .LEHE5-.LEHB5
+ 1390 000e 00       		.uleb128 0
+ 1391 000f 00       		.uleb128 0
+ 1392 0010 50       		.uleb128 .LEHB6-.LFB2254
+ 1393 0011 04       		.uleb128 .LEHE6-.LEHB6
+ 1394 0012 C004     		.uleb128 .L65-.LFB2254
+ 1395 0014 00       		.uleb128 0
+ 1396 0015 60       		.uleb128 .LEHB7-.LFB2254
+ 1397 0016 04       		.uleb128 .LEHE7-.LEHB7
+ 1398 0017 BC04     		.uleb128 .L66-.LFB2254
+ 1399 0019 00       		.uleb128 0
+ 1400 001a 68       		.uleb128 .LEHB8-.LFB2254
+ 1401 001b 04       		.uleb128 .LEHE8-.LEHB8
+ 1402 001c 9003     		.uleb128 .L67-.LFB2254
+ 1403 001e 00       		.uleb128 0
+ 1404 001f B804     		.uleb128 .LEHB9-.LFB2254
+ 1405 0021 04       		.uleb128 .LEHE9-.LEHB9
+ 1406 0022 00       		.uleb128 0
+ 1407 0023 00       		.uleb128 0
+ 1408              	.LLSDACSE2254:
+ 1409              		.section	.text._ZN5zxing12BinaryBitmap4cropEiiii
+ 1410              		.fnend
+ 1412              		.section	.text._ZNK5zxing12BinaryBitmap17isRotateSupportedEv,"ax",%progbits
+ 1413              		.align	2
+ 1414              		.global	_ZNK5zxing12BinaryBitmap17isRotateSupportedEv
+ 1415              		.syntax unified
+ 1416              		.arm
+ 1417              		.fpu neon
+ 1419              	_ZNK5zxing12BinaryBitmap17isRotateSupportedEv:
+ 1420              		.fnstart
+ 1421              	.LFB2255:
+  64:../src/zxing_lib/zxing/BinaryBitmap.cpp ****   return getLuminanceSource()->isRotateSupported();
+ 1422              		.loc 1 64 0
+ 1423              		.cfi_startproc
+ 1424              		.cfi_personality 0,__gxx_personality_v0
+ 1425              		.cfi_lsda 0,.LLSDA2255
+ 1426              		@ args = 0, pretend = 0, frame = 8
+ 1427              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1428              	.LVL130:
+ 1429 0000 10402DE9 		push	{r4, lr}
+ 1430              		.save {r4, lr}
+ 1431              		.cfi_def_cfa_offset 8
+ 1432              		.cfi_offset 4, -8
+ 1433              		.cfi_offset 14, -4
+ 1434              		.pad #8
+ 1435 0004 08D04DE2 		sub	sp, sp, #8
+ 1436              		.cfi_def_cfa_offset 16
+  65:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+ 1437              		.loc 1 65 0
+ 1438 0008 0010A0E1 		mov	r1, r0
+ 1439 000c 04008DE2 		add	r0, sp, #4
+ 1440              	.LVL131:
+ 1441              	.LEHB10:
+ 1442 0010 FEFFFFEB 		bl	_ZNK5zxing12BinaryBitmap18getLuminanceSourceEv
+ 1443              	.LVL132:
+ 1444              	.LEHE10:
+ 1445              	.LBB397:
+ 1446              	.LBB398:
+ 1447              		.loc 2 112 0
+ 1448 0014 04009DE5 		ldr	r0, [sp, #4]
+ 1449              	.LVL133:
+ 1450              	.LBE398:
+ 1451              	.LBE397:
+  65:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+ 1452              		.loc 1 65 0
+ 1453 0018 003090E5 		ldr	r3, [r0]
+ 1454 001c 183093E5 		ldr	r3, [r3, #24]
+ 1455              	.LEHB11:
+ 1456 0020 33FF2FE1 		blx	r3
+ 1457              	.LVL134:
+ 1458              	.LEHE11:
+ 1459 0024 0040A0E1 		mov	r4, r0
+ 1460              	.LVL135:
+ 1461              	.LBB399:
+ 1462              	.LBB400:
+  75:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_->release();
+ 1463              		.loc 2 75 0
+ 1464 0028 04009DE5 		ldr	r0, [sp, #4]
+ 1465 002c 000050E3 		cmp	r0, #0
+ 1466 0030 0400000A 		beq	.L78
+ 1467              	.LVL136:
+ 1468              	.LBB401:
+ 1469              	.LBB402:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 1470              		.loc 2 40 0
+ 1471 0034 043090E5 		ldr	r3, [r0, #4]
+ 1472 0038 013043E2 		sub	r3, r3, #1
+ 1473 003c 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 1474              		.loc 2 41 0
+ 1475 0040 000053E3 		cmp	r3, #0
+ 1476 0044 0200000A 		beq	.L80
+ 1477              	.LVL137:
+ 1478              	.L78:
+ 1479              	.LBE402:
+ 1480              	.LBE401:
+ 1481              	.LBE400:
+ 1482              	.LBE399:
+  66:../src/zxing_lib/zxing/BinaryBitmap.cpp **** 
+ 1483              		.loc 1 66 0
+ 1484 0048 0400A0E1 		mov	r0, r4
+ 1485 004c 08D08DE2 		add	sp, sp, #8
+ 1486              		.cfi_remember_state
+ 1487              		.cfi_def_cfa_offset 8
+ 1488              		@ sp needed
+ 1489 0050 1080BDE8 		pop	{r4, pc}
+ 1490              	.LVL138:
+ 1491              	.L80:
+ 1492              		.cfi_restore_state
+ 1493              	.LBB406:
+ 1494              	.LBB405:
+ 1495              	.LBB404:
+ 1496              	.LBB403:
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 1497              		.loc 2 42 0
+ 1498 0054 01300FE3 		movw	r3, #61441
+ 1499 0058 AD3E4DE3 		movt	r3, 57005
+ 1500 005c 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 1501              		.loc 2 43 0
+ 1502 0060 003090E5 		ldr	r3, [r0]
+ 1503 0064 043093E5 		ldr	r3, [r3, #4]
+ 1504 0068 33FF2FE1 		blx	r3
+ 1505              	.LVL139:
+ 1506              	.LBE403:
+ 1507              	.LBE404:
+ 1508              	.LBE405:
+ 1509              	.LBE406:
+  65:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+ 1510              		.loc 1 65 0
+ 1511 006c F5FFFFEA 		b	.L78
+ 1512              	.L77:
+ 1513              	.LVL140:
+ 1514              	.LBB407:
+ 1515              	.LBB408:
+  75:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_->release();
+ 1516              		.loc 2 75 0
+ 1517 0070 04009DE5 		ldr	r0, [sp, #4]
+ 1518 0074 000050E3 		cmp	r0, #0
+ 1519 0078 0A00000A 		beq	.L76
+ 1520              	.LVL141:
+ 1521              	.LBB409:
+ 1522              	.LBB410:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 1523              		.loc 2 40 0
+ 1524 007c 043090E5 		ldr	r3, [r0, #4]
+ 1525 0080 013043E2 		sub	r3, r3, #1
+ 1526 0084 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 1527              		.loc 2 41 0
+ 1528 0088 000053E3 		cmp	r3, #0
+ 1529 008c 0500001A 		bne	.L76
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 1530              		.loc 2 42 0
+ 1531 0090 01300FE3 		movw	r3, #61441
+ 1532 0094 AD3E4DE3 		movt	r3, 57005
+ 1533 0098 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 1534              		.loc 2 43 0
+ 1535 009c 003090E5 		ldr	r3, [r0]
+ 1536 00a0 043093E5 		ldr	r3, [r3, #4]
+ 1537 00a4 33FF2FE1 		blx	r3
+ 1538              	.LVL142:
+ 1539              	.L76:
+ 1540              	.LEHB12:
+ 1541 00a8 FEFFFFEB 		bl	__cxa_end_cleanup
+ 1542              	.LVL143:
+ 1543              	.LEHE12:
+ 1544              	.LBE410:
+ 1545              	.LBE409:
+ 1546              	.LBE408:
+ 1547              	.LBE407:
+ 1548              		.cfi_endproc
+ 1549              	.LFE2255:
+ 1550              		.personality	__gxx_personality_v0
+ 1551              		.handlerdata
+ 1552              	.LLSDA2255:
+ 1553 0008 FF       		.byte	0xff
+ 1554 0009 FF       		.byte	0xff
+ 1555 000a 01       		.byte	0x1
+ 1556 000b 0D       		.uleb128 .LLSDACSE2255-.LLSDACSB2255
+ 1557              	.LLSDACSB2255:
+ 1558 000c 10       		.uleb128 .LEHB10-.LFB2255
+ 1559 000d 04       		.uleb128 .LEHE10-.LEHB10
+ 1560 000e 00       		.uleb128 0
+ 1561 000f 00       		.uleb128 0
+ 1562 0010 20       		.uleb128 .LEHB11-.LFB2255
+ 1563 0011 04       		.uleb128 .LEHE11-.LEHB11
+ 1564 0012 70       		.uleb128 .L77-.LFB2255
+ 1565 0013 00       		.uleb128 0
+ 1566 0014 A801     		.uleb128 .LEHB12-.LFB2255
+ 1567 0016 04       		.uleb128 .LEHE12-.LEHB12
+ 1568 0017 00       		.uleb128 0
+ 1569 0018 00       		.uleb128 0
+ 1570              	.LLSDACSE2255:
+ 1571              		.section	.text._ZNK5zxing12BinaryBitmap17isRotateSupportedEv
+ 1572              		.fnend
+ 1574              		.section	.text._ZN5zxing12BinaryBitmap22rotateCounterClockwiseEv,"ax",%progbits
+ 1575              		.align	2
+ 1576              		.global	_ZN5zxing12BinaryBitmap22rotateCounterClockwiseEv
+ 1577              		.syntax unified
+ 1578              		.arm
+ 1579              		.fpu neon
+ 1581              	_ZN5zxing12BinaryBitmap22rotateCounterClockwiseEv:
+ 1582              		.fnstart
+ 1583              	.LFB2256:
+  68:../src/zxing_lib/zxing/BinaryBitmap.cpp ****   return Ref<BinaryBitmap> (new BinaryBitmap(binarizer_->createBinarizer(getLuminanceSource()->rota
+ 1584              		.loc 1 68 0
+ 1585              		.cfi_startproc
+ 1586              		.cfi_personality 0,__gxx_personality_v0
+ 1587              		.cfi_lsda 0,.LLSDA2256
+ 1588              		@ args = 0, pretend = 0, frame = 16
+ 1589              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1590              	.LVL144:
+ 1591 0000 70402DE9 		push	{r4, r5, r6, lr}
+ 1592              		.save {r4, r5, r6, lr}
+ 1593              		.cfi_def_cfa_offset 16
+ 1594              		.cfi_offset 4, -16
+ 1595              		.cfi_offset 5, -12
+ 1596              		.cfi_offset 6, -8
+ 1597              		.cfi_offset 14, -4
+ 1598              		.pad #16
+ 1599 0004 10D04DE2 		sub	sp, sp, #16
+ 1600              		.cfi_def_cfa_offset 32
+ 1601 0008 0040A0E1 		mov	r4, r0
+ 1602              	.LVL145:
+ 1603              	.LBB447:
+ 1604              	.LBB448:
+ 1605              		.loc 2 112 0
+ 1606 000c 085091E5 		ldr	r5, [r1, #8]
+ 1607              	.LVL146:
+ 1608              	.LBE448:
+ 1609              	.LBE447:
+  69:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+ 1610              		.loc 1 69 0
+ 1611 0010 003095E5 		ldr	r3, [r5]
+ 1612 0014 106093E5 		ldr	r6, [r3, #16]
+ 1613 0018 0C008DE2 		add	r0, sp, #12
+ 1614              	.LVL147:
+ 1615              	.LEHB13:
+ 1616 001c FEFFFFEB 		bl	_ZNK5zxing12BinaryBitmap18getLuminanceSourceEv
+ 1617              	.LVL148:
+ 1618              	.LEHE13:
+ 1619              	.LBB449:
+ 1620              	.LBB450:
+ 1621              		.loc 2 112 0
+ 1622 0020 0C109DE5 		ldr	r1, [sp, #12]
+ 1623              	.LVL149:
+ 1624              	.LBE450:
+ 1625              	.LBE449:
+  69:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+ 1626              		.loc 1 69 0
+ 1627 0024 003091E5 		ldr	r3, [r1]
+ 1628 0028 203093E5 		ldr	r3, [r3, #32]
+ 1629 002c 08008DE2 		add	r0, sp, #8
+ 1630              	.LEHB14:
+ 1631 0030 33FF2FE1 		blx	r3
+ 1632              	.LVL150:
+ 1633              	.LEHE14:
+  69:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+ 1634              		.loc 1 69 0 is_stmt 0 discriminator 2
+ 1635 0034 08208DE2 		add	r2, sp, #8
+ 1636 0038 0510A0E1 		mov	r1, r5
+ 1637 003c 04008DE2 		add	r0, sp, #4
+ 1638              	.LEHB15:
+ 1639 0040 36FF2FE1 		blx	r6
+ 1640              	.LVL151:
+ 1641              	.LEHE15:
+  69:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+ 1642              		.loc 1 69 0 discriminator 4
+ 1643 0044 0C00A0E3 		mov	r0, #12
+ 1644              	.LEHB16:
+ 1645 0048 FEFFFFEB 		bl	_Znwj
+ 1646              	.LVL152:
+ 1647              	.LEHE16:
+ 1648 004c 0050A0E1 		mov	r5, r0
+ 1649 0050 04108DE2 		add	r1, sp, #4
+ 1650 0054 FEFFFFEB 		bl	_ZN5zxing12BinaryBitmapC1ENS_3RefINS_9BinarizerEEE
+ 1651              	.LVL153:
+ 1652              	.LBB451:
+ 1653              	.LBB452:
+  60:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     reset(o);
+ 1654              		.loc 2 60 0 is_stmt 1 discriminator 4
+ 1655 0058 0030A0E3 		mov	r3, #0
+ 1656 005c 003084E5 		str	r3, [r4]
+ 1657              	.LVL154:
+ 1658              	.LBB453:
+ 1659              	.LBB454:
+  81:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       o->retain();
+ 1660              		.loc 2 81 0 discriminator 4
+ 1661 0060 030055E1 		cmp	r5, r3
+ 1662              	.LVL155:
+ 1663              	.LBB455:
+ 1664              	.LBB456:
+  36:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     return this;
+ 1665              		.loc 2 36 0
+ 1666 0064 04309515 		ldrne	r3, [r5, #4]
+ 1667 0068 01308312 		addne	r3, r3, #1
+ 1668 006c 04308515 		strne	r3, [r5, #4]
+ 1669              	.LVL156:
+ 1670              	.L82:
+ 1671              	.LBE456:
+ 1672              	.LBE455:
+  84:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_->release();
+ 1673              		.loc 2 84 0
+ 1674 0070 000094E5 		ldr	r0, [r4]
+ 1675 0074 000050E3 		cmp	r0, #0
+ 1676 0078 0400000A 		beq	.L83
+ 1677              	.LVL157:
+ 1678              	.LBB457:
+ 1679              	.LBB458:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 1680              		.loc 2 40 0
+ 1681 007c 043090E5 		ldr	r3, [r0, #4]
+ 1682 0080 013043E2 		sub	r3, r3, #1
+ 1683 0084 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 1684              		.loc 2 41 0
+ 1685 0088 000053E3 		cmp	r3, #0
+ 1686 008c 1B00000A 		beq	.L97
+ 1687              	.LVL158:
+ 1688              	.L83:
+ 1689              	.LBE458:
+ 1690              	.LBE457:
+  87:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****   }
+ 1691              		.loc 2 87 0
+ 1692 0090 005084E5 		str	r5, [r4]
+ 1693              	.LVL159:
+ 1694              	.LBE454:
+ 1695              	.LBE453:
+ 1696              	.LBE452:
+ 1697              	.LBE451:
+ 1698              	.LBB464:
+ 1699              	.LBB465:
+  75:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_->release();
+ 1700              		.loc 2 75 0
+ 1701 0094 04009DE5 		ldr	r0, [sp, #4]
+ 1702 0098 000050E3 		cmp	r0, #0
+ 1703 009c 0400000A 		beq	.L84
+ 1704              	.LVL160:
+ 1705              	.LBB466:
+ 1706              	.LBB467:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 1707              		.loc 2 40 0
+ 1708 00a0 043090E5 		ldr	r3, [r0, #4]
+ 1709 00a4 013043E2 		sub	r3, r3, #1
+ 1710 00a8 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 1711              		.loc 2 41 0
+ 1712 00ac 000053E3 		cmp	r3, #0
+ 1713 00b0 1900000A 		beq	.L98
+ 1714              	.LVL161:
+ 1715              	.L84:
+ 1716              	.LBE467:
+ 1717              	.LBE466:
+ 1718              	.LBE465:
+ 1719              	.LBE464:
+ 1720              	.LBB471:
+ 1721              	.LBB472:
+  75:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_->release();
+ 1722              		.loc 2 75 0
+ 1723 00b4 08009DE5 		ldr	r0, [sp, #8]
+ 1724 00b8 000050E3 		cmp	r0, #0
+ 1725 00bc 0400000A 		beq	.L85
+ 1726              	.LVL162:
+ 1727              	.LBB473:
+ 1728              	.LBB474:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 1729              		.loc 2 40 0
+ 1730 00c0 043090E5 		ldr	r3, [r0, #4]
+ 1731 00c4 013043E2 		sub	r3, r3, #1
+ 1732 00c8 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 1733              		.loc 2 41 0
+ 1734 00cc 000053E3 		cmp	r3, #0
+ 1735 00d0 1800000A 		beq	.L99
+ 1736              	.LVL163:
+ 1737              	.L85:
+ 1738              	.LBE474:
+ 1739              	.LBE473:
+ 1740              	.LBE472:
+ 1741              	.LBE471:
+ 1742              	.LBB478:
+ 1743              	.LBB479:
+  75:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_->release();
+ 1744              		.loc 2 75 0
+ 1745 00d4 0C009DE5 		ldr	r0, [sp, #12]
+ 1746 00d8 000050E3 		cmp	r0, #0
+ 1747 00dc 0400000A 		beq	.L81
+ 1748              	.LVL164:
+ 1749              	.LBB480:
+ 1750              	.LBB481:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 1751              		.loc 2 40 0
+ 1752 00e0 043090E5 		ldr	r3, [r0, #4]
+ 1753 00e4 013043E2 		sub	r3, r3, #1
+ 1754 00e8 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 1755              		.loc 2 41 0
+ 1756 00ec 000053E3 		cmp	r3, #0
+ 1757 00f0 1700000A 		beq	.L100
+ 1758              	.LVL165:
+ 1759              	.L81:
+ 1760              	.LBE481:
+ 1761              	.LBE480:
+ 1762              	.LBE479:
+ 1763              	.LBE478:
+ 1764              		.loc 1 70 0
+ 1765 00f4 0400A0E1 		mov	r0, r4
+ 1766 00f8 10D08DE2 		add	sp, sp, #16
+ 1767              		.cfi_remember_state
+ 1768              		.cfi_def_cfa_offset 16
+ 1769              		@ sp needed
+ 1770 00fc 7080BDE8 		pop	{r4, r5, r6, pc}
+ 1771              	.LVL166:
+ 1772              	.L97:
+ 1773              		.cfi_restore_state
+ 1774              	.LBB485:
+ 1775              	.LBB463:
+ 1776              	.LBB462:
+ 1777              	.LBB461:
+ 1778              	.LBB460:
+ 1779              	.LBB459:
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 1780              		.loc 2 42 0
+ 1781 0100 01300FE3 		movw	r3, #61441
+ 1782 0104 AD3E4DE3 		movt	r3, 57005
+ 1783 0108 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 1784              		.loc 2 43 0
+ 1785 010c 003090E5 		ldr	r3, [r0]
+ 1786 0110 043093E5 		ldr	r3, [r3, #4]
+ 1787 0114 33FF2FE1 		blx	r3
+ 1788              	.LVL167:
+ 1789 0118 DCFFFFEA 		b	.L83
+ 1790              	.LVL168:
+ 1791              	.L98:
+ 1792              	.LBE459:
+ 1793              	.LBE460:
+ 1794              	.LBE461:
+ 1795              	.LBE462:
+ 1796              	.LBE463:
+ 1797              	.LBE485:
+ 1798              	.LBB486:
+ 1799              	.LBB470:
+ 1800              	.LBB469:
+ 1801              	.LBB468:
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 1802              		.loc 2 42 0
+ 1803 011c 01300FE3 		movw	r3, #61441
+ 1804 0120 AD3E4DE3 		movt	r3, 57005
+ 1805 0124 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 1806              		.loc 2 43 0
+ 1807 0128 003090E5 		ldr	r3, [r0]
+ 1808 012c 043093E5 		ldr	r3, [r3, #4]
+ 1809 0130 33FF2FE1 		blx	r3
+ 1810              	.LVL169:
+ 1811 0134 DEFFFFEA 		b	.L84
+ 1812              	.LVL170:
+ 1813              	.L99:
+ 1814              	.LBE468:
+ 1815              	.LBE469:
+ 1816              	.LBE470:
+ 1817              	.LBE486:
+ 1818              	.LBB487:
+ 1819              	.LBB477:
+ 1820              	.LBB476:
+ 1821              	.LBB475:
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 1822              		.loc 2 42 0
+ 1823 0138 01300FE3 		movw	r3, #61441
+ 1824 013c AD3E4DE3 		movt	r3, 57005
+ 1825 0140 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 1826              		.loc 2 43 0
+ 1827 0144 003090E5 		ldr	r3, [r0]
+ 1828 0148 043093E5 		ldr	r3, [r3, #4]
+ 1829 014c 33FF2FE1 		blx	r3
+ 1830              	.LVL171:
+ 1831 0150 DFFFFFEA 		b	.L85
+ 1832              	.LVL172:
+ 1833              	.L100:
+ 1834              	.LBE475:
+ 1835              	.LBE476:
+ 1836              	.LBE477:
+ 1837              	.LBE487:
+ 1838              	.LBB488:
+ 1839              	.LBB484:
+ 1840              	.LBB483:
+ 1841              	.LBB482:
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 1842              		.loc 2 42 0
+ 1843 0154 01300FE3 		movw	r3, #61441
+ 1844 0158 AD3E4DE3 		movt	r3, 57005
+ 1845 015c 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 1846              		.loc 2 43 0
+ 1847 0160 003090E5 		ldr	r3, [r0]
+ 1848 0164 043093E5 		ldr	r3, [r3, #4]
+ 1849 0168 33FF2FE1 		blx	r3
+ 1850              	.LVL173:
+ 1851              	.LBE482:
+ 1852              	.LBE483:
+ 1853              	.LBE484:
+ 1854              	.LBE488:
+  69:../src/zxing_lib/zxing/BinaryBitmap.cpp **** }
+ 1855              		.loc 1 69 0
+ 1856 016c E0FFFFEA 		b	.L81
+ 1857              	.L95:
+ 1858              	.LVL174:
+ 1859              	.LBB489:
+ 1860              	.LBB490:
+  75:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_->release();
+ 1861              		.loc 2 75 0
+ 1862 0170 04009DE5 		ldr	r0, [sp, #4]
+ 1863 0174 000050E3 		cmp	r0, #0
+ 1864 0178 0A00000A 		beq	.L89
+ 1865              	.LVL175:
+ 1866              	.LBB491:
+ 1867              	.LBB492:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 1868              		.loc 2 40 0
+ 1869 017c 043090E5 		ldr	r3, [r0, #4]
+ 1870 0180 013043E2 		sub	r3, r3, #1
+ 1871 0184 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 1872              		.loc 2 41 0
+ 1873 0188 000053E3 		cmp	r3, #0
+ 1874 018c 0500001A 		bne	.L89
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 1875              		.loc 2 42 0
+ 1876 0190 01300FE3 		movw	r3, #61441
+ 1877 0194 AD3E4DE3 		movt	r3, 57005
+ 1878 0198 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 1879              		.loc 2 43 0
+ 1880 019c 003090E5 		ldr	r3, [r0]
+ 1881 01a0 043093E5 		ldr	r3, [r3, #4]
+ 1882 01a4 33FF2FE1 		blx	r3
+ 1883              	.LVL176:
+ 1884              	.L89:
+ 1885              	.LBE492:
+ 1886              	.LBE491:
+ 1887              	.LBE490:
+ 1888              	.LBE489:
+ 1889              	.LBB493:
+ 1890              	.LBB494:
+  75:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_->release();
+ 1891              		.loc 2 75 0 discriminator 3
+ 1892 01a8 08009DE5 		ldr	r0, [sp, #8]
+ 1893 01ac 000050E3 		cmp	r0, #0
+ 1894 01b0 0A00000A 		beq	.L91
+ 1895              	.LVL177:
+ 1896              	.LBB495:
+ 1897              	.LBB496:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 1898              		.loc 2 40 0
+ 1899 01b4 043090E5 		ldr	r3, [r0, #4]
+ 1900 01b8 013043E2 		sub	r3, r3, #1
+ 1901 01bc 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 1902              		.loc 2 41 0
+ 1903 01c0 000053E3 		cmp	r3, #0
+ 1904 01c4 0500001A 		bne	.L91
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 1905              		.loc 2 42 0
+ 1906 01c8 01300FE3 		movw	r3, #61441
+ 1907 01cc AD3E4DE3 		movt	r3, 57005
+ 1908 01d0 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 1909              		.loc 2 43 0
+ 1910 01d4 003090E5 		ldr	r3, [r0]
+ 1911 01d8 043093E5 		ldr	r3, [r3, #4]
+ 1912 01dc 33FF2FE1 		blx	r3
+ 1913              	.LVL178:
+ 1914              	.L91:
+ 1915              	.LBE496:
+ 1916              	.LBE495:
+ 1917              	.LBE494:
+ 1918              	.LBE493:
+ 1919              	.LBB497:
+ 1920              	.LBB498:
+  75:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       object_->release();
+ 1921              		.loc 2 75 0 discriminator 1
+ 1922 01e0 0C009DE5 		ldr	r0, [sp, #12]
+ 1923 01e4 000050E3 		cmp	r0, #0
+ 1924 01e8 0A00000A 		beq	.L92
+ 1925              	.LVL179:
+ 1926              	.LBB499:
+ 1927              	.LBB500:
+  40:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     if (count_ == 0) {
+ 1928              		.loc 2 40 0
+ 1929 01ec 043090E5 		ldr	r3, [r0, #4]
+ 1930 01f0 013043E2 		sub	r3, r3, #1
+ 1931 01f4 043080E5 		str	r3, [r0, #4]
+  41:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       count_ = 0xDEADF001;
+ 1932              		.loc 2 41 0
+ 1933 01f8 000053E3 		cmp	r3, #0
+ 1934 01fc 0500001A 		bne	.L92
+  42:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****       delete this;
+ 1935              		.loc 2 42 0
+ 1936 0200 01300FE3 		movw	r3, #61441
+ 1937 0204 AD3E4DE3 		movt	r3, 57005
+ 1938 0208 043080E5 		str	r3, [r0, #4]
+  43:/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/common/Counted.h ****     }
+ 1939              		.loc 2 43 0
+ 1940 020c 003090E5 		ldr	r3, [r0]
+ 1941 0210 043093E5 		ldr	r3, [r3, #4]
+ 1942 0214 33FF2FE1 		blx	r3
+ 1943              	.LVL180:
+ 1944              	.L92:
+ 1945              	.LEHB17:
+ 1946 0218 FEFFFFEB 		bl	__cxa_end_cleanup
+ 1947              	.LVL181:
+ 1948              	.LEHE17:
+ 1949              	.L94:
+ 1950 021c E1FFFFEA 		b	.L89
+ 1951              	.L93:
+ 1952 0220 EEFFFFEA 		b	.L91
+ 1953              	.LBE500:
+ 1954              	.LBE499:
+ 1955              	.LBE498:
+ 1956              	.LBE497:
+ 1957              		.cfi_endproc
+ 1958              	.LFE2256:
+ 1959              		.personality	__gxx_personality_v0
+ 1960              		.handlerdata
+ 1961              	.LLSDA2256:
+ 1962 0008 FF       		.byte	0xff
+ 1963 0009 FF       		.byte	0xff
+ 1964 000a 01       		.byte	0x1
+ 1965 000b 18       		.uleb128 .LLSDACSE2256-.LLSDACSB2256
+ 1966              	.LLSDACSB2256:
+ 1967 000c 1C       		.uleb128 .LEHB13-.LFB2256
+ 1968 000d 04       		.uleb128 .LEHE13-.LEHB13
+ 1969 000e 00       		.uleb128 0
+ 1970 000f 00       		.uleb128 0
+ 1971 0010 30       		.uleb128 .LEHB14-.LFB2256
+ 1972 0011 04       		.uleb128 .LEHE14-.LEHB14
+ 1973 0012 A004     		.uleb128 .L93-.LFB2256
+ 1974 0014 00       		.uleb128 0
+ 1975 0015 40       		.uleb128 .LEHB15-.LFB2256
+ 1976 0016 04       		.uleb128 .LEHE15-.LEHB15
+ 1977 0017 9C04     		.uleb128 .L94-.LFB2256
+ 1978 0019 00       		.uleb128 0
+ 1979 001a 48       		.uleb128 .LEHB16-.LFB2256
+ 1980 001b 04       		.uleb128 .LEHE16-.LEHB16
+ 1981 001c F002     		.uleb128 .L95-.LFB2256
+ 1982 001e 00       		.uleb128 0
+ 1983 001f 9804     		.uleb128 .LEHB17-.LFB2256
+ 1984 0021 04       		.uleb128 .LEHE17-.LEHB17
+ 1985 0022 00       		.uleb128 0
+ 1986 0023 00       		.uleb128 0
+ 1987              	.LLSDACSE2256:
+ 1988              		.section	.text._ZN5zxing12BinaryBitmap22rotateCounterClockwiseEv
+ 1989              		.fnend
+ 1991              		.section	.text._GLOBAL__sub_I__ZN5zxing12BinaryBitmapC2ENS_3RefINS_9BinarizerEEE,"ax",%progbits
+ 1992              		.align	2
+ 1993              		.syntax unified
+ 1994              		.arm
+ 1995              		.fpu neon
+ 1997              	_GLOBAL__sub_I__ZN5zxing12BinaryBitmapC2ENS_3RefINS_9BinarizerEEE:
+ 1998              		.fnstart
+ 1999              	.LFB2740:
+ 2000              		.loc 1 70 0
+ 2001              		.cfi_startproc
+ 2002              		@ args = 0, pretend = 0, frame = 0
+ 2003              		@ frame_needed = 0, uses_anonymous_args = 0
+ 2004 0000 10402DE9 		push	{r4, lr}
+ 2005              		.cfi_def_cfa_offset 8
+ 2006              		.cfi_offset 4, -8
+ 2007              		.cfi_offset 14, -4
+ 2008              		.loc 1 70 0
+ 2009 0004 FF1F0FE3 		movw	r1, #65535
+ 2010 0008 0100A0E3 		mov	r0, #1
+ 2011 000c FEFFFFEB 		bl	_Z41__static_initialization_and_destruction_0ii
+ 2012              	.LVL182:
+ 2013 0010 1080BDE8 		pop	{r4, pc}
+ 2014              		.cfi_endproc
+ 2015              	.LFE2740:
+ 2016              		.cantunwind
+ 2017              		.fnend
+ 2019              		.section	.init_array,"aw",%init_array
+ 2020              		.align	2
+ 2021 0000 00000000 		.word	_GLOBAL__sub_I__ZN5zxing12BinaryBitmapC2ENS_3RefINS_9BinarizerEEE(target1)
+ 2022              		.weak	_ZTSN5zxing7CountedE
+ 2023              		.section	.rodata._ZTSN5zxing7CountedE,"aG",%progbits,_ZTSN5zxing7CountedE,comdat
+ 2024              		.align	2
+ 2027              	_ZTSN5zxing7CountedE:
+ 2028 0000 4E357A78 		.ascii	"N5zxing7CountedE\000"
+ 2028      696E6737 
+ 2028      436F756E 
+ 2028      74656445 
+ 2028      00
+ 2029              		.weak	_ZTIN5zxing7CountedE
+ 2030              		.section	.rodata._ZTIN5zxing7CountedE,"aG",%progbits,_ZTIN5zxing7CountedE,comdat
+ 2031              		.align	2
+ 2034              	_ZTIN5zxing7CountedE:
+ 2035 0000 08000000 		.word	_ZTVN10__cxxabiv117__class_type_infoE+8
+ 2036 0004 00000000 		.word	_ZTSN5zxing7CountedE
+ 2037              		.global	_ZTSN5zxing12BinaryBitmapE
+ 2038              		.global	_ZTIN5zxing12BinaryBitmapE
+ 2039              		.global	_ZTVN5zxing12BinaryBitmapE
+ 2040              		.section	.bss._ZStL8__ioinit,"aw",%nobits
+ 2041              		.align	2
+ 2042              		.set	.LANCHOR1,. + 0
+ 2045              	_ZStL8__ioinit:
+ 2046 0000 00       		.space	1
+ 2047              		.section	.rodata._ZTIN5zxing12BinaryBitmapE,"a",%progbits
+ 2048              		.align	2
+ 2051              	_ZTIN5zxing12BinaryBitmapE:
+ 2052 0000 08000000 		.word	_ZTVN10__cxxabiv120__si_class_type_infoE+8
+ 2053 0004 00000000 		.word	_ZTSN5zxing12BinaryBitmapE
+ 2054 0008 00000000 		.word	_ZTIN5zxing7CountedE
+ 2055              		.section	.rodata._ZTSN5zxing12BinaryBitmapE,"a",%progbits
+ 2056              		.align	2
+ 2059              	_ZTSN5zxing12BinaryBitmapE:
+ 2060 0000 4E357A78 		.ascii	"N5zxing12BinaryBitmapE\000"
+ 2060      696E6731 
+ 2060      3242696E 
+ 2060      61727942 
+ 2060      69746D61 
+ 2061              		.section	.rodata._ZTVN5zxing12BinaryBitmapE,"a",%progbits
+ 2062              		.align	2
+ 2063              		.set	.LANCHOR0,. + 0
+ 2066              	_ZTVN5zxing12BinaryBitmapE:
+ 2067 0000 00000000 		.word	0
+ 2068 0004 00000000 		.word	_ZTIN5zxing12BinaryBitmapE
+ 2069 0008 00000000 		.word	_ZN5zxing12BinaryBitmapD1Ev
+ 2070 000c 00000000 		.word	_ZN5zxing12BinaryBitmapD0Ev
+ 2071              		.text
+ 2072              	.Letext0:
+ 2073              		.file 5 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+ 2074              		.file 6 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+ 2075              		.file 7 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+ 2076              		.file 8 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+ 2077              		.file 9 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-q
+ 2078              		.file 10 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 2079              		.file 11 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 2080              		.file 12 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 2081              		.file 13 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 2082              		.file 14 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 2083              		.file 15 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 2084              		.file 16 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 2085              		.file 17 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 2086              		.file 18 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 2087              		.file 19 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 2088              		.file 20 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 2089              		.file 21 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 2090              		.file 22 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 2091              		.file 23 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 2092              		.file 24 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 2093              		.file 25 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 2094              		.file 26 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 2095              		.file 27 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 2096              		.file 28 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 2097              		.file 29 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 2098              		.file 30 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 2099              		.file 31 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 2100              		.file 32 "<built-in>"
+ 2101              		.file 33 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 2102              		.file 34 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 2103              		.file 35 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 2104              		.file 36 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 2105              		.file 37 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 2106              		.file 38 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 2107              		.file 39 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 2108              		.file 40 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 2109              		.file 41 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 2110              		.file 42 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 2111              		.file 43 "/home/zkmike/.local/share/renesas/e2_studio/toolchains/gcc_arm/gcc-arm-none-eabi-6-2017-
+ 2112              		.file 44 "/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Bi
+ 2113              		.file 45 "/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/src/zxing_lib/zxing/Bi
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 BinaryBitmap.cpp
+     /tmp/ccoDMMUW.s:17     .text._ZN5zxing12BinaryBitmapD2Ev:0000000000000000 $a
+     /tmp/ccoDMMUW.s:23     .text._ZN5zxing12BinaryBitmapD2Ev:0000000000000000 _ZN5zxing12BinaryBitmapD2Ev
+     /tmp/ccoDMMUW.s:90     .text._ZN5zxing12BinaryBitmapD2Ev:0000000000000054 $d
+.ARM.exidx.text._ZN5zxing12BinaryBitmapD2Ev:0000000000000000 $d
+     /tmp/ccoDMMUW.s:23     .text._ZN5zxing12BinaryBitmapD2Ev:0000000000000000 _ZN5zxing12BinaryBitmapD1Ev
+     /tmp/ccoDMMUW.s:104    .text._ZN5zxing12BinaryBitmapD0Ev:0000000000000000 $a
+     /tmp/ccoDMMUW.s:110    .text._ZN5zxing12BinaryBitmapD0Ev:0000000000000000 _ZN5zxing12BinaryBitmapD0Ev
+.ARM.exidx.text._ZN5zxing12BinaryBitmapD0Ev:0000000000000000 $d
+     /tmp/ccoDMMUW.s:138    .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $a
+     /tmp/ccoDMMUW.s:143    .text._Z41__static_initialization_and_destruction_0ii:0000000000000000 _Z41__static_initialization_and_destruction_0ii
+     /tmp/ccoDMMUW.s:2042   .bss._ZStL8__ioinit:0000000000000000 .LANCHOR1
+.ARM.exidx.text._Z41__static_initialization_and_destruction_0ii:0000000000000000 $d
+     /tmp/ccoDMMUW.s:184    .text._ZN5zxing12BinaryBitmapC2ENS_3RefINS_9BinarizerEEE:0000000000000000 $a
+     /tmp/ccoDMMUW.s:190    .text._ZN5zxing12BinaryBitmapC2ENS_3RefINS_9BinarizerEEE:0000000000000000 _ZN5zxing12BinaryBitmapC2ENS_3RefINS_9BinarizerEEE
+     /tmp/ccoDMMUW.s:293    .text._ZN5zxing12BinaryBitmapC2ENS_3RefINS_9BinarizerEEE:0000000000000078 $d
+.ARM.exidx.text._ZN5zxing12BinaryBitmapC2ENS_3RefINS_9BinarizerEEE:0000000000000000 $d
+     /tmp/ccoDMMUW.s:190    .text._ZN5zxing12BinaryBitmapC2ENS_3RefINS_9BinarizerEEE:0000000000000000 _ZN5zxing12BinaryBitmapC1ENS_3RefINS_9BinarizerEEE
+     /tmp/ccoDMMUW.s:309    .text._ZN5zxing12BinaryBitmap11getBlackRowEiNS_3RefINS_8BitArrayEEE:0000000000000000 $a
+     /tmp/ccoDMMUW.s:315    .text._ZN5zxing12BinaryBitmap11getBlackRowEiNS_3RefINS_8BitArrayEEE:0000000000000000 _ZN5zxing12BinaryBitmap11getBlackRowEiNS_3RefINS_8BitArrayEEE
+.ARM.extab.text._ZN5zxing12BinaryBitmap11getBlackRowEiNS_3RefINS_8BitArrayEEE:0000000000000000 $d
+.ARM.exidx.text._ZN5zxing12BinaryBitmap11getBlackRowEiNS_3RefINS_8BitArrayEEE:0000000000000000 $d
+     /tmp/ccoDMMUW.s:553    .text._ZN5zxing12BinaryBitmap14getBlackMatrixEv:0000000000000000 $a
+     /tmp/ccoDMMUW.s:559    .text._ZN5zxing12BinaryBitmap14getBlackMatrixEv:0000000000000000 _ZN5zxing12BinaryBitmap14getBlackMatrixEv
+.ARM.exidx.text._ZN5zxing12BinaryBitmap14getBlackMatrixEv:0000000000000000 $d
+     /tmp/ccoDMMUW.s:594    .text._ZNK5zxing12BinaryBitmap18getLuminanceSourceEv:0000000000000000 $a
+     /tmp/ccoDMMUW.s:600    .text._ZNK5zxing12BinaryBitmap18getLuminanceSourceEv:0000000000000000 _ZNK5zxing12BinaryBitmap18getLuminanceSourceEv
+.ARM.exidx.text._ZNK5zxing12BinaryBitmap18getLuminanceSourceEv:0000000000000000 $d
+     /tmp/ccoDMMUW.s:627    .text._ZNK5zxing12BinaryBitmap8getWidthEv:0000000000000000 $a
+     /tmp/ccoDMMUW.s:633    .text._ZNK5zxing12BinaryBitmap8getWidthEv:0000000000000000 _ZNK5zxing12BinaryBitmap8getWidthEv
+.ARM.exidx.text._ZNK5zxing12BinaryBitmap8getWidthEv:0000000000000000 $d
+     /tmp/ccoDMMUW.s:725    .text._ZNK5zxing12BinaryBitmap9getHeightEv:0000000000000000 $a
+     /tmp/ccoDMMUW.s:731    .text._ZNK5zxing12BinaryBitmap9getHeightEv:0000000000000000 _ZNK5zxing12BinaryBitmap9getHeightEv
+.ARM.exidx.text._ZNK5zxing12BinaryBitmap9getHeightEv:0000000000000000 $d
+     /tmp/ccoDMMUW.s:822    .text._ZNK5zxing12BinaryBitmap15isCropSupportedEv:0000000000000000 $a
+     /tmp/ccoDMMUW.s:828    .text._ZNK5zxing12BinaryBitmap15isCropSupportedEv:0000000000000000 _ZNK5zxing12BinaryBitmap15isCropSupportedEv
+.ARM.extab.text._ZNK5zxing12BinaryBitmap15isCropSupportedEv:0000000000000000 $d
+.ARM.exidx.text._ZNK5zxing12BinaryBitmap15isCropSupportedEv:0000000000000000 $d
+     /tmp/ccoDMMUW.s:984    .text._ZN5zxing12BinaryBitmap4cropEiiii:0000000000000000 $a
+     /tmp/ccoDMMUW.s:990    .text._ZN5zxing12BinaryBitmap4cropEiiii:0000000000000000 _ZN5zxing12BinaryBitmap4cropEiiii
+.ARM.extab.text._ZN5zxing12BinaryBitmap4cropEiiii:0000000000000000 $d
+.ARM.exidx.text._ZN5zxing12BinaryBitmap4cropEiiii:0000000000000000 $d
+     /tmp/ccoDMMUW.s:1413   .text._ZNK5zxing12BinaryBitmap17isRotateSupportedEv:0000000000000000 $a
+     /tmp/ccoDMMUW.s:1419   .text._ZNK5zxing12BinaryBitmap17isRotateSupportedEv:0000000000000000 _ZNK5zxing12BinaryBitmap17isRotateSupportedEv
+.ARM.extab.text._ZNK5zxing12BinaryBitmap17isRotateSupportedEv:0000000000000000 $d
+.ARM.exidx.text._ZNK5zxing12BinaryBitmap17isRotateSupportedEv:0000000000000000 $d
+     /tmp/ccoDMMUW.s:1575   .text._ZN5zxing12BinaryBitmap22rotateCounterClockwiseEv:0000000000000000 $a
+     /tmp/ccoDMMUW.s:1581   .text._ZN5zxing12BinaryBitmap22rotateCounterClockwiseEv:0000000000000000 _ZN5zxing12BinaryBitmap22rotateCounterClockwiseEv
+.ARM.extab.text._ZN5zxing12BinaryBitmap22rotateCounterClockwiseEv:0000000000000000 $d
+.ARM.exidx.text._ZN5zxing12BinaryBitmap22rotateCounterClockwiseEv:0000000000000000 $d
+     /tmp/ccoDMMUW.s:1992   .text._GLOBAL__sub_I__ZN5zxing12BinaryBitmapC2ENS_3RefINS_9BinarizerEEE:0000000000000000 $a
+     /tmp/ccoDMMUW.s:1997   .text._GLOBAL__sub_I__ZN5zxing12BinaryBitmapC2ENS_3RefINS_9BinarizerEEE:0000000000000000 _GLOBAL__sub_I__ZN5zxing12BinaryBitmapC2ENS_3RefINS_9BinarizerEEE
+.ARM.exidx.text._GLOBAL__sub_I__ZN5zxing12BinaryBitmapC2ENS_3RefINS_9BinarizerEEE:0000000000000000 $d
+     /tmp/ccoDMMUW.s:2020   .init_array:0000000000000000 $d
+     /tmp/ccoDMMUW.s:2027   .rodata._ZTSN5zxing7CountedE:0000000000000000 _ZTSN5zxing7CountedE
+     /tmp/ccoDMMUW.s:2024   .rodata._ZTSN5zxing7CountedE:0000000000000000 $d
+     /tmp/ccoDMMUW.s:2034   .rodata._ZTIN5zxing7CountedE:0000000000000000 _ZTIN5zxing7CountedE
+     /tmp/ccoDMMUW.s:2031   .rodata._ZTIN5zxing7CountedE:0000000000000000 $d
+     /tmp/ccoDMMUW.s:2059   .rodata._ZTSN5zxing12BinaryBitmapE:0000000000000000 _ZTSN5zxing12BinaryBitmapE
+     /tmp/ccoDMMUW.s:2051   .rodata._ZTIN5zxing12BinaryBitmapE:0000000000000000 _ZTIN5zxing12BinaryBitmapE
+     /tmp/ccoDMMUW.s:2066   .rodata._ZTVN5zxing12BinaryBitmapE:0000000000000000 _ZTVN5zxing12BinaryBitmapE
+     /tmp/ccoDMMUW.s:2041   .bss._ZStL8__ioinit:0000000000000000 $d
+     /tmp/ccoDMMUW.s:2045   .bss._ZStL8__ioinit:0000000000000000 _ZStL8__ioinit
+     /tmp/ccoDMMUW.s:2048   .rodata._ZTIN5zxing12BinaryBitmapE:0000000000000000 $d
+     /tmp/ccoDMMUW.s:2056   .rodata._ZTSN5zxing12BinaryBitmapE:0000000000000000 $d
+     /tmp/ccoDMMUW.s:2062   .rodata._ZTVN5zxing12BinaryBitmapE:0000000000000000 $d
+                     .debug_frame:0000000000000010 $d
+                           .group:0000000000000000 wm4.0.cd1e96de8a8c4f34e746a820772853ad
+                           .group:0000000000000000 wm4.cconfig.h.31.21483d26c3710eb58c7a44c20d82c775
+                           .group:0000000000000000 wm4.cpu_defines.h.31.54d44f9d3e7c42875c5a7fd49795eb93
+                           .group:0000000000000000 wm4.cconfig.h.515.5e729db314ae74226e291b4ae081e353
+                           .group:0000000000000000 wm4._newlib_version.h.4.3572908597b70d672d181fc7fc501c19
+                           .group:0000000000000000 wm4.newlib.h.21.59901f4bf241ab46c63694665baa7297
+                           .group:0000000000000000 wm4.features.h.22.5cdadbb3efe495d1c9e38350b8c376c7
+                           .group:0000000000000000 wm4.config.h.219.65a553ab5bef5482f0d7880b0d33015e
+                           .group:0000000000000000 wm4._ansi.h.23.1ee1144430bedaab1a14c7b57a6c8384
+                           .group:0000000000000000 wm4.stddef.h.39.fa2e86d241f4df50b9327c72832885e1
+                           .group:0000000000000000 wm4._default_types.h.6.959254cf5f09734ea7516c89e8bb21bd
+                           .group:0000000000000000 wm4.lock.h.2.1461d1fff82dffe8bfddc23307f6484f
+                           .group:0000000000000000 wm4._types.h.125.5cf8a495f1f7ef36777ad868a1e32068
+                           .group:0000000000000000 wm4.stddef.h.161.7e98c9c86da0ed2d27af2ef92af7d013
+                           .group:0000000000000000 wm4._types.h.183.c226d164ceca1f2ecb9ae9360c54a098
+                           .group:0000000000000000 wm4.reent.h.17.23b059516345f8f5abfa01ddc379570f
+                           .group:0000000000000000 wm4.wchar.h.8.acdef4366e64def8c588421024712d23
+                           .group:0000000000000000 wm4.stddef.h.161.9f48187563b2a85291a91832aa425498
+                           .group:0000000000000000 wm4.cdefs.h.47.9bc8274c84fddbf05edd550eb0bf48cd
+                           .group:0000000000000000 wm4.stdarg.h.34.3a23a216c0c293b3d2ea2e89281481e6
+                           .group:0000000000000000 wm4.wchar.h.29.7ec19a1c094c7903732828676a0a91b2
+                           .group:0000000000000000 wm4.wchar.h.76.90478bd2c784f576b769c4535c98839d
+                           .group:0000000000000000 wm4.cwchar.48.c4e882638bf84f6da89479dda6fe8e17
+                           .group:0000000000000000 wm4.atomic_lockfree_defines.h.31.d5c6334fb1e95c9462b052951f1411df
+                           .group:0000000000000000 wm4.exception_defines.h.31.ca6841b9be3287386aafc5c717935b2e
+                           .group:0000000000000000 wm4.concept_check.h.31.f19605d278e56917c68a56d378be308c
+                           .group:0000000000000000 wm4.type_traits.30.967137c3695c72a3f7c65b682f1a104e
+                           .group:0000000000000000 wm4.move.h.152.41d7b9e6779674d169b7813982cfa003
+                           .group:0000000000000000 wm4.cpp_type_traits.h.33.9f2bfd8c4471a9a299f6da3ec24c745c
+                           .group:0000000000000000 wm4.numeric_traits.h.30.aa01a98564b7e55086aad9e53c7e5c53
+                           .group:0000000000000000 wm4.assertions.h.30.51d443923f0d242550e04246a7819b39
+                           .group:0000000000000000 wm4.stl_iterator.h.406.6718c794fa6a1331f8340656b5c8c55c
+                           .group:0000000000000000 wm4.debug.h.30.5c1f223b12199e851d4d42805b788ccf
+                           .group:0000000000000000 wm4.stl_algobase.h.491.ec4060988bfff82dc579decdb75c72d6
+                           .group:0000000000000000 wm4.stdint.h.4.659be5aa44c4ab4eb7c7cc2b24d8ceee
+                           .group:0000000000000000 wm4._intsup.h.10.cce27fed8484c08a33f522034c30d2b5
+                           .group:0000000000000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:0000000000000000 wm4.stdint.h.23.4c107c5a20920bfc6e94fb2672bbd9ee
+                           .group:0000000000000000 wm4.stddef.h.161.38688f2eb958a8ed58fdb61ffe554c94
+                           .group:0000000000000000 wm4.locale.h.16.90d16f662e7119f5b192650a45179c6c
+                           .group:0000000000000000 wm4.clocale.45.c36d2d5b631a875aa5273176b54fdf0f
+                           .group:0000000000000000 wm4.ctype.h.2.cf64fe4c5e8c0ac0f52f1143312d4909
+                           .group:0000000000000000 wm4.cctype.45.0da5714876b0be7f2d816b53d9670403
+                           .group:0000000000000000 wm4.gthr.h.27.ceb1c66b926f052afcba57e8784df0d4
+                           .group:0000000000000000 wm4.gthrdefault.h.27.edc94d4398c0534988962be77dc3c2e1
+                           .group:0000000000000000 wm4.atomic_word.h.30.9e0ac69fd462d5e650933e05133b4afa
+                           .group:0000000000000000 wm4.allocator.h.52.0ceafb36dc1b82dbfa6b05003082e3f5
+                           .group:0000000000000000 wm4.stl_function.h.57.472a8ffdc5144ddcd047558cd884dda0
+                           .group:0000000000000000 wm4.alloc_traits.h.31.c41c7c4789404962122a4e991dfa3abf
+                           .group:0000000000000000 wm4.cstdlib.44.52c5efdfb0f3c176bd11e611a0b94959
+                           .group:0000000000000000 wm4.stdlib.h.13.4ed386f5c1a80d71e72172885d946ef2
+                           .group:0000000000000000 wm4.alloca.h.8.dfc0c703c47ec3e69746825b17d9e66d
+                           .group:0000000000000000 wm4.stdlib.h.56.d4493cd3736e51e9d56335045f26df45
+                           .group:0000000000000000 wm4.cstdlib.76.ae666499c8f9b0ace1b4b23fe143da2c
+                           .group:0000000000000000 wm4.stdio.h.27.3fc80220048df77954e38daec3bb9670
+                           .group:0000000000000000 wm4.types.h.40.e8c16e7ec36ba55f133d0616070e25fc
+                           .group:0000000000000000 wm4._endian.h.31.65a10590763c3dde1ac4a7f66d7d4891
+                           .group:0000000000000000 wm4.endian.h.9.49f3a4695c1b61e8a0808de3c4a106cb
+                           .group:0000000000000000 wm4._timeval.h.30.0e8bfd94e85db17dda3286ee81496fe6
+                           .group:0000000000000000 wm4.timespec.h.41.d855182eb0e690443ab8651bcedca6e1
+                           .group:0000000000000000 wm4.select.h.30.bbece7fa40993a78092dcc5805132560
+                           .group:0000000000000000 wm4.types.h.69.ed3eae3cf73030a737515151ebcab7a1
+                           .group:0000000000000000 wm4.stdio.h.2.4aa87247282eca6c8f36f9de33d8df1a
+                           .group:0000000000000000 wm4.stdio.h.81.edc2fd66146f9635463a729e8fe0add3
+                           .group:0000000000000000 wm4.cstdio.45.1ffaea3e7c26dce1e03f5847a7439edb
+                           .group:0000000000000000 wm4.errno.h.2.ba016d646105af6cad23be83630b6a3f
+                           .group:0000000000000000 wm4.errno.h.9.1ecd7b1049497a0ab61da0f6cbd4b0c6
+                           .group:0000000000000000 wm4.functional_hash.h.98.3bf7680ffcc8d24d09fa83ac1339c79d
+                           .group:0000000000000000 wm4.wctype.h.2.898a9b94aa35d125e245195b099726a8
+                           .group:0000000000000000 wm4.wctype.h.21.aec4d35c940c33b3f9c6f879c49edcd8
+                           .group:0000000000000000 wm4.cwctype.54.6582aca101688c1c3785d03bc15e2af6
+                           .group:0000000000000000 wm4.locale_facets.h.56.0d4bb655ce5e76ea564363ed7c5a34fc
+                           .group:0000000000000000 wm4.ZXing.h.18.e57217e2bd13bffdbef9ea3dcbec75d3
+                           .group:0000000000000000 wm4.limits.38.40c6c565f51037fae3aa9b94f36ded7a
+                           .group:0000000000000000 wm4.math.h.13.4f1ab8d1725735081bbdb9ebcf6dba66
+                           .group:0000000000000000 wm4.cmath.46.d6e5b776115d39075860ed881d18f087
+                           .group:0000000000000000 wm4.ZXing.h.127.586c16e6a699510970dac3542705a0b6
+                           .group:0000000000000000 wm4.string.h.8.c4b8571ce60dff2817f43fec8b86aecd
+
+UNDEFINED SYMBOLS
+_ZdlPvj
+_ZNSt8ios_base4InitC1Ev
+__dso_handle
+_ZNSt8ios_base4InitD1Ev
+__aeabi_atexit
+__gxx_personality_v0
+__cxa_end_cleanup
+__aeabi_unwind_cpp_pr0
+_ZNK5zxing9Binarizer18getLuminanceSourceEv
+_Znwj
+_ZTVN10__cxxabiv117__class_type_infoE
+_ZTVN10__cxxabiv120__si_class_type_infoE

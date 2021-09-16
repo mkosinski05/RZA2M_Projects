@@ -165,25 +165,20 @@ rza2m_2d_barcode_sample_freertos_gcc.hex \
 SECONDARY_SIZE += \
 rza2m_2d_barcode_sample_freertos_gcc.siz \
 
-LIBRARY_GENERATOR_OUTPUTTYPE_OUTPUTS += \
-librza2m_2d_barcode_sample_freertos_gcc.a \
-
 
 # All Target
 all: rza2m_2d_barcode_sample_freertos_gcc.elf secondary-outputs
 
 # Tool invocations
 rza2m_2d_barcode_sample_freertos_gcc.elf: $(OBJS) $(USER_OBJS) $(LIBRARY_GENERATOR_OUTPUTTYPE_OUTPUTS)
-	@	$(file > rza2m_2d_barcode_sample_freertos_gcc.elf.in,-mcpu=cortex-a9 -march=armv7-a -marm -mlittle-endian -mfloat-abi=hard -mfpu=neon -mno-unaligned-access -Og -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wpadded -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -Wmaybe-uninitialized -Wstack-usage=100 -g3 -o "rza2m_2d_barcode_sample_freertos_gcc.elf" $(OBJS) $(USER_OBJS) -T "/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/generate/linker_script.ld" -L "/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/HardwareDebug" -Wl,--start-group -lrza2m_2d_barcode_sample_freertos_gcc -lgcc -lstdc++ -Wl,--end-group -nostartfiles -Xlinker --gc-sections -Wl,-Map,"rza2m_2d_barcode_sample_freertos_gcc.map" -Wl,-eStart)
-	@echo 'arm-none-eabi-g++ -mcpu=cortex-a9 -march=armv7-a -marm -mlittle-endian -mfloat-abi=hard -mfpu=neon -mno-unaligned-access -Og -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wpadded -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -Wmaybe-uninitialized -Wstack-usage=100 -g3 -o "rza2m_2d_barcode_sample_freertos_gcc.elf" $(OBJS) $(USER_OBJS) -T "/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/generate/linker_script.ld" -L "/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/HardwareDebug" -Wl,--start-group -lrza2m_2d_barcode_sample_freertos_gcc -lgcc -lstdc++ -Wl,--end-group -nostartfiles -Xlinker --gc-sections -Wl,-Map,"rza2m_2d_barcode_sample_freertos_gcc.map" -Wl,-eStart'
+	@	$(file > rza2m_2d_barcode_sample_freertos_gcc.elf.in,-mcpu=cortex-a9 -march=armv7-a -marm -mlittle-endian -mfloat-abi=hard -mfpu=neon -mno-unaligned-access -Og -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wpadded -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -Wnull-dereference -Wmaybe-uninitialized -Wstack-usage=100 -g3 -o "rza2m_2d_barcode_sample_freertos_gcc.elf" $(OBJS) $(USER_OBJS) -T "/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/generate/linker_script.ld"  -Wl,--start-group -Wl,--end-group -nostartfiles -Xlinker --gc-sections -Wl,-Map,"rza2m_2d_barcode_sample_freertos_gcc.map" -Wl,-eStart)
+	@echo 'arm-none-eabi-g++ -mcpu=cortex-a9 -march=armv7-a -marm -mlittle-endian -mfloat-abi=hard -mfpu=neon -mno-unaligned-access -Og -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wpadded -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -Wnull-dereference -Wmaybe-uninitialized -Wstack-usage=100 -g3 -o "rza2m_2d_barcode_sample_freertos_gcc.elf" $(OBJS) $(USER_OBJS) -T "/home/zkmike/workspace/RZA2M/rza2m_2d_barcode_sample_freertos_gcc/generate/linker_script.ld"  -Wl,--start-group -Wl,--end-group -nostartfiles -Xlinker --gc-sections -Wl,-Map,"rza2m_2d_barcode_sample_freertos_gcc.map" -Wl,-eStart'
 
 	arm-none-eabi-g++ @"rza2m_2d_barcode_sample_freertos_gcc.elf.in"
 rza2m_2d_barcode_sample_freertos_gcc.hex: rza2m_2d_barcode_sample_freertos_gcc.elf
 	arm-none-eabi-objcopy -O ihex "rza2m_2d_barcode_sample_freertos_gcc.elf"  "rza2m_2d_barcode_sample_freertos_gcc.hex"
 rza2m_2d_barcode_sample_freertos_gcc.siz: rza2m_2d_barcode_sample_freertos_gcc.elf
 	arm-none-eabi-size --format=berkeley "rza2m_2d_barcode_sample_freertos_gcc.elf"
-librza2m_2d_barcode_sample_freertos_gcc.a: 
-	arm-none-eabi-libgen  --header-files=all --select-lib=newlib --compiler-options=-Og,-ffunction-sections,-fdata-sections,-mcpu=cortex-a9,-march=armv7-a,-mlittle-endian,-mfloat-abi=hard,-mfpu=neon,-mno-unaligned-access,-D_WANT_IO_LONG_LONG --assembler-options=-mcpu=cortex-a9,-march=armv7-a,-mlittle-endian,-mfloat-abi=hard,-mfpu=neon -o "librza2m_2d_barcode_sample_freertos_gcc.a"
 # Other Targets
 clean:
 ifneq ($(strip $(CC_UPPER_DEPS)),)
@@ -255,11 +250,6 @@ ifneq ($(strip $(CXX_DEPS)),)
 	-$(file > clean_CXX_DEPS.tmp, $(CXX_DEPS))
 	-@ xargs -s 6000 -t -a clean_CXX_DEPS.tmp $(RM)
 	-@$(RM) clean_CXX_DEPS.tmp
-endif
-ifneq ($(strip $(LIBRARY_GENERATOR_OUTPUTTYPE_OUTPUTS)),)
-	-$(file > clean_LIBRARY_GENERATOR_OUTPUTTYPE_OUTPUTS.tmp, $(LIBRARY_GENERATOR_OUTPUTTYPE_OUTPUTS))
-	-@ xargs -s 6000 -t -a clean_LIBRARY_GENERATOR_OUTPUTTYPE_OUTPUTS.tmp $(RM)
-	-@$(RM) clean_LIBRARY_GENERATOR_OUTPUTTYPE_OUTPUTS.tmp
 endif
 ifneq ($(strip $(JMP_DEPS)),)
 	-$(file > clean_JMP_DEPS.tmp, $(JMP_DEPS))
