@@ -41,7 +41,7 @@ g_drp_lib_reed_solomon:
 
 .balign 32
 .global g_drp_lib_image_rotate
-g_drp_lib_reed_solomon:
+g_drp_lib_image_rotate:
 .incbin "r_drp_image_rotate.dat"
 
 .end

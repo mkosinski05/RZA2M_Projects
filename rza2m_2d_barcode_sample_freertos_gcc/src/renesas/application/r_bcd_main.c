@@ -81,6 +81,10 @@ typedef struct {
     uint8_t     unsharp_coring;
 } simple_setting_t;
 
+/* Terminal window escape sequences */
+static const char_t * const sp_clear_screen = "\x1b[2J";
+static const char_t * const sp_cursor_home  = "\x1b[H";
+
 /**********************************************************************************************************************
 Imported global variables and functions (from other files)
 **********************************************************************************************************************/
@@ -282,15 +286,18 @@ void R_BCD_MainSetReedsolomonTime(uint32_t time)
     return;
 }
 void R_BSD_ImageRotate(uint32_t in_adr, uint32_t out_adr, uint16_t width, uint16_t height) {
-	param_imr.src = in_adr;
-	param_imr.dst = out_adr;
+
+	//param_imr.src = in_adr;
+	R_MMU_VAtoPA((uint32_t)in_adr, &(param_imr.src));
+	//param_imr.dst = out_adr;
+	R_MMU_VAtoPA((uint32_t)out_adr, &(param_imr.dst));
 	param_imr.src_width = width;
 	param_imr.src_height = height;
 	param_imr.dst_stride = 0;
 	param_imr.mode = 1;
 
 	/* Initialize variables to be used in termination judgment of the DRP library */
-	drp_lib_status[TILE_0] = DRP_NOT_FINISH;
+	drp_lib_status[TILE_4] = DRP_NOT_FINISH;
 
 	/* Clean D cache */
 	R_CACHE_L1DataCleanInvalidAll();
@@ -298,12 +305,12 @@ void R_BSD_ImageRotate(uint32_t in_adr, uint32_t out_adr, uint16_t width, uint16
 	/*****************/
 	/* Start DRP lib */
 	/*****************/
-	(void)R_DK2_Start(drp_lib_id[TILE_0], (void *)&param_imr, sizeof(r_drp_image_rotate_t));
+	(void)R_DK2_Start(drp_lib_id[TILE_4], (void *)&param_imr, sizeof(r_drp_image_rotate_t));
 
 	/***************************************/
 	/* Wait until DRP processing is finish */
 	/***************************************/
-	while (drp_lib_status[TILE_0] == DRP_NOT_FINISH)
+	while (drp_lib_status[TILE_4] == DRP_NOT_FINISH)
 	{
 		/* DO NOTHING */
 	}
@@ -399,7 +406,9 @@ void sample_main(void)
 
     /* Gamma Table */
     R_BCD_AeMakeGammaTable(&ae_setting, (double)1.2, look_up_table);
-
+    printf("%s%s", sp_clear_screen, sp_cursor_home);
+    fprintf(stdout,"Renesas DRP UPC and QR Decode\n");
+    fflush(stdout);
     /* main loop */
     while (1)
     {
@@ -580,28 +589,25 @@ void sample_main(void)
         /* set parameters */
         (uint8_t *)p_output_bufadr, R_BCD_CAMERA_WIDTH, R_BCD_CAMERA_HEIGHT, (char *)result_buf, 
                                                                                             (sizeof(result_buf))-1);
-
+#if 1
         if ( result <= 0 ) {
         	/*
         	 * Rotate the image 90 degrees and try again
         	 * This only needs to be down once because ZXing can decode verital flipped images
-        	 * Because we are using the camera input buffer we stop the camera
         	 */
-        	/* Stop Camera Capture*/
-        	R_RVAPI_CaptureStartMIPI();
-        	/* Rotate image and output to input buffer*/
         	R_BSD_ImageRotate( (uint32_t)p_output_bufadr, (uint32_t)p_input_bufadr, R_BCD_CAMERA_WIDTH, R_BCD_CAMERA_HEIGHT );
 
         	/* ZXing process */
         	result = zxing_decode_image(
-        	/* set parameters */
-			(uint8_t *)p_input_bufadr, R_BCD_CAMERA_WIDTH, R_BCD_CAMERA_HEIGHT, (char *)result_buf,
-																								(sizeof(result_buf))-1);
-        	/* Capture Start */
-			R_BCD_CameraClearCaptureStatus();
-			R_BCD_CameraCaptureStart();
+				/* set parameters */
+				(uint8_t *)p_input_bufadr, R_BCD_CAMERA_HEIGHT, R_BCD_CAMERA_WIDTH, (char *)result_buf,
+				(sizeof(result_buf))-1);
+
+			fprintf(stdout,"2");
+			fflush(stdout);
 
         }
+#endif
         /* Set end time of process */
         PerformSetEndTime(0);
 
@@ -613,6 +619,7 @@ void sample_main(void)
         /* Check whether barcode decoding succeeded */
         if (result > 0)
         {
+        	fprintf(stdout,"\n"); fflush(stdout);
             result = (result > (ZXING_RESULT_BUF_SIZE - 1)) ? (ZXING_RESULT_BUF_SIZE - 1) : result;
             result_buf[result] = 0;
 
@@ -668,6 +675,9 @@ void sample_main(void)
         R_BCD_LcdWriteString(&buf[0], 0 + 2, 30 + 2, GREEN);
 
         /* characters */
+        printf("%s%s", sp_clear_screen, sp_cursor_home);
+        fprintf( stdout, "Decode : %s\r\n", zxing_result_buf); 
+		fflush(stdout);
         sprintf((void *)&buf[0],"Decode : %s",zxing_result_buf);
         R_BCD_LcdWriteString(&buf[0], 0 + 2, 60 + 2, GREEN);
 
