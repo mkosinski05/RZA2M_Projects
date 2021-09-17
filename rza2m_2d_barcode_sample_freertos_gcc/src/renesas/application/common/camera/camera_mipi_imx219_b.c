@@ -14,12 +14,14 @@
  * following link:
  * http://www.renesas.com/disclaimer
  *
- * Copyright (C) 2019 Renesas Electronics Corporation. All rights reserved.
+ * Copyright (C) 2020 Renesas Electronics Corporation. All rights reserved.
  *********************************************************************************************************************/
-/**************************************************************************//**
-* @file         camera_mipi_imx219_b.c
-* @version      0.01
-* @brief        MIPI Camera Register Setting
+/*****************************************************************************
+ * @file        : camera_mipi_imx219_b.c
+ * Device(s)    : RZ/A2M
+ * OS           : FreeRTOS Version See src/freertos/include/FreeRTOS.h
+ * H/W Platform : GR-MANGO(mbed-RZ/A2M) X71A-M01-B
+ * @brief       : MIPI Camera Register Setting
 ******************************************************************************/
 
 /******************************************************************************
@@ -72,7 +74,7 @@ void Init_Camera(void)
     int_t    ret;
 
     /* open RIIC */
-    ret = open(DEVICE_INDENTIFIER "riic2", O_RDWR);
+    ret = open(DEVICE_INDENTIFIER "riic1", O_RDWR);
 
     if (ret >= 0)
     {
@@ -123,6 +125,7 @@ void Start_Camera( void )
                     reg_sw_standby_out[0],
                     reg_sw_standby_out[1],
                     reg_sw_standby_out[2]);
+
 }   /* End of function Start_Camera() */
 
 

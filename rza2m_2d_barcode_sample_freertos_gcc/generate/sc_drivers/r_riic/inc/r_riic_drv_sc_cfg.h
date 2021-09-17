@@ -91,7 +91,7 @@ typedef struct
 static const st_r_drv_riic_sc_config_t RIIC_SC_TABLE[] =
 {
     /* This code is auto-generated. Do not edit manually */
-    { 3, 
+    { 1, 
         {
             RIIC_MODE_MASTER, 
             true, 
@@ -121,42 +121,8 @@ static const st_r_drv_riic_sc_config_t RIIC_SC_TABLE[] =
             9, 
         }, 
         {
-            &GPIO_SC_TABLE_riic3[0], 
-            sizeof(GPIO_SC_TABLE_riic3)/sizeof(st_r_drv_gpio_sc_config_t), 
-        }
-    },
-    { 2, 
-        {
-            RIIC_MODE_MASTER, 
-            true, 
-            false, 
-            false, 
-            1, 
-            1, 
-            1, 
-            RIIC_DEVICE_ADDR_7, 
-            RIIC_DEVICE_ADDR_7, 
-            RIIC_DEVICE_ADDR_7, 
-            RIIC_FREQUENCY_100KHZ, 
-            RIIC_DUTY_50, 
-            0, 
-            0, 
-            RIIC_FILTER_NOT_USED, 
-            RIIC_TIMEOUT_NOT_USED, 
-            RIIC_FORMAT_I2C, 
-            false, 
-            9, 
-            9, 
-            9, 
-            9, 
-            9, 
-            9, 
-            9, 
-            9, 
-        }, 
-        {
-            &GPIO_SC_TABLE_riic2[0], 
-            sizeof(GPIO_SC_TABLE_riic2)/sizeof(st_r_drv_gpio_sc_config_t), 
+            &GPIO_SC_TABLE_riic1[0], 
+            sizeof(GPIO_SC_TABLE_riic1)/sizeof(st_r_drv_gpio_sc_config_t), 
         }
     },
     /* End of modification */

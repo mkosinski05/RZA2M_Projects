@@ -18,7 +18,7 @@
 * you agree to the additional terms and conditions found by accessing the
 * following link:
 * http://www.renesas.com/disclaimer
-* Copyright (C) 2018 Renesas Electronics Corporation. All rights reserved.
+* Copyright (C) 2021 Renesas Electronics Corporation. All rights reserved.
 *******************************************************************************/
 /*******************************************************************************
 * File Name   : linker_script.ld
@@ -26,7 +26,8 @@
 *******************************************************************************/
 
 MEMORY {
-    ROM               (rx)  : ORIGIN = 0x20010000, LENGTH = 0x04000000
+    BOOT_LOADER       (rx)  : ORIGIN = 0x50000000, LENGTH = 0x00010000
+    ROM               (rx)  : ORIGIN = 0x50010000, LENGTH = 0x01000000
     GRAPHICS_RAM      (rwx) : ORIGIN = 0x80000000, LENGTH = 0x00020000
     MMU_PAGE_TABLE    (rw)  : ORIGIN = 0x80020000, LENGTH = 0x00004000
     HARDWARE_INIT_RAM (rwx) : ORIGIN = 0x80024000, LENGTH = 0x00004000
@@ -37,6 +38,10 @@ MEMORY {
 
 SECTIONS
 {
+    .boot 0x50000000 : {
+        KEEP(*(.boot_loader))
+    } > BOOT_LOADER
+
     LOAD_MODULE1 : {
         KEEP(* (VECTOR_TABLE))      /*asm*/
     } > ROM

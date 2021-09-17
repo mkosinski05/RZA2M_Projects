@@ -67,17 +67,6 @@ typedef struct
 static const st_r_drv_ostm_sc_config_t OSTM_SC_TABLE[] =
 {
     /* This code is auto-generated. Do not edit manually */
-    { 2, 
-        {
-            OSTM_MODE_INTERVAL, 
-            OSTM_TIME_MS, 
-            1, 
-            OSTM_START_INTERRUPT_OFF, 
-            INTC_ENABLE, 
-            30, 
-            FreeRTOS_Tick_Handler, 
-        }
-    },
     { 1, 
         {
             OSTM_MODE_FREERUN, 
@@ -87,6 +76,17 @@ static const st_r_drv_ostm_sc_config_t OSTM_SC_TABLE[] =
             INTC_DISABLE, 
             0, 
             NULL, 
+        }
+    },
+    { 2, 
+        {
+            OSTM_MODE_INTERVAL, 
+            OSTM_TIME_MS, 
+            1, 
+            OSTM_START_INTERRUPT_OFF, 
+            INTC_ENABLE, 
+            30, 
+            FreeRTOS_Tick_Handler, 
         }
     },
     /* End of modification */

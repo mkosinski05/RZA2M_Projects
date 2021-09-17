@@ -14,25 +14,21 @@
  * following link:
  * http://www.renesas.com/disclaimer
  *
- * Copyright (C) 2020 Renesas Electronics Corporation. All rights reserved.
+ * Copyright (C) 2021 Renesas Electronics Corporation. All rights reserved.
  *********************************************************************************************************************/
 /*******************************************************************************
 * File Name    : version.h
 * Device(s)    : RZ/A2M
-* Tool-Chain   : e2Studio Ver 7.8.0
-*              : GNU Arm Embedded Toolchain 6-2017-q2-update
+* Tool-Chain   : e2Studio 2021-01
+*              : GNU ARM Embedded 6.3.1.20170620
 * OS           : FreeRTOS Version See src/freertos/include/FreeRTOS.h
-* H/W Platform : RZ/A2M Evaluation Board
+* H/W Platform : GR-MANGO(mbed-RZ/A2M) X71A-M01-B
 * Description  : The version release and build numbers.
 *                build version
 *                APPLICATION_INFO_VERSION.APPLICATION_INFO_RELEASE.APPLICATION_INFO_BUILD
 *******************************************************************************
 * History      : DD.MM.YYYY Version Description
-*              : 17.09.2018 1.00    First Release
-*              : 30.09.2019 1.11    Fifth Release
-*              : 17.12.2019 1.12    Sixth Release
-*              : 30.06.2020 1.13    Eighth Release
-*              : 30.09.2020 1.14    8.1 Release
+*              : 28.04.2021 1.00    First Release
 ******************************************************************************/
 #ifndef VERSION_H_INCLUDED
 #define VERSION_H_INCLUDED
@@ -46,7 +42,7 @@ Macro definitions
  * buildinc does not recognise numbers surrounded in braces
 ******************************************************************************/
 #define APPLICATION_INFO_VERSION          (1)
-#define APPLICATION_INFO_RELEASE          (14)
+#define APPLICATION_INFO_RELEASE          (0)
 #define APPLICATION_INFO_BUILD            (0)
 
 

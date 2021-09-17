@@ -14,12 +14,14 @@
  * following link:
  * http://www.renesas.com/disclaimer
  *
- * Copyright (C) 2019 Renesas Electronics Corporation. All rights reserved.
+ * Copyright (C) 2020 Renesas Electronics Corporation. All rights reserved.
  *********************************************************************************************************************/
-/**************************************************************************//**
-* @file         lcd_dvi_ch0.h
-* @version      0.01
-* @brief        LCD panel for VDC channel 0 definition header
+/****************************************************************************
+* @file        : lcd_dvi_ch0.h
+* Device(s)    : RZ/A2M
+* OS           : FreeRTOS Version See src/freertos/include/FreeRTOS.h
+* H/W Platform : GR-MANGO(mbed-RZ/A2M) X71A-M01-B
+* @brief       : LCD panel for VDC channel 0 definition header
 ******************************************************************************/
 /******************************************************************************
 Includes   <System Includes> , "Project Includes"
@@ -49,9 +51,9 @@ Macro definitions
 #define     LCD_CH0_SIG_FV          (LCD_V_TOTAL - 1u)  /* Vertical Total Period(VTP) */
 #define     LCD_CH0_SIG_FH          (LCD_H_TOTAL - 1u)  /* Horizontal Total Period(HTP)  */
 
-#define     LCD_CH0_TCON_PIN_VSYNC  (VDC_LCD_TCON_PIN_0)  /* Select TCON of a Vsync signal (Vsync_TCON_select) */
-#define     LCD_CH0_TCON_PIN_HSYNC  (VDC_LCD_TCON_PIN_3)  /* Select TCON of a Hsync signal (Hsync_TCON_select) */
-#define     LCD_CH0_TCON_PIN_DE     (VDC_LCD_TCON_PIN_4)  /* Select TCON of a DE signal    (DE_TCON_select)    */
+#define     LCD_CH0_TCON_PIN_VSYNC  (VDC_LCD_TCON_PIN_1)  /* Select TCON of a Vsync signal (Vsync_TCON_select) */
+#define     LCD_CH0_TCON_PIN_HSYNC  (VDC_LCD_TCON_PIN_0)  /* Select TCON of a Hsync signal (Hsync_TCON_select) */
+#define     LCD_CH0_TCON_PIN_DE     (VDC_LCD_TCON_PIN_2)  /* Select TCON of a DE signal    (DE_TCON_select)    */
 
 #define     LCD_CH0_TOCN_POL_VSYNC  (LCD_V_POLARITY)      /* Select polarity of a Vsync signal (Vsync_POL)     */
 #define     LCD_CH0_TOCN_POL_HSYNC  (LCD_H_POLARITY)      /* Select polarity of a Hsync signal (Hsync_POL)     */

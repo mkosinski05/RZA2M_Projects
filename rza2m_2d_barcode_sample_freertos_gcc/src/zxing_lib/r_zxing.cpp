@@ -39,7 +39,7 @@ Includes   <System Includes> , "Project Includes"
 Macro definitions
 ******************************************************************************/
 //#define DECODE_HINTS  (DecodeHints::ONED_HINT | DecodeHints::QR_CODE_HINT | DecodeHints::DATA_MATRIX_HINT | DecodeHints::AZTEC_HINT)
-#define DECODE_HINTS  (DecodeHints::QR_CODE_HINT | DecodeHints::UPC_A_HINT | DecodeHints::UPC_E_HINT | DecodeHints::UPC_EAN_EXTENSION_HINT)
+#define DECODE_HINTS  (DecodeHints::QR_CODE_HINT | DecodeHints::UPC_A_HINT | DecodeHints::UPC_E_HINT | DecodeHints::UPC_EAN_EXTENSION_HINT )
 
 /******************************************************************************
 Typedef definitions

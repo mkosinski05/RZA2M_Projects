@@ -356,7 +356,9 @@ static vdc_error_t r_display_init(const vdc_channel_t vdc_ch)
         q_cnf.tcon_ofset = LCD_CH0_TCON_OFFSET;         /* TCON reference timing, offset Hsync signal timing */
         q_cnf.lcd_data_out_edge = LCD_CH0_OUT_EDGE;     /* LCD_DATA_OUT_EDGE */
         q_cnf.lcd_outformat = LCD_CH0_OUT_FORMAT;       /* LCD output format select */
-        error = R_RVAPI_DispControlVDC (vdc_ch, VDC_ON, &q_cnf);
+        q_cnf.out_endian_on = VDC_ON;
+        q_cnf.out_swap_on = VDC_ON;
+        error = R_RVAPI_DispControlConfigVDC (vdc_ch, VDC_ON, &q_cnf);
     }
 
     return error;

@@ -14,12 +14,14 @@
  * following link:
  * http://www.renesas.com/disclaimer
  *
- * Copyright (C) 2019 Renesas Electronics Corporation. All rights reserved.
+ * Copyright (C) 2020 Renesas Electronics Corporation. All rights reserved.
  *********************************************************************************************************************/
 /**************************************************************************//**
  * File Name :    vdc_portsetting.c
- * @file          vdc_portsetting.c
- * @brief        VDC port setting functions
+ * Device(s)    : RZ/A2M
+ * OS           : FreeRTOS Version See src/freertos/include/FreeRTOS.h
+ * H/W Platform : GR-MANGO(mbed-RZ/A2M) X71A-M01-B
+ * @brief       : VDC port setting functions
  ******************************************************************************/
 
 /*******************************************************************************
@@ -40,7 +42,7 @@
  Macro definitions
  ******************************************************************************/
 #if ( LCD_PANEL==3 )
-#define TFP410                  (0x78u)
+#define EP952_DEV_ADDR  (0x52u)
 #endif
 
 /******************************************************************************
@@ -50,6 +52,31 @@
 /******************************************************************************
  Structures
  ******************************************************************************/
+typedef struct
+{
+    uint8_t  reg_addr;  /* address */
+    uint8_t  value;     /* value of register */
+} st_dvi_reg_t;
+
+
+#if ( LCD_PANEL==3 )
+static st_r_drv_gpio_pin_rw_t s_pk5_hi =
+{
+    GPIO_PORT_K_PIN_5,
+    GPIO_LEVEL_HIGH,
+    GPIO_SUCCESS
+};
+static st_r_drv_gpio_pin_rw_t s_pk5_lo =
+{
+    GPIO_PORT_K_PIN_5,
+    GPIO_LEVEL_LOW,
+    GPIO_SUCCESS
+};
+static const r_gpio_port_pin_t s_ep952_pin_list[] =
+{
+    GPIO_PORT_K_PIN_5,
+};
+#endif
 
 /******************************************************************************
  Global Vaiables
@@ -59,7 +86,52 @@
 /******************************************************************************
  Private global variables and functions
  ******************************************************************************/
-static void RIIC_DviWrite( int_t handle, uint8_t ic_adr, uint8_t reg_adr_upper, uint8_t reg_adr_lower, uint8_t reg_data );
+
+const st_dvi_reg_t g_dvi_reg_init_table[] =
+{
+    /* dvi short */
+    {0x00u, 0x80u},
+    {0x40u, 0x08u},
+    {0x05u, 0x14u},
+    {0x7Bu, 0x00u},
+    {0x7Cu, 0x00u},
+    {0x7Du, 0x00u},
+    {0x7Eu, 0x00u},
+    {0x7Fu, 0x01u},
+    {0x63u, 0x00u},
+    {0x64u, 0x16u},
+    {0x65u, 0x0Cu},
+    {0x74u, 0x70u},
+    {0x75u, 0x01u},
+    {0x76u, 0x00u},
+    {0x77u, 0x00u},
+    {0x78u, 0x00u},
+    {0x79u, 0x00u},
+    {0x0Au, 0x81u},
+    {0x33u, 0x0Fu},
+    {0x0Eu, 0x0Du},
+    {0x66u, 0xBBu},
+    {0x67u, 0x10u},
+    {0x68u, 0xA0u},
+    {0x69u, 0x00u},
+    {0x6Au, 0x40u},
+    {0x6Bu, 0x00u},
+    {0x6Cu, 0x00u},
+    {0x6Du, 0x00u},
+    {0x6Eu, 0x00u},
+    {0x6Fu, 0x00u},
+    {0x70u, 0x00u},
+    {0x71u, 0x00u},
+    {0x72u, 0x00u},
+    {0x73u, 0x00u},
+    {0x3Fu, 0xF8u},
+    {0x0Du, 0x80u},
+    {0x0Cu, 0x30u},
+    {0x08u, 0x97u},
+    {0x01u, 0x00u},
+};
+
+static void RIIC_DviWrite( int_t handle, uint8_t ic_adr, uint8_t reg_adr, uint8_t reg_data ); 
 
 /******************************************************************************
  Function prototypes
@@ -175,14 +247,28 @@ void VDC_LcdPortSetting(uint32_t param)
         }
     }
 
-    /* === P7_6 : EBK LCD BACK Light === */
-    /* ---- Port initialize ---- */
-    pin_back_light.config.pin                       = GPIO_PORT_7_PIN_6;
-    pin_back_light.config.configuration.function    = GPIO_FUNC_OUT_LOW;
-    pin_back_light.config.configuration.current     = GPIO_CURRENT_4mA;
-    pin_back_light.config.configuration.tint        = GPIO_TINT_DISABLE;
+#if ( LCD_PANEL==3 )
+    {
+        /**************************************************
+         * Initialise P6_0 pin parameterised in GPIO_SC_TABLE_MANUAL
+         * PK_5: HDMI RST
+         **************************************************/
+        st_r_drv_gpio_pin_list_t pin_ep952;
+        
+        pin_ep952.p_pin_list = s_ep952_pin_list;
+        pin_ep952.count = (sizeof(s_ep952_pin_list)) / (sizeof(s_ep952_pin_list[0]));
+        err = direct_control(gpio_handle, CTL_GPIO_INIT_BY_PIN_LIST, &pin_ep952);
+        if ( err < 0 )
+        {
+            /* stop execute */
+            while(1)
+            {
+                /* Spin here forever */
+                ;
+            }
+        }
 
-    err = direct_control(gpio_handle, CTL_GPIO_SET_CONFIGURATION, &pin_back_light);
+        err = direct_control(gpio_handle, CTL_GPIO_PIN_WRITE, &s_pk5_lo);
     if ( err < 0 )
     {
         /* stop execute */
@@ -193,34 +279,42 @@ void VDC_LcdPortSetting(uint32_t param)
         }
     }
 
-    /* EBK LCD BACK Light on */
-    direct_control(gpio_handle, CTL_GPIO_PIN_WRITE, (void *)&p76_hi);
+        R_OS_TaskSleep(10);
 
-#if ( LCD_PANEL==3 )
+        err = direct_control(gpio_handle, CTL_GPIO_PIN_WRITE, &s_pk5_hi);
+        if ( err < 0 )
+        {
+            /* stop execute */
+            while(1)
+            {
+                /* Spin here forever */
+                ;
+            }
+        }
+    }
+
     {
         int_t   handle;
-        uint8_t senddata[3];
+        int_t count;
 
         /* open RIIC */
-        handle = open(DEVICE_INDENTIFIER "riic3", O_RDWR);
+        handle = open(DEVICE_INDENTIFIER "riic1", O_RDWR);
 
         if( handle >= 0 )
         {
-            /* DVI On */
-            senddata[0] = (uint8_t)(0x08u);    /* Cast to an appropriate type */
-            senddata[1] = (uint8_t)(0xbfu);    /* Cast to an appropriate type */
-            senddata[2] = (uint8_t)(0x70u);    /* Cast to an appropriate type */
+
+
+            for (count = 0; count < (sizeof(g_dvi_reg_init_table) / sizeof(st_dvi_reg_t)); count++)
+            {
             RIIC_DviWrite(
                     handle,
-                    TFP410,
-                    senddata[0],
-                    senddata[1],
-                    senddata[2]);
+                    EP952_DEV_ADDR,
+                    g_dvi_reg_init_table[count].reg_addr,
+                    g_dvi_reg_init_table[count].value);
+            }
+            
             close(handle);
         }
-
-        /* EBK LCD BACK Light off */
-        direct_control(gpio_handle, CTL_GPIO_PIN_WRITE, (void *)&p76_lo);
     }
 #endif
 
@@ -236,29 +330,22 @@ void VDC_LcdPortSetting(uint32_t param)
 * Description  :
 * @param[in]  hld            : io handle.
 * @param[in]  ic_adr         : device address.
-* @param[in]  reg_adr_upper  : upper register address to write .
-* @param[in]  reg_adr_lower  : lower register address to write .
+* @param[in]  reg_adr        : register address to write .
 * @param[in]  reg_data       : write data .
 * @retval  : none
 ******************************************************************************/
-static void RIIC_DviWrite( int_t handle, uint8_t ic_adr, uint8_t reg_adr_upper,
-                            uint8_t reg_adr_lower, uint8_t reg_data )
+static void RIIC_DviWrite( int_t handle, uint8_t ic_adr, uint8_t reg_adr, uint8_t reg_data )
 {
     int_t ret;
     st_r_drv_riic_transfer_t i2c_write;
 
     i2c_write.device_address = ic_adr;
-    i2c_write.sub_address_type = RIIC_SUB_ADDR_WIDTH_16_BITS;
-
-    /* calc sub address */
-    i2c_write.sub_address = (uint32_t)(reg_adr_upper << 8) | reg_adr_lower;
+    i2c_write.sub_address_type = RIIC_SUB_ADDR_WIDTH_8_BITS;
+    i2c_write.sub_address = reg_adr;
     i2c_write.number_of_bytes = 1;
     i2c_write.p_data_buffer = &reg_data;
 
     ret = control(handle, CTL_RIIC_WRITE, &i2c_write);
-
-    /* ret is not used */
-    UNUSED_PARAM(ret);
 
 }   /* End of function RIIC_DviWrite() */
 #endif

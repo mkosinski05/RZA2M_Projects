@@ -20,9 +20,9 @@
 /***********************************************************************************************************************
 * File Name    : r_gpio_drv_sc_cfg.h
 * Version      : 1.0.0
-* Device(s)    : R7S921053
+* Device(s)    : R7S921058
 * Description  : Pin Configuration.
-* Creation Date: 2021-03-10
+* Creation Date: 2021-04-15
 ***********************************************************************************************************************/
 
 #ifndef DRIVERS_R_GPIO_INC_R_GPIO_DRV_SC_CFG_H_
@@ -49,19 +49,14 @@ Variable Externs
 static const st_r_drv_gpio_sc_config_t GPIO_SC_TABLE_INIT[] =
 {
     /* {<pin>, {<function>, <tint>, <current>}}, */
+    {GPIO_PORT_6_PIN_6, {GPIO_FUNC_OUT_HIGH, GPIO_TINT_DISABLE, GPIO_CURRENT_4mA}},
+    {GPIO_PORT_6_PIN_7, {GPIO_FUNC_IN, GPIO_TINT_DISABLE, GPIO_CURRENT_RESERVED}},
 };
 static const st_r_drv_gpio_sc_config_t GPIO_SC_TABLE_MANUAL[] =
 {
     /* {<pin>, {<function>, <tint>, <current>}}, */
-    {GPIO_PORT_4_PIN_0, {GPIO_FUNC_PERIPHERAL2, GPIO_TINT_DISABLE, GPIO_CURRENT_4mA}},
-    {GPIO_PORT_4_PIN_1, {GPIO_FUNC_PERIPHERAL2, GPIO_TINT_DISABLE, GPIO_CURRENT_4mA}},
-    {GPIO_PORT_4_PIN_2, {GPIO_FUNC_PERIPHERAL2, GPIO_TINT_DISABLE, GPIO_CURRENT_4mA}},
-    {GPIO_PORT_4_PIN_3, {GPIO_FUNC_PERIPHERAL2, GPIO_TINT_DISABLE, GPIO_CURRENT_4mA}},
-    {GPIO_PORT_4_PIN_4, {GPIO_FUNC_PERIPHERAL2, GPIO_TINT_DISABLE, GPIO_CURRENT_4mA}},
-    {GPIO_PORT_4_PIN_5, {GPIO_FUNC_PERIPHERAL2, GPIO_TINT_DISABLE, GPIO_CURRENT_4mA}},
-    {GPIO_PORT_4_PIN_6, {GPIO_FUNC_PERIPHERAL2, GPIO_TINT_DISABLE, GPIO_CURRENT_4mA}},
-    {GPIO_PORT_4_PIN_7, {GPIO_FUNC_PERIPHERAL2, GPIO_TINT_DISABLE, GPIO_CURRENT_4mA}},
-    {GPIO_PORT_6_PIN_0, {GPIO_FUNC_OUT_LOW, GPIO_TINT_DISABLE, GPIO_CURRENT_4mA}},
+    {GPIO_PORT_8_PIN_2, {GPIO_FUNC_OUT_LOW, GPIO_TINT_DISABLE, GPIO_CURRENT_4mA}},
+    {GPIO_PORT_K_PIN_5, {GPIO_FUNC_OUT_LOW, GPIO_TINT_DISABLE, GPIO_CURRENT_4mA}},
 };
 static const st_r_drv_gpio_sc_config_t GPIO_SC_TABLE_ceu[] =
 {
@@ -75,17 +70,11 @@ static const st_r_drv_gpio_sc_config_t GPIO_SC_TABLE_mipi[] =
 {
     /* {<pin>, {<function>, <tint>, <current>}}, */
 };
-static const st_r_drv_gpio_sc_config_t GPIO_SC_TABLE_riic2[] =
+static const st_r_drv_gpio_sc_config_t GPIO_SC_TABLE_riic1[] =
 {
     /* {<pin>, {<function>, <tint>, <current>}}, */
-    {GPIO_PORT_D_PIN_4, {GPIO_FUNC_PERIPHERAL1, GPIO_TINT_DISABLE, GPIO_CURRENT_RESERVED}},
-    {GPIO_PORT_D_PIN_5, {GPIO_FUNC_PERIPHERAL1, GPIO_TINT_DISABLE, GPIO_CURRENT_RESERVED}},
-};
-static const st_r_drv_gpio_sc_config_t GPIO_SC_TABLE_riic3[] =
-{
-    /* {<pin>, {<function>, <tint>, <current>}}, */
-    {GPIO_PORT_D_PIN_6, {GPIO_FUNC_PERIPHERAL1, GPIO_TINT_DISABLE, GPIO_CURRENT_RESERVED}},
-    {GPIO_PORT_D_PIN_7, {GPIO_FUNC_PERIPHERAL1, GPIO_TINT_DISABLE, GPIO_CURRENT_RESERVED}},
+    {GPIO_PORT_D_PIN_2, {GPIO_FUNC_PERIPHERAL1, GPIO_TINT_DISABLE, GPIO_CURRENT_RESERVED}},
+    {GPIO_PORT_D_PIN_3, {GPIO_FUNC_PERIPHERAL1, GPIO_TINT_DISABLE, GPIO_CURRENT_RESERVED}},
 };
 static const st_r_drv_gpio_sc_config_t GPIO_SC_TABLE_scifa4[] =
 {
@@ -96,6 +85,8 @@ static const st_r_drv_gpio_sc_config_t GPIO_SC_TABLE_scifa4[] =
 static const st_r_drv_gpio_sc_config_t GPIO_SC_TABLE_vdc[] =
 {
     /* {<pin>, {<function>, <tint>, <current>}}, */
+    {GPIO_PORT_7_PIN_2, {GPIO_FUNC_PERIPHERAL3, GPIO_TINT_DISABLE, GPIO_CURRENT_4mA}},
+    {GPIO_PORT_7_PIN_6, {GPIO_FUNC_PERIPHERAL3, GPIO_TINT_DISABLE, GPIO_CURRENT_4mA}},
     {GPIO_PORT_7_PIN_7, {GPIO_FUNC_PERIPHERAL3, GPIO_TINT_DISABLE, GPIO_CURRENT_4mA}},
     {GPIO_PORT_8_PIN_0, {GPIO_FUNC_PERIPHERAL3, GPIO_TINT_DISABLE, GPIO_CURRENT_4mA}},
     {GPIO_PORT_A_PIN_0, {GPIO_FUNC_PERIPHERAL3, GPIO_TINT_DISABLE, GPIO_CURRENT_4mA}},

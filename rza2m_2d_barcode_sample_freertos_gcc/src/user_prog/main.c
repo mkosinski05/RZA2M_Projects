@@ -14,15 +14,15 @@
  * following link:
  * http://www.renesas.com/disclaimer
  *
- * Copyright (C) 2019 Renesas Electronics Corporation. All rights reserved.
+ * Copyright (C) 2020 Renesas Electronics Corporation. All rights reserved.
  *********************************************************************************************************************/
 /*******************************************************************************
 * File Name    : main.c
 * Device(s)    : RZ/A2M
-* Tool-Chain   : e2Studio Ver 7.5.0
-*              : GNU Arm Embedded Toolchain 6-2017-q2-update
-* OS           : None
-* H/W Platform : RZ/A2M Evaluation Board
+* Tool-Chain   : e2Studio 2021-01
+*              : GNU ARM Embedded 6.3.1.20170620
+* OS           : FreeRTOS Version See src/freertos/include/FreeRTOS.h
+* H/W Platform : GR-MANGO(mbed-RZ/A2M) X71A-M01-B
 * Description  : RZ/A2M Sample Program - Main
 * Operation    :
 * Limitations  :
